@@ -10,7 +10,7 @@
           <ion-input type="text" [(ngModel)]="patientID.fname"></ion-input>
         </ion-item>
 
-        <ion-item>
+        <ion-item (click)="checkifenter()">
           <ion-label floating>{{'LASTNAME' | translate }}</ion-label>
           <ion-input type="text" [(ngModel)]="patientID.lname"></ion-input>
         </ion-item>
@@ -136,7 +136,7 @@
 
   <ion-card>
     <ion-item no-lines>
-      <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" >
+      <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" [disabled]="!isenabled">
         <ion-icon name="checkmark-circle"></ion-icon>
         {{'SUBMIT' | translate }} {{'REGISTRATION' | translate }}
       </button>
@@ -145,15 +145,3 @@
 </ion-content>
 
 
-<!--Photo Identification
-<ion-card>
-
-</ion-card>
--->
-
-<!--ion-item no-lines>
-  <button ion-button icon-left full block large color="accent" (click)="postSurveyConfirm()" (click)="presentToast()">
-    <ion-icon name="checkmark-circle"></ion-icon>
-    Submit | Entrega
-  </button>
-</ion-item-->

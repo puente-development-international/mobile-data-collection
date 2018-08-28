@@ -17,6 +17,10 @@ import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 })
 export class PatientIDForm {
 
+  firstname: string = '';
+  lastname: string = '';
+
+  isenabled:boolean=false;
   //images: Array<{src: String}>;
   Imgsrc: String;
 
@@ -76,6 +80,7 @@ export class PatientIDForm {
   } 
 
   public post_n_clear() {
+    this.isenabled=false;
     this.parseProvider.postObjectsToClass(this.patientID,'SurveyData').then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
@@ -102,6 +107,15 @@ export class PatientIDForm {
       console.log(err);
     });
 
+  }
+
+  checkifenter(){
+    if (this.patientID.fname !== ''){
+      this.isenabled=true; 
+    } 
+    else {
+    this.isenabled=false;
+    }
   }
 
   //Navigation
