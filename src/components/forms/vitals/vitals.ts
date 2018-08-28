@@ -88,6 +88,7 @@ export class VitalsForm {
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
     this.client.fname = selectedItem.get('fname');
     this.client.lname = selectedItem.get('lname');
+    this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
   }
 
