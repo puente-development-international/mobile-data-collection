@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 import { ViewController } from 'ionic-angular';
 
@@ -8,11 +8,16 @@ import { ParseProvider } from '../../../providers/parse/parse';
 import { AuthProvider } from '../../../providers/auth/auth';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 
+//Components
+import { ContentDrawerComponent } from '../../content-drawer/content-drawer';
+
 @Component({
   selector: 'evaluation-medical',
   templateUrl: 'evaluation-medical.html'
 })
 export class EvaluationMedicalForm {
+  @ViewChild("ContentDrawerComponent") contentDrawer: ContentDrawerComponent;
+
   isenabled:boolean=false;
   
   client = {

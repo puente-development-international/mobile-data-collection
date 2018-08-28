@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
-import { App, ViewController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
 import { AuthProvider } from '../../../providers/auth/auth';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 
+// Components
+import { ContentDrawerComponent } from '../../content-drawer/content-drawer';
+
 @Component({
   selector: 'medicalhistory',
   templateUrl: 'medicalhistory.html'
 })
 export class MedicalHistoryForm {
+  @ViewChild("ContentDrawerComponent") contentDrawer: ContentDrawerComponent;
+
   isenabled:boolean=false;
   
   client = {

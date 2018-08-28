@@ -2,10 +2,15 @@
   <!--Environmental Health -->
   <ion-card>
     
-    <ion-item color='primary-dark' (click)="close()">
+    <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
       {{ 'CLIENT' | translate }}
       <ion-label>{{client.fname}} {{client.fname}}</ion-label>
-      <ion-icon name="person" item-start></ion-icon>
+      <button ion-button outline item-start (click)="close()">
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()">
+          <ion-icon name="person" color="white"></ion-icon>
+      </button>
     </ion-item>
 
     <ion-card-header ion-text text-wrap class='card-title'>
@@ -147,6 +152,6 @@
   </ion-card>
 </ion-content>
 
-<content-drawer [options]="drawerOptions">
+<content-drawer [options]="drawerOptions" #ContentDrawerComponent>
   <searchbar-object-id (emitObjectIDfromComponent)='inputObjectIDfromComponent($event)'></searchbar-object-id>
 </content-drawer>
