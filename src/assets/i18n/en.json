@@ -191,7 +191,7 @@
     "DIRTFLOOR":"Dirt Floor",
     "CEMENTFLOOR":"Cement Floor",
     "POORCONDITION":"Poor Condition",
-    "WORKINGCONDITON":"Working Condition",
+    "WORKINGCONDITION":"Working Condition",
     "PULLUPTOSELECTPATIENT": "Pull up to select patient",
     "ALLERGIES":"Allergies",
     "SUBSTANCE":"Substance",
@@ -216,5 +216,9 @@
     "SEARCH":"Search",
     "SEARCHBYFIRSTNAMELASTNAME":"Search by first name, last name",
     "SEARCHBYFIRSTNAMELASTNAMEUSER":"Search by first name, last name, or user",
-    "PASSWORDRESET":"Password Reset"
+    "PASSWORDRESET":"Password Reset",
+    "POPULATION":"Population",
+    "NUMBERINHOUSE":"Number of Individuals Living in the House",
+    "NUMBERINHOUSEUNDERFIVE":"Number of Children Living in House Under the Age of 5",
+    "HOUSEOWNERSHIP":"Are you the owner of this house?"
 }

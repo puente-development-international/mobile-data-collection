@@ -1,5 +1,11 @@
 <ion-content >
   <ion-card>
+    <ion-item color='primary-dark'>
+      <button ion-button outline item-start (click)="close()" padding-right>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>{{patientID.fname}} {{patientID.lname}}</ion-label>
+    </ion-item>
     <ion-card-header class='card-title' color="primary-light" (click)="close()">
       {{'REGISTRATION' | translate }}
     </ion-card-header>
@@ -11,8 +17,8 @@
         </ion-item>
 
         <ion-item (click)="checkifenter()">
-          <ion-label floating>{{'LASTNAME' | translate }}</ion-label>
-          <ion-input type="text" [(ngModel)]="patientID.lname"></ion-input>
+          <ion-label floating (click)="checkifenter()" >{{'LASTNAME' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="patientID.lname" (click)="checkifenter()"></ion-input>
         </ion-item>
 
         <ion-item>

@@ -37,7 +37,11 @@ export class EnvironmentalHistoryForm {
     dentalproblemswheredoyougo:null,
     biggestproblemofcommunity:null,
     timesperweektrashcollected:null,
-    wheretrashleftbetweenpickups:null
+    wheretrashleftbetweenpickups:null,
+    numberofIndividualsLivingintheHouse:null,
+    numberofChildrenLivinginHouseUndertheAgeof5:null,
+    houseownership:null
+
   }
 
   //Design Element
@@ -56,6 +60,7 @@ export class EnvironmentalHistoryForm {
     
     //Design Element: Accordion
     this.accordionItems = [
+      {expanded: false},
       {expanded: false},
       {expanded: false},
       {expanded: false},

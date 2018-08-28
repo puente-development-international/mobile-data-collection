@@ -5,7 +5,7 @@
     <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
       {{ 'CLIENT' | translate }}
       <ion-label>{{client.fname}} {{client.fname}}</ion-label>
-      <button ion-button outline item-start (click)="close()">
+      <button ion-button outline item-start (click)="close()" padding-right>
           <ion-icon name="arrow-round-back" ></ion-icon>
       </button>
       <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()">
@@ -121,12 +121,19 @@
     <ion-item-group>
       <accordion [expanded]="accordionItems[1].expanded">
         <ion-item>
+          <ion-label>{{ 'HOUSEOWNERSHIP'| translate}}</ion-label>
+          <ion-select [(ngModel)]="environmentalHealth.houseownership" interface ='popover'>
+              <ion-option text-wrap value="owned"> {{ 'YES' | translate }} </ion-option>
+              <ion-option text-wrap value="rented"> {{ 'NO' | translate }}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
           <ion-label>{{ 'CONDITIONOFFLOOR'| translate}}</ion-label>
           <ion-select [(ngModel)]="environmentalHealth.conditionoFloorinyourhouse" interface ='popover'>
-              <ion-option text-wrap value="dirtPoor"> {{ 'DIRTFLOOR' | translate }} {{ 'POORCONDITION' | translate }}  </ion-option>
-              <ion-option text-wrap value="dirtWorking"> {{ 'DIRTFLOOR' | translate }} {{ 'WORKINGCONDITION' | translate }}   </ion-option>
-              <ion-option text-wrap value="cementPoor"> {{ 'CEMENTFLOOR' | translate }} {{ 'POORCONDITION' | translate }}  </ion-option>
-              <ion-option text-wrap value="cementWorking"> {{ 'CEMENTFLOOR' | translate }} {{ 'WORKINGCONDITION' | translate }}  </ion-option>
+              <ion-option text-wrap value="dirtPoor"> {{ 'DIRTFLOOR' | translate }} | {{ 'POORCONDITION' | translate }}  </ion-option>
+              <ion-option text-wrap value="dirtWorking"> {{ 'DIRTFLOOR' | translate }} | {{ 'WORKINGCONDITION' | translate }}   </ion-option>
+              <ion-option text-wrap value="cementPoor"> {{ 'CEMENTFLOOR' | translate }} | {{ 'POORCONDITION' | translate }}  </ion-option>
+              <ion-option text-wrap value="cementWorking"> {{ 'CEMENTFLOOR' | translate }} | {{ 'WORKINGCONDITION' | translate }}  </ion-option>
           </ion-select>
         </ion-item>
 
@@ -136,6 +143,25 @@
               <ion-option text-wrap value="poor"> {{ 'POORCONDITION' | translate }} </ion-option>
               <ion-option text-wrap value="working">{{ 'WORKINGCONDITION' | translate }}</ion-option>
           </ion-select>
+        </ion-item>
+      </accordion>
+    </ion-item-group>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="card-title" (click)="expandItem(accordionItems[2])">
+      {{ 'POPULATION'| translate}}
+    </ion-card-header>
+    <ion-item-group>
+      <accordion [expanded]="accordionItems[2].expanded">
+        <ion-item>
+          <ion-label floating>{{ 'NUMBERINHOUSE'| translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>{{ 'NUMBERINHOUSEUNDERFIVE'| translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5"></ion-input>
         </ion-item>
       </accordion>
     </ion-item-group>

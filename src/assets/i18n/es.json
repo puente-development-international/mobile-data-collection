@@ -215,6 +215,10 @@
     "SEARCH":"Búsqueda",
     "SEARCHBYFIRSTNAMELASTNAME":"Búsqueda por nombre o apellido",
     "SEARCHBYFIRSTNAMELASTNAMEUSER":"Búsqueda por nombre, apellido o quien envió",
-    "PASSWORDRESET":"Cambio de contraseña"
+    "PASSWORDRESET":"Cambio de contraseña",
+    "POPULATION":"Población",
+    "NUMBERINHOUSE":"Numero de personas que viven en la casa",
+    "NUMBERINHOUSEUNDERFIVE":"Número de hijos menores de 5 años en la casa",
+    "HOUSEOWNERSHIP":"Eres el dueño de esta casa?"
     
 }

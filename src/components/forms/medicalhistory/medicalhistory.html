@@ -3,7 +3,7 @@
     <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
         {{ 'CLIENT' | translate }}
         <ion-label>{{client.fname}} {{client.lname}}</ion-label>
-        <button ion-button outline item-start (click)="close()">
+        <button ion-button outline item-start (click)="close()" padding-right>
             <ion-icon name="arrow-round-back" ></ion-icon>
         </button>
         <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()">
@@ -14,6 +14,10 @@
         {{ 'MEDICALHISTORY' | translate }}
     </ion-card-header>
     <ion-list>
+        <ion-item>
+            <ion-label floating>{{ 'FAMILYHEALTHHISTORY' | translate }}</ion-label>
+            <ion-textarea [(ngModel)]="medicalHistory.familyhistory"></ion-textarea>
+        </ion-item>
         <ion-item>
           <ion-label floating>{{ 'MAJOREVENTS' | translate }}</ion-label>
           <p>{{ 'MAJOREVENTS_DESCRIP' | translate }}</p>
@@ -38,10 +42,6 @@
         <ion-item>
             <ion-label floating>{{ 'WHATDIDDOCTORRECOMMEND' | translate }}</ion-label>
             <ion-textarea [(ngModel)]="medicalHistory.treatment"></ion-textarea>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>{{ 'FAMILYHEALTHHISTORY' | translate }}</ion-label>
-            <ion-textarea [(ngModel)]="medicalHistory.familyhistory"></ion-textarea>
         </ion-item>
         <ion-item>
             <ion-label floating>{{ 'PREVENTATIVECAREATTEMPTS' | translate }}</ion-label>

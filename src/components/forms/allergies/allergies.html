@@ -4,7 +4,7 @@
     <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
         {{ 'CLIENT' | translate }}
       <ion-label>{{client.fname}} {{client.lname}}</ion-label>
-      <button ion-button outline item-start (click)="close()">
+      <button ion-button outline item-start (click)="close()" padding-right>
           <ion-icon name="arrow-round-back" ></ion-icon>
       </button>
       <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()">
