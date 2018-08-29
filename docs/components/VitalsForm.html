@@ -1491,6 +1491,7 @@ export class VitalsForm {
     this.client.objectID&#x3D; selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
     this.client.fname &#x3D; selectedItem.get(&#x27;fname&#x27;);
     this.client.lname &#x3D; selectedItem.get(&#x27;lname&#x27;);
+    this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
   }
 
