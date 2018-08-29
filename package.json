@@ -5,6 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "website:build": "ionic cordova platform remove browser && ionic cordova platform add browser && ionic cordova build browser --prod --release",
     "android:build": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
+    "android:build:staging": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android",
     "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release",
     "compodoc": "./node_modules/.bin/compodoc -d ./docs/ -p ./tsconfig.json"
   },
@@ -69,7 +70,6 @@
       "cordova-plugin-camera": {}
     },
     "platforms": [
-      "android",
       "browser",
       "ios"
     ]
