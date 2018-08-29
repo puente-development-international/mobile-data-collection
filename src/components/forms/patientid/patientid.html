@@ -13,12 +13,12 @@
     <ion-list>
         <ion-item>
           <ion-label floating>{{'FIRSTNAME' | translate }}</ion-label>
-          <ion-input type="text" [(ngModel)]="patientID.fname"></ion-input>
+          <ion-input type="text" [(ngModel)]="patientID.fname" (ngModelChange)="checkifenter()"></ion-input>
         </ion-item>
 
-        <ion-item (click)="checkifenter()">
-          <ion-label floating (click)="checkifenter()" >{{'LASTNAME' | translate }}</ion-label>
-          <ion-input type="text" [(ngModel)]="patientID.lname" (click)="checkifenter()"></ion-input>
+        <ion-item>
+          <ion-label floating  >{{'LASTNAME' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="patientID.lname"></ion-input>
         </ion-item>
 
         <ion-item>

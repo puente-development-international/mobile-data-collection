@@ -17,9 +17,6 @@ import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 })
 export class PatientIDForm {
 
-  firstname: string = '';
-  lastname: string = '';
-
   isenabled:boolean=false;
   //images: Array<{src: String}>;
   Imgsrc: String;
@@ -114,7 +111,7 @@ export class PatientIDForm {
       this.isenabled=true; 
     } 
     else {
-    this.isenabled=false;
+      this.isenabled=false;
     }
   }
 
