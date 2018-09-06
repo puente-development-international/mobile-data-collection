@@ -114,5 +114,21 @@ export class QueryServiceProvider {
       }, 500);
     });
   }
+
+  //Testing Cloud Code
+  listAllPatients(){
+    return this.parseSrvc.runCloudFunction("retrievePatientRecordsAll", null);
+  }
+
+  listPatientsByOrganization(organization){
+    return this.parseSrvc.runCloudFunction("retrievePatientRecordByOrgnization", {
+      organization: organization
+    });
+
+  }
+
+  hello(){
+    return this.parseSrvc.runCloudFunction("hello",null);
+  }
   
 }

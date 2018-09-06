@@ -116,6 +116,10 @@ export class ParseProvider {
     Parse.serverURL = this.parseServerUrl;
   }
 
+  runCloudFunction(functionName:string, functionRequest:any){
+    return Parse.Cloud.run(functionName,functionRequest);
+  }
+
 
 
 }
