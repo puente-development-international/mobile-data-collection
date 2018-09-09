@@ -40,8 +40,6 @@ export class FindRecordsPage {
         this.filteredCommunityRecords = this.communityRecords;
         this.themeCtrl.dismissCustomLoading();  
     })
-    console.log(this.querySrvc.hello());
-    console.log(this.querySrvc.listAllPatients());
   }
 
 
