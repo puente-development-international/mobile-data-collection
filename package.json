@@ -4,7 +4,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "website:build": "ionic cordova platform remove browser && ionic cordova platform add browser && ionic cordova build browser --prod --release",
-    "android:build": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
+    "android:build:production": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
     "android:build:staging": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android",
     "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release -- --buildFlag='-UseModernBuildSystem=0'",
     "ios:emulate": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'",
@@ -27,7 +27,7 @@
     "@ionic/app-scripts": "^3.1.11",
     "@ionic/storage": "2.0.1",
     "chart.js": "^2.7.2",
-    "cordova-android": "7.0.0",
+    "cordova-android": "7.1.1",
     "cordova-browser": "5.0.4",
     "cordova-ios": "4.5.5",
     "cordova-plugin-camera": "^4.0.3",
