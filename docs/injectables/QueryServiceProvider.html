@@ -755,6 +755,15 @@
                                     <span class="modifier">Public</span>
                                 <a href="#geoQuery">geoQuery</a>
                             </li>
+                            <li>
+                                <a href="#hello">hello</a>
+                            </li>
+                            <li>
+                                <a href="#listAllPatients">listAllPatients</a>
+                            </li>
+                            <li>
+                                <a href="#listPatientsByOrganization">listPatientsByOrganization</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -778,7 +787,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/providers/query-service/query-service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/providers/query-service/query-service.ts:7</a></div>
                             </td>
                         </tr>
 
@@ -845,13 +854,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/providers/query-service/query-service.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/providers/query-service/query-service.ts:65</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Performs a query based on the parameter defined in a column</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -862,6 +873,7 @@
                                                     <td>Type</td>
                                                 <td>Optional</td>
                                                     <td>Default value</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -879,6 +891,10 @@
                                                                 <code>0</code>
                                                         </td>
 
+                                                        <td>
+                                                                <code><p>First number</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>limit</td>
@@ -894,6 +910,10 @@
                                                                 <code>3</code>
                                                         </td>
 
+                                                        <td>
+                                                                <code><p>Max limit of results</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseObject</td>
@@ -908,6 +928,10 @@
                                                         <td>
                                                         </td>
 
+                                                        <td>
+                                                                <code><p>Name of Backend Model</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseColumn</td>
@@ -922,6 +946,10 @@
                                                         <td>
                                                         </td>
 
+                                                        <td>
+                                                                <code><p>Name of Column in Backend Model</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseParam</td>
@@ -936,18 +964,27 @@
                                                         <td>
                                                         </td>
 
+                                                        <td>
+                                                                <code><p>Name of Parameter in Column </p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">basicQuery(0,1000,&amp;#39;SurveyData&amp;#39;,&amp;#39;organization&amp;#39;,&amp;quot;Puente&amp;quot;)</code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                             </div>
                                 <div class="io-description">
-                                    
+                                    <p>Results of Query</p>
+
                                 </div>
                     </td>
                 </tr>
@@ -977,13 +1014,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/providers/query-service/query-service.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/providers/query-service/query-service.ts:24</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Queries results based on the Object and Column</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -993,6 +1032,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1007,6 +1047,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Name of the Backend Model</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseColumn</td>
@@ -1019,18 +1063,27 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Name of the Column in the Backend Model</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">genericQuery(&amp;#39;SurveyData&amp;#39;,&amp;quot;organization&amp;quot;)</code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                             </div>
                                 <div class="io-description">
-                                    
+                                    <p>query of results in backend</p>
+
                                 </div>
                     </td>
                 </tr>
@@ -1060,13 +1113,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/providers/query-service/query-service.ts:83</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/providers/query-service/query-service.ts:112</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Performs a query based on parameter based on geolocation</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -1076,6 +1131,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1090,6 +1146,8 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>long</td>
@@ -1102,6 +1160,8 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>limit</td>
@@ -1114,6 +1174,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Max Number of Results</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseClass</td>
@@ -1126,6 +1190,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Backend Model</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseColumn</td>
@@ -1138,6 +1206,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Column in Backend Model</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>parseParam</td>
@@ -1150,18 +1222,204 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Parameter in Column</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">geoQuery(30,86,2000,&amp;quot;SurveyData&amp;quot;,&amp;quot;organization&amp;quot;,&amp;quot;Puente&amp;quot;)</code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                             </div>
                                 <div class="io-description">
-                                    
+                                    <p>Results of Query based on Geolocation</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hello"></a>
+                        <span class="name">
+                            <b>
+                            hello
+                            </b>
+                            <a href="#hello"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>hello()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/providers/query-service/query-service.ts:183</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Test Cloud function</p>
+</div>
+
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">hello()</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>a console.log of hello</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listAllPatients"></a>
+                        <span class="name">
+                            <b>
+                            listAllPatients
+                            </b>
+                            <a href="#listAllPatients"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>listAllPatients()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/providers/query-service/query-service.ts:155</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Performs a query of all records</p>
+</div>
+
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">listAllPatients()</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>a list of all objects in &quot;SurveyData&quot; Model</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listPatientsByOrganization"></a>
+                        <span class="name">
+                            <b>
+                            listPatientsByOrganization
+                            </b>
+                            <a href="#listPatientsByOrganization"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>listPatientsByOrganization(organization: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/providers/query-service/query-service.ts:168</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Performs a query of all records in &quot;SurveyData&quot; Model based on Organization name</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>organization</td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Name of Organization</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">listPatientsByOrganization(&amp;quot;Puente&amp;quot;)</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>The sum of a and b</p>
+
                                 </div>
                     </td>
                 </tr>
@@ -1179,22 +1437,24 @@ import &#x27;rxjs/add/operator/map&#x27;;
 
 import { ParseProvider } from &#x27;../parse/parse&#x27;;
 
-/*
-  Generated class for the QueryServiceProvider provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class QueryServiceProvider {
 
   constructor(private parseSrvc: ParseProvider) {
     console.log(&#x27;Hello QueryServiceProvider Provider&#x27;);
-
-    
     parseSrvc.parseInitialize();
   }
 
+  /**
+  * Queries results based on the Object and Column
+  * 
+  * @example
+  * genericQuery(&#x27;SurveyData&#x27;,&quot;organization&quot;)
+  * 
+  * @param {string} parseObject Name of the Backend Model
+  * @param {string} parseColumn Name of the Column in the Backend Model
+  * @returns query of results in backend
+  */
   public genericQuery(parseObject: string, parseColumn: string): Promise&lt;any&gt; {
     //This is Retrieving Results from Parse Server
     let Parse &#x3D; this.parseSrvc.getParseENV();
@@ -1222,7 +1482,20 @@ export class QueryServiceProvider {
       }, 500);
     });
   }
-
+  
+  /**
+  * Performs a query based on the parameter defined in a column
+  * 
+  * @example
+  * basicQuery(0,1000,&#x27;SurveyData&#x27;,&#x27;organization&#x27;,&quot;Puente&quot;)
+  * 
+  * @param {number} offset First number
+  * @param {number} limit Max limit of results
+  * @param {string} parseObject Name of Backend Model
+  * @param {string} parseColumn Name of Column in Backend Model
+  * @param {string} parseParam Name of Parameter in Column 
+  * @returns Results of Query
+  */
   public basicQuery(offset: number &#x3D; 0, limit: number &#x3D; 3, parseObject: string, parseColumn: string, parseParam: string): Promise&lt;any&gt; {
     //This is Retrieving Results from Parse Server
     let Parse &#x3D; this.parseSrvc.getParseENV();
@@ -1256,6 +1529,20 @@ export class QueryServiceProvider {
     });
   }
   
+  /**
+  * Performs a query based on parameter based on geolocation
+  * 
+  * @example
+  * geoQuery(30,86,2000,&quot;SurveyData&quot;,&quot;organization&quot;,&quot;Puente&quot;)
+  * 
+  * @param {number} a First number
+  * @param {number} b Second number
+  * @param {number} limit Max Number of Results
+  * @param {string} parseClass Backend Model
+  * @param {string} parseColumn Column in Backend Model
+  * @param {string} parseParam Parameter in Column
+  * @returns Results of Query based on Geolocation
+  */
   public geoQuery(lat: number, long: number, limit: number , parseClass: string, parseColumn: string, parseParam: string): Promise&lt;any&gt; {
     let Parse &#x3D; this.parseSrvc.getParseENV();
     //Returns the resolve (the query) and if there&#x27;s an error, rejects
@@ -1289,6 +1576,46 @@ export class QueryServiceProvider {
         });
       }, 500);
     });
+  }
+
+  /**
+  * Performs a query of all records
+  * 
+  * @example
+  * listAllPatients()
+  * 
+  * @returns a list of all objects in &quot;SurveyData&quot; Model
+  */
+  listAllPatients(){
+    return this.parseSrvc.runCloudFunction(&quot;retrievePatientRecordsAll&quot;, null);
+  }
+
+  /**
+  * Performs a query of all records in &quot;SurveyData&quot; Model based on Organization name
+  * 
+  * @example
+  * listPatientsByOrganization(&quot;Puente&quot;)
+  * 
+  * @param {string} organization Name of Organization
+  * @returns The sum of a and b
+  */
+  listPatientsByOrganization(organization){
+    return this.parseSrvc.runCloudFunction(&quot;retrievePatientRecordByOrgnization&quot;, {
+      organization: organization
+    });
+
+  }
+
+  /**
+  * Test Cloud function
+  * 
+  * @example
+  * hello()
+  * 
+  * @returns a console.log of hello
+  */
+  hello(){
+    return this.parseSrvc.runCloudFunction(&quot;hello&quot;,null);
   }
   
 }
