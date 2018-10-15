@@ -144,10 +144,27 @@ export class QueryServiceProvider {
     });
   }
 
+  /**
+  * Performs a query of all records
+  * 
+  * @example
+  * listAllPatients()
+  * 
+  * @returns a list of all objects in "SurveyData" Model
+  */
   listAllPatients(){
     return this.parseSrvc.runCloudFunction("retrievePatientRecordsAll", null);
   }
 
+  /**
+  * Performs a query of all records in "SurveyData" Model based on Organization name
+  * 
+  * @example
+  * listPatientsByOrganization("Puente")
+  * 
+  * @param {string} organization Name of Organization
+  * @returns The sum of a and b
+  */
   listPatientsByOrganization(organization){
     return this.parseSrvc.runCloudFunction("retrievePatientRecordByOrgnization", {
       organization: organization
@@ -155,6 +172,14 @@ export class QueryServiceProvider {
 
   }
 
+  /**
+  * Test Cloud function
+  * 
+  * @example
+  * hello()
+  * 
+  * @returns a console.log of hello
+  */
   hello(){
     return this.parseSrvc.runCloudFunction("hello",null);
   }
