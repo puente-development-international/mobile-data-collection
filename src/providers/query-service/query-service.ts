@@ -3,22 +3,24 @@ import 'rxjs/add/operator/map';
 
 import { ParseProvider } from '../parse/parse';
 
-/*
-  Generated class for the QueryServiceProvider provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class QueryServiceProvider {
 
   constructor(private parseSrvc: ParseProvider) {
     console.log('Hello QueryServiceProvider Provider');
-
-    
     parseSrvc.parseInitialize();
   }
 
+  /**
+  * Queries results based on the Object and Column
+  * 
+  * @example
+  * genericQuery('SurveyData',"organization")
+  * 
+  * @param {string} parseObject Name of the Backend Model
+  * @param {string} parseColumn Name of the Column in the Backend Model
+  * @returns query of results in backend
+  */
   public genericQuery(parseObject: string, parseColumn: string): Promise<any> {
     //This is Retrieving Results from Parse Server
     let Parse = this.parseSrvc.getParseENV();
@@ -46,7 +48,20 @@ export class QueryServiceProvider {
       }, 500);
     });
   }
-
+  
+  /**
+  * Performs a query based on the parameter defined in a column
+  * 
+  * @example
+  * basicQuery(0,1000,'SurveyData','organization',"Puente")
+  * 
+  * @param {number} offset First number
+  * @param {number} limit Max limit of results
+  * @param {string} parseObject Name of Backend Model
+  * @param {string} parseColumn Name of Column in Backend Model
+  * @param {string} parseParam Name of Parameter in Column 
+  * @returns Results of Query
+  */
   public basicQuery(offset: number = 0, limit: number = 3, parseObject: string, parseColumn: string, parseParam: string): Promise<any> {
     //This is Retrieving Results from Parse Server
     let Parse = this.parseSrvc.getParseENV();
@@ -80,6 +95,20 @@ export class QueryServiceProvider {
     });
   }
   
+  /**
+  * Performs a query based on parameter based on geolocation
+  * 
+  * @example
+  * geoQuery(30,86,2000,"SurveyData","organization","Puente")
+  * 
+  * @param {number} a First number
+  * @param {number} b Second number
+  * @param {number} limit Max Number of Results
+  * @param {string} parseClass Backend Model
+  * @param {string} parseColumn Column in Backend Model
+  * @param {string} parseParam Parameter in Column
+  * @returns Results of Query based on Geolocation
+  */
   public geoQuery(lat: number, long: number, limit: number , parseClass: string, parseColumn: string, parseParam: string): Promise<any> {
     let Parse = this.parseSrvc.getParseENV();
     //Returns the resolve (the query) and if there's an error, rejects
@@ -115,7 +144,6 @@ export class QueryServiceProvider {
     });
   }
 
-  //Testing Cloud Code
   listAllPatients(){
     return this.parseSrvc.runCloudFunction("retrievePatientRecordsAll", null);
   }

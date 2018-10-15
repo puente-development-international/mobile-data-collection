@@ -6,7 +6,6 @@ import { Geolocation, GeolocationOptions } from '@ionic-native/geolocation';
 @Injectable()
 export class UserpositionProvider {
 
-  //Enables Options from Geolocation Import
   options: GeolocationOptions;
 
   coordinates = {
@@ -30,6 +29,14 @@ export class UserpositionProvider {
     return this.geolocation.getCurrentPosition(this.options)
   }*/
 
+  /**
+  * Returns User Position Coordinates
+  * 
+  * @example
+  * getUserPosition()
+  * 
+  * @returns latitude and longitude coordinates
+  */
   async getUserPosition() {
     this.options = {
       enableHighAccuracy: true,
