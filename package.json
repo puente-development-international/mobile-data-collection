@@ -6,7 +6,8 @@
     "website:build": "ionic cordova platform remove browser && ionic cordova platform add browser && ionic cordova build browser --prod --release",
     "android:build": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
     "android:build:staging": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android",
-    "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release",
+    "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release -- --buildFlag='-UseModernBuildSystem=0'",
+    "ios:emulate": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'",
     "compodoc": "./node_modules/.bin/compodoc -d ./docs/ -p ./tsconfig.json"
   },
   "dependencies": {
@@ -71,6 +72,7 @@
     },
     "platforms": [
       "browser",
+      "android",
       "ios"
     ]
   },
