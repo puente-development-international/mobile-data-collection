@@ -15,7 +15,7 @@ export class QueryServiceProvider {
   * Queries results based on the Object and Column
   * 
   * @example
-  * genericQuery('SurveyData',"organization")
+  * genericQuery(SurveyData,organization)
   * 
   * @param {string} parseObject Name of the Backend Model
   * @param {string} parseColumn Name of the Column in the Backend Model
@@ -53,7 +53,7 @@ export class QueryServiceProvider {
   * Performs a query based on the parameter defined in a column
   * 
   * @example
-  * basicQuery(0,1000,'SurveyData','organization',"Puente")
+  * basicQuery(0,1000,SurveyData,organization,Puente)
   * 
   * @param {number} offset First number
   * @param {number} limit Max limit of results
@@ -99,7 +99,7 @@ export class QueryServiceProvider {
   * Performs a query based on parameter based on geolocation
   * 
   * @example
-  * geoQuery(30,86,2000,"SurveyData","organization","Puente")
+  * geoQuery(30,86,2000,SurveyData,"organization","Puente")
   * 
   * @param {number} a First number
   * @param {number} b Second number
