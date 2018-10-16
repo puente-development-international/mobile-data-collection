@@ -17,7 +17,7 @@
     (ionCancel)="onCancel($event)">
   </ion-searchbar>
   -->
-  <ion-searchbar [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems()" placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAMEUSER' | translate }}"></ion-searchbar>
+  <ion-searchbar ion-text text-wrap [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems()" placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAMEUSER' | translate }}"></ion-searchbar>
 </ion-header>
 
 
@@ -39,7 +39,7 @@
                 </div>
               
                 <div class="flash-card-back">
-                  <ion-grid>
+                  <ion-grid class="card-grid">
 
                     <ion-row>
                       <ion-col>
@@ -82,8 +82,4 @@
         </ion-row>
       </ion-grid>
   </ion-list>
-
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content></ion-infinite-scroll-content>
-  </ion-infinite-scroll>
 </ion-content>

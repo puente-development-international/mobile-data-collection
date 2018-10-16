@@ -52,6 +52,12 @@ card-flipping {
         top: 0;
         left: 0;
     }
+    .back {
+        //Added 10/16/2018
+        display: inline;
+        padding: 5%;
+        word-wrap: normal;
+    }
 
     /* front pane, placed above back */
     .front {
