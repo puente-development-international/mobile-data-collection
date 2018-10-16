@@ -226,6 +226,7 @@
     "NUMBERINHOUSESUB":"Cuántos personas se quedan aquí por la noche?",
     "NUMBERINHOUSEUNDERFIVE":"Número de hijos menores de 5 años en la casa",
     "NUMBERINHOUSEUNDERFIVESUB": "Cuántos niños se quedan aquí por la noche?",
-    "HOUSEOWNERSHIP":"Eres el dueño de esta casa?"
+    "HOUSEOWNERSHIP":"Eres el dueño de esta casa?",
+    "INPUT":"Entra"
     
 }

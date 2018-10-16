@@ -119,4 +119,19 @@ export class PatientIDForm {
   close() {
     this.viewCtrl.dismiss();
   }
+
+  /*
+    * Sets the Value of a key in the PatientID Dictionary
+    * 
+    * @example
+    * set("Greenwood","city")
+    * 
+    * @param {string} value for dictionary key
+    * @param {string} dictionary key
+    * @returns 
+  */
+ set(value,key){
+  this.patientID[key]= value;
+  console.log(this.patientID[key])
+}
 }

@@ -50,7 +50,7 @@
 
   <!--Accessibility-->
   <ion-card>
-      <ion-card-header class='card-title' (click)="expandItem(accordionItems[0])">
+      <ion-card-header ion-text text-wrap class='card-title' (click)="expandItem(accordionItems[0])">
         {{ 'ACCESSIBILITY' | translate }}
       </ion-card-header>
     <ion-item-group>
@@ -67,44 +67,44 @@
           </ion-select>
         </ion-item>
 
-        <ion-buttons padding>
+        <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'TYPEOFWATER' | translate }} </ion-label>
           <!--ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface ='popover'>
               <ion-option text-wrap value="bottled"> {{ 'BOTTLED' | translate }} </ion-option>
               <ion-option text-wrap value="tap"> {{ 'TAP' | translate }}  </ion-option>
           </ion-select-->
-          <button ion-button small color="grey" (click)="set('bottled','typeofWaterdoyoudrink')">
+          <button ion-button small color="primary-darkest" (click)="set('bottled','typeofWaterdoyoudrink')">
               {{ 'BOTTLED' | translate }}
             </button>
-            <button ion-button right small outline color="grey" (click)="set('tap','typeofWaterdoyoudrink')">
+            <button ion-button right small outline color="primary-darkest" (click)="set('tap','typeofWaterdoyoudrink')">
               {{ 'TAP' | translate }}
             </button>
         </ion-buttons>
 
-        <ion-buttons padding>
+        <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'ACCESSTOLATRINE' | translate }}  </ion-label>
           <!--ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface ='popover'>
               <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
           </ion-select-->
-          <button ion-button small color="grey" (click)="set('Y','latrineAccess')">
+          <button ion-button small color="primary-darkest" (click)="set('Y','latrineAccess')">
             {{ 'YES' | translate }}
           </button>
-          <button ion-button right small outline color="grey" (click)="set('N','latrineAccess')">
+          <button ion-button right small outline color="primary-darkest" (click)="set('N','latrineAccess')">
             {{ 'NO' | translate }}
           </button>
         </ion-buttons>
 
-        <ion-buttons padding>
+        <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'ACCESSTOCLINIC' | translate }} </ion-label>
           <!--ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface ='popover'>
               <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
           </ion-select-->
-          <button ion-button small color="grey" (click)="set('Y','clinicAccess')">
+          <button ion-button small color="primary-darkest" (click)="set('Y','clinicAccess')">
               {{ 'YES' | translate }}
             </button>
-            <button ion-button right small outline color="grey" (click)="set('N','clinicAccess')">
+            <button ion-button right small outline color="primary-darkest" (click)="set('N','clinicAccess')">
               {{ 'NO' | translate }}
             </button>
         </ion-buttons>
@@ -133,24 +133,24 @@
 
   <!--Housing Conditions-->
   <ion-card>
-    <ion-card-header class='card-title' (click)="expandItem(accordionItems[1])">
+    <ion-card-header ion-text text-wrap class='card-title' (click)="expandItem(accordionItems[1])">
       {{ 'HOUSINGCONDITIONS'| translate}}
     </ion-card-header>
     <ion-item-group>
       <accordion [expanded]="accordionItems[1].expanded">
 
-        <ion-buttons padding>
+        <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'HOUSEOWNERSHIP'| translate}}</ion-label>
           <!--ion-select [(ngModel)]="environmentalHealth.houseownership" interface ='popover'>
               <ion-option text-wrap value="owned"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="rented"> {{ 'NO' | translate }}</ion-option>
           </ion-select-->
-          <button ion-button small color="grey" (click)="set('owned','houseownership')">
+          <button ion-button small color="primary-darkest" (click)="set('owned','houseownership')">
               {{ 'YES' | translate }}
             </button>
-            <button ion-button right small outline color="grey" (click)="set('rented','houseownership')">
+            <button ion-button right small outline color="primary-darkest" (click)="set('rented','houseownership')">
               {{ 'NO' | translate }}
-            </button>
+          </button>
         </ion-buttons>
 
         <ion-item>
@@ -163,16 +163,16 @@
           </ion-select>
         </ion-item>
 
-        <ion-buttons padding>
+        <ion-buttons padding-horizontal>
           <ion-label stacked>{{'CONDITIONOFROOF'| translate}} </ion-label>
           <!--ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface ='popover'>
               <ion-option text-wrap value="poor"> {{ 'POORCONDITION' | translate }} </ion-option>
               <ion-option text-wrap value="working">{{ 'WORKINGCONDITION' | translate }}</ion-option>
           </ion-select-->
-          <button ion-button small color="grey" (click)="set('poor','conditionoRoofinyourhouse')">
+          <button ion-button small color="primary-darkest" (click)="set('poor','conditionoRoofinyourhouse')">
             {{ 'POORCONDITION' | translate }}
           </button>
-          <button ion-button right small outline color="grey" (click)="set('working','conditionoRoofinyourhouse')">
+          <button ion-button right small outline color="primary-darkest" (click)="set('working','conditionoRoofinyourhouse')">
             {{ 'WORKINGCONDITION' | translate }}
           </button>
         </ion-buttons>
@@ -181,7 +181,7 @@
   </ion-card>
 
   <ion-card>
-    <ion-card-header class="card-title" (click)="expandItem(accordionItems[2])">
+    <ion-card-header ion-text text-wrap class="card-title" (click)="expandItem(accordionItems[2])">
       {{ 'POPULATION'| translate}}
     </ion-card-header>
     <ion-item-group>

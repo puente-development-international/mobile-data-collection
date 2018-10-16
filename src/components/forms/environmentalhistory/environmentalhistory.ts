@@ -83,7 +83,7 @@ export class EnvironmentalHistoryForm {
       this.client.fname=null; 
       this.client.lname=null;
       this.isenabled=false;
-      this.themeCtrl.toasting('Submitted| Entregado', "bottom");
+      this.themeCtrl.toasting('Submitted | Entregado', "bottom");
     }, (error) => {
       console.log(error);
       alert('Error Confirming.');
@@ -111,7 +111,15 @@ export class EnvironmentalHistoryForm {
     });
 
   }
-
+  /*
+    * Retrieves objectID from page content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
   inputObjectIDfromComponent(selectedItem) {
     this.isenabled=true;
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
