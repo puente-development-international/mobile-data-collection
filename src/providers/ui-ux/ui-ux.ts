@@ -51,7 +51,7 @@ export class UiUxProvider {
   * 
   * @param {string} content Loading Content
   * @param {string} spinner Spinner
-  * @returns The sum of a and b
+  * @returns The loader
   */
   loading(content : string = "...", spinner : string = "dots") {
     let loader = this.loadCtrl.create({

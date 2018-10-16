@@ -67,29 +67,47 @@
           </ion-select>
         </ion-item>
 
-        <ion-item>
+        <ion-buttons padding>
           <ion-label stacked>{{ 'TYPEOFWATER' | translate }} </ion-label>
-          <ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface ='popover'>
+          <!--ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface ='popover'>
               <ion-option text-wrap value="bottled"> {{ 'BOTTLED' | translate }} </ion-option>
               <ion-option text-wrap value="tap"> {{ 'TAP' | translate }}  </ion-option>
-          </ion-select>
-        </ion-item>
+          </ion-select-->
+          <button ion-button small color="grey" (click)="set('bottled','typeofWaterdoyoudrink')">
+              {{ 'BOTTLED' | translate }}
+            </button>
+            <button ion-button right small outline color="grey" (click)="set('tap','typeofWaterdoyoudrink')">
+              {{ 'TAP' | translate }}
+            </button>
+        </ion-buttons>
 
-        <ion-item>
+        <ion-buttons padding>
           <ion-label stacked>{{ 'ACCESSTOLATRINE' | translate }}  </ion-label>
-          <ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface ='popover'>
+          <!--ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface ='popover'>
               <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
-          </ion-select>
-        </ion-item>
+          </ion-select-->
+          <button ion-button small color="grey" (click)="set('Y','latrineAccess')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small outline color="grey" (click)="set('N','latrineAccess')">
+            {{ 'NO' | translate }}
+          </button>
+        </ion-buttons>
 
-        <ion-item>
-            <ion-label stacked>{{ 'ACCESSTOCLINIC' | translate }} </ion-label>
-            <ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface ='popover'>
-                <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
-                <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
-            </ion-select>
-        </ion-item>
+        <ion-buttons padding>
+          <ion-label stacked>{{ 'ACCESSTOCLINIC' | translate }} </ion-label>
+          <!--ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface ='popover'>
+              <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
+              <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
+          </ion-select-->
+          <button ion-button small color="grey" (click)="set('Y','clinicAccess')">
+              {{ 'YES' | translate }}
+            </button>
+            <button ion-button right small outline color="grey" (click)="set('N','clinicAccess')">
+              {{ 'NO' | translate }}
+            </button>
+        </ion-buttons>
         
         <ion-item>
             <ion-label stacked>{{ 'WHEREDOYOUGOFORMEDICALPROBLEMS' | translate }} </ion-label>
@@ -120,13 +138,20 @@
     </ion-card-header>
     <ion-item-group>
       <accordion [expanded]="accordionItems[1].expanded">
-        <ion-item>
+
+        <ion-buttons padding>
           <ion-label stacked>{{ 'HOUSEOWNERSHIP'| translate}}</ion-label>
-          <ion-select [(ngModel)]="environmentalHealth.houseownership" interface ='popover'>
+          <!--ion-select [(ngModel)]="environmentalHealth.houseownership" interface ='popover'>
               <ion-option text-wrap value="owned"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="rented"> {{ 'NO' | translate }}</ion-option>
-          </ion-select>
-        </ion-item>
+          </ion-select-->
+          <button ion-button small color="grey" (click)="set('owned','houseownership')">
+              {{ 'YES' | translate }}
+            </button>
+            <button ion-button right small outline color="grey" (click)="set('rented','houseownership')">
+              {{ 'NO' | translate }}
+            </button>
+        </ion-buttons>
 
         <ion-item>
           <ion-label stacked>{{ 'CONDITIONOFFLOOR'| translate}}</ion-label>
@@ -138,13 +163,19 @@
           </ion-select>
         </ion-item>
 
-        <ion-item>
+        <ion-buttons padding>
           <ion-label stacked>{{'CONDITIONOFROOF'| translate}} </ion-label>
-          <ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface ='popover'>
+          <!--ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface ='popover'>
               <ion-option text-wrap value="poor"> {{ 'POORCONDITION' | translate }} </ion-option>
               <ion-option text-wrap value="working">{{ 'WORKINGCONDITION' | translate }}</ion-option>
-          </ion-select>
-        </ion-item>
+          </ion-select-->
+          <button ion-button small color="grey" (click)="set('poor','conditionoRoofinyourhouse')">
+            {{ 'POORCONDITION' | translate }}
+          </button>
+          <button ion-button right small outline color="grey" (click)="set('working','conditionoRoofinyourhouse')">
+            {{ 'WORKINGCONDITION' | translate }}
+          </button>
+        </ion-buttons>
       </accordion>
     </ion-item-group>
   </ion-card>

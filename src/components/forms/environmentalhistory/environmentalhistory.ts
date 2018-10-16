@@ -121,8 +121,18 @@ export class EnvironmentalHistoryForm {
     console.log(this.client.objectID);
   }
 
-  set(value:string,key){
-    this.environmentalHealth[key] = value;
+  /*
+    * Sets the Value of a key in the environmental Dictionary
+    * 
+    * @example
+    * set("Y","latrineAcess")
+    * 
+    * @param {string} value for dictionary key
+    * @param {string} dictionary key
+    * @returns 
+  */
+  set(value,key){
+    this.environmentalHealth[key]= value;
     console.log(this.environmentalHealth[key])
   }
 
