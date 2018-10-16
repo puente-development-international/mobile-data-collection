@@ -20,8 +20,8 @@
     <ion-item-group>
       <!--Context Within Community-->
       <ion-item>
-        <ion-label>{{ 'YEARSLIVEDINCOMM' | translate }}</ion-label>
-        <ion-select [(ngModel)]="environmentalHealth.yearsLivedinthecommunity" interface ='popover'>
+        <ion-label stacked>{{ 'YEARSLIVEDINCOMM' | translate }}</ion-label>
+        <ion-select  [(ngModel)]="environmentalHealth.yearsLivedinthecommunity" interface ='popover'>
             <ion-option text-wrap value="lessThan1"> {{ 'LESSTHAN1YEAR' | translate }} </ion-option>
             <ion-option text-wrap value="1-2"> {{ '1-2' | translate }}  </ion-option>
             <ion-option text-wrap value="3-4"> {{ '3-4' | translate }}  </ion-option>
@@ -31,7 +31,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-label>{{ 'YEARSLIVEDINTHISHOUSE' | translate }}</ion-label>
+        <ion-label stacked>{{ 'YEARSLIVEDINTHISHOUSE' | translate }}</ion-label>
         <ion-select [(ngModel)]="environmentalHealth.yearsLivedinThisHouse" interface ='popover'>
           <ion-option text-wrap value="lessThan1"> {{ 'LESSTHAN1YEAR' | translate }} </ion-option>
           <ion-option text-wrap value="1-2"> {{ '1-2' | translate }}  </ion-option>
@@ -42,8 +42,8 @@
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{ 'BIGGESTPROBLEMOFCOMMUNITY' | translate }} </ion-label>
-        <ion-input type="text" [(ngModel)]="environmentalHealth.biggestproblemofcommunity"></ion-input>
+        <ion-label stacked>{{ 'BIGGESTPROBLEMOFCOMMUNITY' | translate }} </ion-label>
+        <ion-textarea type="text" [(ngModel)]="environmentalHealth.biggestproblemofcommunity" placeholder="{{ 'BIGGESTPROBLEMOFCOMMUNITYSUB' | translate }}"></ion-textarea>
       </ion-item>
     </ion-item-group>
   </ion-card>
@@ -56,7 +56,7 @@
     <ion-item-group>
       <accordion [expanded]="accordionItems[0].expanded">
         <ion-item>
-          <ion-label>{{ 'OFTENACCESSWATER' | translate }} </ion-label>
+          <ion-label stacked>{{ 'OFTENACCESSWATER' | translate }} </ion-label>
           <ion-select [(ngModel)]="environmentalHealth.waterAccess" interface ='popover'>
               <ion-option text-wrap value="everyday"> {{ 'EVERYDAY' | translate }}  </ion-option>
               <ion-option text-wrap value="4-6AWeek"> {{ '4-6DAYSAWEEK' | translate }} </ion-option>
@@ -68,7 +68,7 @@
         </ion-item>
 
         <ion-item>
-          <ion-label>{{ 'TYPEOFWATER' | translate }} </ion-label>
+          <ion-label stacked>{{ 'TYPEOFWATER' | translate }} </ion-label>
           <ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface ='popover'>
               <ion-option text-wrap value="bottled"> {{ 'BOTTLED' | translate }} </ion-option>
               <ion-option text-wrap value="tap"> {{ 'TAP' | translate }}  </ion-option>
@@ -76,7 +76,7 @@
         </ion-item>
 
         <ion-item>
-          <ion-label>{{ 'ACCESSTOLATRINE' | translate }}  </ion-label>
+          <ion-label stacked>{{ 'ACCESSTOLATRINE' | translate }}  </ion-label>
           <ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface ='popover'>
               <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
@@ -84,7 +84,7 @@
         </ion-item>
 
         <ion-item>
-            <ion-label>{{ 'ACCESSTOCLINIC' | translate }} </ion-label>
+            <ion-label stacked>{{ 'ACCESSTOCLINIC' | translate }} </ion-label>
             <ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface ='popover'>
                 <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
                 <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
@@ -92,22 +92,22 @@
         </ion-item>
         
         <ion-item>
-            <ion-label floating>{{ 'WHEREDOYOUGOFORMEDICALPROBLEMS' | translate }} </ion-label>
-            <ion-input type="text" [(ngModel)]="environmentalHealth.medicalproblemswheredoyougo"></ion-input>
+            <ion-label stacked>{{ 'WHEREDOYOUGOFORMEDICALPROBLEMS' | translate }} </ion-label>
+            <ion-textarea type="text" [(ngModel)]="environmentalHealth.medicalproblemswheredoyougo" placeholder="{{ 'WHEREDOYOUGOFORMEDICALPROBLEMSSUB' | translate }}"></ion-textarea>
         </ion-item>
 
         <ion-item>
-          <ion-label floating>{{ 'WHEREDOYOUGOFORDENTALPROBLEMS'| translate}}</ion-label>
-          <ion-input type="text" [(ngModel)]="environmentalHealth.dentalproblemswheredoyougo"></ion-input>
+          <ion-label stacked>{{ 'WHEREDOYOUGOFORDENTALPROBLEMS'| translate}}</ion-label>
+          <ion-textarea type="text" [(ngModel)]="environmentalHealth.dentalproblemswheredoyougo" placeholder="{{ 'WHEREDOYOUGOFORDENTALPROBLEMSSUB' | translate }}"></ion-textarea>
         </ion-item>
 
         <ion-item>
-          <ion-label floating>{{ 'TIMESTRASHISCOLLECTED' | translate }} </ion-label>
-          <ion-input type="number" [(ngModel)]="environmentalHealth.timesperweektrashcollected"></ion-input>
+          <ion-label stacked>{{ 'TIMESTRASHISCOLLECTED' | translate }} </ion-label>
+          <ion-textarea type="number" [(ngModel)]="environmentalHealth.timesperweektrashcollected" placeholder="{{ 'TIMESTRASHISCOLLECTEDSUB' | translate }}"></ion-textarea>
         </ion-item>
         <ion-item>
-          <ion-label floating>{{ 'WHEREISTRASHLEFT' | translate }} </ion-label>
-          <ion-input type="text" [(ngModel)]="environmentalHealth.wheretrashleftbetweenpickups"></ion-input>
+          <ion-label stacked>{{ 'WHEREISTRASHLEFT' | translate }} </ion-label>
+          <ion-textarea type="text" [(ngModel)]="environmentalHealth.wheretrashleftbetweenpickups" placeholder="{{ 'WHEREISTRASHLEFTSUB' | translate }}"></ion-textarea>
         </ion-item>
       </accordion>
     </ion-item-group>
@@ -121,14 +121,15 @@
     <ion-item-group>
       <accordion [expanded]="accordionItems[1].expanded">
         <ion-item>
-          <ion-label>{{ 'HOUSEOWNERSHIP'| translate}}</ion-label>
+          <ion-label stacked>{{ 'HOUSEOWNERSHIP'| translate}}</ion-label>
           <ion-select [(ngModel)]="environmentalHealth.houseownership" interface ='popover'>
               <ion-option text-wrap value="owned"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="rented"> {{ 'NO' | translate }}</ion-option>
           </ion-select>
         </ion-item>
+
         <ion-item>
-          <ion-label>{{ 'CONDITIONOFFLOOR'| translate}}</ion-label>
+          <ion-label stacked>{{ 'CONDITIONOFFLOOR'| translate}}</ion-label>
           <ion-select [(ngModel)]="environmentalHealth.conditionoFloorinyourhouse" interface ='popover'>
               <ion-option text-wrap value="dirtPoor"> {{ 'DIRTFLOOR' | translate }} | {{ 'POORCONDITION' | translate }}  </ion-option>
               <ion-option text-wrap value="dirtWorking"> {{ 'DIRTFLOOR' | translate }} | {{ 'WORKINGCONDITION' | translate }}   </ion-option>
@@ -138,7 +139,7 @@
         </ion-item>
 
         <ion-item>
-          <ion-label>{{'CONDITIONOFROOF'| translate}} </ion-label>
+          <ion-label stacked>{{'CONDITIONOFROOF'| translate}} </ion-label>
           <ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface ='popover'>
               <ion-option text-wrap value="poor"> {{ 'POORCONDITION' | translate }} </ion-option>
               <ion-option text-wrap value="working">{{ 'WORKINGCONDITION' | translate }}</ion-option>
@@ -155,13 +156,13 @@
     <ion-item-group>
       <accordion [expanded]="accordionItems[2].expanded">
         <ion-item>
-          <ion-label floating>{{ 'NUMBERINHOUSE'| translate}}</ion-label>
-          <ion-input type="number" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse"></ion-input>
+          <ion-label stacked>{{ 'NUMBERINHOUSE'| translate}}</ion-label>
+          <ion-textarea type="number" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse" placeholder="{{ 'NUMBERINHOUSESUB'| translate}}"></ion-textarea>
         </ion-item>
 
         <ion-item>
-          <ion-label floating>{{ 'NUMBERINHOUSEUNDERFIVE'| translate}}</ion-label>
-          <ion-input type="number" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5"></ion-input>
+          <ion-label stacked>{{ 'NUMBERINHOUSEUNDERFIVE'| translate}}</ion-label>
+          <ion-textarea type="number" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5" placeholder="{{ 'NUMBERINHOUSEUNDERFIVESUB' | translate }}"></ion-textarea>
         </ion-item>
       </accordion>
     </ion-item-group>

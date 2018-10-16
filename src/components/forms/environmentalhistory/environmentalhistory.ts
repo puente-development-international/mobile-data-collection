@@ -121,6 +121,11 @@ export class EnvironmentalHistoryForm {
     console.log(this.client.objectID);
   }
 
+  set(value:string,key){
+    this.environmentalHealth[key] = value;
+    console.log(this.environmentalHealth[key])
+  }
+
 
 
 }
