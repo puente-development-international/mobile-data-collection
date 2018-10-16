@@ -8,7 +8,7 @@
     "android:build:staging": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android",
     "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release -- --buildFlag='-UseModernBuildSystem=0'",
     "ios:emulate": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'",
-    "compodoc": "./node_modules/.bin/compodoc -d ./docs/ -p ./tsconfig.json"
+    "doc": "./node_modules/.bin/compodoc -d ./docs/ -p ./tsconfig.json"
   },
   "dependencies": {
     "@angular/common": "4.1.0",
@@ -72,8 +72,8 @@
     },
     "platforms": [
       "browser",
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   },
   "cordovaPlugins": [],

@@ -975,7 +975,7 @@
                             <div>
                                     <b>Example :</b>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-html">basicQuery(0,1000,&amp;#39;SurveyData&amp;#39;,&amp;#39;organization&amp;#39;,&amp;quot;Puente&amp;quot;)</code></pre>
+                                            <pre class="line-numbers"><code class="language-html">basicQuery(0,1000,SurveyData,organization,Puente)</code></pre>
                                         </div>
                             </div>
                             <div class="io-description">
@@ -1074,7 +1074,7 @@
                             <div>
                                     <b>Example :</b>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-html">genericQuery(&amp;#39;SurveyData&amp;#39;,&amp;quot;organization&amp;quot;)</code></pre>
+                                            <pre class="line-numbers"><code class="language-html">genericQuery(SurveyData,organization)</code></pre>
                                         </div>
                             </div>
                             <div class="io-description">
@@ -1233,7 +1233,7 @@
                             <div>
                                     <b>Example :</b>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-html">geoQuery(30,86,2000,&amp;quot;SurveyData&amp;quot;,&amp;quot;organization&amp;quot;,&amp;quot;Puente&amp;quot;)</code></pre>
+                                            <pre class="line-numbers"><code class="language-html">geoQuery(30,86,2000,SurveyData,&amp;quot;organization&amp;quot;,&amp;quot;Puente&amp;quot;)</code></pre>
                                         </div>
                             </div>
                             <div class="io-description">
@@ -1449,7 +1449,7 @@ export class QueryServiceProvider {
   * Queries results based on the Object and Column
   * 
   * @example
-  * genericQuery(&#x27;SurveyData&#x27;,&quot;organization&quot;)
+  * genericQuery(SurveyData,organization)
   * 
   * @param {string} parseObject Name of the Backend Model
   * @param {string} parseColumn Name of the Column in the Backend Model
@@ -1487,7 +1487,7 @@ export class QueryServiceProvider {
   * Performs a query based on the parameter defined in a column
   * 
   * @example
-  * basicQuery(0,1000,&#x27;SurveyData&#x27;,&#x27;organization&#x27;,&quot;Puente&quot;)
+  * basicQuery(0,1000,SurveyData,organization,Puente)
   * 
   * @param {number} offset First number
   * @param {number} limit Max limit of results
@@ -1533,7 +1533,7 @@ export class QueryServiceProvider {
   * Performs a query based on parameter based on geolocation
   * 
   * @example
-  * geoQuery(30,86,2000,&quot;SurveyData&quot;,&quot;organization&quot;,&quot;Puente&quot;)
+  * geoQuery(30,86,2000,SurveyData,&quot;organization&quot;,&quot;Puente&quot;)
   * 
   * @param {number} a First number
   * @param {number} b Second number

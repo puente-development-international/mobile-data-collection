@@ -822,6 +822,9 @@
                             <li>
                                 <a href="#post_n_clear">post_n_clear</a>
                             </li>
+                            <li>
+                                <a href="#set">set</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -1053,7 +1056,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/components/forms/environmentalhistory/environmentalhistory.ts:115</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/components/forms/environmentalhistory/environmentalhistory.ts:123</a></div>
                             </td>
                         </tr>
 
@@ -1130,6 +1133,80 @@
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="set"></a>
+                        <span class="name">
+                            <b>
+                            set
+                            </b>
+                            <a href="#set"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>set(value: , key: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/components/forms/environmentalhistory/environmentalhistory.ts:142</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>key</td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -1483,7 +1560,7 @@ export class EnvironmentalHistoryForm {
       this.client.fname&#x3D;null; 
       this.client.lname&#x3D;null;
       this.isenabled&#x3D;false;
-      this.themeCtrl.toasting(&#x27;Submitted| Entregado&#x27;, &quot;bottom&quot;);
+      this.themeCtrl.toasting(&#x27;Submitted | Entregado&#x27;, &quot;bottom&quot;);
     }, (error) &#x3D;&gt; {
       console.log(error);
       alert(&#x27;Error Confirming.&#x27;);
@@ -1511,7 +1588,15 @@ export class EnvironmentalHistoryForm {
     });
 
   }
-
+  /*
+    * Retrieves objectID from page content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
   inputObjectIDfromComponent(selectedItem) {
     this.isenabled&#x3D;true;
     this.client.objectID&#x3D; selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
@@ -1519,6 +1604,21 @@ export class EnvironmentalHistoryForm {
     this.client.lname &#x3D; selectedItem.get(&#x27;lname&#x27;);
     this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
+  }
+
+  /*
+    * Sets the Value of a key in the environmental Dictionary
+    * 
+    * @example
+    * set(&quot;Y&quot;,&quot;latrineAcess&quot;)
+    * 
+    * @param {string} value for dictionary key
+    * @param {string} dictionary key
+    * @returns 
+  */
+  set(value,key){
+    this.environmentalHealth[key]&#x3D; value;
+    console.log(this.environmentalHealth[key])
   }
 
 
@@ -1550,8 +1650,8 @@ export class EnvironmentalHistoryForm {
     &lt;ion-item-group&gt;
       &lt;!--Context Within Community--&gt;
       &lt;ion-item&gt;
-        &lt;ion-label&gt;{{ &#x27;YEARSLIVEDINCOMM&#x27; | translate }}&lt;/ion-label&gt;
-        &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.yearsLivedinthecommunity&quot; interface &#x3D;&#x27;popover&#x27;&gt;
+        &lt;ion-label stacked&gt;{{ &#x27;YEARSLIVEDINCOMM&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-select  [(ngModel)]&#x3D;&quot;environmentalHealth.yearsLivedinthecommunity&quot; interface &#x3D;&#x27;popover&#x27;&gt;
             &lt;ion-option text-wrap value&#x3D;&quot;lessThan1&quot;&gt; {{ &#x27;LESSTHAN1YEAR&#x27; | translate }} &lt;/ion-option&gt;
             &lt;ion-option text-wrap value&#x3D;&quot;1-2&quot;&gt; {{ &#x27;1-2&#x27; | translate }}  &lt;/ion-option&gt;
             &lt;ion-option text-wrap value&#x3D;&quot;3-4&quot;&gt; {{ &#x27;3-4&#x27; | translate }}  &lt;/ion-option&gt;
@@ -1561,7 +1661,7 @@ export class EnvironmentalHistoryForm {
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label&gt;{{ &#x27;YEARSLIVEDINTHISHOUSE&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{ &#x27;YEARSLIVEDINTHISHOUSE&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.yearsLivedinThisHouse&quot; interface &#x3D;&#x27;popover&#x27;&gt;
           &lt;ion-option text-wrap value&#x3D;&quot;lessThan1&quot;&gt; {{ &#x27;LESSTHAN1YEAR&#x27; | translate }} &lt;/ion-option&gt;
           &lt;ion-option text-wrap value&#x3D;&quot;1-2&quot;&gt; {{ &#x27;1-2&#x27; | translate }}  &lt;/ion-option&gt;
@@ -1572,21 +1672,21 @@ export class EnvironmentalHistoryForm {
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{ &#x27;BIGGESTPROBLEMOFCOMMUNITY&#x27; | translate }} &lt;/ion-label&gt;
-        &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.biggestproblemofcommunity&quot;&gt;&lt;/ion-input&gt;
+        &lt;ion-label stacked&gt;{{ &#x27;BIGGESTPROBLEMOFCOMMUNITY&#x27; | translate }} &lt;/ion-label&gt;
+        &lt;ion-textarea type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.biggestproblemofcommunity&quot; placeholder&#x3D;&quot;{{ &#x27;BIGGESTPROBLEMOFCOMMUNITYSUB&#x27; | translate }}&quot;&gt;&lt;/ion-textarea&gt;
       &lt;/ion-item&gt;
     &lt;/ion-item-group&gt;
   &lt;/ion-card&gt;
 
   &lt;!--Accessibility--&gt;
   &lt;ion-card&gt;
-      &lt;ion-card-header class&#x3D;&#x27;card-title&#x27; (click)&#x3D;&quot;expandItem(accordionItems[0])&quot;&gt;
+      &lt;ion-card-header ion-text text-wrap class&#x3D;&#x27;card-title&#x27; (click)&#x3D;&quot;expandItem(accordionItems[0])&quot;&gt;
         {{ &#x27;ACCESSIBILITY&#x27; | translate }}
       &lt;/ion-card-header&gt;
     &lt;ion-item-group&gt;
       &lt;accordion [expanded]&#x3D;&quot;accordionItems[0].expanded&quot;&gt;
         &lt;ion-item&gt;
-          &lt;ion-label&gt;{{ &#x27;OFTENACCESSWATER&#x27; | translate }} &lt;/ion-label&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;OFTENACCESSWATER&#x27; | translate }} &lt;/ion-label&gt;
           &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.waterAccess&quot; interface &#x3D;&#x27;popover&#x27;&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;everyday&quot;&gt; {{ &#x27;EVERYDAY&#x27; | translate }}  &lt;/ion-option&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;4-6AWeek&quot;&gt; {{ &#x27;4-6DAYSAWEEK&#x27; | translate }} &lt;/ion-option&gt;
@@ -1597,47 +1697,65 @@ export class EnvironmentalHistoryForm {
           &lt;/ion-select&gt;
         &lt;/ion-item&gt;
 
-        &lt;ion-item&gt;
-          &lt;ion-label&gt;{{ &#x27;TYPEOFWATER&#x27; | translate }} &lt;/ion-label&gt;
-          &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.typeofWaterdoyoudrink&quot; interface &#x3D;&#x27;popover&#x27;&gt;
+        &lt;ion-buttons padding-horizontal&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;TYPEOFWATER&#x27; | translate }} &lt;/ion-label&gt;
+          &lt;!--ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.typeofWaterdoyoudrink&quot; interface &#x3D;&#x27;popover&#x27;&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;bottled&quot;&gt; {{ &#x27;BOTTLED&#x27; | translate }} &lt;/ion-option&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;tap&quot;&gt; {{ &#x27;TAP&#x27; | translate }}  &lt;/ion-option&gt;
-          &lt;/ion-select&gt;
-        &lt;/ion-item&gt;
+          &lt;/ion-select--&gt;
+          &lt;button ion-button small color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;bottled&#x27;,&#x27;typeofWaterdoyoudrink&#x27;)&quot;&gt;
+              {{ &#x27;BOTTLED&#x27; | translate }}
+            &lt;/button&gt;
+            &lt;button ion-button right small outline color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;tap&#x27;,&#x27;typeofWaterdoyoudrink&#x27;)&quot;&gt;
+              {{ &#x27;TAP&#x27; | translate }}
+            &lt;/button&gt;
+        &lt;/ion-buttons&gt;
 
-        &lt;ion-item&gt;
-          &lt;ion-label&gt;{{ &#x27;ACCESSTOLATRINE&#x27; | translate }}  &lt;/ion-label&gt;
-          &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.latrineAccess&quot; interface &#x3D;&#x27;popover&#x27;&gt;
+        &lt;ion-buttons padding-horizontal&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;ACCESSTOLATRINE&#x27; | translate }}  &lt;/ion-label&gt;
+          &lt;!--ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.latrineAccess&quot; interface &#x3D;&#x27;popover&#x27;&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;Y&quot;&gt; {{ &#x27;YES&#x27; | translate }} &lt;/ion-option&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;N&quot;&gt; {{ &#x27;NO&#x27; | translate }} &lt;/ion-option&gt;
-          &lt;/ion-select&gt;
-        &lt;/ion-item&gt;
+          &lt;/ion-select--&gt;
+          &lt;button ion-button small color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;Y&#x27;,&#x27;latrineAccess&#x27;)&quot;&gt;
+            {{ &#x27;YES&#x27; | translate }}
+          &lt;/button&gt;
+          &lt;button ion-button right small outline color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;N&#x27;,&#x27;latrineAccess&#x27;)&quot;&gt;
+            {{ &#x27;NO&#x27; | translate }}
+          &lt;/button&gt;
+        &lt;/ion-buttons&gt;
 
-        &lt;ion-item&gt;
-            &lt;ion-label&gt;{{ &#x27;ACCESSTOCLINIC&#x27; | translate }} &lt;/ion-label&gt;
-            &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.clinicAccess&quot; interface &#x3D;&#x27;popover&#x27;&gt;
-                &lt;ion-option text-wrap value&#x3D;&quot;Y&quot;&gt; {{ &#x27;YES&#x27; | translate }} &lt;/ion-option&gt;
-                &lt;ion-option text-wrap value&#x3D;&quot;N&quot;&gt; {{ &#x27;NO&#x27; | translate }} &lt;/ion-option&gt;
-            &lt;/ion-select&gt;
-        &lt;/ion-item&gt;
+        &lt;ion-buttons padding-horizontal&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;ACCESSTOCLINIC&#x27; | translate }} &lt;/ion-label&gt;
+          &lt;!--ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.clinicAccess&quot; interface &#x3D;&#x27;popover&#x27;&gt;
+              &lt;ion-option text-wrap value&#x3D;&quot;Y&quot;&gt; {{ &#x27;YES&#x27; | translate }} &lt;/ion-option&gt;
+              &lt;ion-option text-wrap value&#x3D;&quot;N&quot;&gt; {{ &#x27;NO&#x27; | translate }} &lt;/ion-option&gt;
+          &lt;/ion-select--&gt;
+          &lt;button ion-button small color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;Y&#x27;,&#x27;clinicAccess&#x27;)&quot;&gt;
+              {{ &#x27;YES&#x27; | translate }}
+            &lt;/button&gt;
+            &lt;button ion-button right small outline color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;N&#x27;,&#x27;clinicAccess&#x27;)&quot;&gt;
+              {{ &#x27;NO&#x27; | translate }}
+            &lt;/button&gt;
+        &lt;/ion-buttons&gt;
         
         &lt;ion-item&gt;
-            &lt;ion-label floating&gt;{{ &#x27;WHEREDOYOUGOFORMEDICALPROBLEMS&#x27; | translate }} &lt;/ion-label&gt;
-            &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.medicalproblemswheredoyougo&quot;&gt;&lt;/ion-input&gt;
+            &lt;ion-label stacked&gt;{{ &#x27;WHEREDOYOUGOFORMEDICALPROBLEMS&#x27; | translate }} &lt;/ion-label&gt;
+            &lt;ion-textarea type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.medicalproblemswheredoyougo&quot; placeholder&#x3D;&quot;{{ &#x27;WHEREDOYOUGOFORMEDICALPROBLEMSSUB&#x27; | translate }}&quot;&gt;&lt;/ion-textarea&gt;
         &lt;/ion-item&gt;
 
         &lt;ion-item&gt;
-          &lt;ion-label floating&gt;{{ &#x27;WHEREDOYOUGOFORDENTALPROBLEMS&#x27;| translate}}&lt;/ion-label&gt;
-          &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.dentalproblemswheredoyougo&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;WHEREDOYOUGOFORDENTALPROBLEMS&#x27;| translate}}&lt;/ion-label&gt;
+          &lt;ion-textarea type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.dentalproblemswheredoyougo&quot; placeholder&#x3D;&quot;{{ &#x27;WHEREDOYOUGOFORDENTALPROBLEMSSUB&#x27; | translate }}&quot;&gt;&lt;/ion-textarea&gt;
         &lt;/ion-item&gt;
 
         &lt;ion-item&gt;
-          &lt;ion-label floating&gt;{{ &#x27;TIMESTRASHISCOLLECTED&#x27; | translate }} &lt;/ion-label&gt;
-          &lt;ion-input type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.timesperweektrashcollected&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;TIMESTRASHISCOLLECTED&#x27; | translate }} &lt;/ion-label&gt;
+          &lt;ion-textarea type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.timesperweektrashcollected&quot; placeholder&#x3D;&quot;{{ &#x27;TIMESTRASHISCOLLECTEDSUB&#x27; | translate }}&quot;&gt;&lt;/ion-textarea&gt;
         &lt;/ion-item&gt;
         &lt;ion-item&gt;
-          &lt;ion-label floating&gt;{{ &#x27;WHEREISTRASHLEFT&#x27; | translate }} &lt;/ion-label&gt;
-          &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.wheretrashleftbetweenpickups&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;WHEREISTRASHLEFT&#x27; | translate }} &lt;/ion-label&gt;
+          &lt;ion-textarea type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.wheretrashleftbetweenpickups&quot; placeholder&#x3D;&quot;{{ &#x27;WHEREISTRASHLEFTSUB&#x27; | translate }}&quot;&gt;&lt;/ion-textarea&gt;
         &lt;/ion-item&gt;
       &lt;/accordion&gt;
     &lt;/ion-item-group&gt;
@@ -1645,20 +1763,28 @@ export class EnvironmentalHistoryForm {
 
   &lt;!--Housing Conditions--&gt;
   &lt;ion-card&gt;
-    &lt;ion-card-header class&#x3D;&#x27;card-title&#x27; (click)&#x3D;&quot;expandItem(accordionItems[1])&quot;&gt;
+    &lt;ion-card-header ion-text text-wrap class&#x3D;&#x27;card-title&#x27; (click)&#x3D;&quot;expandItem(accordionItems[1])&quot;&gt;
       {{ &#x27;HOUSINGCONDITIONS&#x27;| translate}}
     &lt;/ion-card-header&gt;
     &lt;ion-item-group&gt;
       &lt;accordion [expanded]&#x3D;&quot;accordionItems[1].expanded&quot;&gt;
-        &lt;ion-item&gt;
-          &lt;ion-label&gt;{{ &#x27;HOUSEOWNERSHIP&#x27;| translate}}&lt;/ion-label&gt;
-          &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.houseownership&quot; interface &#x3D;&#x27;popover&#x27;&gt;
+
+        &lt;ion-buttons padding-horizontal&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;HOUSEOWNERSHIP&#x27;| translate}}&lt;/ion-label&gt;
+          &lt;!--ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.houseownership&quot; interface &#x3D;&#x27;popover&#x27;&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;owned&quot;&gt; {{ &#x27;YES&#x27; | translate }} &lt;/ion-option&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;rented&quot;&gt; {{ &#x27;NO&#x27; | translate }}&lt;/ion-option&gt;
-          &lt;/ion-select&gt;
-        &lt;/ion-item&gt;
+          &lt;/ion-select--&gt;
+          &lt;button ion-button small color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;owned&#x27;,&#x27;houseownership&#x27;)&quot;&gt;
+              {{ &#x27;YES&#x27; | translate }}
+            &lt;/button&gt;
+            &lt;button ion-button right small outline color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;rented&#x27;,&#x27;houseownership&#x27;)&quot;&gt;
+              {{ &#x27;NO&#x27; | translate }}
+          &lt;/button&gt;
+        &lt;/ion-buttons&gt;
+
         &lt;ion-item&gt;
-          &lt;ion-label&gt;{{ &#x27;CONDITIONOFFLOOR&#x27;| translate}}&lt;/ion-label&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;CONDITIONOFFLOOR&#x27;| translate}}&lt;/ion-label&gt;
           &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.conditionoFloorinyourhouse&quot; interface &#x3D;&#x27;popover&#x27;&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;dirtPoor&quot;&gt; {{ &#x27;DIRTFLOOR&#x27; | translate }} | {{ &#x27;POORCONDITION&#x27; | translate }}  &lt;/ion-option&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;dirtWorking&quot;&gt; {{ &#x27;DIRTFLOOR&#x27; | translate }} | {{ &#x27;WORKINGCONDITION&#x27; | translate }}   &lt;/ion-option&gt;
@@ -1667,31 +1793,37 @@ export class EnvironmentalHistoryForm {
           &lt;/ion-select&gt;
         &lt;/ion-item&gt;
 
-        &lt;ion-item&gt;
-          &lt;ion-label&gt;{{&#x27;CONDITIONOFROOF&#x27;| translate}} &lt;/ion-label&gt;
-          &lt;ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.conditionoRoofinyourhouse&quot; interface &#x3D;&#x27;popover&#x27;&gt;
+        &lt;ion-buttons padding-horizontal&gt;
+          &lt;ion-label stacked&gt;{{&#x27;CONDITIONOFROOF&#x27;| translate}} &lt;/ion-label&gt;
+          &lt;!--ion-select [(ngModel)]&#x3D;&quot;environmentalHealth.conditionoRoofinyourhouse&quot; interface &#x3D;&#x27;popover&#x27;&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;poor&quot;&gt; {{ &#x27;POORCONDITION&#x27; | translate }} &lt;/ion-option&gt;
               &lt;ion-option text-wrap value&#x3D;&quot;working&quot;&gt;{{ &#x27;WORKINGCONDITION&#x27; | translate }}&lt;/ion-option&gt;
-          &lt;/ion-select&gt;
-        &lt;/ion-item&gt;
+          &lt;/ion-select--&gt;
+          &lt;button ion-button small color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;poor&#x27;,&#x27;conditionoRoofinyourhouse&#x27;)&quot;&gt;
+            {{ &#x27;POORCONDITION&#x27; | translate }}
+          &lt;/button&gt;
+          &lt;button ion-button right small outline color&#x3D;&quot;primary-darkest&quot; (click)&#x3D;&quot;set(&#x27;working&#x27;,&#x27;conditionoRoofinyourhouse&#x27;)&quot;&gt;
+            {{ &#x27;WORKINGCONDITION&#x27; | translate }}
+          &lt;/button&gt;
+        &lt;/ion-buttons&gt;
       &lt;/accordion&gt;
     &lt;/ion-item-group&gt;
   &lt;/ion-card&gt;
 
   &lt;ion-card&gt;
-    &lt;ion-card-header class&#x3D;&quot;card-title&quot; (click)&#x3D;&quot;expandItem(accordionItems[2])&quot;&gt;
+    &lt;ion-card-header ion-text text-wrap class&#x3D;&quot;card-title&quot; (click)&#x3D;&quot;expandItem(accordionItems[2])&quot;&gt;
       {{ &#x27;POPULATION&#x27;| translate}}
     &lt;/ion-card-header&gt;
     &lt;ion-item-group&gt;
       &lt;accordion [expanded]&#x3D;&quot;accordionItems[2].expanded&quot;&gt;
         &lt;ion-item&gt;
-          &lt;ion-label floating&gt;{{ &#x27;NUMBERINHOUSE&#x27;| translate}}&lt;/ion-label&gt;
-          &lt;ion-input type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.numberofIndividualsLivingintheHouse&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;NUMBERINHOUSE&#x27;| translate}}&lt;/ion-label&gt;
+          &lt;ion-textarea type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.numberofIndividualsLivingintheHouse&quot; placeholder&#x3D;&quot;{{ &#x27;NUMBERINHOUSESUB&#x27;| translate}}&quot;&gt;&lt;/ion-textarea&gt;
         &lt;/ion-item&gt;
 
         &lt;ion-item&gt;
-          &lt;ion-label floating&gt;{{ &#x27;NUMBERINHOUSEUNDERFIVE&#x27;| translate}}&lt;/ion-label&gt;
-          &lt;ion-input type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-label stacked&gt;{{ &#x27;NUMBERINHOUSEUNDERFIVE&#x27;| translate}}&lt;/ion-label&gt;
+          &lt;ion-textarea type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5&quot; placeholder&#x3D;&quot;{{ &#x27;NUMBERINHOUSEUNDERFIVESUB&#x27; | translate }}&quot;&gt;&lt;/ion-textarea&gt;
         &lt;/ion-item&gt;
       &lt;/accordion&gt;
     &lt;/ion-item-group&gt;
@@ -1738,7 +1870,7 @@ export class EnvironmentalHistoryForm {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-content>  <!--Environmental Health -->  <ion-card>        <ion-item color=\'primary-dark\' (click)="contentDrawer.openDrawer()">      {{ \'CLIENT\' | translate }}      <ion-label>{{client.fname}} {{client.fname}}</ion-label>      <button ion-button outline item-start (click)="close()" large>          <ion-icon name="arrow-round-back" ></ion-icon>      </button>      <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()" large>          <ion-icon name="person" color="white"></ion-icon>      </button>    </ion-item>    <ion-card-header ion-text text-wrap class=\'card-title\'>      {{ \'CONTEXTWITHINCOMMUNITY\' | translate }}    </ion-card-header>    <ion-item-group>      <!--Context Within Community-->      <ion-item>        <ion-label>{{ \'YEARSLIVEDINCOMM\' | translate }}</ion-label>        <ion-select [(ngModel)]="environmentalHealth.yearsLivedinthecommunity" interface =\'popover\'>            <ion-option text-wrap value="lessThan1"> {{ \'LESSTHAN1YEAR\' | translate }} </ion-option>            <ion-option text-wrap value="1-2"> {{ \'1-2\' | translate }}  </ion-option>            <ion-option text-wrap value="3-4"> {{ \'3-4\' | translate }}  </ion-option>            <ion-option text-wrap value="5-10"> {{ \'5-10\' | translate }} </ion-option>            <ion-option text-wrap value="moreThan10"> {{ \'10+\' | translate }}  </ion-option>          </ion-select>      </ion-item>      <ion-item>        <ion-label>{{ \'YEARSLIVEDINTHISHOUSE\' | translate }}</ion-label>        <ion-select [(ngModel)]="environmentalHealth.yearsLivedinThisHouse" interface =\'popover\'>          <ion-option text-wrap value="lessThan1"> {{ \'LESSTHAN1YEAR\' | translate }} </ion-option>          <ion-option text-wrap value="1-2"> {{ \'1-2\' | translate }}  </ion-option>          <ion-option text-wrap value="3-4"> {{ \'3-4\' | translate }}  </ion-option>          <ion-option text-wrap value="5-10"> {{ \'5-10\' | translate }} </ion-option>          <ion-option text-wrap value="moreThan10"> {{ \'10+\' | translate }}  </ion-option>        </ion-select>      </ion-item>      <ion-item>        <ion-label floating>{{ \'BIGGESTPROBLEMOFCOMMUNITY\' | translate }} </ion-label>        <ion-input type="text" [(ngModel)]="environmentalHealth.biggestproblemofcommunity"></ion-input>      </ion-item>    </ion-item-group>  </ion-card>  <!--Accessibility-->  <ion-card>      <ion-card-header class=\'card-title\' (click)="expandItem(accordionItems[0])">        {{ \'ACCESSIBILITY\' | translate }}      </ion-card-header>    <ion-item-group>      <accordion [expanded]="accordionItems[0].expanded">        <ion-item>          <ion-label>{{ \'OFTENACCESSWATER\' | translate }} </ion-label>          <ion-select [(ngModel)]="environmentalHealth.waterAccess" interface =\'popover\'>              <ion-option text-wrap value="everyday"> {{ \'EVERYDAY\' | translate }}  </ion-option>              <ion-option text-wrap value="4-6AWeek"> {{ \'4-6DAYSAWEEK\' | translate }} </ion-option>              <ion-option text-wrap value="2-3AWeek"> {{ \'2-3DAYSAWEEK\' | translate }} </ion-option>              <ion-option text-wrap value="1AWeek"> {{ \'LESSTHAN1DAYAWEEK\' | translate }}  </ion-option>              <ion-option text-wrap value="1AMonth"> {{ \'1DAYAMONTH\' | translate }}  </ion-option>              <ion-option text-wrap value="Never"> {{ \'NEVER\' | translate }} </ion-option>          </ion-select>        </ion-item>        <ion-item>          <ion-label>{{ \'TYPEOFWATER\' | translate }} </ion-label>          <ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface =\'popover\'>              <ion-option text-wrap value="bottled"> {{ \'BOTTLED\' | translate }} </ion-option>              <ion-option text-wrap value="tap"> {{ \'TAP\' | translate }}  </ion-option>          </ion-select>        </ion-item>        <ion-item>          <ion-label>{{ \'ACCESSTOLATRINE\' | translate }}  </ion-label>          <ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface =\'popover\'>              <ion-option text-wrap value="Y"> {{ \'YES\' | translate }} </ion-option>              <ion-option text-wrap value="N"> {{ \'NO\' | translate }} </ion-option>          </ion-select>        </ion-item>        <ion-item>            <ion-label>{{ \'ACCESSTOCLINIC\' | translate }} </ion-label>            <ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface =\'popover\'>                <ion-option text-wrap value="Y"> {{ \'YES\' | translate }} </ion-option>                <ion-option text-wrap value="N"> {{ \'NO\' | translate }} </ion-option>            </ion-select>        </ion-item>                <ion-item>            <ion-label floating>{{ \'WHEREDOYOUGOFORMEDICALPROBLEMS\' | translate }} </ion-label>            <ion-input type="text" [(ngModel)]="environmentalHealth.medicalproblemswheredoyougo"></ion-input>        </ion-item>        <ion-item>          <ion-label floating>{{ \'WHEREDOYOUGOFORDENTALPROBLEMS\'| translate}}</ion-label>          <ion-input type="text" [(ngModel)]="environmentalHealth.dentalproblemswheredoyougo"></ion-input>        </ion-item>        <ion-item>          <ion-label floating>{{ \'TIMESTRASHISCOLLECTED\' | translate }} </ion-label>          <ion-input type="number" [(ngModel)]="environmentalHealth.timesperweektrashcollected"></ion-input>        </ion-item>        <ion-item>          <ion-label floating>{{ \'WHEREISTRASHLEFT\' | translate }} </ion-label>          <ion-input type="text" [(ngModel)]="environmentalHealth.wheretrashleftbetweenpickups"></ion-input>        </ion-item>      </accordion>    </ion-item-group>  </ion-card>  <!--Housing Conditions-->  <ion-card>    <ion-card-header class=\'card-title\' (click)="expandItem(accordionItems[1])">      {{ \'HOUSINGCONDITIONS\'| translate}}    </ion-card-header>    <ion-item-group>      <accordion [expanded]="accordionItems[1].expanded">        <ion-item>          <ion-label>{{ \'HOUSEOWNERSHIP\'| translate}}</ion-label>          <ion-select [(ngModel)]="environmentalHealth.houseownership" interface =\'popover\'>              <ion-option text-wrap value="owned"> {{ \'YES\' | translate }} </ion-option>              <ion-option text-wrap value="rented"> {{ \'NO\' | translate }}</ion-option>          </ion-select>        </ion-item>        <ion-item>          <ion-label>{{ \'CONDITIONOFFLOOR\'| translate}}</ion-label>          <ion-select [(ngModel)]="environmentalHealth.conditionoFloorinyourhouse" interface =\'popover\'>              <ion-option text-wrap value="dirtPoor"> {{ \'DIRTFLOOR\' | translate }} | {{ \'POORCONDITION\' | translate }}  </ion-option>              <ion-option text-wrap value="dirtWorking"> {{ \'DIRTFLOOR\' | translate }} | {{ \'WORKINGCONDITION\' | translate }}   </ion-option>              <ion-option text-wrap value="cementPoor"> {{ \'CEMENTFLOOR\' | translate }} | {{ \'POORCONDITION\' | translate }}  </ion-option>              <ion-option text-wrap value="cementWorking"> {{ \'CEMENTFLOOR\' | translate }} | {{ \'WORKINGCONDITION\' | translate }}  </ion-option>          </ion-select>        </ion-item>        <ion-item>          <ion-label>{{\'CONDITIONOFROOF\'| translate}} </ion-label>          <ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface =\'popover\'>              <ion-option text-wrap value="poor"> {{ \'POORCONDITION\' | translate }} </ion-option>              <ion-option text-wrap value="working">{{ \'WORKINGCONDITION\' | translate }}</ion-option>          </ion-select>        </ion-item>      </accordion>    </ion-item-group>  </ion-card>  <ion-card>    <ion-card-header class="card-title" (click)="expandItem(accordionItems[2])">      {{ \'POPULATION\'| translate}}    </ion-card-header>    <ion-item-group>      <accordion [expanded]="accordionItems[2].expanded">        <ion-item>          <ion-label floating>{{ \'NUMBERINHOUSE\'| translate}}</ion-label>          <ion-input type="number" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse"></ion-input>        </ion-item>        <ion-item>          <ion-label floating>{{ \'NUMBERINHOUSEUNDERFIVE\'| translate}}</ion-label>          <ion-input type="number" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5"></ion-input>        </ion-item>      </accordion>    </ion-item-group>  </ion-card>    <!--Submission-->  <ion-card>    <ion-item no-lines>      <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" [disabled]="!isenabled" >        <ion-icon name="checkmark-circle"></ion-icon>        {{\'SUBMIT\'| translate}}      </button>    </ion-item>  </ion-card></ion-content><content-drawer [options]="drawerOptions" #ContentDrawerComponent>  <searchbar-object-id (emitObjectIDfromComponent)=\'inputObjectIDfromComponent($event)\'></searchbar-object-id></content-drawer></div>'
+        var COMPONENT_TEMPLATE = '<div><ion-content>  <!--Environmental Health -->  <ion-card>        <ion-item color=\'primary-dark\' (click)="contentDrawer.openDrawer()">      {{ \'CLIENT\' | translate }}      <ion-label>{{client.fname}} {{client.fname}}</ion-label>      <button ion-button outline item-start (click)="close()" large>          <ion-icon name="arrow-round-back" ></ion-icon>      </button>      <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()" large>          <ion-icon name="person" color="white"></ion-icon>      </button>    </ion-item>    <ion-card-header ion-text text-wrap class=\'card-title\'>      {{ \'CONTEXTWITHINCOMMUNITY\' | translate }}    </ion-card-header>    <ion-item-group>      <!--Context Within Community-->      <ion-item>        <ion-label stacked>{{ \'YEARSLIVEDINCOMM\' | translate }}</ion-label>        <ion-select  [(ngModel)]="environmentalHealth.yearsLivedinthecommunity" interface =\'popover\'>            <ion-option text-wrap value="lessThan1"> {{ \'LESSTHAN1YEAR\' | translate }} </ion-option>            <ion-option text-wrap value="1-2"> {{ \'1-2\' | translate }}  </ion-option>            <ion-option text-wrap value="3-4"> {{ \'3-4\' | translate }}  </ion-option>            <ion-option text-wrap value="5-10"> {{ \'5-10\' | translate }} </ion-option>            <ion-option text-wrap value="moreThan10"> {{ \'10+\' | translate }}  </ion-option>          </ion-select>      </ion-item>      <ion-item>        <ion-label stacked>{{ \'YEARSLIVEDINTHISHOUSE\' | translate }}</ion-label>        <ion-select [(ngModel)]="environmentalHealth.yearsLivedinThisHouse" interface =\'popover\'>          <ion-option text-wrap value="lessThan1"> {{ \'LESSTHAN1YEAR\' | translate }} </ion-option>          <ion-option text-wrap value="1-2"> {{ \'1-2\' | translate }}  </ion-option>          <ion-option text-wrap value="3-4"> {{ \'3-4\' | translate }}  </ion-option>          <ion-option text-wrap value="5-10"> {{ \'5-10\' | translate }} </ion-option>          <ion-option text-wrap value="moreThan10"> {{ \'10+\' | translate }}  </ion-option>        </ion-select>      </ion-item>      <ion-item>        <ion-label stacked>{{ \'BIGGESTPROBLEMOFCOMMUNITY\' | translate }} </ion-label>        <ion-textarea type="text" [(ngModel)]="environmentalHealth.biggestproblemofcommunity" placeholder="{{ \'BIGGESTPROBLEMOFCOMMUNITYSUB\' | translate }}"></ion-textarea>      </ion-item>    </ion-item-group>  </ion-card>  <!--Accessibility-->  <ion-card>      <ion-card-header ion-text text-wrap class=\'card-title\' (click)="expandItem(accordionItems[0])">        {{ \'ACCESSIBILITY\' | translate }}      </ion-card-header>    <ion-item-group>      <accordion [expanded]="accordionItems[0].expanded">        <ion-item>          <ion-label stacked>{{ \'OFTENACCESSWATER\' | translate }} </ion-label>          <ion-select [(ngModel)]="environmentalHealth.waterAccess" interface =\'popover\'>              <ion-option text-wrap value="everyday"> {{ \'EVERYDAY\' | translate }}  </ion-option>              <ion-option text-wrap value="4-6AWeek"> {{ \'4-6DAYSAWEEK\' | translate }} </ion-option>              <ion-option text-wrap value="2-3AWeek"> {{ \'2-3DAYSAWEEK\' | translate }} </ion-option>              <ion-option text-wrap value="1AWeek"> {{ \'LESSTHAN1DAYAWEEK\' | translate }}  </ion-option>              <ion-option text-wrap value="1AMonth"> {{ \'1DAYAMONTH\' | translate }}  </ion-option>              <ion-option text-wrap value="Never"> {{ \'NEVER\' | translate }} </ion-option>          </ion-select>        </ion-item>        <ion-buttons padding-horizontal>          <ion-label stacked>{{ \'TYPEOFWATER\' | translate }} </ion-label>          <!--ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface =\'popover\'>              <ion-option text-wrap value="bottled"> {{ \'BOTTLED\' | translate }} </ion-option>              <ion-option text-wrap value="tap"> {{ \'TAP\' | translate }}  </ion-option>          </ion-select-->          <button ion-button small color="primary-darkest" (click)="set(\'bottled\',\'typeofWaterdoyoudrink\')">              {{ \'BOTTLED\' | translate }}            </button>            <button ion-button right small outline color="primary-darkest" (click)="set(\'tap\',\'typeofWaterdoyoudrink\')">              {{ \'TAP\' | translate }}            </button>        </ion-buttons>        <ion-buttons padding-horizontal>          <ion-label stacked>{{ \'ACCESSTOLATRINE\' | translate }}  </ion-label>          <!--ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface =\'popover\'>              <ion-option text-wrap value="Y"> {{ \'YES\' | translate }} </ion-option>              <ion-option text-wrap value="N"> {{ \'NO\' | translate }} </ion-option>          </ion-select-->          <button ion-button small color="primary-darkest" (click)="set(\'Y\',\'latrineAccess\')">            {{ \'YES\' | translate }}          </button>          <button ion-button right small outline color="primary-darkest" (click)="set(\'N\',\'latrineAccess\')">            {{ \'NO\' | translate }}          </button>        </ion-buttons>        <ion-buttons padding-horizontal>          <ion-label stacked>{{ \'ACCESSTOCLINIC\' | translate }} </ion-label>          <!--ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface =\'popover\'>              <ion-option text-wrap value="Y"> {{ \'YES\' | translate }} </ion-option>              <ion-option text-wrap value="N"> {{ \'NO\' | translate }} </ion-option>          </ion-select-->          <button ion-button small color="primary-darkest" (click)="set(\'Y\',\'clinicAccess\')">              {{ \'YES\' | translate }}            </button>            <button ion-button right small outline color="primary-darkest" (click)="set(\'N\',\'clinicAccess\')">              {{ \'NO\' | translate }}            </button>        </ion-buttons>                <ion-item>            <ion-label stacked>{{ \'WHEREDOYOUGOFORMEDICALPROBLEMS\' | translate }} </ion-label>            <ion-textarea type="text" [(ngModel)]="environmentalHealth.medicalproblemswheredoyougo" placeholder="{{ \'WHEREDOYOUGOFORMEDICALPROBLEMSSUB\' | translate }}"></ion-textarea>        </ion-item>        <ion-item>          <ion-label stacked>{{ \'WHEREDOYOUGOFORDENTALPROBLEMS\'| translate}}</ion-label>          <ion-textarea type="text" [(ngModel)]="environmentalHealth.dentalproblemswheredoyougo" placeholder="{{ \'WHEREDOYOUGOFORDENTALPROBLEMSSUB\' | translate }}"></ion-textarea>        </ion-item>        <ion-item>          <ion-label stacked>{{ \'TIMESTRASHISCOLLECTED\' | translate }} </ion-label>          <ion-textarea type="number" [(ngModel)]="environmentalHealth.timesperweektrashcollected" placeholder="{{ \'TIMESTRASHISCOLLECTEDSUB\' | translate }}"></ion-textarea>        </ion-item>        <ion-item>          <ion-label stacked>{{ \'WHEREISTRASHLEFT\' | translate }} </ion-label>          <ion-textarea type="text" [(ngModel)]="environmentalHealth.wheretrashleftbetweenpickups" placeholder="{{ \'WHEREISTRASHLEFTSUB\' | translate }}"></ion-textarea>        </ion-item>      </accordion>    </ion-item-group>  </ion-card>  <!--Housing Conditions-->  <ion-card>    <ion-card-header ion-text text-wrap class=\'card-title\' (click)="expandItem(accordionItems[1])">      {{ \'HOUSINGCONDITIONS\'| translate}}    </ion-card-header>    <ion-item-group>      <accordion [expanded]="accordionItems[1].expanded">        <ion-buttons padding-horizontal>          <ion-label stacked>{{ \'HOUSEOWNERSHIP\'| translate}}</ion-label>          <!--ion-select [(ngModel)]="environmentalHealth.houseownership" interface =\'popover\'>              <ion-option text-wrap value="owned"> {{ \'YES\' | translate }} </ion-option>              <ion-option text-wrap value="rented"> {{ \'NO\' | translate }}</ion-option>          </ion-select-->          <button ion-button small color="primary-darkest" (click)="set(\'owned\',\'houseownership\')">              {{ \'YES\' | translate }}            </button>            <button ion-button right small outline color="primary-darkest" (click)="set(\'rented\',\'houseownership\')">              {{ \'NO\' | translate }}          </button>        </ion-buttons>        <ion-item>          <ion-label stacked>{{ \'CONDITIONOFFLOOR\'| translate}}</ion-label>          <ion-select [(ngModel)]="environmentalHealth.conditionoFloorinyourhouse" interface =\'popover\'>              <ion-option text-wrap value="dirtPoor"> {{ \'DIRTFLOOR\' | translate }} | {{ \'POORCONDITION\' | translate }}  </ion-option>              <ion-option text-wrap value="dirtWorking"> {{ \'DIRTFLOOR\' | translate }} | {{ \'WORKINGCONDITION\' | translate }}   </ion-option>              <ion-option text-wrap value="cementPoor"> {{ \'CEMENTFLOOR\' | translate }} | {{ \'POORCONDITION\' | translate }}  </ion-option>              <ion-option text-wrap value="cementWorking"> {{ \'CEMENTFLOOR\' | translate }} | {{ \'WORKINGCONDITION\' | translate }}  </ion-option>          </ion-select>        </ion-item>        <ion-buttons padding-horizontal>          <ion-label stacked>{{\'CONDITIONOFROOF\'| translate}} </ion-label>          <!--ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface =\'popover\'>              <ion-option text-wrap value="poor"> {{ \'POORCONDITION\' | translate }} </ion-option>              <ion-option text-wrap value="working">{{ \'WORKINGCONDITION\' | translate }}</ion-option>          </ion-select-->          <button ion-button small color="primary-darkest" (click)="set(\'poor\',\'conditionoRoofinyourhouse\')">            {{ \'POORCONDITION\' | translate }}          </button>          <button ion-button right small outline color="primary-darkest" (click)="set(\'working\',\'conditionoRoofinyourhouse\')">            {{ \'WORKINGCONDITION\' | translate }}          </button>        </ion-buttons>      </accordion>    </ion-item-group>  </ion-card>  <ion-card>    <ion-card-header ion-text text-wrap class="card-title" (click)="expandItem(accordionItems[2])">      {{ \'POPULATION\'| translate}}    </ion-card-header>    <ion-item-group>      <accordion [expanded]="accordionItems[2].expanded">        <ion-item>          <ion-label stacked>{{ \'NUMBERINHOUSE\'| translate}}</ion-label>          <ion-textarea type="number" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse" placeholder="{{ \'NUMBERINHOUSESUB\'| translate}}"></ion-textarea>        </ion-item>        <ion-item>          <ion-label stacked>{{ \'NUMBERINHOUSEUNDERFIVE\'| translate}}</ion-label>          <ion-textarea type="number" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5" placeholder="{{ \'NUMBERINHOUSEUNDERFIVESUB\' | translate }}"></ion-textarea>        </ion-item>      </accordion>    </ion-item-group>  </ion-card>    <!--Submission-->  <ion-card>    <ion-item no-lines>      <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" [disabled]="!isenabled" >        <ion-icon name="checkmark-circle"></ion-icon>        {{\'SUBMIT\'| translate}}      </button>    </ion-item>  </ion-card></ion-content><content-drawer [options]="drawerOptions" #ContentDrawerComponent>  <searchbar-object-id (emitObjectIDfromComponent)=\'inputObjectIDfromComponent($event)\'></searchbar-object-id></content-drawer></div>'
     var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ConsumerEnviroEvalPage', 'selector': 'page-consumer-enviro-eval'},{'name': 'ConsumerMedicalEvalPage', 'selector': 'page-consumer-medical-eval'},{'name': 'ConsumerVitalsPage', 'selector': 'page-consumer-vitals'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': ''},{'name': 'VitalsForm', 'selector': 'vitals'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EnvironmentalHistoryForm'};
