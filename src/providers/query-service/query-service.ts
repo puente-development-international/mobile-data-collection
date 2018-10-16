@@ -173,6 +173,25 @@ export class QueryServiceProvider {
   }
 
   /**
+  * Performs a query of all records in "SurveyData" Model based on Organization name
+  * 
+  * @example
+  * listPatientsByOrganization("Puente")
+  * 
+  * @param {string} organization Name of Organization
+  * @returns The sum of a and b
+  */
+  cloudBasicQuery(offset: number = 0, limit: number = 3, parseColumn: string, parseParam: string){
+    return this.parseSrvc.runCloudFunction("retrieveAllPatientsByParam", {
+      offset: offset,
+      limit: limit,
+      parseColumn: parseColumn,
+      parseParam: parseParam
+    });
+
+  }
+
+  /**
   * Test Cloud function
   * 
   * @example

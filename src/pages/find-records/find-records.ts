@@ -42,24 +42,27 @@ export class FindRecordsPage {
     })
   }
 
-
-
-
   //Function that constructs an Array of Community Records
   public aggregateRecords(){
     let offset = this.communityRecords.length;
     let limit = 10000;
 
+    /*
+      return this.querySrvc.basicQuery(offset,limit,'SurveyData','surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{
+        for (let i = 0; i < result.length; i++) {
+          let object = result[i];
+          this.communityRecords.push(object);
+        }
 
-    return this.querySrvc.basicQuery(offset,limit,'SurveyData','surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{
-      for (let i = 0; i < result.length; i++) {
-        let object = result[i];
-        this.communityRecords.push(object);
-      }
+      }, (error) => {
+        console.log(error);
+      }); 
+    */
 
-    }, (error) => {
-      console.log(error);
-    });
+    return this.querySrvc.cloudBasicQuery(offset,limit,'surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{
+      this.communityRecords = result;
+    })
+
   }
 
   //Navigation
@@ -68,15 +71,11 @@ export class FindRecordsPage {
   }
 
   openConsumerDemographicsEval(patient){
-    //this.navCtrl.push(ConsumerMedicalEvalPage);
     let demographicsModal = this.modalCtrl.create(ConsumerMedicalEvalPage,{
       patient:patient
     });
+
     demographicsModal.present()
-    /*
-    this.navCtrl.push(ConsumerMedicalEvalPage,{
-      patient:patient
-    });*/
   }
 
   openConsumerVitalsList(patient){
