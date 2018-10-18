@@ -163,7 +163,7 @@ export class QueryServiceProvider {
   * listPatientsByOrganization("Puente")
   * 
   * @param {string} organization Name of Organization
-  * @returns The sum of a and b
+  * @returns  a list of all objects in "SurveyData" Model based on organization
   */
   listPatientsByOrganization(organization){
     return this.parseSrvc.runCloudFunction("retrievePatientRecordByOrgnization", {
@@ -176,10 +176,14 @@ export class QueryServiceProvider {
   * Performs a query of all records in "SurveyData" Model based on Organization name
   * 
   * @example
-  * listPatientsByOrganization("Puente")
+  * cloudBasedQuery("Puente")
   * 
-  * @param {string} organization Name of Organization
-  * @returns The sum of a and b
+  * @param {number} offset
+  * @param {number} limit Max Number of results to query
+  * @param {string} parseColumn Name of Column within PatientID to search
+  * @param {string} parseParam Name of Parameter within parseColumn to Select
+  * 
+  * @returns  a list of all objects in "SurveyData" Model based on parseParam in parseColumn
   */
   cloudBasicQuery(offset: number = 0, limit: number = 3, parseColumn: string, parseParam: string){
     return this.parseSrvc.runCloudFunction("retrieveAllPatientsByParam", {
