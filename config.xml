@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.puente.datacollection" version="3.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.puente.datacollection" version="3.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Puente</name>
     <description>Custom Surveying and Mapping Application</description>
     <author email="hope@puente-dr.com" href="http://hopetambala.github.io/life-blog//">Hope Tambala</author>
@@ -127,6 +127,6 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To track your movement" />
     </plugin>
     <engine name="browser" spec="5.0.4" />
-    <engine name="android" spec="7.1.1" />
     <engine name="ios" spec="4.5.5" />
+    <engine name="android" spec="7.1.1" />
 </widget>

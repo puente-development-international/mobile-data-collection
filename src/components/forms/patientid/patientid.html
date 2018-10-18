@@ -33,14 +33,10 @@
 
         <ion-buttons padding-horizontal>
           <ion-label>{{'SEX' | translate }}</ion-label>
-          <!--ion-select [(ngModel)]="patientID.sex" interface ='popover'>
-            <ion-option value="Male"> {{'MALE' | translate }} </ion-option>
-            <ion-option value="Female"> {{'FEMALE' | translate }} </ion-option>
-          </ion-select-->
-          <button ion-button small color="primary-darkest" (click)="set('Male','sex')">
+          <button ion-button small [outline]="patientID.sex == 'Male' ? false : true" color="primary-darkest" (click)="set('Male','sex')">
               {{ 'MALE' | translate }}
             </button>
-            <button ion-button right small outline color="primary-darkest" (click)="set('Female','sex')">
+            <button ion-button right small [outline]="patientID.sex == 'Female' ? false : true" color="primary-darkest" (click)="set('Female','sex')">
               {{ 'FEMALE' | translate }}
           </button>
         </ion-buttons>
@@ -58,16 +54,16 @@
             <ion-option  value="concubine"> {{'CONCUBINE' | translate }} </ion-option>
             <ion-option  value="widow"> {{'WIDOW' | translate }} </ion-option>
           </ion-select-->
-          <button ion-button right small outline color="primary-darkest" (click)="set('single','marriageStatus')">
+          <button ion-button right small [outline]="patientID.marriageStatus == 'single' ? false : true" color="primary-darkest" (click)="set('single','marriageStatus')">
             {{ 'SINGLE' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('married','marriageStatus')">
+          <button ion-button right small [outline]="patientID.marriageStatus == 'married' ? false : true" color="primary-darkest" (click)="set('married','marriageStatus')">
             {{ 'MARRIED' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('concubine','marriageStatus')">
+          <button ion-button right small [outline]="patientID.marriageStatus == 'concubine' ? false : true" color="primary-darkest" (click)="set('concubine','marriageStatus')">
             {{ 'CONCUBINE' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('widow','marriageStatus')">
+          <button ion-button right small [outline]="patientID.marriageStatus == 'widow' ? false : true" color="primary-darkest" (click)="set('widow','marriageStatus')">
             {{ 'WIDOW' | translate }}
           </button>
         </ion-buttons>
@@ -92,22 +88,22 @@
             <ion-option text-wrap value="someCollege">{{'SOMECOLLEGE' | translate }}</ion-option>
             <ion-option text-wrap value="college"> {{'COLLEGE' | translate }}</ion-option>
           </ion-select-->
-          <button ion-button right small outline color="primary-darkest" (click)="set('lessThanprimary','educationLevel')">
+          <button ion-button right small [outline]="patientID.educationLevel == 'lessThanprimary' ? false : true" color="primary-darkest" (click)="set('lessThanprimary','educationLevel')">
             {{ 'LESSTHANPRIMARY' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('primary','educationLevel')">
+          <button ion-button right small [outline]="patientID.educationLevel == 'primary' ? false : true" color="primary-darkest" (click)="set('primary','educationLevel')">
             {{ 'PRIMARY' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('someHighSchool','educationLevel')">
+          <button ion-button right small [outline]="patientID.educationLevel == 'someHighSchool' ? false : true" color="primary-darkest" (click)="set('someHighSchool','educationLevel')">
             {{ 'SOMEHIGHSCHOOL' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('highschool','educationLevel')">
+          <button ion-button right small [outline]="patientID.educationLevel == 'highschool' ? false : true" color="primary-darkest" (click)="set('highschool','educationLevel')">
             {{ 'HIGHSCHOOL' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('someCollege','educationLevel')">
+          <button ion-button right small [outline]="patientID.educationLevel == 'someCollege' ? false : true" color="primary-darkest" (click)="set('someCollege','educationLevel')">
             {{ 'SOMECOLLEGE' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('college','educationLevel')">
+          <button ion-button right small [outline]="patientID.educationLevel == 'college' ? false : true" color="primary-darkest" (click)="set('college','educationLevel')">
             {{ 'COLLEGE' | translate }}
           </button>
         </ion-buttons>

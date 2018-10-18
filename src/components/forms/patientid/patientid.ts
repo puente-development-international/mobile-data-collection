@@ -130,8 +130,11 @@ export class PatientIDForm {
     * @param {string} dictionary key
     * @returns 
   */
- set(value,key){
-  this.patientID[key]= value;
-  console.log(this.patientID[key])
-}
+  set(value,key){
+    this.patientID[key]= value;
+    console.log(this.patientID[key]);
+  }
+
+  /*  
+  */
 }

@@ -4,7 +4,7 @@
     
     <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
       {{ 'CLIENT' | translate }}
-      <ion-label>{{client.fname}} {{client.fname}}</ion-label>
+      <ion-label>{{client.fname}} {{client.lname}}</ion-label>
       <button ion-button outline item-start (click)="close()" large>
           <ion-icon name="arrow-round-back" ></ion-icon>
       </button>
@@ -73,10 +73,10 @@
               <ion-option text-wrap value="bottled"> {{ 'BOTTLED' | translate }} </ion-option>
               <ion-option text-wrap value="tap"> {{ 'TAP' | translate }}  </ion-option>
           </ion-select-->
-          <button ion-button small color="primary-darkest" (click)="set('bottled','typeofWaterdoyoudrink')">
+          <button ion-button small [outline]="environmentalHealth.typeofWaterdoyoudrink == 'bottled' ? false : true" color="primary-darkest" (click)="set('bottled','typeofWaterdoyoudrink')">
               {{ 'BOTTLED' | translate }}
             </button>
-            <button ion-button right small outline color="primary-darkest" (click)="set('tap','typeofWaterdoyoudrink')">
+            <button ion-button right small [outline]="environmentalHealth.typeofWaterdoyoudrink == 'tap' ? false : true" color="primary-darkest" (click)="set('tap','typeofWaterdoyoudrink')">
               {{ 'TAP' | translate }}
             </button>
         </ion-buttons>
@@ -87,10 +87,10 @@
               <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
           </ion-select-->
-          <button ion-button small color="primary-darkest" (click)="set('Y','latrineAccess')">
+          <button ion-button small [outline]="environmentalHealth.latrineAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','latrineAccess')">
             {{ 'YES' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('N','latrineAccess')">
+          <button ion-button right small [outline]="environmentalHealth.latrineAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','latrineAccess')">
             {{ 'NO' | translate }}
           </button>
         </ion-buttons>
@@ -101,10 +101,10 @@
               <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
           </ion-select-->
-          <button ion-button small color="primary-darkest" (click)="set('Y','clinicAccess')">
+          <button ion-button small [outline]="environmentalHealth.clinicAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','clinicAccess')">
               {{ 'YES' | translate }}
             </button>
-            <button ion-button right small outline color="primary-darkest" (click)="set('N','clinicAccess')">
+            <button ion-button right small [outline]="environmentalHealth.clinicAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','clinicAccess')">
               {{ 'NO' | translate }}
             </button>
         </ion-buttons>
@@ -145,10 +145,10 @@
               <ion-option text-wrap value="owned"> {{ 'YES' | translate }} </ion-option>
               <ion-option text-wrap value="rented"> {{ 'NO' | translate }}</ion-option>
           </ion-select-->
-          <button ion-button small color="primary-darkest" (click)="set('owned','houseownership')">
+          <button ion-button small [outline]="environmentalHealth.houseownership == 'owned' ? false : true" color="primary-darkest" (click)="set('owned','houseownership')">
               {{ 'YES' | translate }}
             </button>
-            <button ion-button right small outline color="primary-darkest" (click)="set('rented','houseownership')">
+            <button ion-button right small [outline]="environmentalHealth.houseownership == 'rented' ? false : true" color="primary-darkest" (click)="set('rented','houseownership')">
               {{ 'NO' | translate }}
           </button>
         </ion-buttons>
@@ -169,10 +169,10 @@
               <ion-option text-wrap value="poor"> {{ 'POORCONDITION' | translate }} </ion-option>
               <ion-option text-wrap value="working">{{ 'WORKINGCONDITION' | translate }}</ion-option>
           </ion-select-->
-          <button ion-button small color="primary-darkest" (click)="set('poor','conditionoRoofinyourhouse')">
+          <button ion-button small [outline]="environmentalHealth.houseownership == 'poor' ? false : true" color="primary-darkest" (click)="set('poor','conditionoRoofinyourhouse')">
             {{ 'POORCONDITION' | translate }}
           </button>
-          <button ion-button right small outline color="primary-darkest" (click)="set('working','conditionoRoofinyourhouse')">
+          <button ion-button right small [outline]="environmentalHealth.houseownership == 'working' ? false : true" color="primary-darkest" (click)="set('working','conditionoRoofinyourhouse')">
             {{ 'WORKINGCONDITION' | translate }}
           </button>
         </ion-buttons>
