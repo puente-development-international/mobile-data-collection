@@ -65,9 +65,9 @@ export class MapPage {
   ionViewWillEnter() {
   }
   ionViewDidLoad() {
-    this.themeCtrl.coolLoadz.present()
     //.then(()=>{
       this.initializeMap().then(() => {
+        //this.themeCtrl.coolLoadz.present()
         this.mapCtrl.addMultipleMarkers(
           this.map,
           this.userInfo.latitude,
@@ -95,8 +95,9 @@ export class MapPage {
             this.getUserPosition();
             
         });
-        this.themeCtrl.coolLoadz.dismiss();
-      });     
+        //this.themeCtrl.coolLoadz.dismiss(); 
+      //})
+    });     
   }
   ionViewDidEnter() {    
   }
@@ -107,6 +108,7 @@ export class MapPage {
     Map Creation
   */
   public initializeMap() {
+    this.themeCtrl.coolLoadz.present();
     return this.userPst.getUserPosition().then((position) => {
 
         let mapOptions = {
@@ -127,6 +129,8 @@ export class MapPage {
         /* We can show our location only if map was previously initialized */
         //this.addMarker(position.coords.latitude, position.coords.longitude,'User Location', this.userimage);
         this.mapCtrl.addMarker(this.map,position.coords.latitude,position.coords.longitude,'User Location', this.userimage,this.markerArray);
+
+        this.themeCtrl.coolLoadz.dismiss()
 
     }).catch((error) => {
         console.log('Error getting location', error);
