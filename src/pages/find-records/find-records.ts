@@ -45,9 +45,9 @@ export class FindRecordsPage {
   //Function that constructs an Array of Community Records
   public aggregateRecords(){
     let offset = this.communityRecords.length;
-    let limit = 10000;
+    let limit = 100;
 
-    /*
+    
       return this.querySrvc.basicQuery(offset,limit,'SurveyData','surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{
         for (let i = 0; i < result.length; i++) {
           let object = result[i];
@@ -57,11 +57,11 @@ export class FindRecordsPage {
       }, (error) => {
         console.log(error);
       }); 
-    */
-
+    
+    /*
     return this.querySrvc.cloudBasicQuery(offset,limit,'surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{
       this.communityRecords = result;
-    })
+    }) */
 
   }
 
