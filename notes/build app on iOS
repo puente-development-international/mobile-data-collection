@@ -20,3 +20,9 @@ Build Application
 Deploy Application 
 	Remember to use same build identifier but different build numbers
 	https://ionicframework.com/docs/intro/deploying/
+
+----
+2018 Quirks
+Due to new Xcode Build Tools, build commands need special commands
+--buildFlag='-UseModernBuildSystem=0'
+See package.json 
