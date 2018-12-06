@@ -69,10 +69,6 @@
 
         <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'TYPEOFWATER' | translate }} </ion-label>
-          <!--ion-select [(ngModel)]="environmentalHealth.typeofWaterdoyoudrink" interface ='popover'>
-              <ion-option text-wrap value="bottled"> {{ 'BOTTLED' | translate }} </ion-option>
-              <ion-option text-wrap value="tap"> {{ 'TAP' | translate }}  </ion-option>
-          </ion-select-->
           <button ion-button small [outline]="environmentalHealth.typeofWaterdoyoudrink == 'bottled' ? false : true" color="primary-darkest" (click)="set('bottled','typeofWaterdoyoudrink')">
               {{ 'BOTTLED' | translate }}
             </button>
@@ -83,10 +79,6 @@
 
         <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'ACCESSTOLATRINE' | translate }}  </ion-label>
-          <!--ion-select [(ngModel)]="environmentalHealth.latrineAccess" interface ='popover'>
-              <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
-              <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
-          </ion-select-->
           <button ion-button small [outline]="environmentalHealth.latrineAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','latrineAccess')">
             {{ 'YES' | translate }}
           </button>
@@ -97,10 +89,6 @@
 
         <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'ACCESSTOCLINIC' | translate }} </ion-label>
-          <!--ion-select [(ngModel)]="environmentalHealth.clinicAccess" interface ='popover'>
-              <ion-option text-wrap value="Y"> {{ 'YES' | translate }} </ion-option>
-              <ion-option text-wrap value="N"> {{ 'NO' | translate }} </ion-option>
-          </ion-select-->
           <button ion-button small [outline]="environmentalHealth.clinicAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','clinicAccess')">
               {{ 'YES' | translate }}
             </button>
@@ -141,10 +129,6 @@
 
         <ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'HOUSEOWNERSHIP'| translate}}</ion-label>
-          <!--ion-select [(ngModel)]="environmentalHealth.houseownership" interface ='popover'>
-              <ion-option text-wrap value="owned"> {{ 'YES' | translate }} </ion-option>
-              <ion-option text-wrap value="rented"> {{ 'NO' | translate }}</ion-option>
-          </ion-select-->
           <button ion-button small [outline]="environmentalHealth.houseownership == 'owned' ? false : true" color="primary-darkest" (click)="set('owned','houseownership')">
               {{ 'YES' | translate }}
             </button>
@@ -156,23 +140,19 @@
         <ion-item>
           <ion-label stacked>{{ 'CONDITIONOFFLOOR'| translate}}</ion-label>
           <ion-select [(ngModel)]="environmentalHealth.conditionoFloorinyourhouse" interface ='popover'>
-              <ion-option text-wrap value="dirtPoor"> {{ 'DIRTFLOOR' | translate }} | {{ 'POORCONDITION' | translate }}  </ion-option>
-              <ion-option text-wrap value="dirtWorking"> {{ 'DIRTFLOOR' | translate }} | {{ 'WORKINGCONDITION' | translate }}   </ion-option>
-              <ion-option text-wrap value="cementPoor"> {{ 'CEMENTFLOOR' | translate }} | {{ 'POORCONDITION' | translate }}  </ion-option>
-              <ion-option text-wrap value="cementWorking"> {{ 'CEMENTFLOOR' | translate }} | {{ 'WORKINGCONDITION' | translate }}  </ion-option>
+              <ion-option text-wrap value="dirtPoor"> {{ 'DIRTFLOOR' | translate }}, {{ 'POORCONDITION' | translate }}  </ion-option>
+              <ion-option text-wrap value="dirtWorking"> {{ 'DIRTFLOOR' | translate }}, {{ 'WORKINGCONDITION' | translate }}   </ion-option>
+              <ion-option text-wrap value="cementPoor"> {{ 'CEMENTFLOOR' | translate }}, {{ 'POORCONDITION' | translate }}  </ion-option>
+              <ion-option text-wrap value="cementWorking"> {{ 'CEMENTFLOOR' | translate }}, {{ 'WORKINGCONDITION' | translate }}  </ion-option>
           </ion-select>
         </ion-item>
 
         <ion-buttons padding-horizontal>
           <ion-label stacked>{{'CONDITIONOFROOF'| translate}} </ion-label>
-          <!--ion-select [(ngModel)]="environmentalHealth.conditionoRoofinyourhouse" interface ='popover'>
-              <ion-option text-wrap value="poor"> {{ 'POORCONDITION' | translate }} </ion-option>
-              <ion-option text-wrap value="working">{{ 'WORKINGCONDITION' | translate }}</ion-option>
-          </ion-select-->
-          <button ion-button small [outline]="environmentalHealth.houseownership == 'poor' ? false : true" color="primary-darkest" (click)="set('poor','conditionoRoofinyourhouse')">
+          <button ion-button small [outline]="environmentalHealth.conditionoRoofinyourhouse == 'poor' ? false : true" color="primary-darkest" (click)="set('poor','conditionoRoofinyourhouse')">
             {{ 'POORCONDITION' | translate }}
           </button>
-          <button ion-button right small [outline]="environmentalHealth.houseownership == 'working' ? false : true" color="primary-darkest" (click)="set('working','conditionoRoofinyourhouse')">
+          <button ion-button right small [outline]="environmentalHealth.conditionoRoofinyourhouse == 'working' ? false : true" color="primary-darkest" (click)="set('working','conditionoRoofinyourhouse')">
             {{ 'WORKINGCONDITION' | translate }}
           </button>
         </ion-buttons>
