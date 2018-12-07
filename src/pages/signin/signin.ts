@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController, NavController, LoadingController,ModalController } from 'ionic-angular';
+import { AlertController, NavController, LoadingController, ModalController, Platform } from 'ionic-angular';
 
 // Providers
 import { AuthProvider } from '../../providers/auth/auth';
@@ -25,7 +25,11 @@ export class SigninPage {
     public navCtrl: NavController, 
     private loadCtrl: LoadingController, 
     private authPvdr: AuthProvider,
-    private modalCtrl: ModalController) { 
+    private modalCtrl: ModalController,
+    public plt: Platform) { 
+  }
+  ionViewWillEnter(){
+    this.plt.ready();
   }
 
   ionViewDidLoad() {
