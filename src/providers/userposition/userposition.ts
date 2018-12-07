@@ -41,15 +41,13 @@ export class UserpositionProvider {
     this.options = {
       enableHighAccuracy: true,
       timeout: 30000,
-      //maximumAge: 0
+      maximumAge: 0
     };
     
     await this.plt.ready();
-    this.geolocation.getCurrentPosition(this.options).then((results)=>{
-      console.log(results.coords.latitude,results.coords.longitude)
-    })
       
-    return await this.geolocation.getCurrentPosition(this.options)
+    //return await this.geolocation.getCurrentPosition(this.options)
+    return this.geolocation.getCurrentPosition(this.options)
 
     
 
