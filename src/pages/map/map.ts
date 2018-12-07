@@ -64,9 +64,12 @@ export class MapPage {
 
   ionViewWillEnter() {
   }
-  ionViewDidLoad() {
+  
+  async ionViewDidLoad() {
     //.then(()=>{
-      this.initializeMap().then(() => {
+    this.themeCtrl.coolLoadz.present()
+
+    await this.initializeMap().then(() => {
         //this.themeCtrl.coolLoadz.present()
         this.mapCtrl.addMultipleMarkers(
           this.map,
@@ -97,7 +100,9 @@ export class MapPage {
         });
         //this.themeCtrl.coolLoadz.dismiss(); 
       //})
-    });     
+    });    
+
+    this.themeCtrl.coolLoadz.dismiss() 
   }
   ionViewDidEnter() {    
   }
@@ -108,7 +113,7 @@ export class MapPage {
     Map Creation
   */
   public initializeMap() {
-    this.themeCtrl.coolLoadz.present();
+    //this.themeCtrl.coolLoadz.present();
     return this.userPst.getUserPosition().then((position) => {
 
         let mapOptions = {
@@ -121,7 +126,6 @@ export class MapPage {
         this.userInfo.latitude = position.coords.latitude;
         this.userInfo.longitude = position.coords.longitude;
 
-        //loading.dismiss();
         
         /* Create Map */
         this.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
@@ -130,11 +134,12 @@ export class MapPage {
         //this.addMarker(position.coords.latitude, position.coords.longitude,'User Location', this.userimage);
         this.mapCtrl.addMarker(this.map,position.coords.latitude,position.coords.longitude,'User Location', this.userimage,this.markerArray);
 
-        this.themeCtrl.coolLoadz.dismiss()
+        //this.themeCtrl.coolLoadz.dismiss()
 
     }).catch((error) => {
         console.log('Error getting location', error);
       });
+    //this.themeCtrl.coolLoadz.dismiss()
   }
 
   setMarkersMapOnAll(map) {
@@ -190,16 +195,16 @@ export class MapPage {
   /*
     Geolocation
   */
-  public getUserPosition() {
+  async getUserPosition() {
 
     //Loading Controller
     let loading = this.loadingCtrl.create({
       content: 'Retrieving Location...'
     });
 
-    loading.present();
+    //loading.present();
     
-    return this.userPst.getUserPosition().then((resp) => {
+    return await this.userPst.getUserPosition().then((resp) => {
       let latitude = resp.coords.latitude;
       let longitude = resp.coords.longitude;
       
@@ -209,7 +214,7 @@ export class MapPage {
       this.userInfo.latitude = latitude;
       this.userInfo.longitude = longitude;
 
-      loading.dismiss();
+      //loading.dismiss();
 
       this.themeCtrl.toasting(String([latitude,longitude]), 'top')
 
