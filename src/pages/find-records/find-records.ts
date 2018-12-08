@@ -45,7 +45,7 @@ export class FindRecordsPage {
   //Function that constructs an Array of Community Records
   public aggregateRecords(){
     let offset = this.communityRecords.length;
-    let limit = 100;
+    let limit = 75;
 
     
       return this.querySrvc.basicQuery(offset,limit,'SurveyData','surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{
