@@ -134,6 +134,9 @@ export class QueryServiceProvider {
         //You can limit the number of results by setting "limit"
         query.limit(limit);
 
+        // Retrieve the most recent ones
+        query.descending("createdAt");
+
         //Limiting Results based on a specific paramater in a specific field/column
         query.equalTo(parseColumn, parseParam);
 
