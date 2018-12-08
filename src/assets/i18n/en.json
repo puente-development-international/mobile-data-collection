@@ -228,5 +228,6 @@
     "NUMBERINHOUSEUNDERFIVE":"Number of Children Living in House Under the Age of 5",
     "NUMBERINHOUSEUNDERFIVESUB": "How many children sleep here at night?",
     "HOUSEOWNERSHIP":"Are you the owner of this house?",
-    "INPUT":"Input"
+    "INPUT":"Input",
+    "FREEUNION":"Cohabitation"
 }

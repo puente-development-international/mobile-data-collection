@@ -60,8 +60,8 @@
           <button ion-button right small [outline]="patientID.marriageStatus == 'married' ? false : true" color="primary-darkest" (click)="set('married','marriageStatus')">
             {{ 'MARRIED' | translate }}
           </button>
-          <button ion-button right small [outline]="patientID.marriageStatus == 'concubine' ? false : true" color="primary-darkest" (click)="set('concubine','marriageStatus')">
-            {{ 'CONCUBINE' | translate }}
+          <button ion-button right small [outline]="patientID.marriageStatus == 'free_union' ? false : true" color="primary-darkest" (click)="set('free_union','marriageStatus')">
+            {{ 'FREEUNION' | translate }}
           </button>
           <button ion-button right small [outline]="patientID.marriageStatus == 'widow' ? false : true" color="primary-darkest" (click)="set('widow','marriageStatus')">
             {{ 'WIDOW' | translate }}
@@ -80,14 +80,6 @@
 
         <ion-buttons padding-horizontal>
           <ion-label>{{'EDUCATION' | translate }}</ion-label>
-          <!--ion-select text-wrap [(ngModel)]="patientID.educationLevel" interface ='popover'>
-            <ion-option text-wrap value="lessThanprimary">{{'LESSTHANPRIMARY' | translate }}</ion-option>
-            <ion-option text-wrap value="primary"> {{'PRIMARY' | translate }}</ion-option>
-            <ion-option text-wrap value="someHighSchool">{{'SOMEHIGHSCHOOL' | translate }}</ion-option>
-            <ion-option text-wrap value="highschool">{{'HIGHSCHOOL' | translate }}</ion-option>
-            <ion-option text-wrap value="someCollege">{{'SOMECOLLEGE' | translate }}</ion-option>
-            <ion-option text-wrap value="college"> {{'COLLEGE' | translate }}</ion-option>
-          </ion-select-->
           <button ion-button right small [outline]="patientID.educationLevel == 'lessThanprimary' ? false : true" color="primary-darkest" (click)="set('lessThanprimary','educationLevel')">
             {{ 'LESSTHANPRIMARY' | translate }}
           </button>
