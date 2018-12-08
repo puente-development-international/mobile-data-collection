@@ -61,7 +61,7 @@ export class MapControlsProvider {
     /*
       Parse
     */
-    let limit = 500;
+    let limit = 100;
     //let parseClass = 'SurveyData';
     let parseClass = parseClassName;
     let parseField = 'surveyingOrganization';
