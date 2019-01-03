@@ -101,7 +101,7 @@ export class MapPage {
         //this.themeCtrl.coolLoadz.dismiss(); 
       //})
     });    
-
+    
     this.themeCtrl.coolLoadz.dismiss() 
   }
   ionViewDidEnter() {    
