@@ -25,4 +25,11 @@ Deploy Application
 2018 Quirks
 Due to new Xcode Build Tools, build commands need special commands
 --buildFlag='-UseModernBuildSystem=0'
-See package.json 
+See package.json npm run ios:build
+
+
+XCode Quirks
+Change Build System to Legacy in File > Project Settings
+Change compiler to Generic iOS Device
+Produce > Archive
+(mess around with signing)
