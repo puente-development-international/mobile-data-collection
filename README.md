@@ -98,6 +98,9 @@ Parse offer a backend to store data, push notifications, social media integratio
 - Android Production has geolocation issues
 - Performance Issues on older/slower devices
 
+# Documentation
+https://hopetambala.github.io/puente-ionic-datacollection/
+
 # Contribution
 
 - Report issues
