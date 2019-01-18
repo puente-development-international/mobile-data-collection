@@ -69,38 +69,35 @@ export class MapPage {
     //.then(()=>{
     this.themeCtrl.coolLoadz.present()
 
-    await this.initializeMap().then(() => {
+    await this.initializeMap()
         //this.themeCtrl.coolLoadz.present()
-        this.mapCtrl.addMultipleMarkers(
-          this.map,
-          this.userInfo.latitude,
-          this.userInfo.longitude,
-          this.userInfo.surveyingOrganization,
-          this.assetsimage,
-          'name',
-          'AssetData',
-          this.markerArray)
-          .then(()=> {
-            this.setMarkersMapOnAll(this.map);
-          })
+    await this.mapCtrl.addMultipleMarkers(
+      this.map,
+      this.userInfo.latitude,
+      this.userInfo.longitude,
+      this.userInfo.surveyingOrganization,
+      this.assetsimage,
+      'name',
+      'AssetData',
+      this.markerArray)
+      .then(()=> {
+        this.setMarkersMapOnAll(this.map);
+    })
   
-        this.mapCtrl.addMultipleMarkers(
-          this.map,
-          this.userInfo.latitude,
-          this.userInfo.longitude,
-          this.userInfo.surveyingOrganization,
-          this.queryimage,
-          'fname',
-          'SurveyData',
-          this.markerArray)
-          .then(() => { 
-            this.setMarkersMapOnAll(this.map);
-            this.getUserPosition();
-            
-        });
-        //this.themeCtrl.coolLoadz.dismiss(); 
-      //})
-    });    
+    await this.mapCtrl.addMultipleMarkers(
+      this.map,
+      this.userInfo.latitude,
+      this.userInfo.longitude,
+      this.userInfo.surveyingOrganization,
+      this.queryimage,
+      'fname',
+      'SurveyData',
+      this.markerArray)
+      .then(() => { 
+        this.setMarkersMapOnAll(this.map);
+        this.getUserPosition();
+        
+    });
     
     this.themeCtrl.coolLoadz.dismiss() 
   }
@@ -175,15 +172,15 @@ export class MapPage {
   }
 
 
-  restartMarkers(){
+  async restartMarkers(){
     /*
       Reinitiate Everything
     */
-    this.mapCtrl.addMultipleMarkers(this.map,this.userInfo.latitude,this.userInfo.longitude,this.userInfo.surveyingOrganization,this.queryimage,'fname','SurveyData',this.markerArray).then(() => {
+    await this.mapCtrl.addMultipleMarkers(this.map,this.userInfo.latitude,this.userInfo.longitude,this.userInfo.surveyingOrganization,this.queryimage,'fname','SurveyData',this.markerArray).then(() => {
       this.setMarkersMapOnAll(this.map);
     });
 
-    this.mapCtrl.addMultipleMarkers(this.map,this.userInfo.latitude,this.userInfo.longitude,this.userInfo.surveyingOrganization,this.assetsimage,'name','AssetData',this.markerArray).then(() => {
+    await this.mapCtrl.addMultipleMarkers(this.map,this.userInfo.latitude,this.userInfo.longitude,this.userInfo.surveyingOrganization,this.assetsimage,'name','AssetData',this.markerArray).then(() => {
       this.setMarkersMapOnAll(this.map);
     });
   }
@@ -195,7 +192,7 @@ export class MapPage {
   /*
     Geolocation
   */
-  async getUserPosition() {
+  public getUserPosition() {
 
     //Loading Controller
     let loading = this.loadingCtrl.create({
@@ -204,7 +201,7 @@ export class MapPage {
 
     //loading.present();
     
-    return await this.userPst.getUserPosition().then((resp) => {
+    return this.userPst.getUserPosition().then((resp) => {
       let latitude = resp.coords.latitude;
       let longitude = resp.coords.longitude;
       
