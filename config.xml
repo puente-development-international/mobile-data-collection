@@ -2,7 +2,7 @@
 <widget id="com.puente.datacollection" version="3.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Puente</name>
     <description>Custom Surveying and Mapping Application</description>
-    <author email="hope@puente-dr.com" href="http://hopetambala.github.io/life-blog//">Hope Tambala</author>
+    <author email="hope@puente-dr.com" href="https://hopetambala.herokuapp.com">Hope Tambala</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
@@ -127,6 +127,6 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To track your movement" />
     </plugin>
     <engine name="browser" spec="5.0.4" />
-    <engine name="android" spec="7.1.4" />
     <engine name="ios" spec="4.5.5" />
+    <engine name="android" spec="7.1.4" />
 </widget>
