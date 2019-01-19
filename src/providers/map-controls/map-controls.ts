@@ -15,15 +15,21 @@ export class MapControlsProvider {
     console.log('Hello MapControlsProvider Provider');
   }
 
-  /*
-    Parameters
-    - google map
-    - users latitude
-    - users longitude
-    - information stored on marker
-    - image of marker
-  */
 
+  /**
+  * Adds a marker
+  * "Look At Google Maps Documentation"
+  * @example
+  * addMarker(map,position.coords.latitude,position.coords.longitude,'User Location', this.userimage,this.markerArray)
+  * 
+  * @param {any}    map Google Map 
+  * @param {number} latitude Latitudinal coordinates
+  * @param {number} longitude Longitudianl coordinates
+  * @param {string} markerInformation Information for Marker
+  * @param {any}    image image of marker
+  * @param {array}  localMarkerArray Marker Array to load into Google Maps
+  * @returns 
+  */
   public addMarker(map, latitude: number, longitude: number, markerInformation:string,image, localMarkerArray){
     /*
     * Adds a marker to the map and push to the array.
@@ -54,6 +60,24 @@ export class MapControlsProvider {
     localMarkerArray.push(marker);
   }
 
+
+  /**
+  * Adds Markesr Based on Parse-Server Query
+  * "Look At Google Maps Documentation"
+  * @example
+  * addMultipleMarkers(map,latitude,longitude,'Puente','markerImageName','fname','SurveyData',markerArray)
+  * 
+  * @param {any}    map Google Map 
+  * @param {number} refLatitude Latitudinal coordinates
+  * @param {number} refLongitude Longitudianl coordinates
+  * @param {number} refOrganization Longitudianl coordinates
+  * @param {string} markerInformation Information for Marker
+  * @param {any}    multipleMarkersImages image of marker
+  * @param {string} markerParseName name of marker
+  * @param {string} parseClassName Backend table to retrieve info from
+  * @param {array}  localMarkerArray Marker Array to load into Google Maps
+  * @returns 
+  */
   public addMultipleMarkers(map, refLatitude,refLongitude,refOrganization, multipleMarkersImages, markerParseName:string, parseClassName:string, localMarkerArray){
     let latitude = refLatitude;
     let longitude = refLongitude;
@@ -78,7 +102,5 @@ export class MapControlsProvider {
       console.log(error);
     });
   }
-
-
 
 }
