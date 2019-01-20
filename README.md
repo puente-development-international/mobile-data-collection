@@ -17,12 +17,14 @@ This is a Community Health Records Data Collection Application that integrates I
 Google Maps Javascript SDK
 
 
-## Some older screenshots
+## Screenshots
 
-<p align="center">
-  <img src="https://github.com/murraco/ionic-parse-server/blob/master/signin.png" width="40%" />
-  <img src="https://github.com/hopetambala/puente-parse-ionic/blob/master/home.png" width="40%" />
-</p>
+
+  <!--img src="https://github.com/murraco/ionic-parse-server/blob/master/signin.png" width="40%" />
+  <img src="https://github.com/hopetambala/puente-parse-ionic/blob/master/home.png" width="40%" /-->
+![Home](/resources/screenshots/home.jpg)
+![DB](/resources/screenshots/db.jpg)
+
 
 # File structure
 
