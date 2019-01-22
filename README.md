@@ -19,10 +19,10 @@ Google Maps Javascript SDK
 
 ## Screenshots
 
-
+<p align="middle">
   <img src="https://github.com/hopetambala/puente-ionic-datacollection/blob/master/resources/screenshots/home.jpg" width="40%" />
   <img src="https://github.com/hopetambala/puente-ionic-datacollection/blob/master/resources/screenshots/db.jpg" width="40%"/>
-
+</p>
 
 
 # File structure
