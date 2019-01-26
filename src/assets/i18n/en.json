@@ -229,5 +229,22 @@
     "NUMBERINHOUSEUNDERFIVESUB": "How many children sleep here at night?",
     "HOUSEOWNERSHIP":"Are you the owner of this house?",
     "INPUT":"Input",
-    "FREEUNION":"Cohabitation"
+    "FREEUNION":"Cohabitation",
+    
+    "ABNORMALBLEEDING":"Are you experiencing abnormal bleeding?",
+    "BREATHINGDIFFICULTIES":"Are you having difficulties breathing?",
+    "MENTALISSUES":"Are you experiencing any abnormal mental issues like confusion or disorientation?",
+    "DESCRIPTION":"Description",
+    "DESCRIPTION_DESCRIP":"Describe this problem in your own words",
+    "DURATION":"Duration",
+    "DURATION_DESCRIP":"How long have you had this problem",
+    "SEENADOCTOR":"Have you seen a doctor for this problem",
+    "DIAGNOSIS_PREVIOUS":"Previous Diagnosis",
+    "DIAGNOSIS":"Diagnosis",
+    "DIAGNOSIS_DESCRIP":"What was the doctor’s diagnosis?",
+    "TREATMENTSUGGESTED":"Suggested Treatment",
+    "TREATMENTSUGGESTED_DESCRIP":"What treatment did the doctor recommend",
+    "TREATMENTRECEIVED":"Did you receive this treatment?",
+    "TREATMENTRECEIVED_DESCRIP":"If not, why not? \n \nIf yes, has the treatment been helping?"
+
 }

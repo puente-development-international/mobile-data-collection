@@ -26,6 +26,18 @@ export class EvaluationSurgicalForm {
   }
 
   evaluationSurgical = {
+    abnormal_bleeding:null,
+    difficulty_breathing:null,
+    mental_issues:null,
+    description:null,
+    duration:null,
+    seen_doctor:null,
+    diagnosis:null,
+    suggested_treatment:null,
+    received_treatment:null,
+    received_treatment_description:null,
+
+    //Old and not used
     AssessmentandEvaluationSurgical: null,
     planOfActionSurgical: null,
     notesSurgical: null,
@@ -83,6 +95,11 @@ export class EvaluationSurgicalForm {
     this.client.lname = selectedItem.get('lname');
     this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
+  }
+
+  set(value,key){
+    this.evaluationSurgical[key]= value;
+    console.log(this.evaluationSurgical[key])
   }
 
 

@@ -228,6 +228,22 @@
     "NUMBERINHOUSEUNDERFIVESUB": "Cuántos niños se quedan aquí por la noche?",
     "HOUSEOWNERSHIP":"Eres el dueño de esta casa?",
     "INPUT":"Entra",
-    "FREEUNION":"Unión libre"
+    "FREEUNION":"Unión libre",
+
+    "ABNORMALBLEEDING":"Tiene algún sangrado que no sea normal",
+    "BREATHINGDIFFICULTIES":"Tiene dificultad para respirar?",
+    "MENTALISSUES":"Tiene alteración de estado mental agudo, como confusión o desorientación?",
+    "DESCRIPTION":"Descripción",
+    "DESCRIPTION_DESCRIP":"Describe el problema en sus propias palabras",
+    "DURATION":"Duración",
+    "DURATION_DESCRIP":"Por cuánto tiempo ha tenido este problema?",
+    "SEENADOCTOR":"Ha visitado un doctor por este problema?",
+    "DIAGNOSIS_PREVIOUS":"Previous Diagnosis",
+    "DIAGNOSIS":"Diagnosis",
+    "DIAGNOSIS_DESCRIP":"Qué diagnosis le dio el doctor?",
+    "TREATMENTSUGGESTED":"Suggested Treatment",
+    "TREATMENTSUGGESTED_DESCRIP":"Qué tratamiento recomendó el doctor?",
+    "TREATMENTRECEIVED":"Recibió esta tratamiento?",
+    "TREATMENTRECEIVED_DESCRIP":"Si no: ¿Por qué? \n \nSi sí: ¿Este tratamiento ha ayudado?"
     
 }
