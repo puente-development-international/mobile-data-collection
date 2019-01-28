@@ -748,6 +748,9 @@
                                 <a href="#basicQuery">basicQuery</a>
                             </li>
                             <li>
+                                <a href="#cloudBasicQuery">cloudBasicQuery</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#genericQuery">genericQuery</a>
                             </li>
@@ -994,6 +997,144 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="cloudBasicQuery"></a>
+                        <span class="name">
+                            <b>
+                            cloudBasicQuery
+                            </b>
+                            <a href="#cloudBasicQuery"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>cloudBasicQuery(offset: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, parseColumn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, parseParam: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="194" class="link-to-prism">src/providers/query-service/query-service.ts:194</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Performs a query of all records in &quot;SurveyData&quot; Model based on Organization name</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>offset</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>0</code>
+                                                        </td>
+
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>limit</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>3</code>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>Max Number of results to query</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>parseColumn</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>Name of Column within PatientID to search</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>parseParam</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>Name of Parameter within parseColumn to Select</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">cloudBasedQuery(&amp;quot;Puente&amp;quot;)</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>a list of all objects in &quot;SurveyData&quot; Model based on parseParam in parseColumn</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="genericQuery"></a>
                         <span class="name">
                             <b>
@@ -1113,7 +1254,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/providers/query-service/query-service.ts:112</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/providers/query-service/query-service.ts:115</a></div>
                             </td>
                         </tr>
 
@@ -1270,7 +1411,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/providers/query-service/query-service.ts:183</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="212" class="link-to-prism">src/providers/query-service/query-service.ts:212</a></div>
                             </td>
                         </tr>
 
@@ -1320,7 +1461,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/providers/query-service/query-service.ts:155</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/providers/query-service/query-service.ts:161</a></div>
                             </td>
                         </tr>
 
@@ -1370,7 +1511,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/providers/query-service/query-service.ts:168</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/providers/query-service/query-service.ts:174</a></div>
                             </td>
                         </tr>
 
@@ -1418,7 +1559,7 @@
 
                             </div>
                                 <div class="io-description">
-                                    <p>The sum of a and b</p>
+                                    <p>a list of all objects in &quot;SurveyData&quot; Model based on organization</p>
 
                                 </div>
                     </td>
@@ -1516,6 +1657,9 @@ export class QueryServiceProvider {
         //You can limit the number of results by setting &quot;limit&quot;
         query.limit(limit);
 
+        // Retrieve the most recent ones
+        query.descending(&quot;createdAt&quot;);
+
         //Limiting Results based on a class
         query.equalTo(parseColumn,parseParam);
 
@@ -1565,6 +1709,9 @@ export class QueryServiceProvider {
         //You can limit the number of results by setting &quot;limit&quot;
         query.limit(limit);
 
+        // Retrieve the most recent ones
+        query.descending(&quot;createdAt&quot;);
+
         //Limiting Results based on a specific paramater in a specific field/column
         query.equalTo(parseColumn, parseParam);
 
@@ -1597,11 +1744,34 @@ export class QueryServiceProvider {
   * listPatientsByOrganization(&quot;Puente&quot;)
   * 
   * @param {string} organization Name of Organization
-  * @returns The sum of a and b
+  * @returns  a list of all objects in &quot;SurveyData&quot; Model based on organization
   */
   listPatientsByOrganization(organization){
     return this.parseSrvc.runCloudFunction(&quot;retrievePatientRecordByOrgnization&quot;, {
       organization: organization
+    });
+
+  }
+
+  /**
+  * Performs a query of all records in &quot;SurveyData&quot; Model based on Organization name
+  * 
+  * @example
+  * cloudBasedQuery(&quot;Puente&quot;)
+  * 
+  * @param {number} offset
+  * @param {number} limit Max Number of results to query
+  * @param {string} parseColumn Name of Column within PatientID to search
+  * @param {string} parseParam Name of Parameter within parseColumn to Select
+  * 
+  * @returns  a list of all objects in &quot;SurveyData&quot; Model based on parseParam in parseColumn
+  */
+  cloudBasicQuery(offset: number &#x3D; 0, limit: number &#x3D; 3, parseColumn: string, parseParam: string){
+    return this.parseSrvc.runCloudFunction(&quot;retrieveAllPatientsByParam&quot;, {
+      offset: offset,
+      limit: limit,
+      parseColumn: parseColumn,
+      parseParam: parseParam
     });
 
   }

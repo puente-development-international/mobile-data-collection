@@ -795,6 +795,10 @@
                                 <a href="#password">password</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#plt">plt</a>
+                            </li>
+                            <li>
                                 <a href="#registerPage">registerPage</a>
                             </li>
                             <li>
@@ -820,6 +824,9 @@
                                 <a href="#ionViewDidLoad">ionViewDidLoad</a>
                             </li>
                             <li>
+                                <a href="#ionViewWillEnter">ionViewWillEnter</a>
+                            </li>
+                            <li>
                                 <a href="#presentSettingsModal">presentSettingsModal</a>
                             </li>
                             <li>
@@ -843,7 +850,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(alertCtrl: AlertController, navCtrl: NavController, loadCtrl: LoadingController, authPvdr: <a href="../injectables/AuthProvider.html">AuthProvider</a>, modalCtrl: ModalController)</code>
+<code>constructor(alertCtrl: AlertController, navCtrl: NavController, loadCtrl: LoadingController, authPvdr: <a href="../injectables/AuthProvider.html">AuthProvider</a>, modalCtrl: ModalController, plt: Platform)</code>
                     </td>
                 </tr>
                         <tr>
@@ -925,6 +932,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>plt</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -967,7 +986,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/signin/signin.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/pages/signin/signin.ts:42</a></div>
                             </td>
                         </tr>
 
@@ -999,6 +1018,44 @@
                 <tr>
                     <td class="col-md-4">
 <code>ionViewDidLoad()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/pages/signin/signin.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewWillEnter"></a>
+                        <span class="name">
+                            <b>
+                            ionViewWillEnter
+                            </b>
+                            <a href="#ionViewWillEnter"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewWillEnter()</code>
                     </td>
                 </tr>
 
@@ -1043,7 +1100,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/pages/signin/signin.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/pages/signin/signin.ts:74</a></div>
                             </td>
                         </tr>
 
@@ -1081,7 +1138,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/pages/signin/signin.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/pages/signin/signin.ts:39</a></div>
                             </td>
                         </tr>
 
@@ -1277,6 +1334,41 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="plt"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            plt
+                            </b>
+                            <a href="#plt"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>plt:     <code>Platform</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Platform</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/signin/signin.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="registerPage"></a>
                         <span class="name">
                             <b>
@@ -1352,7 +1444,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { AlertController, NavController, LoadingController,ModalController } from &#x27;ionic-angular&#x27;;
+import { AlertController, NavController, LoadingController, ModalController, Platform } from &#x27;ionic-angular&#x27;;
 
 // Providers
 import { AuthProvider } from &#x27;../../providers/auth/auth&#x27;;
@@ -1378,7 +1470,11 @@ export class SigninPage {
     public navCtrl: NavController, 
     private loadCtrl: LoadingController, 
     private authPvdr: AuthProvider,
-    private modalCtrl: ModalController) { 
+    private modalCtrl: ModalController,
+    public plt: Platform) { 
+  }
+  ionViewWillEnter(){
+    this.plt.ready();
   }
 
   ionViewDidLoad() {
