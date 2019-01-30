@@ -147,7 +147,11 @@
 
     <ion-item>
       <p text-center>{{'PRESS' | translate }}</p>
-      <button ion-button text-wrap color="primary-light" round block large (click)='recordCoordinates()'>{{patientID.latitude}}, {{patientID.longitude}}</button>
+      
+      <button ion-button text-wrap color="primary-light" round block large (click)='recordCoordinates()'>
+        <ion-spinner *ngIf="patientID.latitude == null"></ion-spinner>
+        {{patientID.latitude}}, {{patientID.longitude}}
+      </button>
     </ion-item>
   </ion-card>
 
