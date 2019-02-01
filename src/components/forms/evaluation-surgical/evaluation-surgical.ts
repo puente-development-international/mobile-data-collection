@@ -26,7 +26,7 @@ export class EvaluationSurgicalForm {
   }
 
   evaluationSurgical = {
-    abnormal_bleeding:null,
+    /*abnormal_bleeding:null,
     difficulty_breathing:null,
     mental_issues:null,
     description:null,
@@ -35,7 +35,7 @@ export class EvaluationSurgicalForm {
     diagnosis:null,
     suggested_treatment:null,
     received_treatment:null,
-    received_treatment_description:null,
+    received_treatment_description:null,*/
 
     //Old and not used
     AssessmentandEvaluationSurgical: null,

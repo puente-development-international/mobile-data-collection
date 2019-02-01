@@ -13,93 +13,25 @@
     <ion-card-header class='card-title' color="primary-light">
       {{ 'SURGICALEVALUATION' | translate }}
     </ion-card-header>
-
     <ion-list>
-      <ion-buttons padding-horizontal>
-        <ion-label>{{'ABNORMALBLEEDING' | translate }}</ion-label>
-        <button ion-button small [outline]="evaluationSurgical.abnormal_bleeding == 'Yes' ? false : true" color="red" (click)="set('Yes','abnormal_bleeding')">
-            {{ 'YES' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationSurgical.abnormal_bleeding == 'No' ? false : true" color="green" (click)="set('No','abnormal_bleeding')">
-            {{ 'NO' | translate }}
-        </button>
-      </ion-buttons>
-
-      <ion-buttons padding-horizontal>
-        <ion-label>{{'BREATHINGDIFFICULTIES' | translate }}</ion-label>
-        <button ion-button small [outline]="evaluationSurgical.difficulty_breathing == 'Yes' ? false : true" color="red" (click)="set('Yes','difficulty_breathing')">
-            {{ 'YES' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationSurgical.difficulty_breathing == 'No' ? false : true" color="green" (click)="set('No','difficulty_breathing')">
-            {{ 'NO' | translate }}
-        </button>
-      </ion-buttons>
-
-      <ion-buttons padding-horizontal>
-        <ion-label>{{'MENTALISSUES' | translate }}</ion-label>
-        <button ion-button small [outline]="evaluationSurgical.mental_issues == 'Yes' ? false : true" color="red" (click)="set('Yes','mental_issues')">
-            {{ 'YES' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationSurgical.mental_issues == 'No' ? false : true" color="green" (click)="set('No','mental_issues')">
-            {{ 'NO' | translate }}
-        </button>
-      </ion-buttons>
-        
-    </ion-list>
-
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header class='card-title' color="primary-light">
-      {{ 'PROBLEM' | translate }}
-    </ion-card-header>
-    <ion-list>
-      <ion-item color="gray">
-        <ion-label stacked>{{ 'DESCRIPTION' | translate }}</ion-label>
-        <ion-textarea rows="3" type="text" [(ngModel)]="evaluationSurgical.description" placeholder="{{ 'DESCRIPTION_DESCRIP' | translate }}"></ion-textarea>
-      </ion-item>
-      <ion-item color="gray">
-        <ion-label stacked>{{ 'DURATION' | translate }}</ion-label>
-        <ion-textarea rows="2" type="text" [(ngModel)]="evaluationSurgical.duration" placeholder="{{ 'DURATION_DESCRIP' | translate }}"></ion-textarea>
-      </ion-item>
-
-    </ion-list>
-  </ion-card>
-
-  <ion-card>
-      <ion-card-header class='card-title' color="primary-light">
-        {{ 'DIAGNOSIS_PREVIOUS' | translate }}
-      </ion-card-header>
-      <ion-list>
-        <ion-buttons padding-horizontal>
-          <ion-label>{{'SEENADOCTOR' | translate }}</ion-label>
-          <button ion-button small [outline]="evaluationSurgical.seen_doctor == 'Yes' ? false : true" color="green" (click)="set('Yes','seen_doctor')">
-              {{ 'YES' | translate }}
-            </button>
-            <button ion-button right small [outline]="evaluationSurgical.seen_doctor == 'No' ? false : true" color="red" (click)="set('No','seen_doctor')">
-              {{ 'NO' | translate }}
-          </button>
-        </ion-buttons>
-
-        <div *ngIf="evaluationSurgical.seen_doctor == 'Yes'">
-            <ion-item color="gray">
-                <ion-label stacked>{{ 'DIAGNOSIS' | translate }}</ion-label>
-                <ion-textarea rows="3" type="text" [(ngModel)]="evaluationSurgical.diagnosis" placeholder="{{ 'DIAGNOSIS_DESCRIP' | translate }}"></ion-textarea>
-              </ion-item>
-      
-              <ion-item color="gray">
-                <ion-label stacked>{{ 'TREATMENTSUGGESTED' | translate }}</ion-label>
-                <ion-textarea rows="3" type="text" [(ngModel)]="evaluationSurgical.suggested_treatment" placeholder="{{ 'TREATMENTSUGGESTED_DESCRIP' | translate }}"></ion-textarea>
-              </ion-item>
-      
-              <ion-item color="gray">
-                <ion-label stacked>{{ 'TREATMENTRECEIVED' | translate }}</ion-label>
-                <ion-textarea rows="3" type="text" [(ngModel)]="evaluationSurgical.received_treatment_description" placeholder="{{ 'TREATMENTRECEIVED_DESCRIP' | translate }}"></ion-textarea>
-              </ion-item>
-        </div>
+        <ion-item>
+          <ion-label floating>{{ 'ASSESSMENT' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="evaluationSurgical.AssessmentandEvaluation"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>{{ 'PLAN_GENERAL' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="evaluationSurgical.planOfAction"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label floating>{{ 'NOTES_GENERAL' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="evaluationSurgical.notes"></ion-input>
+        </ion-item> 
       </ion-list>
-    </ion-card>
 
+  </ion-card>
+  
   <ion-card>
     <ion-item no-lines>
       <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" text-wrap [disabled]="!isenabled">
