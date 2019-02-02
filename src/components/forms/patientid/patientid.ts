@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ViewController } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+//import { Camera, CameraOptions } from '@ionic-native/camera';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -54,7 +54,7 @@ export class PatientIDForm {
     public viewCtrl:ViewController,
     private userPositn:UserpositionProvider,
     public assetsMngr: AssetManagerProvider,
-    private camera:Camera,
+    //private camera:Camera,
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello PatientIDForm ');
@@ -89,6 +89,7 @@ export class PatientIDForm {
     });
   }
 
+  /*
   takePhoto () {
     const options: CameraOptions = {
       quality: 100,
@@ -104,7 +105,7 @@ export class PatientIDForm {
       console.log(err);
     });
 
-  }
+  }*/
 
   checkifenter(){
     if (this.patientID.fname !== ''){

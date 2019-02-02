@@ -13,7 +13,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
-import { Camera } from '@ionic-native/camera';
+//import { Camera } from '@ionic-native/camera';
 
 
 // Providers
@@ -163,7 +163,7 @@ export function createTranslateLoader(http: Http) {
   providers: [
     StatusBar,
     SplashScreen,
-    Camera,
+    //Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ParseProvider,
     AuthProvider,
