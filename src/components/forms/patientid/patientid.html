@@ -150,7 +150,7 @@
       
       <button ion-button text-wrap color="primary-light" round block large (click)='recordCoordinates()'>
         <ion-spinner *ngIf="patientID.latitude == null"></ion-spinner>
-        {{patientID.latitude}}, {{patientID.longitude}}
+        {{patientID.latitude}} {{patientID.longitude}}
       </button>
     </ion-item>
   </ion-card>
