@@ -80,6 +80,16 @@
                 {{ 'NO' | translate }}
             </button>
           </ion-buttons>
+
+          <ion-buttons padding-horizontal>
+              <ion-label>{{'ASSESSMENT' | translate }}?</ion-label>
+              <button ion-button small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','needsAssessmentandEvaluation')">
+                  {{ 'YES' | translate }}
+                </button>
+                <button ion-button right small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'No' ? false : true" color="primary-darkest" (click)="set('No','needsAssessmentandEvaluation')">
+                  {{ 'NO' | translate }}
+              </button>
+            </ion-buttons>
   
           <div *ngIf="evaluationMedical.seen_doctor == 'Yes'">
               <ion-item color="gray">
@@ -102,7 +112,7 @@
 
 
   <!--Medical Evaluation-->
-  <ion-card>
+  <ion-card *ngIf="evaluationMedical.needsAssessmentandEvaluation == 'Yes'">
       <ion-card-header class='card-title' color="primary-light" text-wrap>
         {{ 'ASSESSMENT' | translate }}
       </ion-card-header>

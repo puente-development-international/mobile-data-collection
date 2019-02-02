@@ -43,6 +43,8 @@ export class EvaluationMedicalForm {
     AssessmentandEvaluation: null,
     planOfAction: null,
     notes: null,
+
+    needsAssessmentandEvaluation:null,
     
     surveyingUser: this.auth.currentUser().name,
     surveyingOrganization: this.auth.currentUser().organization
