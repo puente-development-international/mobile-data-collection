@@ -88,6 +88,15 @@ export class EvaluationSurgicalForm {
     this.isenabled=false;
   }
 
+  /*
+    * Retrieves objectID from templates's content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
   inputObjectIDfromComponent(selectedItem) {
     this.isenabled=true;
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
@@ -97,6 +106,17 @@ export class EvaluationSurgicalForm {
     console.log(this.client.objectID);
   }
 
+
+  /*
+    * Sets the Value of a key in the evaluationSurgical Dictionary
+    * 
+    * @example
+    * set("Y","latrineAcess")
+    * 
+    * @param {string} value for dictionary key
+    * @param {string} dictionary key
+    * @returns 
+  */
   set(value,key){
     this.evaluationSurgical[key]= value;
     console.log(this.evaluationSurgical[key])

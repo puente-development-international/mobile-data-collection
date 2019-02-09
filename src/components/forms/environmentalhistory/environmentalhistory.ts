@@ -112,7 +112,7 @@ export class EnvironmentalHistoryForm {
 
   }
   /*
-    * Retrieves objectID from page content drawer
+    * Retrieves objectID from templates's content drawer
     * 
     * @example
     * inputObjectIDfromComponent($event)

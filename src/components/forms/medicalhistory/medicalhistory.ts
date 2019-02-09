@@ -78,6 +78,15 @@ export class MedicalHistoryForm {
     this.isenabled = false;
   }
 
+  /*
+    * Retrieves objectID from templates's content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
   inputObjectIDfromComponent(selectedItem) {
     this.isenabled=true;
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
