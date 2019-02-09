@@ -28,21 +28,33 @@ export class EvaluationMedicalForm {
 
   evaluationMedical = {
     //New
-    abnormal_bleeding:null,
-    difficulty_breathing:null,
-    mental_issues:null,
-    description:null,
-    duration:null,
-    seen_doctor:null,
-    diagnosis:null,
-    suggested_treatment:null,
-    received_treatment:null,
-    received_treatment_description:null,
+    //abnormal_bleeding:null,
+    //difficulty_breathing:null,
+    //mental_issues:null,
 
-    //Old
-    AssessmentandEvaluation: null,
-    planOfAction: null,
-    notes: null,
+    //chronic_condition:null,
+    chronic_condition_hypertension:null,
+    chronic_condition_diabetes:null,
+    chronic_condition_other:null,
+
+    seen_doctor:null,
+
+    received_treatment_notes:null,//what did the doctor say
+    received_treatment_description:null, //status of health
+
+    part_of_body:null,
+    duration:null,
+    trauma_induced:null,
+    condition_progression:null,
+    pain:null,
+
+    //Assessment Section
+    notes:null,
+    AssessmentandEvaluation: null, //general_health_recommendation
+    AssessmentandEvaluation_Surgical: null,
+    AssessmentandEvaluation_Surgical_Guess:null,
+    planOfAction:null, 
+    immediate_follow_up:null,
 
     needsAssessmentandEvaluation:null,
     
@@ -91,6 +103,15 @@ export class EvaluationMedicalForm {
     this.isenabled=false;
   }
 
+  /*
+    * Retrieves objectID from templates's content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
   inputObjectIDfromComponent(selectedItem) {
     this.isenabled=true;
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
@@ -100,9 +121,36 @@ export class EvaluationMedicalForm {
     console.log(this.client.objectID);
   }
 
+  /*
+    * Sets the Value of a key in the evaluationMedical Dictionary
+    * 
+    * @example
+    * set("Greenwood","city")
+    * 
+    * @param {string} value for dictionary key
+    * @param {string} dictionary key
+    * @returns 
+  */
   set(value,key){
     this.evaluationMedical[key]= value;
     console.log(this.evaluationMedical[key])
+  }
+
+  /*
+    * Sets the Values of a list of keys in the evalMedical Dictionary to null
+    * 
+    * @example
+    * clear(['chronic_condition_hypertension','chronic_condition_diabetes','chronic_condition_other'])
+    * 
+    * @param {array} list of dictionary key
+    * @returns 
+  */
+  clear(list_of_keys){
+    for (let i=0; i<list_of_keys.length; i++){
+      let x = list_of_keys[i]
+      this.evaluationMedical[x] = null;      
+    }
+    
   }
 
 

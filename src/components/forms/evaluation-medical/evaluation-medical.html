@@ -1,141 +1,245 @@
 <ion-content >
   <ion-card>
-      <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
-        {{ 'CLIENT' | translate }}
-        <ion-label>{{client.fname}} {{client.lname}}</ion-label>
-        <button ion-button outline item-start (click)="close()" large>
-            <ion-icon name="arrow-round-back" ></ion-icon>
-        </button>
-        <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()" large>
-            <ion-icon name="person" color="white"></ion-icon>
-        </button>
-      </ion-item>
+    <!--Identifier Stuff-->
+    <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
+      {{ 'CLIENT' | translate }}
+      <ion-label>{{client.fname}} {{client.lname}}</ion-label>
+      <button ion-button outline item-start (click)="close()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()" large>
+          <ion-icon name="person" color="white"></ion-icon>
+      </button>
+    </ion-item>
+
     <ion-card-header class='card-title' color="primary-light" text-wrap>
       {{ 'MEDICALEVALUATION' | translate }}
     </ion-card-header>
 
     <ion-list>
-        <ion-buttons padding-horizontal>
-          <ion-label>{{'ABNORMALBLEEDING' | translate }}</ion-label>
-          <button ion-button small [outline]="evaluationMedical.abnormal_bleeding == 'Yes' ? false : true" color="red" (click)="set('Yes','abnormal_bleeding')">
-              {{ 'YES' | translate }}
-            </button>
-            <button ion-button right small [outline]="evaluationMedical.abnormal_bleeding == 'No' ? false : true" color="green" (click)="set('No','abnormal_bleeding')">
-              {{ 'NO' | translate }}
+      <!--Chronic Condition-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'CHRONIC_CONDITION' | translate }}</ion-label>
+          <button ion-button small [outline]="evaluationMedical.chronic_condition_hypertension == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','chronic_condition_hypertension')">
+            {{ 'HYPERTENSION' | translate }}
           </button>
-        </ion-buttons>
-  
-        <ion-buttons padding-horizontal>
-          <ion-label>{{'BREATHINGDIFFICULTIES' | translate }}</ion-label>
-          <button ion-button small [outline]="evaluationMedical.difficulty_breathing == 'Yes' ? false : true" color="red" (click)="set('Yes','difficulty_breathing')">
-              {{ 'YES' | translate }}
-            </button>
-            <button ion-button right small [outline]="evaluationMedical.difficulty_breathing == 'No' ? false : true" color="green" (click)="set('No','difficulty_breathing')">
-              {{ 'NO' | translate }}
+          <button ion-button right small [outline]="evaluationMedical.chronic_condition_diabetes == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','chronic_condition_diabetes')">
+            {{ 'DIABETES' | translate }}
           </button>
-        </ion-buttons>
-  
-        <ion-buttons padding-horizontal>
-          <ion-label>{{'MENTALISSUES' | translate }}</ion-label>
-          <button ion-button small [outline]="evaluationMedical.mental_issues == 'Yes' ? false : true" color="red" (click)="set('Yes','mental_issues')">
-              {{ 'YES' | translate }}
-            </button>
-            <button ion-button right small [outline]="evaluationMedical.mental_issues == 'No' ? false : true" color="green" (click)="set('No','mental_issues')">
-              {{ 'NO' | translate }}
+          <button ion-button right small [outline]="evaluationMedical.chronic_condition_other == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','chronic_condition_other')">
+            {{ 'OTHER' | translate }}
           </button>
-        </ion-buttons>
-          
-      </ion-list>
-  
-    </ion-card>
-  
-    <ion-card>
-      <ion-card-header class='card-title' color="primary-light">
-        {{ 'PROBLEM' | translate }}
-      </ion-card-header>
-      <ion-list>
-        <ion-item color="gray">
-          <ion-label stacked>{{ 'DESCRIPTION' | translate }}</ion-label>
-          <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.description" placeholder="{{ 'DESCRIPTION_DESCRIP' | translate }}"></ion-textarea>
-        </ion-item>
-        <ion-item color="gray">
-          <ion-label stacked>{{ 'DURATION' | translate }}</ion-label>
-          <ion-textarea rows="2" type="text" [(ngModel)]="evaluationMedical.duration" placeholder="{{ 'DURATION_DESCRIP' | translate }}"></ion-textarea>
-        </ion-item>
-  
-      </ion-list>
-    </ion-card>
-  
-    <ion-card>
-        <ion-card-header class='card-title' color="primary-light">
-          {{ 'DIAGNOSIS_PREVIOUS' | translate }}
-        </ion-card-header>
-        <ion-list>
-          <ion-buttons padding-horizontal>
-            <ion-label>{{'SEENADOCTOR' | translate }}</ion-label>
-            <button ion-button small [outline]="evaluationMedical.seen_doctor == 'Yes' ? false : true" color="green" (click)="set('Yes','seen_doctor')">
-                {{ 'YES' | translate }}
-              </button>
-              <button ion-button right small [outline]="evaluationMedical.seen_doctor == 'No' ? false : true" color="red" (click)="set('No','seen_doctor')">
-                {{ 'NO' | translate }}
-            </button>
-          </ion-buttons>
+          <button ion-button right small color="primary-dark" (click)="clear(['chronic_condition_hypertension','chronic_condition_diabetes','chronic_condition_other'])">
+            {{ 'RESET' | translate }}
+          </button>
+      </ion-buttons>
 
-          <ion-buttons padding-horizontal>
-              <ion-label>{{'ASSESSMENT' | translate }}?</ion-label>
-              <button ion-button small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','needsAssessmentandEvaluation')">
-                  {{ 'YES' | translate }}
-                </button>
-                <button ion-button right small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'No' ? false : true" color="primary-darkest" (click)="set('No','needsAssessmentandEvaluation')">
-                  {{ 'NO' | translate }}
-              </button>
-            </ion-buttons>
+      <!--Seen a Doctor-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'SEENADOCTOR' | translate }}</ion-label>
+        <button ion-button small [outline]="evaluationMedical.seen_doctor == 'Yes' ? false : true" color="green" (click)="set('Yes','seen_doctor')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.seen_doctor == 'No' ? false : true" color="red" (click)="set('No','seen_doctor')">
+            {{ 'NO' | translate }}
+        </button>
+      </ion-buttons>
+
+      <!--Need Assessment?-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'ASSESSMENT' | translate }}?</ion-label>
+        <button ion-button small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','needsAssessmentandEvaluation')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'No' ? false : true" color="primary-darkest" (click)="set('No','needsAssessmentandEvaluation')">
+            {{ 'NO' | translate }}
+        </button>
+      </ion-buttons>
+          
+    </ion-list>
   
-          <div *ngIf="evaluationMedical.seen_doctor == 'Yes'">
-              <ion-item color="gray">
-                  <ion-label stacked>{{ 'DIAGNOSIS' | translate }}</ion-label>
-                  <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.diagnosis" placeholder="{{ 'DIAGNOSIS_DESCRIP' | translate }}"></ion-textarea>
-                </ion-item>
-        
-                <ion-item color="gray">
-                  <ion-label stacked>{{ 'TREATMENTSUGGESTED' | translate }}</ion-label>
-                  <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.suggested_treatment" placeholder="{{ 'TREATMENTSUGGESTED_DESCRIP' | translate }}"></ion-textarea>
-                </ion-item>
-        
-                <ion-item color="gray">
-                  <ion-label stacked>{{ 'TREATMENTRECEIVED' | translate }}</ion-label>
-                  <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.received_treatment_description" placeholder="{{ 'TREATMENTRECEIVED_DESCRIP' | translate }}"></ion-textarea>
-                </ion-item>
-          </div>
-        </ion-list>
-    </ion-card>
+  </ion-card>
+    
+  <!--Problem-->
+  <ion-card *ngIf="evaluationMedical.seen_doctor == 'No'">
+    <ion-card-header class='card-title' color="primary-light">
+      {{ 'PROBLEM' | translate }}
+    </ion-card-header>
+    <ion-list>
+      <!--Part of Body-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'PART_OF_BODY' | translate }}</ion-label>
+          <button ion-button small [outline]="evaluationMedical.part_of_body == 'bones_or_joints' ? false : true" color="primary-darkest" (click)="set('bones_or_joints','part_of_body')">
+            {{ 'BONES_OR_JOINTS' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'Eyes' ? false : true" color="primary-darkest" (click)="set('eyes','part_of_body')">
+            {{ 'EYES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'ear_nose_throat' ? false : true" color="primary-darkest" (click)="set('ear_nose_throat','part_of_body')">
+            {{ 'EAR_NOSE_THROAT' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'skin' ? false : true" color="primary-darkest" (click)="set('skin','part_of_body')">
+            {{ 'SKIN' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'head_mental_issue' ? false : true" color="primary-darkest" (click)="set('head_mental_issue','part_of_body')">
+            {{ 'HEAD_MENTAL_ISSUE' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'stomach_intestines' ? false : true" color="primary-darkest" (click)="set('stomach_intestines','part_of_body')">
+            {{ 'STOMACH_INTESTINES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'bladder_urinary' ? false : true" color="primary-darkest" (click)="set('bladder_urinary','part_of_body')">
+            {{ 'BLADDER_URINARYTRACT' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'reproductive_organs' ? false : true" color="primary-darkest" (click)="set('reproductive_organs','part_of_body')">
+            {{ 'REPRODUCTIVE_ORGANS' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'nutrition' ? false : true" color="primary-darkest" (click)="set('nutrition','part_of_body')">
+            {{ 'NUTRITION_ISSUE' | translate }}
+          </button>
+      </ion-buttons>
+
+      <!--DURATION-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'DURATION' | translate }}</ion-label>
+        <button ion-button right small [outline]="evaluationMedical.duration == 'within_last_month' ? false : true" color="primary-darkest" (click)="set('within_last_month','duration')">
+          {{ 'LAST_MONTH' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.duration == 'within_last_year' ? false : true" color="primary-darkest" (click)="set('within_last_year','duration')">
+          {{ 'LAST_YEAR' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.duration == 'within_last_5_years' ? false : true" color="primary-darkest" (click)="set('within_last_5_years','duration')">
+          {{ 'LAST_5_YEARS' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.duration == 'after_5_years' ? false : true" color="primary-darkest" (click)="set('after_5_years','duration')">
+          {{ 'AFTER_5_YEARS' | translate }}
+        </button>
+      </ion-buttons>
+
+      <!--Trauma-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'TRAUMA_INDUCED' | translate }}</ion-label>
+        <button ion-button right small [outline]="evaluationMedical.trauma_induced == 'suddenly_due_to_trauma' ? false : true" color="primary-darkest" (click)="set('suddenly_due_to_trauma','trauma_induced')">
+          {{ 'SUDDEN_DUE_TO_TRAUMA' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.trauma_induced == 'suddenly_but_not_due_to_trauma' ? false : true" color="primary-darkest" (click)="set('suddenly_but_not_due_to_trauma','trauma_induced')">
+          {{ 'SUDDEN_NOT_DUE_TO_TRAUMA' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.trauma_induced == 'gradually' ? false : true" color="primary-darkest" (click)="set('gradually','trauma_induced')">
+          {{ 'GRADUALLY' | translate }}
+        </button>
+      </ion-buttons>
+
+      <!--Progression of Condition-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'PROGRESSION_OF_CONDITION' | translate }}</ion-label>
+        <button ion-button right small [outline]="evaluationMedical.condition_progression == 'improve' ? false : true" color="primary-darkest" (click)="set('improve','condition_progression')">
+          {{ 'IMPROVE' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.condition_progression == 'worsen' ? false : true" color="primary-darkest" (click)="set('worsen','condition_progression')">
+          {{ 'WORSEN' | translate }}
+        </button>
+        <button ion-button right small [outline]="evaluationMedical.condition_progression == 'constant' ? false : true" color="primary-darkest" (click)="set('constant','condition_progression')">
+          {{ 'CONSTANT' | translate }}
+        </button>
+      </ion-buttons>
+    </ion-list>
+  </ion-card>
+    
+  <!--Previous Diagnosis-->
+  <ion-card *ngIf="evaluationMedical.seen_doctor == 'Yes'">
+    <ion-card-header class='card-title' color="primary-light">
+      {{ 'DIAGNOSIS_PREVIOUS' | translate }}
+    </ion-card-header>
+    <ion-list>
+      <!--Notes on What they Said -->
+      <ion-item>
+          <ion-label floating>{{ 'NOTES_GENERAL' | translate }}</ion-label>
+          <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.received_treatment_notes"></ion-textarea>
+      </ion-item> 
+
+      <!--Status-->
+      <ion-buttons padding-horizontal>
+        <ion-label>{{'STATUS_OF_HEALTH' | translate }}</ion-label>
+          <button ion-button small [outline]="evaluationMedical.received_treatment_description == 'receiving_treatment' ? false : true" color="green" (click)="set('receiving_treatment','received_treatment_description')">
+            {{ 'RECEIVING_TREATMENT_NO_SUPPORT_NEEDED' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
+            {{ 'RECEIVING_TREATMENT_SUPPORT_NEEDED' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
+            {{ 'WAITING_TREATMENT_SUPPORT_NEEDED' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
+            {{ 'NO_TREATMENT_SUPPORT_NEEDED' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
+            {{ 'OTHER' | translate }}
+          </button>
+      </ion-buttons>
+    </ion-list>
+  </ion-card>
 
 
   <!--Medical Evaluation-->
   <ion-card *ngIf="evaluationMedical.needsAssessmentandEvaluation == 'Yes'">
-      <ion-card-header class='card-title' color="primary-light" text-wrap>
-        {{ 'ASSESSMENT' | translate }}
-      </ion-card-header>
-      <ion-list>
-          <ion-item>
-            <ion-label floating>{{ 'ASSESSMENT' | translate }}</ion-label>
-            <ion-input type="text" [(ngModel)]="evaluationMedical.AssessmentandEvaluation"></ion-input>
-          </ion-item>
-      
-          <ion-item>
-            <ion-label floating>{{ 'PLAN_GENERAL' | translate }}</ion-label>
-            <ion-input type="text" [(ngModel)]="evaluationMedical.planOfAction"></ion-input>
-          </ion-item>
-      
-          <ion-item>
-              <ion-label floating>{{ 'NOTES_GENERAL' | translate }}</ion-label>
-              <ion-input type="text" [(ngModel)]="evaluationMedical.notes"></ion-input>
-          </ion-item> 
-        </ion-list>
+    <ion-card-header class='card-title' color="primary-light" text-wrap>
+      {{ 'ASSESSMENT' | translate }}
+    </ion-card-header>
+    <ion-list>
+        <!--Notes-->
+        <ion-item>
+            <ion-label floating>{{ 'NOTES_GENERAL' | translate }}</ion-label>
+            <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.notes"></ion-textarea>
+        </ion-item> 
+
+        <!--General Health Recommendation-->
+        <ion-buttons padding-horizontal>
+          <ion-label>{{'GENERAL_HEALTH_RECOMMENDATION' | translate }}</ion-label>
+          <button ion-button small [outline]="evaluationMedical.AssessmentandEvaluation == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','AssessmentandEvaluation')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.AssessmentandEvaluation == 'No' ? false : true" color="primary-darkest" (click)="set('No','AssessmentandEvaluation')">
+            {{ 'NO' | translate }}
+          </button>
+        </ion-buttons>
+
+        <!--Surgical Recommendation-->
+        <ion-buttons padding-horizontal>
+          <ion-label>{{'SURGICAL_NEED_RECOMMENDATION' | translate }}</ion-label>
+          <button ion-button small [outline]="evaluationMedical.AssessmentandEvaluation_Surgical == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','AssessmentandEvaluation_Surgical')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.AssessmentandEvaluation_Surgical == 'No' ? false : true" color="primary-darkest" (click)="set('No','AssessmentandEvaluation_Surgical')">
+            {{ 'NO' | translate }}
+          </button>
+        </ion-buttons>
+
+        <!--Surgical Recommendation Guess-->
+        <ion-item *ngIf="evaluationMedical.AssessmentandEvaluation_Surgical == 'Yes'">
+          <ion-label floating>{{ 'SURGICAL_NEED_RECOMMENDATION_GUESS' | translate }}</ion-label>
+          <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.AssessmentandEvaluation_Surgical_Guess"></ion-textarea>
+        </ion-item>
+
+        <!--Plan of Action-->
+        <ion-item>
+          <ion-label floating>{{ 'PLAN_GENERAL' | translate }}</ion-label>
+          <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.planOfAction"></ion-textarea>
+        </ion-item>
+
+        <!--Immediate Follow UP-->
+        <ion-buttons padding-horizontal>
+          <ion-label>{{'IMMEDIATE_FOLLOWUP_REQUIRED' | translate }}</ion-label>
+          <button ion-button small [outline]="evaluationMedical.immediate_follow_up == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','immediate_follow_up')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small [outline]="evaluationMedical.immediate_follow_up == 'No' ? false : true" color="primary-darkest" (click)="set('No','immediate_follow_up')">
+            {{ 'NO' | translate }}
+          </button>
+        </ion-buttons>
+    </ion-list>
   </ion-card>
  
-
-  <ion-card>
+  <ion-card padding-bottom='20px'>
     <ion-item no-lines>
       <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" text-wrap [disabled]="!isenabled">
         <ion-icon name="checkmark-circle"></ion-icon>
