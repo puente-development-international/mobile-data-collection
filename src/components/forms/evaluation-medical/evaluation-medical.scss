@@ -1,23 +1,22 @@
 evaluation-medical {
-    
-    //Card Details to keep
-    .card-title {
-        //position: absolute;
-        //top: 36%;
-        background-color: map-get($colors, primary-light);
-        font-size: 2.0em;
-        width: 100%;
-        font-weight: bold;
-        color: map-get($colors, primary-dark);
-        white-space: normal;
-      }
-    
-      .card-subtitle {
-        background-color: map-get($colors, primary-dark);
-        font-size: 1.25em;
-        //position: absolute;
-        //top: 52%;
-        width: 100%;
-        color: white;
-      }
+  //Card Details to keep
+  .card-title {
+    //position: absolute;
+    //top: 36%;
+    background-color: map-get($colors, primary-light);
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: map-get($colors, primary-dark);
+    white-space: normal;
+  }
+
+  .card-subtitle {
+    background-color: map-get($colors, primary-dark);
+    font-size: 1.25em;
+    //position: absolute;
+    //top: 52%;
+    width: 100%;
+    color: white;
+  }
 }

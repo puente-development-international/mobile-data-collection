@@ -37,10 +37,10 @@
       <!--Seen a Doctor-->
       <ion-buttons padding-horizontal>
         <ion-label>{{'SEENADOCTOR' | translate }}</ion-label>
-        <button ion-button small [outline]="evaluationMedical.seen_doctor == 'Yes' ? false : true" color="green" (click)="set('Yes','seen_doctor')">
+        <button ion-button small [outline]="evaluationMedical.seen_doctor == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','seen_doctor')">
             {{ 'YES' | translate }}
           </button>
-          <button ion-button right small [outline]="evaluationMedical.seen_doctor == 'No' ? false : true" color="red" (click)="set('No','seen_doctor')">
+          <button ion-button right small [outline]="evaluationMedical.seen_doctor == 'No' ? false : true" color="primary-darkest" (click)="set('No','seen_doctor')">
             {{ 'NO' | translate }}
         </button>
       </ion-buttons>
@@ -67,36 +67,20 @@
     </ion-card-header>
     <ion-list>
       <!--Part of Body-->
-      <ion-buttons padding-horizontal>
+      <ion-item padding-horizontal>
         <ion-label>{{'PART_OF_BODY' | translate }}</ion-label>
-          <button ion-button small [outline]="evaluationMedical.part_of_body == 'bones_or_joints' ? false : true" color="primary-darkest" (click)="set('bones_or_joints','part_of_body')">
-            {{ 'BONES_OR_JOINTS' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'Eyes' ? false : true" color="primary-darkest" (click)="set('eyes','part_of_body')">
-            {{ 'EYES' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'ear_nose_throat' ? false : true" color="primary-darkest" (click)="set('ear_nose_throat','part_of_body')">
-            {{ 'EAR_NOSE_THROAT' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'skin' ? false : true" color="primary-darkest" (click)="set('skin','part_of_body')">
-            {{ 'SKIN' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'head_mental_issue' ? false : true" color="primary-darkest" (click)="set('head_mental_issue','part_of_body')">
-            {{ 'HEAD_MENTAL_ISSUE' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'stomach_intestines' ? false : true" color="primary-darkest" (click)="set('stomach_intestines','part_of_body')">
-            {{ 'STOMACH_INTESTINES' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'bladder_urinary' ? false : true" color="primary-darkest" (click)="set('bladder_urinary','part_of_body')">
-            {{ 'BLADDER_URINARYTRACT' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'reproductive_organs' ? false : true" color="primary-darkest" (click)="set('reproductive_organs','part_of_body')">
-            {{ 'REPRODUCTIVE_ORGANS' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.part_of_body == 'nutrition' ? false : true" color="primary-darkest" (click)="set('nutrition','part_of_body')">
-            {{ 'NUTRITION_ISSUE' | translate }}
-          </button>
-      </ion-buttons>
+        <ion-select interface ='popover' [(ngModel)]="evaluationMedical.part_of_body" placeholder="{{ 'SELECT_ONE' | translate }}">
+          <ion-option text-wrap value="bones_or_joints">{{ 'BONES_OR_JOINTS' | translate }}</ion-option>
+          <ion-option text-wrap value="eyes">{{ 'EYES' | translate }}</ion-option>
+          <ion-option text-wrap value="ear_nose_throat">{{ 'EAR_NOSE_THROAT' | translate }}</ion-option>
+          <ion-option text-wrap value="skin">{{ 'SKIN' | translate }}</ion-option>
+          <ion-option text-wrap value="head_mental_issue">{{ 'HEAD_MENTAL_ISSUE' | translate }}</ion-option>
+          <ion-option text-wrap value="stomach_intestines">{{ 'STOMACH_INTESTINES' | translate }}</ion-option>
+          <ion-option text-wrap value="bladder_urinary">{{ 'BLADDER_URINARYTRACT' | translate }}</ion-option>
+          <ion-option text-wrap value="reproductive_organs">{{ 'REPRODUCTIVE_ORGANS' | translate }}</ion-option>
+          <ion-option text-wrap value="nutrition">{{ 'NUTRITION_ISSUE' | translate }}</ion-option>
+        </ion-select>
+      </ion-item>
 
       <!--DURATION-->
       <ion-buttons padding-horizontal>
@@ -117,7 +101,7 @@
 
       <!--Trauma-->
       <ion-buttons padding-horizontal>
-        <ion-label>{{'TRAUMA_INDUCED' | translate }}</ion-label>
+        <ion-label>{{'PROBLEM' | translate }} {{'SUDDENNESS' | translate }}</ion-label>
         <button ion-button right small [outline]="evaluationMedical.trauma_induced == 'suddenly_due_to_trauma' ? false : true" color="primary-darkest" (click)="set('suddenly_due_to_trauma','trauma_induced')">
           {{ 'SUDDEN_DUE_TO_TRAUMA' | translate }}
         </button>
@@ -158,24 +142,17 @@
       </ion-item> 
 
       <!--Status-->
-      <ion-buttons padding-horizontal>
+      <ion-item padding-horizontal>
         <ion-label>{{'STATUS_OF_HEALTH' | translate }}</ion-label>
-          <button ion-button small [outline]="evaluationMedical.received_treatment_description == 'receiving_treatment' ? false : true" color="green" (click)="set('receiving_treatment','received_treatment_description')">
-            {{ 'RECEIVING_TREATMENT_NO_SUPPORT_NEEDED' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
-            {{ 'RECEIVING_TREATMENT_SUPPORT_NEEDED' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
-            {{ 'WAITING_TREATMENT_SUPPORT_NEEDED' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
-            {{ 'NO_TREATMENT_SUPPORT_NEEDED' | translate }}
-          </button>
-          <button ion-button right small [outline]="evaluationMedical.received_treatment_description == 'No' ? false : true" color="red" (click)="set('No','received_treatment_description')">
-            {{ 'OTHER' | translate }}
-          </button>
-      </ion-buttons>
+        <ion-select interface ='popover' [(ngModel)]="evaluationMedical.received_treatment_description" placeholder="{{ 'SELECT_ONE' | translate }}">
+          <ion-option text-wrap value="receiving_treatment_no_support_required">{{ 'RECEIVING_TREATMENT_NO_SUPPORT_NEEDED' | translate }}</ion-option>
+          <ion-option text-wrap value="receiving_treatment_support_required">{{ 'RECEIVING_TREATMENT_SUPPORT_NEEDED' | translate }}</ion-option>
+          <ion-option text-wrap value="awaiting_treatment_support_required">{{ 'WAITING_TREATMENT_SUPPORT_NEEDED' | translate }}</ion-option>
+          <ion-option text-wrap value="no_treatment_support_required">{{ 'NO_TREATMENT_SUPPORT_NEEDED' | translate }}</ion-option>
+          <ion-option text-wrap value="other">{{ 'OTHER' | translate }}</ion-option>
+        </ion-select>
+      </ion-item>
+
     </ion-list>
   </ion-card>
 
@@ -238,7 +215,8 @@
         </ion-buttons>
     </ion-list>
   </ion-card>
- 
+  
+  <!--Submit-->
   <ion-card padding-bottom='20px'>
     <ion-item no-lines>
       <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" text-wrap [disabled]="!isenabled">
