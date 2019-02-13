@@ -282,6 +282,8 @@
     "NO_TREATMENT_SUPPORT_NEEDED":"No Treatment | Support Needed",
     "GENERAL_HEALTH_RECOMMENDATION":"General Health Consult Required?",
     "SURGICAL_NEED_RECOMMENDATION":"Surgical Need Required?",
+    "YOUR":"Your",
+    "GUESS":"Guess",
     "IMMEDIATE_FOLLOWUP_REQUIRED":"Immediate Follow Up Required?",
     "SELECT_ONE":"Select One"
 
