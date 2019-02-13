@@ -52,7 +52,8 @@ page-home {
     .card {
         margin: 0 5px;
         //width: calc(100% - 10px);
-        height: 20vh !important;
+        //height: 20vh !important;
+        height: inherit;
         width: auto !important;
         padding: 14px;
         //box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
