@@ -285,6 +285,11 @@
     "YOUR":"Your",
     "GUESS":"Guess",
     "IMMEDIATE_FOLLOWUP_REQUIRED":"Immediate Follow Up Required?",
-    "SELECT_ONE":"Select One"
+    "SELECT_ONE":"Select One",
+
+    "ROLE":"Role",
+    "ADMIN":"Administrator",
+    "MANAGER":"Manager",
+    "ASSOCIATE":"Associate"
 
 }

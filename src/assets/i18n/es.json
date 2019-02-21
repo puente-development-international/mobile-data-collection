@@ -282,6 +282,11 @@
     "GENERAL_HEALTH_RECOMMENDATION":"Consulta de salud general requerida?",
     "SURGICAL_NEED_RECOMMENDATION":"Necesidad quirúrgica requerida?",
     "IMMEDIATE_FOLLOWUP_REQUIRED":"Se requiere seguimiento inmediato?",
-    "SELECT_ONE":"Seleccione Uno"
+    "SELECT_ONE":"Seleccione Uno",
+
+    "ROLE":"Papel",
+    "ADMIN":"Administrador",
+    "MANAGER":"Gerente",
+    "ASSOCIATE":"Ayudante"
     
 }
