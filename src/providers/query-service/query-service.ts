@@ -11,6 +11,19 @@ export class QueryServiceProvider {
     parseSrvc.parseInitialize();
   }
 
+
+  async distinctUsers() {
+    //This is Retrieving Results from Parse Server
+    let Parse = this.parseSrvc.getParseENV();
+
+    const query = new Parse.Query('User');
+    
+    var users = await query.find()
+    
+    return users
+         
+  }
+
   /**
   * Queries results based on the Object and Column
   * 
