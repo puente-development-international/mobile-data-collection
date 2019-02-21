@@ -3,6 +3,7 @@ import { NavController, LoadingController } from 'ionic-angular';
 
 // Providers
 import { AuthProvider } from '../../providers/auth/auth';
+import { QueryServiceProvider} from '../../providers/query-service/query-service';
 
 // Pages
 import { TabsPage } from '../tabs/tabs';
@@ -19,10 +20,17 @@ export class SignupPage {
   confirm: string = '';
   email: string = '';
   organization: string = '';
+  role: string = '';
+
+
+
+  organizationsss = []
 
   constructor(public navCtrl: NavController, 
     private authPvdr: AuthProvider, 
-    private loadCtrl: LoadingController) { 
+    private loadCtrl: LoadingController,
+    private query:QueryServiceProvider) { 
+      this.organizationsss = ['Puente', 'OWS', 'WOF']
   }
 
   ionViewDidLoad() {
@@ -43,12 +51,21 @@ export class SignupPage {
     
     loader.present();
 
-    this.authPvdr.signup(this.username, this.password, this.email, this.organization).subscribe((success) => {
+    this.authPvdr.signup(this.username, this.password, this.email, this.organization,this.role).subscribe((success) => {
       this.navCtrl.setRoot(TabsPage);
       loader.dismissAll();
     }, (error) => {
       loader.dismissAll();
     });
+  }
+
+  async listOfOrganizations(){
+    var users = await this.query.distinctUsers()
+    for (let i=0; i<users.length;i++){
+      this.organizationsss.push(users[i].get('organization'))
+    }
+    let unique_orgs = this.organizationsss.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
+    console.log(unique_orgs)
   }
 
 }
