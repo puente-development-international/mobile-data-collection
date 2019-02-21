@@ -8,8 +8,8 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { UiUxProvider } from '../../providers/ui-ux/ui-ux';
 
 //Pages
-import { ConsumerEnviroEvalPage } from "../consumer/consumer-enviro-eval/consumer-enviro-eval";
-import { ConsumerMedicalEvalPage } from '../consumer/consumer-medical-eval/consumer-medical-eval';
+import { EnviroEvalUpdatePage } from "../update-forms/env-update/env-update";
+import { PatientUpdatePage } from '../update-forms/patientid-update/patientid-update';
 
 //Components
 import { ListofvitalsComponent } from '../../components/lists/listofvitals/listofvitals';
@@ -67,11 +67,11 @@ export class FindRecordsPage {
 
   //Navigation
   openConsumerEnviroEval(){
-    this.navCtrl.push(ConsumerEnviroEvalPage)
+    this.navCtrl.push(EnviroEvalUpdatePage)
   }
 
   openConsumerDemographicsEval(patient){
-    let demographicsModal = this.modalCtrl.create(ConsumerMedicalEvalPage,{
+    let demographicsModal = this.modalCtrl.create(PatientUpdatePage,{
       patient:patient
     });
 
