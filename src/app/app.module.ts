@@ -62,9 +62,9 @@ import { SigninForgotPage } from '../pages/signin-forgot/signin-forgot';
 import { Splash } from '../pages/splash/splash';
 import { MapPage } from '../pages/map/map';
 import { ProfileModalPage } from '../pages/profile-modal/profile-modal';
-import { ConsumerEnviroEvalPage } from '../pages/consumer/consumer-enviro-eval/consumer-enviro-eval';
-import { ConsumerMedicalEvalPage } from '../pages/consumer/consumer-medical-eval/consumer-medical-eval';
-import { ConsumerVitalsPage } from '../pages/consumer/consumer-vitals/consumer-vitals';
+import { EnviroEvalUpdatePage } from '../pages/update-forms/env-update/env-update';
+import { PatientUpdatePage} from '../pages/update-forms/patientid-update/patientid-update';
+import { VitalsUpdatePage } from '../pages/update-forms/vitals-update/vitals-update';
 import { HelpPage } from '../pages/help/help';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { FindRecordsPage } from '../pages/find-records/find-records';
@@ -94,9 +94,9 @@ export function createTranslateLoader(http: Http) {
     HelpPage,
     DashboardPage,
     FindRecordsPage,
-    ConsumerEnviroEvalPage,
-    ConsumerMedicalEvalPage,
-    ConsumerVitalsPage,
+    EnviroEvalUpdatePage,
+    PatientUpdatePage,
+    VitalsUpdatePage,
     AccordionComponent,
     CardFlippingComponent,
     ContentDrawerComponent,
@@ -147,9 +147,9 @@ export function createTranslateLoader(http: Http) {
     HelpPage,
     DashboardPage,
     FindRecordsPage,
-    ConsumerEnviroEvalPage,
-    ConsumerMedicalEvalPage,
-    ConsumerVitalsPage,
+    EnviroEvalUpdatePage,
+    PatientUpdatePage,
+    VitalsUpdatePage,
     PatientIDForm,
     EnvironmentalHistoryForm,
     MedicalHistoryForm,
