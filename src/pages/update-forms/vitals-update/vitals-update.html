@@ -1,0 +1,87 @@
+<!--
+  UNFINISHED
+-->
+<ion-header no-border-bottom>
+
+  <ion-navbar (click)="popView()" color="primary" no-border-bottom>
+    <ion-title>{{ 'UPDATE' | translate }} {{ 'VITALS' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content">
+  <div class='card'>
+    <!--ion-item>
+      <img [src]='patientID.picture'>
+    </ion-item-->
+    <form (ngSubmit)="post_n_update()">
+     
+      <ion-item-group>
+        <ion-item>
+          <ion-label floating>{{ 'HEIGHT' | translate }}</ion-label>
+          <ion-input type="number" [(ngModel)]="vitals.height" name="height"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>{{ 'WEIGHT' | translate }}</ion-label>
+          <ion-input type="number" [(ngModel)]="vitals.weight" name="weight"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'BODYMASSINDEX' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.bmi" name="bmi"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'TEMPERATURE' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.temp" name="temp"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'PULSE' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.pulse" name="pulse"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'RESPIRATORYRATE' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.respRate" name="respRate"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'BLOODPRESSURE' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="vitals.bloodPressure" name="bloodPressure"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'BLOODOXYGEN' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.bloodOxygen" name="bloodOxygen"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'BLOODSUGAR' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.bloodSugar" name="bloodSugar"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>{{ 'HEMOGLOBINLEVELS' | translate }}</ion-label>
+          <ion-input type="number" [(ngModel)]="vitals.hemoglobinLevels" name="hemoglobinLevels"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>{{ 'PAIN' | translate }}</ion-label>
+            <ion-input type="number" [(ngModel)]="vitals.painLevels" name="painLevels"></ion-input>
+        </ion-item>
+        
+      </ion-item-group>
+      
+      <ion-item type="submit">
+        <button ion-button icon-left full block large color="primary-dark" >
+          <ion-icon name="checkmark-circle"></ion-icon>
+          {{'UPDATE' | translate }}
+        </button>
+      </ion-item>
+    </form>
+  </div>
+
+</ion-content>
