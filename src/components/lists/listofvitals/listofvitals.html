@@ -4,19 +4,10 @@
       {{ 'VITALS' | translate }}
     </ion-card-header>
     <ion-list>
-      <ion-item *ngFor="let vitals of vitalsList">
-        <h6 ion-text color="grey">{{ vitals.get('createdAt') }}</h6>
-        <h2>{{ 'BODYMASSINDEX' | translate }}: {{ vitals.get('bmi') }}</h2>
-        <h2>{{ 'HEIGHT' | translate }}: {{ vitals.get('height') }}</h2>
-        <h2>{{ 'WEIGHT' | translate }}: {{ vitals.get('weight') }}</h2>
-        <h2>{{ 'TEMPERATURE' | translate }}: {{ vitals.get('temp') }}</h2>
-        <h2>{{ 'PULSE' | translate }}: {{ vitals.get('pulse') }}</h2>
-        <h2>{{ 'RESPIRATORYRATE' | translate }}: {{ vitals.get('respRate') }}</h2>
-        <h2>{{ 'BLOODPRESSURE' | translate }}: {{ vitals.get('bloodPressure') }}</h2>
-        <h2>{{ 'BLOODOXYGEN' | translate }}: {{ vitals.get('bloodOxygen') }}</h2>
-        <h2>{{ 'BLOODSUGAR' | translate }}: {{ vitals.get('bloodSugar') }}</h2>
-        <h2>{{ 'HEMOGLOBINLEVELS' | translate }}: {{ vitals.get('hemoglobinLevels') }}</h2>
-        <h2>{{ 'PAIN' | translate }}: {{ vitals.get('painLevels') }}</h2>
+      <ion-item>
+        <div class="fancy" (click)="openVitalsDetails(vitals)"  *ngFor="let vitals of vitalsList">
+          <h6 ion-text color="grey">{{ vitals.get('createdAt') }}</h6>
+        </div>
       </ion-item>
     </ion-list>
   </ion-card>

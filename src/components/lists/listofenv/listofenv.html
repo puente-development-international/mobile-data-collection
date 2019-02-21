@@ -4,20 +4,12 @@
       {{ 'ENVIRONMENTALHEALTHHISTORY' | translate }}
     </ion-card-header>
     <ion-list>
-      <ion-item *ngFor="let env of envList">
-        <h6 ion-text color="grey">{{ env.get('createdAt') }}</h6>
-        <!--h2>{{ 'BODYMASSINDEX' | translate }}: {{ env.get('bmi') }}</h2>
-        <h2>{{ 'HEIGHT' | translate }}: {{ env.get('height') }}</h2>
-        <h2>{{ 'WEIGHT' | translate }}: {{ env.get('weight') }}</h2>
-        <h2>{{ 'TEMPERATURE' | translate }}: {{ env.get('temp') }}</h2>
-        <h2>{{ 'PULSE' | translate }}: {{ env.get('pulse') }}</h2>
-        <h2>{{ 'RESPIRATORYRATE' | translate }}: {{ env.get('respRate') }}</h2>
-        <h2>{{ 'BLOODPRESSURE' | translate }}: {{ env.get('bloodPressure') }}</h2>
-        <h2>{{ 'BLOODOXYGEN' | translate }}: {{ env.get('bloodOxygen') }}</h2>
-        <h2>{{ 'BLOODSUGAR' | translate }}: {{ env.get('bloodSugar') }}</h2>
-        <h2>{{ 'HEMOGLOBINLEVELS' | translate }}: {{ env.get('hemoglobinLevels') }}</h2>
-        <h2>{{ 'PAIN' | translate }}: {{ env.get('painLevels') }}</h2-->
+      <ion-item>
+        <div class="fancy" (click)="openEnvHealthetails(env)" *ngFor="let env of envList">
+          <h6 ion-text color="grey">{{ env.get('createdAt') }}</h6>
+        </div>
       </ion-item>
+      
     </ion-list>
   </ion-card>
       

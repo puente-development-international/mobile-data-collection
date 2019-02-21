@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ActionSheetController,ViewController } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController,ViewController, ModalController} from 'ionic-angular';
 
 //Providers
 import { QueryServiceProvider } from "../../../providers/query-service/query-service";
+
+
+import { VitalsUpdatePage } from "../../../pages/update-forms/vitals-update/vitals-update";
 
 
 @Component({
@@ -18,7 +21,8 @@ export class ListofvitalsComponent {
 
   constructor(private querySrvc:QueryServiceProvider,
     public navParams: NavParams,
-    private viewCtrl:ViewController) {
+    private viewCtrl:ViewController,
+    private modalCtrl:ModalController) {
     console.log('Hello ListofvitalsComponent');
     this.patient = navParams.get('patient');
     this.aggregateVitals(this.patient);
@@ -39,6 +43,14 @@ export class ListofvitalsComponent {
     }, (error) => {
       console.log(error);
     });
+  }
+
+
+  openVitalsDetails(vital_record){
+    let vitalsModal = this.modalCtrl.create(VitalsUpdatePage,{
+      vital:vital_record
+    });
+    vitalsModal.present();
   }
 
   //Navigation

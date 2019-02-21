@@ -13,4 +13,15 @@ listofvitals {
         color: map-get($colors,primary);
       }
 
+    .fancy {
+        border-radius: 25px;
+        background: map-get($colors, primary);
+        padding: 20px; 
+        width: inherit;
+        height: inherit; 
+        h6{
+            color: white!important;
+        }
+    }
+
 }
