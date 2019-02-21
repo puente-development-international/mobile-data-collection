@@ -42,6 +42,17 @@
         <ion-input type="text" [(ngModel)]="organization" name="organization"></ion-input>
       </ion-item>
 
+
+      <!--Status-->
+      <ion-item>
+        <ion-label stacked>{{'ROLE' | translate }}</ion-label>
+        <ion-select interface ='popover' [(ngModel)]="role" name="role" placeholder="{{ 'SELECT_ONE' | translate }}">
+          <ion-option text-wrap value="admin">{{ 'ADMIN' | translate }}</ion-option>
+          <ion-option text-wrap value="manager">{{ 'MANAGER' | translate }}</ion-option>
+          <ion-option text-wrap value="associate">{{ 'ASSOCIATE' | translate }}</ion-option>
+        </ion-select>
+      </ion-item>
+
       
       <ion-item>
         <ion-label stacked>{{ 'EMAIL' | translate }}</ion-label>
