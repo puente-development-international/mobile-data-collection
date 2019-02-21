@@ -12,6 +12,7 @@ export class ParseProvider {
   private parseAppId: string = ENV.parseAppId;
   private parseServerUrl: string = ENV.parseServerUrl;
   private parseJavascriptKey: string = ENV.parseJavascriptKey;
+  private parseMasterKey: string = ENV.parseMasterKey;
 
   constructor() {
     this.parseInitialize();
@@ -114,6 +115,8 @@ export class ParseProvider {
     
     //Server
     Parse.serverURL = this.parseServerUrl;
+
+    Parse.masterKey = this.parseMasterKey;
   }
 
   runCloudFunction(functionName:string, functionRequest:any){

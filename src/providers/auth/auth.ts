@@ -15,6 +15,8 @@ export class User {
   public name: string;
   public email: string;
   public organization: string;
+  public role: string;
+
 }
 
 @Injectable()
@@ -99,13 +101,15 @@ export class AuthProvider {
     });
   }
 
-  public signup(username: string, password: string, email: string, organization: string): Observable<boolean> {
+  public signup(username: string, password: string, email: string, organization: string,role:string): Observable<boolean> {
     return new Observable((observer) => {
       var user = new Parse.User();
       user.set('username', username);
       user.set('password', password);
       user.set('email', email);
-      user.set('organization', organization)
+      user.set('organization', organization);
+      user.set('role', role)
+      user.set('adminVerified', false)
 
       user.signUp(null, {
         success: (user) => {
@@ -150,6 +154,7 @@ export class AuthProvider {
       user.name = u.get('username');
       user.email = u.get('email');
       user.organization = u.get('organization');
+      user.role = u.get('role');
       return user;
     }
     return null
