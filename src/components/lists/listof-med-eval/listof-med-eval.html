@@ -1,0 +1,16 @@
+<ion-content class="content">
+  <ion-card>
+    <ion-card-header (click)='closeModal()' class="card-title" ion-text text-wrap>
+      {{ 'MEDICALEVALUATION' | translate }} 
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <div class="fancy" (click)="openMedEval(med)" *ngFor="let med of medList">
+          <h6 ion-text color="grey">{{ med.get('createdAt') }}</h6>
+        </div>
+      </ion-item>
+      
+    </ion-list>
+  </ion-card>
+      
+</ion-content>
