@@ -43,6 +43,7 @@ export class EnviroEvalUpdatePage {
     private parsePrvdr:ParseProvider,
     private themeSrvc:UiUxProvider) {
     this._environmentalHealth = navParams.get('envHlth');
+    this.populateFields();
   }
 
   ionViewDidLoad() {
