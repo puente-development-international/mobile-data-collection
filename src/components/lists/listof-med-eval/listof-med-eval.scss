@@ -1,0 +1,27 @@
+listof-med-eval {
+    .content{
+        background-color: transparent;
+    }
+
+    .card-title {
+        //position: absolute;
+        //top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        //color: #fff;
+        color: map-get($colors,primary);
+      }
+
+      .fancy {
+        border-radius: 25px;
+        background: map-get($colors, primary);
+        padding: 20px; 
+        width: inherit;
+        height: inherit; 
+        h6{
+            color: white!important;
+        }
+      }
+
+}
