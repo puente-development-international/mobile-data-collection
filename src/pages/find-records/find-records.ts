@@ -8,12 +8,13 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { UiUxProvider } from '../../providers/ui-ux/ui-ux';
 
 //Pages
-import { EnviroEvalUpdatePage } from "../update-forms/env-update/env-update";
 import { PatientUpdatePage } from '../update-forms/patientid-update/patientid-update';
+
 
 //Components
 import { ListofvitalsComponent } from '../../components/lists/listofvitals/listofvitals';
 import { ListofEnviroComponent } from '../../components/lists/listofenv/listofenv';
+import { ListofMedEvalComponent } from '../../components/lists/listof-med-eval/listof-med-eval';
 
 @Component({
   selector: 'page-find-records',
@@ -66,9 +67,7 @@ export class FindRecordsPage {
   }
 
   //Navigation
-  openConsumerEnviroEval(){
-    this.navCtrl.push(EnviroEvalUpdatePage)
-  }
+  
 
   openConsumerDemographicsEval(patient){
     let demographicsModal = this.modalCtrl.create(PatientUpdatePage,{
@@ -90,6 +89,13 @@ export class FindRecordsPage {
       patient:patient
     });
     envModal.present();
+  }
+
+  openMedEvalList(patient){
+    let medEvalModal = this.modalCtrl.create(ListofMedEvalComponent,{
+      patient:patient
+    });
+    medEvalModal.present();
   }
 
   //Searchbar

@@ -68,6 +68,15 @@
 
                     <ion-row>
                       <ion-col>
+                        <button ion-button icon-left small full (click)="openMedEvalList(communityRecord)">
+                          <ion-icon name="information-circle"></ion-icon>
+                          <div ion-text text-wrap>{{ 'MEDICAL' | translate }}</div>
+                        </button>
+                      </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col>
                         <button color="red" ion-button icon-left small full (click)="presentActionSheet(communityRecord.id)">
                           <ion-icon name="trash"></ion-icon>
                           <div>{{ 'DESTROY' | translate }}</div>
