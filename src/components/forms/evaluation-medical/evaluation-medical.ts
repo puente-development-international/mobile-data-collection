@@ -43,6 +43,7 @@ export class EvaluationMedicalForm {
     received_treatment_description:null, //status of health
 
     part_of_body:null,
+    part_of_body_description:null,
     duration:null,
     trauma_induced:null,
     condition_progression:null,

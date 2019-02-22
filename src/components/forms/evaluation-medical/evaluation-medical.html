@@ -45,7 +45,7 @@
         </button>
       </ion-buttons>
 
-      <!--Need Assessment?-->
+      <!--Need Assessment?
       <ion-buttons padding-horizontal>
         <ion-label>{{'ASSESSMENT' | translate }}?</ion-label>
         <button ion-button small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'Yes' ? false : true" color="primary-darkest" (click)="set('Yes','needsAssessmentandEvaluation')">
@@ -54,14 +54,14 @@
           <button ion-button right small [outline]="evaluationMedical.needsAssessmentandEvaluation == 'No' ? false : true" color="primary-darkest" (click)="set('No','needsAssessmentandEvaluation')">
             {{ 'NO' | translate }}
         </button>
-      </ion-buttons>
+      </ion-buttons>-->
           
     </ion-list>
   
   </ion-card>
     
   <!--Previous Diagnosis-->
-  <ion-card *ngIf="evaluationMedical.seen_doctor == 'Yes'">
+  <ion-card>
     <ion-card-header class='card-title' color="primary-light">
       {{ 'DIAGNOSIS_PREVIOUS' | translate }}
     </ion-card-header>
@@ -106,8 +106,15 @@
           <ion-option text-wrap value="bladder_urinary">{{ 'BLADDER_URINARYTRACT' | translate }}</ion-option>
           <ion-option text-wrap value="reproductive_organs">{{ 'REPRODUCTIVE_ORGANS' | translate }}</ion-option>
           <ion-option text-wrap value="nutrition">{{ 'NUTRITION_ISSUE' | translate }}</ion-option>
+          <ion-option text-wrap value="">---</ion-option>
         </ion-select>
       </ion-item>
+
+      <!--Part of Body Description-->
+      <ion-item>
+          <ion-label floating>{{'PART_OF_BODY' | translate }} {{ 'DESCRIPTION' | translate }}</ion-label>
+          <ion-textarea rows="3" type="text" [(ngModel)]="evaluationMedical.part_of_body_description"></ion-textarea>
+      </ion-item> 
 
       <!--DURATION-->
       <ion-buttons padding-horizontal>
@@ -157,7 +164,7 @@
   </ion-card>
 
   <!--Medical Evaluation-->
-  <ion-card *ngIf="evaluationMedical.needsAssessmentandEvaluation == 'Yes'">
+  <ion-card>
     <ion-card-header class='card-title' color="primary-light" text-wrap>
       {{ 'ASSESSMENT' | translate }}
     </ion-card-header>
