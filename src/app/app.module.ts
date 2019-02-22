@@ -50,6 +50,7 @@ import { PrescriptionsForm } from '../components/forms/prescriptions/prescriptio
 import { AllergiesForm } from '../components/forms/allergies/allergies';
 import { ListofvitalsComponent } from '../components/lists/listofvitals/listofvitals';
 import { ListofEnviroComponent } from '../components/lists/listofenv/listofenv';
+import { ListofMedEvalComponent } from '../components/lists/listof-med-eval/listof-med-eval';
 
 // Pages
 import { AboutPage } from '../pages/about/about';
@@ -65,6 +66,7 @@ import { ProfileModalPage } from '../pages/profile-modal/profile-modal';
 import { EnviroEvalUpdatePage } from '../pages/update-forms/env-update/env-update';
 import { PatientUpdatePage} from '../pages/update-forms/patientid-update/patientid-update';
 import { VitalsUpdatePage } from '../pages/update-forms/vitals-update/vitals-update';
+import { MedEvalUpdatePage } from '../pages/update-forms/medeval-update/medeval-update';
 import { HelpPage } from '../pages/help/help';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { FindRecordsPage } from '../pages/find-records/find-records';
@@ -97,6 +99,7 @@ export function createTranslateLoader(http: Http) {
     EnviroEvalUpdatePage,
     PatientUpdatePage,
     VitalsUpdatePage,
+    MedEvalUpdatePage,
     AccordionComponent,
     CardFlippingComponent,
     ContentDrawerComponent,
@@ -108,6 +111,7 @@ export function createTranslateLoader(http: Http) {
     RadarComponent,
     ListofvitalsComponent,
     ListofEnviroComponent,
+    ListofMedEvalComponent,
     PatientIDForm,
     EnvironmentalHistoryForm,
     MedicalHistoryForm,
@@ -142,6 +146,7 @@ export function createTranslateLoader(http: Http) {
     AnimatedCirclesComponent,
     ListofvitalsComponent,
     ListofEnviroComponent,
+    ListofMedEvalComponent,
     MapPage,
     ProfileModalPage,
     HelpPage,
@@ -150,6 +155,7 @@ export function createTranslateLoader(http: Http) {
     EnviroEvalUpdatePage,
     PatientUpdatePage,
     VitalsUpdatePage,
+    MedEvalUpdatePage,
     PatientIDForm,
     EnvironmentalHistoryForm,
     MedicalHistoryForm,
