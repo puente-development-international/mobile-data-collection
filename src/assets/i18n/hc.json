@@ -286,6 +286,10 @@
     "ROLE":"Wòl",
     "ADMIN":"Administratè",
     "MANAGER":"Manadjè",
-    "ASSOCIATE":"Asosyasyon"
+    "ASSOCIATE":"Asosyasyon",
+
+    "DAY":"Jou",
+    "MONTH":"Mwa",
+    "YEAR":"Ane"
 
 }

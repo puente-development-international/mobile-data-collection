@@ -290,6 +290,10 @@
     "ROLE":"Role",
     "ADMIN":"Administrator",
     "MANAGER":"Manager",
-    "ASSOCIATE":"Associate"
+    "ASSOCIATE":"Associate",
+
+    "DAY":"Day",
+    "MONTH":"Month",
+    "YEAR":"Year"
 
 }

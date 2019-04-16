@@ -287,6 +287,10 @@
     "ROLE":"Papel",
     "ADMIN":"Administrador",
     "MANAGER":"Gerente",
-    "ASSOCIATE":"Ayudante"
+    "ASSOCIATE":"Ayudante",
+
+    "DAY":"Dìa",
+    "MONTH":"Mes",
+    "YEAR":"Año"
     
 }
