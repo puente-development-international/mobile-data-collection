@@ -96,7 +96,6 @@ Parse offer a backend to store data, push notifications, social media integratio
 - **Ideal for**: General purpose applications
 
 # Known Issues
-- Android Production has geolocation issues
 - Performance Issues on older/slower devices
 
 # Documentation
