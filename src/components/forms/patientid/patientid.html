@@ -26,10 +26,25 @@
           <ion-input type="text" [(ngModel)]="patientID.nickname" placeholder="{{ 'INPUT' | translate }}"></ion-input>
         </ion-item>
 
-        <ion-item>
+          
+          <!--ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="patientID.dob" placeholder="{{ 'INPUT' | translate }}"></ion-datetime-->
+        <ion-grid padding='5%'>
           <ion-label stacked>{{'DOB' | translate }}</ion-label>
-          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="patientID.dob" placeholder="{{ 'INPUT' | translate }}"></ion-datetime>
-        </ion-item>
+          <ion-row>
+            <ion-col col-3>
+                <ion-label stacked>{{'DAY' | translate }}</ion-label>
+                <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.day" placeholder="DD" maxlength='2' ></ion-input>
+            </ion-col>
+            <ion-col col-3>
+                <ion-label stacked>{{'MONTH' | translate }}</ion-label>
+                <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.month" placeholder="MM" maxlength='2' ></ion-input>
+            </ion-col>
+            <ion-col col-3>
+                <ion-label stacked>{{'YEAR' | translate }}</ion-label>
+                <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.year" placeholder="YYYY" maxlength='4' ></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
         <ion-buttons padding-horizontal>
           <ion-label>{{'SEX' | translate }}</ion-label>

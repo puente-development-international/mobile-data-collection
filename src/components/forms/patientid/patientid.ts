@@ -47,6 +47,12 @@ export class PatientIDForm {
 
   }
 
+  date_of_birth = {
+    day: null,
+    month:null,
+    year:null
+  }
+
   
   
   constructor(private parseProvider: ParseProvider,
@@ -61,10 +67,28 @@ export class PatientIDForm {
     this.auth.authenticated();
   }
 
+
   
 
   ionViewDidEnter() {
     this.recordCoordinates();
+  }
+
+  async secureCredentials(){
+    this.patientID.surveyingUser = await this.auth.currentUser().name
+    this.patientID.surveyingOrganization = await this.auth.currentUser().organization
+
+  }
+
+  public fixDate(){
+    for (let key in this.date_of_birth){
+      if (this.date_of_birth[key] == null){
+        this.date_of_birth[key] = 0;  
+      }
+
+    }
+    this.patientID.dob = String(this.date_of_birth.day+'/'+ this.date_of_birth.month +'/'+ this.date_of_birth.year)
+    console.log(this.patientID.dob)
   }
 
   public recordCoordinates() {
@@ -76,8 +100,10 @@ export class PatientIDForm {
     });
   } 
 
-  public post_n_clear() {
+  async post_n_clear() {
     this.isenabled=false;
+    await this.secureCredentials() //make sure credentials are stored
+    await this.fixDate() //combine fields
     this.parseProvider.postObjectsToClass(this.patientID,'SurveyData').then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
