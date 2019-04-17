@@ -64,7 +64,7 @@ export class PatientIDForm {
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello PatientIDForm ');
-    this.auth.authenticated();
+    this.auth.authenticated()
   }
 
 
@@ -72,12 +72,14 @@ export class PatientIDForm {
 
   ionViewDidEnter() {
     this.recordCoordinates();
+    this.secureCredentials();
   }
 
   async secureCredentials(){
-    this.patientID.surveyingUser = await this.auth.currentUser().name
-    this.patientID.surveyingOrganization = await this.auth.currentUser().organization
-
+    if(this.patientID.surveyingOrganization == null || this.patientID.surveyingUser ){
+      this.patientID.surveyingUser = await this.auth.currentUser().name
+      this.patientID.surveyingOrganization = await this.auth.currentUser().organization
+    }
   }
 
   public fixDate(){

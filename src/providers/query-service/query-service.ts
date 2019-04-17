@@ -107,7 +107,7 @@ export class QueryServiceProvider {
         }, (error) => {
           reject(error);
         });
-      }, 500);
+      }, 1500);
     });
   }
   

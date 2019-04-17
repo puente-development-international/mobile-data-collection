@@ -82,7 +82,7 @@ export class SearchbarObjectIdComponent {
     //let offset = 0;
 
     //Limits the length of the searched results
-    let limit = 1000;
+    let limit = 3000;
 
     //Returns the query then displays those "result" by pushing into surveyPoints object
     //Based on Parse surveyingOrganization Column and name of organization for the User
