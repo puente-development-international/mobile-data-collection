@@ -72,8 +72,8 @@
     },
     "platforms": [
       "browser",
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   },
   "cordovaPlugins": [],
