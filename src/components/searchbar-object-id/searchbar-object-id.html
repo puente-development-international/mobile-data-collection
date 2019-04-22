@@ -1,27 +1,28 @@
 
 <ion-content>
 
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems1()" placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAME' | translate }}"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"  placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAME' | translate }}"></ion-searchbar>
     
-    <!--div *ngIf="searching" class="spinner-container">
+    <div *ngIf="searching" class="spinner-container">
         <ion-spinner></ion-spinner>
-    </div-->
+    </div>
     
     <ion-list>
-        <ion-item-group>
-            <ion-item no-lines *ngFor="let item of filteredItems" (click)='setItem(item)'>
-                <ion-label>
-                    {{ item.get('fname') }}
-                    {{ item.get('lname') }}
-                </ion-label>
-                <div item-right>
+        <ion-grid>
+            <ion-row no-lines *ngFor="let item of filteredItems" (click)='setItem(item)'>
+                <ion-col col-8 >
+                    <div class="center">
+                        <h1>{{ item.get('fname') }}</h1>
+                        <h3>{{ item.get('lname') }}</h3>
+                        <h6>{{ item.get('nickname') }}</h6>
+                    </div>
+                </ion-col>
+                <ion-col  style="margin: auto">
                     {{ item.get('communityname') }}
-                </div> 
-                <div item-left>
-                    <img height="100 px" width="100 px" src='assets/images/placeholder.png'>
-                </div> 
-            </ion-item>
-        </ion-item-group>      
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+     
     </ion-list>
      
 </ion-content>

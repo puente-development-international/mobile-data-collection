@@ -14,25 +14,26 @@ export class SearchbarObjectIdComponent {
   @Output() emitObjectIDfromComponent = new EventEmitter();
 
   searchTerm: string = '';
-  //allItems: any;
   allItems = [];
   filteredItems:any;
   selectedItem:any;
+  searching: any = false;
 
   constructor(public navCtrl: NavController,
     private querySrvc:QueryServiceProvider,
     private auth:AuthProvider) {
 
       this.auth.authenticated();
+
+      this.searching = true;
       this.listItems().then(()=>{
+        this.searching = false;
         this.filteredItems = this.allItems; 
       })
   }
 
-  ionViewDidLoad() {
-  }
-
-  ionViewDidEnter(){
+  ngOnInit() {
+    this.setFilteredItems();
   }
 
   setItem(item){
@@ -47,6 +48,7 @@ export class SearchbarObjectIdComponent {
     //console.log(this.selectedItem.get('fname'));
   }
 
+  //old
   filterItems(){
     /*
     For Searchbar
@@ -57,23 +59,16 @@ export class SearchbarObjectIdComponent {
     }); */
 
     this.filteredItems = this.allItems.filter((result) => {
-      return result.get('fname').toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1;
-    });
-
-  }
-
-  filterItems1(){
-    this.filteredItems = this.allItems.filter((result) => {
+      let result_comb = result.get('fname') + ' ' + result.get('lname') 
       if (result.get('fname')){
-        var fname =  result.get('fname').toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1;
+        var name =  result_comb.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1;
       }
-      if (result.get('lname')){
-        var lname =  result.get('lname').toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1;
-      }
-      return fname || lname;
+      return name;
     });
+
   }
 
+  //1
   listItems(): Promise<any> {
     //Retrieves list of records from server
 
@@ -91,9 +86,25 @@ export class SearchbarObjectIdComponent {
         let object = result[i];
         this.allItems.push(object);
       }
+      console.log("Done with Query")
     }, (error) => {
       console.log(error);
     });
   }
+
+  //2
+  filterItems_new(searchTerm){
+    return this.allItems.filter((item) => {
+      let result_comb = item.get('fname') + ' ' + item.get('lname') 
+      return result_comb.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+      
+      //return fname || lname;
+    });
+  }
+  //3
+  setFilteredItems() {
+    this.filteredItems = this.filterItems_new(this.searchTerm);
+  }
+  
 
 }

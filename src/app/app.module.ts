@@ -4,6 +4,7 @@ import { TranslateModule } from 'ng2-translate/ng2-translate';
 import { TranslateLoader, TranslateStaticLoader } from 'ng2-translate/src/translate.service';
 import { Http } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 // App
@@ -123,6 +124,7 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     IonicModule.forRoot(MyApp),
     TranslateModule.forRoot({
 			provide: TranslateLoader,

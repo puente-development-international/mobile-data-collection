@@ -11,5 +11,19 @@ searchbar-object-id {
         margin-left: auto;
         margin-right: auto;
     }
+    
+    .center{
+        //display: block;
+        margin:auto;
+    }
+
+    ion-row{
+        background-color: lighten(map-get($colors, primary-dark),60%);
+        border: .5px;
+        border-color: map-get($colors, primary);
+        border-style: solid;
+        border-radius: 10px;
+        margin: 1%;
+    }
 
 }
