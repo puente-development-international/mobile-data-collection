@@ -2,13 +2,13 @@
   <!--Environmental Health -->
   <ion-card>
     
-    <ion-item color='primary-dark' (click)="contentDrawer.openDrawer()">
+    <ion-item color='primary-dark'>
       {{ 'CLIENT' | translate }}
-      <ion-label>{{client.fname}} {{client.lname}}</ion-label>
+      <ion-label (click)="presentModal()">{{client.fname}} {{client.lname}}</ion-label>
       <button ion-button outline item-start (click)="close()" large>
           <ion-icon name="arrow-round-back" ></ion-icon>
       </button>
-      <button ion-button item-start icon-only clear (click)="contentDrawer.openDrawer()" large>
+      <button ion-button item-start icon-only clear (click)="presentModal()" large>
           <ion-icon name="person" color="white"></ion-icon>
       </button>
     </ion-item>
@@ -189,7 +189,3 @@
     </ion-item>
   </ion-card>
 </ion-content>
-
-<content-drawer [options]="drawerOptions" #ContentDrawerComponent>
-  <searchbar-object-id (emitObjectIDfromComponent)='inputObjectIDfromComponent($event)'></searchbar-object-id>
-</content-drawer>

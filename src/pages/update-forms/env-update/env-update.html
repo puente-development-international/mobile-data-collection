@@ -1,7 +1,10 @@
 
 <ion-header>
 
-  <ion-navbar (click)="popView()">
+  <ion-navbar>
+    <button color='primary-light' ion-button item-start (click)="popView()" large>
+      <ion-icon name="arrow-round-back" ></ion-icon>
+    </button>
     <ion-title>{{ 'ENVIRONMENTALHEALTHHISTORY' | translate }}</ion-title>
   </ion-navbar>
 

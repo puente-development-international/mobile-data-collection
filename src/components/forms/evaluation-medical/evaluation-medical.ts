@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { ViewController } from 'ionic-angular';
+import { ViewController, ModalController } from 'ionic-angular';
 
 
 // Providers
@@ -9,14 +9,13 @@ import { AuthProvider } from '../../../providers/auth/auth';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 
 //Components
-import { ContentDrawerComponent } from '../../content-drawer/content-drawer';
+import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-object-id';
 
 @Component({
   selector: 'evaluation-medical',
   templateUrl: 'evaluation-medical.html'
 })
 export class EvaluationMedicalForm {
-  @ViewChild("ContentDrawerComponent") contentDrawer: ContentDrawerComponent;
 
   isenabled:boolean=false;
   
@@ -69,6 +68,7 @@ export class EvaluationMedicalForm {
   constructor(private parseProvider: ParseProvider,
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
+    public modalCtrl:ModalController,
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello EvaluationMedicalForm');
@@ -118,8 +118,21 @@ export class EvaluationMedicalForm {
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
     this.client.fname = selectedItem.get('fname');
     this.client.lname = selectedItem.get('lname');
-    this.contentDrawer.closeDrawer();
+    //this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
+  }
+
+  presentModal() {
+    const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+    });
+    modal.present();
   }
 
   /*

@@ -6,6 +6,10 @@ page-patientid-update {
         background-color: black;
     }
 
+    ion-content,ion-grid{
+        background: white;
+    }
+
     .content{
         background: #F7F8F8;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to bottom, map-get($colors, primary), #F7F8F8);  /* Chrome 10-25, Safari 5.1-6 */
@@ -24,6 +28,13 @@ page-patientid-update {
     .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
+
+    .border{
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 10px;
+        border-color: map-get($colors, primary-dark);
+      }
 
    
 

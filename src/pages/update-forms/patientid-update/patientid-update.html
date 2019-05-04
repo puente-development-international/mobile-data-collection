@@ -6,7 +6,10 @@
 -->
 <ion-header no-border-bottom>
 
-  <ion-navbar (click)="popView()" color="primary" no-border-bottom>
+  <ion-navbar color="primary" no-border-bottom>
+    <button color='primary-light' ion-button item-start (click)="popView()" large>
+      <ion-icon name="arrow-round-back" ></ion-icon>
+    </button>
     <ion-title>{{ 'PATIENTDEMOGRAPHICS' | translate }}</ion-title>
   </ion-navbar>
 
@@ -34,10 +37,23 @@
         <ion-input type="text" [(ngModel)]="patientID.nickname" name="nickname"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label>{{'DOB' | translate }}</ion-label>
-        <ion-input  type="tel" [(ngModel)]="patientID.dob" name="dob"></ion-input>
-      </ion-item>
+      <ion-grid padding='5%'>
+        <ion-label stacked>{{'DOB' | translate }}</ion-label>
+        <ion-row>
+          <ion-col col-3>
+              <ion-label stacked>{{'DAY' | translate }}</ion-label>
+              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.day" name="day" placeholder="DD" maxlength='2' ></ion-input>
+          </ion-col>
+          <ion-col col-3>
+              <ion-label stacked>{{'MONTH' | translate }}</ion-label>
+              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.month" name="month" placeholder="MM" maxlength='2' ></ion-input>
+          </ion-col>
+          <ion-col col-3>
+              <ion-label stacked>{{'YEAR' | translate }}</ion-label>
+              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.year" name="year" placeholder="YYYY" maxlength='4' ></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
       <ion-item>
         <ion-label>{{'SEX' | translate }}</ion-label>

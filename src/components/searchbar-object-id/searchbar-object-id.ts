@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController} from 'ionic-angular';
 import 'rxjs/add/operator/debounceTime';
 
 import { QueryServiceProvider } from '../../providers/query-service/query-service';
@@ -19,9 +19,11 @@ export class SearchbarObjectIdComponent {
   selectedItem:any;
   searching: any = false;
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     private querySrvc:QueryServiceProvider,
-    private auth:AuthProvider) {
+    private auth:AuthProvider,
+    private viewCtrl:ViewController) {
 
       this.auth.authenticated();
 
@@ -44,8 +46,10 @@ export class SearchbarObjectIdComponent {
     this.selectedItem = item;
 
     //Emits selectedItem to the parent class
-    this.emitObjectIDfromComponent.emit(this.selectedItem);
+    //this.emitObjectIDfromComponent.emit(this.selectedItem);
     //console.log(this.selectedItem.get('fname'));
+    console.log(this.selectedItem)
+    this.dismiss(this.selectedItem)
   }
 
   //old
@@ -77,7 +81,7 @@ export class SearchbarObjectIdComponent {
     //let offset = 0;
 
     //Limits the length of the searched results
-    let limit = 3000;
+    let limit = 1000;
 
     //Returns the query then displays those "result" by pushing into surveyPoints object
     //Based on Parse surveyingOrganization Column and name of organization for the User
@@ -105,6 +109,16 @@ export class SearchbarObjectIdComponent {
   setFilteredItems() {
     this.filteredItems = this.filterItems_new(this.searchTerm);
   }
+
+  dismiss(item) {
+    this.viewCtrl.dismiss(item);
+  }
+
+  close(){
+    let item = null
+    this.dismiss(item)
+  }
+
   
 
 }

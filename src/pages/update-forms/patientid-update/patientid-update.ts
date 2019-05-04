@@ -37,6 +37,14 @@ export class PatientUpdatePage {
     longitude:null
   } 
 
+  date_of_birth = {
+    day: null,
+    month:null,
+    year:null
+  }
+
+
+
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
@@ -45,6 +53,7 @@ export class PatientUpdatePage {
     private userPositn:UserpositionProvider) {
     this.patient = navParams.get('patient');
     this.populateFields();
+    this.splitDate();
   }
 
   ionViewDidLoad() {
@@ -72,6 +81,33 @@ export class PatientUpdatePage {
     //for (var prop in this.patient.attributes) this.patientID[prop] = this.patient.attributes[prop];
   }
 
+  public splitDate(){
+    let date_arr = this.patientID.dob.split("/")
+    
+    console.log(date_arr)
+
+    this.date_of_birth.day = date_arr[0]
+    this.date_of_birth.month = date_arr[1]
+    this.date_of_birth.year = date_arr[2]
+
+    console.log(this.date_of_birth)
+    
+
+    //this.patientID.dob = String(this.date_of_birth.day+'/'+ this.date_of_birth.month +'/'+ this.date_of_birth.year)
+    //console.log(this.patientID.dob)
+  }
+
+  public fixDate(){
+    for (let key in this.date_of_birth){
+      if (this.date_of_birth[key] == null){
+        this.date_of_birth[key] = 0;  
+      }
+
+    }
+    this.patientID.dob = String(this.date_of_birth.day+'/'+ this.date_of_birth.month +'/'+ this.date_of_birth.year)
+    console.log(this.patientID.dob)
+  }
+
   public recordCoordinates() {
     this.userPositn.getUserPosition().then((resp) => {
       this.patientID.latitude = resp.coords.latitude;
@@ -96,10 +132,10 @@ export class PatientUpdatePage {
   console.log(this.patientID[key]);
 }
 
-  public post_n_update() {
+  async post_n_update() {
     this.patientID.id = this.patient.id;
     console.log(this.patientID.fname);
-
+    await this.fixDate();
     this.parsePrvdr.postObjectsToClass(this.patientID,'SurveyData').then(() => {
       this.themeSrvc.toasting('Saved | Guardado', 'top');
     }, (error) => {

@@ -1,5 +1,10 @@
 
 <ion-content>
+    <ion-navbar color='primary'>
+        <button color='primary-light' ion-button item-start (click)="close()" large>
+            <ion-icon name="arrow-round-back" ></ion-icon>
+        </button>
+    </ion-navbar>
 
     <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"  placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAME' | translate }}"></ion-searchbar>
     

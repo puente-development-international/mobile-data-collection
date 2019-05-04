@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { ViewController } from 'ionic-angular';
+import { ViewController,ModalController } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -8,14 +8,13 @@ import { AuthProvider } from '../../../providers/auth/auth';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 
 // Components
-import { ContentDrawerComponent } from '../../content-drawer/content-drawer';
+import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-object-id';
 
 @Component({
   selector: 'evaluation-surgical',
   templateUrl: 'evaluation-surgical.html'
 })
 export class EvaluationSurgicalForm {
-  @ViewChild("ContentDrawerComponent") contentDrawer: ContentDrawerComponent;
 
   isenabled:boolean=false;
   
@@ -53,6 +52,7 @@ export class EvaluationSurgicalForm {
   constructor(private parseProvider: ParseProvider,
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
+    public modalCtrl:ModalController,
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello EvaluationSurgicalForm');
@@ -102,10 +102,22 @@ export class EvaluationSurgicalForm {
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
     this.client.fname = selectedItem.get('fname');
     this.client.lname = selectedItem.get('lname');
-    this.contentDrawer.closeDrawer();
+    //this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
   }
 
+  presentModal() {
+    const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+    });
+    modal.present();
+  }
 
   /*
     * Sets the Value of a key in the evaluationSurgical Dictionary

@@ -149,6 +149,7 @@ export function createTranslateLoader(http: Http) {
     ListofvitalsComponent,
     ListofEnviroComponent,
     ListofMedEvalComponent,
+    SearchbarObjectIdComponent,
     MapPage,
     ProfileModalPage,
     HelpPage,

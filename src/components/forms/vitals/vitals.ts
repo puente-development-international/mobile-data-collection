@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, Modal, ModalController } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -7,14 +7,13 @@ import { AuthProvider } from '../../../providers/auth/auth';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 
 //Component
-import { ContentDrawerComponent } from '../../content-drawer/content-drawer';
+import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-object-id';
 
 @Component({
   selector: 'vitals',
   templateUrl: 'vitals.html'
 })
 export class VitalsForm {
-  @ViewChild("ContentDrawerComponent") contentDrawer: ContentDrawerComponent;
 
   isenabled:boolean=false;
   
@@ -44,6 +43,7 @@ export class VitalsForm {
   constructor(private parseProvider: ParseProvider,
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
+    private modalCtrl:ModalController,
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello VitalsForm');
@@ -79,10 +79,6 @@ export class VitalsForm {
     this.isenabled = false;
   }
 
-  openContentDrawer(){
-    this.contentDrawer.openDrawer();
-  }
-
   /*
     * Retrieves objectID from templates's content drawer
     * 
@@ -97,8 +93,21 @@ export class VitalsForm {
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
     this.client.fname = selectedItem.get('fname');
     this.client.lname = selectedItem.get('lname');
-    this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
+  }
+
+  presentModal() {
+    const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+        
+    });
+    modal.present();
   }
 
 

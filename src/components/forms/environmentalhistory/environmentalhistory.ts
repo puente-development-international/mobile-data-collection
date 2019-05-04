@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, ModalController } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -7,14 +7,13 @@ import { AuthProvider } from '../../../providers/auth/auth';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 
 //Components
-import {  ContentDrawerComponent} from '../../content-drawer/content-drawer';
+import {  SearchbarObjectIdComponent} from '../../searchbar-object-id/searchbar-object-id';
 
 @Component({
   selector: 'environmentalhistory',
   templateUrl: 'environmentalhistory.html'
 })
 export class EnvironmentalHistoryForm {
-  @ViewChild("ContentDrawerComponent") contentDrawer: ContentDrawerComponent;
 
   isenabled:boolean=false;
   
@@ -53,6 +52,7 @@ export class EnvironmentalHistoryForm {
   constructor(private auth: AuthProvider,  
     private parseProvider: ParseProvider,
     private viewCtrl: ViewController,
+    private modalCtrl:ModalController,
     private themeCtrl:UiUxProvider) {
 
     console.log('Hello EnvironmentalHistoryForm ');
@@ -66,13 +66,6 @@ export class EnvironmentalHistoryForm {
       {expanded: false},
     ];
 
-    //Design Element: Content Drawer
-    this.drawerOptions = {
-      handleHeight: 50,
-      thresholdFromBottom: 200,
-      thresholdFromTop: 200,
-      bounceBack: true
-    };
   }
 
   post_n_clear(){
@@ -125,8 +118,21 @@ export class EnvironmentalHistoryForm {
     this.client.objectID= selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
     this.client.fname = selectedItem.get('fname');
     this.client.lname = selectedItem.get('lname');
-    this.contentDrawer.closeDrawer();
+    //this.contentDrawer.closeDrawer();
     console.log(this.client.objectID);
+  }
+
+  presentModal() {
+    const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+    });
+    modal.present();
   }
 
   /*
