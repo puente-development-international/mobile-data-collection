@@ -145,5 +145,9 @@ export class FindRecordsPage {
     actionSheet.present();
   }
 
+  back(){
+    this.navCtrl.pop()
+  }
+
 
 }

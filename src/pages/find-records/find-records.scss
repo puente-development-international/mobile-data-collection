@@ -9,4 +9,14 @@ page-find-records {
         width: 100%;
     }
 
+    ion-header{
+        background: map-get($colors, primary);
+        margin: auto;
+        display: inline;
+    }
+    ion-title{
+        margin:auto;
+        text-align: center !important;
+    }
+
 }
