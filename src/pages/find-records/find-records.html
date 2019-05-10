@@ -5,17 +5,8 @@
   Ionic pages and navigation.
 -->
 <ion-header >
-  <ion-navbar hideBackButton color="primary">
-   
-    <ion-buttons left>
-      <button ion-button outline large icon-only (click)="back()">
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
-    </ion-buttons> 
-   
+  <ion-navbar  color="primary">
     <ion-title text-center text-wrap>{{ 'FINDRECORDS' | translate }}</ion-title>
-     
-    
   </ion-navbar>
   <!--
   <ion-searchbar
@@ -32,9 +23,38 @@
 
 <ion-content class="page-background">
   <ion-list>
-      <ion-grid fixed>
+    <ion-item *ngFor="let communityRecord of filteredCommunityRecords">
+      <ion-grid>
         <ion-row>
-          <!--ion-col *ngFor="let communityRecord of communityRecords" col-12 -->
+        <ion-col>
+            <h4>{{ 'LICENSENUM' | translate }}: {{ communityRecord.get('cedulaNumber') }}</h4>
+            <h1>{{ communityRecord.get('lname') }}, {{ communityRecord.get('fname') }}</h1>
+            <h6>{{ communityRecord.get('communityname') }}, {{ communityRecord.get('city') }}</h6>
+            <h6>{{ communityRecord.get('province') }}</h6>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left full (click)="openConsumerDemographicsEval(communityRecord)">
+            <div ion-text text-wrap style="width:100%">{{ 'PATIENTDEMOGRAPHICS' | translate }}</div>
+          </button>
+          <button ion-button icon-left  full (click)="openConsumerVitalsList(communityRecord)">
+            <div ion-text text-wrap>{{ 'VITALS' | translate }}</div>
+          </button>
+          <button ion-button icon-left  full (click)="openConsumerEnvHistoryList(communityRecord)">
+            <div ion-text text-wrap>{{ 'ENVIRONMENTAL' | translate }}</div>
+          </button>
+          <button ion-button icon-left full (click)="openMedEvalList(communityRecord)">
+            <div ion-text text-wrap>{{ 'MEDICAL' | translate }}</div>
+          </button>
+          <button color="red" ion-button icon-left small full (click)="presentActionSheet(communityRecord.id)">
+            <div ion-text text-wrap>{{ 'DESTROY' | translate }}</div>
+          </button>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+      <!--ion-grid fixed>
+        <ion-row>
           <ion-col *ngFor="let communityRecord of filteredCommunityRecords" col-12 >
             <card-flipping class='record-card'>
                 <div class="flash-card-front">
@@ -97,6 +117,6 @@
             </card-flipping>
           </ion-col>
         </ion-row>
-      </ion-grid>
+      </ion-grid-->
   </ion-list>
 </ion-content>
