@@ -5,6 +5,7 @@ import { ToastController, ModalController, NavController } from 'ionic-angular';
 
 // Providers
 import { AuthProvider } from '../../providers/auth/auth';
+import { StorageProvider } from '../../providers/storage/storage'
 
 // Pages
 import { SigninPage } from '../signin/signin';
@@ -42,6 +43,7 @@ export class HomePage {
   constructor(private toastCtrl: ToastController, 
     public modalCtrl: ModalController, 
     private navCtrl: NavController,
+    private storagePrvdr:StorageProvider,
     private auth: AuthProvider,  
     private app: App) {
     
@@ -56,6 +58,7 @@ export class HomePage {
     return this.auth.authenticated();
   }
   ionViewDidEnter() { 
+    this.storeCredentials()
   }
   
   /*
@@ -177,6 +180,12 @@ export class HomePage {
       //this.listPoints();
       refresher.complete();
     }, 2000);
+  }
+
+  storeCredentials(){
+    let name = this.auth.currentUser().name;
+    let org = this.auth.currentUser().organization;
+    this.storagePrvdr.setUserInfoToStorage(name,org);
   }
 
 

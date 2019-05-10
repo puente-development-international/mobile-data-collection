@@ -6,6 +6,8 @@ import { Http } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 // App
 import { MyApp } from './app.component';
@@ -26,6 +28,7 @@ import { UserpositionProvider } from '../providers/userposition/userposition';
 import { UiUxProvider } from '../providers/ui-ux/ui-ux';
 import { AssetManagerProvider } from '../providers/asset-manager/asset-manager';
 import { MapControlsProvider } from '../providers/map-controls/map-controls';
+import { StorageProvider } from '../providers/storage/storage';
 
 // Components
 import { AccordionComponent } from '../components/accordion/accordion';
@@ -72,6 +75,7 @@ import { HelpPage } from '../pages/help/help';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { FindRecordsPage } from '../pages/find-records/find-records';
 import { SettingsPageModule } from '../pages/settings/settings.module'
+
 
 
 
@@ -126,6 +130,7 @@ export function createTranslateLoader(http: Http) {
     BrowserModule,
     ReactiveFormsModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
 			provide: TranslateLoader,
 			useFactory: (createTranslateLoader),
@@ -183,6 +188,7 @@ export function createTranslateLoader(http: Http) {
     UiUxProvider,
     AssetManagerProvider,
     MapControlsProvider,
+    StorageProvider,
   ]
 })
 export class AppModule { }
