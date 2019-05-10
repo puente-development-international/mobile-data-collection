@@ -75,6 +75,19 @@
             <button ion-button right small [outline]="environmentalHealth.typeofWaterdoyoudrink == 'tap' ? false : true" color="primary-darkest" (click)="set('tap','typeofWaterdoyoudrink')">
               {{ 'TAP' | translate }}
             </button>
+            <button ion-button right small [outline]="environmentalHealth.typeofWaterdoyoudrink == 'filtered' ? false : true" color="primary-darkest" (click)="set('filtered','typeofWaterdoyoudrink')">
+              {{ 'FILTERED' | translate }}
+            </button>
+        </ion-buttons>
+
+        <ion-buttons padding-horizontal>
+          <ion-label stacked>{{ 'ACCESSTOBATHROOM' | translate }}  </ion-label>
+          <button ion-button small [outline]="environmentalHealth.bathroomAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','bathroomAccess')">
+            {{ 'YES' | translate }}
+          </button>
+          <button ion-button right small [outline]="environmentalHealth.bathroomAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','bathroomAccess')">
+            {{ 'NO' | translate }}
+          </button>
         </ion-buttons>
 
         <ion-buttons padding-horizontal>

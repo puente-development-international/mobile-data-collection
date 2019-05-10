@@ -28,6 +28,7 @@ export class EnvironmentalHistoryForm {
     yearsLivedinThisHouse: null,
     waterAccess: null,
     typeofWaterdoyoudrink: null,
+    bathroomAccess:null,
     latrineAccess: null,
     clinicAccess: null,
     conditionoFloorinyourhouse: null,
