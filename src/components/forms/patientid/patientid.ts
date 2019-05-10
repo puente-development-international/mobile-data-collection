@@ -9,7 +9,7 @@ import { AuthProvider } from '../../../providers/auth/auth';
 import { UserpositionProvider } from '../../../providers/userposition/userposition';
 import { AssetManagerProvider } from '../../../providers/asset-manager/asset-manager';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
-
+import { StorageProvider} from '../../../providers/storage/storage'
 
 @Component({
   selector: 'patientid',
@@ -47,6 +47,12 @@ export class PatientIDForm {
 
   }
 
+  geography = {
+    communityname: null,
+    city:null,
+    province: null
+  }
+
   date_of_birth = {
     day: null,
     month:null,
@@ -60,6 +66,7 @@ export class PatientIDForm {
     public viewCtrl:ViewController,
     private userPositn:UserpositionProvider,
     public assetsMngr: AssetManagerProvider,
+    private storagePrvdr: StorageProvider,
     //private camera:Camera,
     public themeCtrl:UiUxProvider) {
 
@@ -76,9 +83,20 @@ export class PatientIDForm {
   }
 
   async secureCredentials(){
+    
     if(this.patientID.surveyingOrganization == null || this.patientID.surveyingUser ){
-      this.patientID.surveyingUser = await this.auth.currentUser().name
-      this.patientID.surveyingOrganization = await this.auth.currentUser().organization
+      this.patientID.surveyingUser = this.auth.currentUser().name
+      this.patientID.surveyingOrganization = this.auth.currentUser().organization
+    }
+    if(this.patientID.surveyingOrganization == null || this.patientID.surveyingUser ){
+      this.storagePrvdr.getUserInfoFromStorage().then((results)=>{
+        results[0].then((result)=>{
+          this.patientID.surveyingUser = result
+        })
+        results[1].then((result)=>{
+          this.patientID.surveyingOrganization = result
+        })
+      })
     }
   }
 
@@ -102,15 +120,23 @@ export class PatientIDForm {
     });
   } 
 
+  public fakeCachelocation(){
+    this.patientID.communityname = this.geography.communityname;
+    this.patientID.city = this.geography.city;
+    this.patientID.province = this.geography.province;
+  }
+
   async post_n_clear() {
     this.isenabled=false;
     await this.secureCredentials() //make sure credentials are stored
     await this.fixDate() //combine fields
+    this.fakeCachelocation();
     this.parseProvider.postObjectsToClass(this.patientID,'SurveyData').then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
       }
       this.themeCtrl.toasting('Submitted | Entregado', "bottom");
+      this.fakeCachelocation;
     }, (error) => {
       console.log(error);
       alert('Error Confirming.');
