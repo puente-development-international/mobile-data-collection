@@ -32,4 +32,11 @@ vitals {
     searchbar-object-id {
       color: black;
     }
+
+    .border{
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 10px;
+      border-color: map-get($colors, primary-dark);
+    }
 }

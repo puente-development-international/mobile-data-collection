@@ -37,6 +37,11 @@ export class VitalsForm {
     hemoglobinLevels:null
   }
 
+  bloodPressure = {
+    systolic: null,
+    diastolic:null
+  }
+
   //Design Element: Content Drawer
   drawerOptions: any;
   
@@ -58,6 +63,16 @@ export class VitalsForm {
     };
   }
 
+  public fixDate(){
+    for (let key in this.bloodPressure){
+      if (this.bloodPressure[key] == null){
+        this.bloodPressure[key] = 0;  
+      }
+
+    }
+    this.vitals.bloodPressure = String(this.bloodPressure.systolic+'/'+ this.bloodPressure.diastolic)
+    console.log(this.vitals.bloodPressure)
+  }
 
   post_n_clear(){
     this.parseProvider.postObjectsToClassWithRelation(this.vitals,'Vitals','SurveyData',this.client.objectID).then(()=> {
