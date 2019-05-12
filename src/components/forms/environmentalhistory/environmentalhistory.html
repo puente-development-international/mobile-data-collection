@@ -80,7 +80,7 @@
             </button>
         </ion-buttons>
 
-        <ion-buttons padding-horizontal>
+        <!--ion-buttons padding-horizontal>
           <ion-label stacked>{{ 'ACCESSTOBATHROOM' | translate }}  </ion-label>
           <button ion-button small [outline]="environmentalHealth.bathroomAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','bathroomAccess')">
             {{ 'YES' | translate }}
@@ -98,6 +98,22 @@
           <button ion-button right small [outline]="environmentalHealth.latrineAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','latrineAccess')">
             {{ 'NO' | translate }}
           </button>
+        </ion-buttons-->
+        
+        <ion-buttons padding-horizontal>
+          <ion-label>{{ 'BATHROOM' | translate }}/{{ 'LATRINE' | translate }}</ion-label>
+            <button ion-button small [outline]="environmentalHealth.bathroomAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','bathroomAccess')">
+              {{ 'ACCESSTOBATHROOM' | translate }}
+            </button>
+            <button ion-button right small [outline]="environmentalHealth.latrineAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','latrineAccess')">
+              {{ 'ACCESSTOLATRINE' | translate }}
+            </button>
+            <button ion-button right small [outline]="environmentalHealth.bathroomAccess == 'N' && environmentalHealth.latrineAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','bathroomAccess');set('N','latrineAccess')">
+              {{ 'NONE' | translate }}
+            </button>
+            <button ion-button right small color="primary-dark" (click)="clear(['bathroomAccess','latrineAccess'  ])">
+              {{ 'RESET' | translate }}
+            </button>
         </ion-buttons>
 
         <ion-buttons padding-horizontal>
@@ -122,7 +138,7 @@
 
         <ion-item>
           <ion-label stacked>{{ 'TIMESTRASHISCOLLECTED' | translate }} </ion-label>
-          <ion-textarea type="number" [(ngModel)]="environmentalHealth.timesperweektrashcollected" placeholder="{{ 'TIMESTRASHISCOLLECTEDSUB' | translate }}"></ion-textarea>
+          <ion-textarea type="tel" [(ngModel)]="environmentalHealth.timesperweektrashcollected" placeholder="{{ 'TIMESTRASHISCOLLECTEDSUB' | translate }}"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label stacked>{{ 'WHEREISTRASHLEFT' | translate }} </ion-label>
@@ -181,12 +197,12 @@
       <accordion [expanded]="accordionItems[2].expanded">
         <ion-item>
           <ion-label stacked>{{ 'NUMBERINHOUSE'| translate}}</ion-label>
-          <ion-textarea type="number" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse" placeholder="{{ 'NUMBERINHOUSESUB'| translate}}"></ion-textarea>
+          <ion-textarea type="tel" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse" placeholder="{{ 'NUMBERINHOUSESUB'| translate}}"></ion-textarea>
         </ion-item>
 
         <ion-item>
           <ion-label stacked>{{ 'NUMBERINHOUSEUNDERFIVE'| translate}}</ion-label>
-          <ion-textarea type="number" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5" placeholder="{{ 'NUMBERINHOUSEUNDERFIVESUB' | translate }}"></ion-textarea>
+          <ion-textarea type="tel" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5" placeholder="{{ 'NUMBERINHOUSEUNDERFIVESUB' | translate }}"></ion-textarea>
         </ion-item>
       </accordion>
     </ion-item-group>

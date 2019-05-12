@@ -151,6 +151,23 @@ export class EnvironmentalHistoryForm {
     console.log(this.environmentalHealth[key])
   }
 
+  /*
+    * Sets the Values of a list of keys in the environmentalHalth Dictionary to null
+    * 
+    * @example
+    * clear(['latrineAcess','bathroomAccess'])
+    * 
+    * @param {array} list of dictionary key
+    * @returns 
+  */
+ clear(list_of_keys){
+  for (let i=0; i<list_of_keys.length; i++){
+    let x = list_of_keys[i]
+    this.environmentalHealth[x] = null;      
+  }
+  
+}
+
 
 
 }
