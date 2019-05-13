@@ -73,9 +73,9 @@
       "cordova-sqlite-storage": {}
     },
     "platforms": [
-      "android",
       "browser",
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "cordovaPlugins": [],
