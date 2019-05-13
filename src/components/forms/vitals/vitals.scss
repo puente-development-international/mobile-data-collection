@@ -38,5 +38,11 @@ vitals {
       border-width: 1px;
       border-radius: 10px;
       border-color: map-get($colors, primary-dark);
+      //text-align: center;
+      .text-input {
+        text-align: center;
+      }
     }
+
+    
 }
