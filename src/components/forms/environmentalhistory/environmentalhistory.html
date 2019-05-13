@@ -138,7 +138,7 @@
 
         <ion-item>
           <ion-label stacked>{{ 'TIMESTRASHISCOLLECTED' | translate }} </ion-label>
-          <ion-textarea type="tel" [(ngModel)]="environmentalHealth.timesperweektrashcollected" placeholder="{{ 'TIMESTRASHISCOLLECTEDSUB' | translate }}"></ion-textarea>
+          <ion-input type="tel" [(ngModel)]="environmentalHealth.timesperweektrashcollected" placeholder="{{ 'TIMESTRASHISCOLLECTEDSUB' | translate }}"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label stacked>{{ 'WHEREISTRASHLEFT' | translate }} </ion-label>
@@ -197,12 +197,12 @@
       <accordion [expanded]="accordionItems[2].expanded">
         <ion-item>
           <ion-label stacked>{{ 'NUMBERINHOUSE'| translate}}</ion-label>
-          <ion-textarea type="tel" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse" placeholder="{{ 'NUMBERINHOUSESUB'| translate}}"></ion-textarea>
+          <ion-input type="tel" [(ngModel)]="environmentalHealth.numberofIndividualsLivingintheHouse" placeholder="{{ 'NUMBERINHOUSESUB'| translate}}"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label stacked>{{ 'NUMBERINHOUSEUNDERFIVE'| translate}}</ion-label>
-          <ion-textarea type="tel" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5" placeholder="{{ 'NUMBERINHOUSEUNDERFIVESUB' | translate }}"></ion-textarea>
+          <ion-input type="tel" [(ngModel)]="environmentalHealth.numberofChildrenLivinginHouseUndertheAgeof5" placeholder="{{ 'NUMBERINHOUSEUNDERFIVESUB' | translate }}"></ion-input>
         </ion-item>
       </accordion>
     </ion-item-group>
