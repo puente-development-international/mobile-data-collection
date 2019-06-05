@@ -63,18 +63,19 @@ export class VitalsForm {
     };
   }
 
-  public fixDate(){
+  async fixBloodPressure(){
     for (let key in this.bloodPressure){
       if (this.bloodPressure[key] == null){
         this.bloodPressure[key] = 0;  
       }
 
     }
-    this.vitals.bloodPressure = String(this.bloodPressure.systolic+'/'+ this.bloodPressure.diastolic)
+    this.vitals.bloodPressure = await String(this.bloodPressure.systolic+'/'+ this.bloodPressure.diastolic)
     console.log(this.vitals.bloodPressure)
   }
 
-  post_n_clear(){
+  async post_n_clear(){
+    await this.fixBloodPressure() //combine fields
     this.parseProvider.postObjectsToClassWithRelation(this.vitals,'Vitals','SurveyData',this.client.objectID).then(()=> {
       for (var key in this.vitals){
         this.vitals[key] = null;
