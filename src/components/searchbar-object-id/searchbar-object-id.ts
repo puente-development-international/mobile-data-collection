@@ -15,7 +15,7 @@ export class SearchbarObjectIdComponent {
 
   searchTerm: string = '';
   allItems = [];
-  filteredItems:any;
+  filteredItems:any[] = [];
   selectedItem:any;
   searching: any = false;
 

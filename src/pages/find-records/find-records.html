@@ -22,8 +22,8 @@
 
 
 <ion-content class="page-background">
-  <ion-list>
-    <ion-item *ngFor="let communityRecord of filteredCommunityRecords">
+  <ion-list [virtualScroll]="filteredCommunityRecords">
+    <ion-item *virtualItem="let communityRecord">
       <ion-grid>
         <ion-row>
         <ion-col>

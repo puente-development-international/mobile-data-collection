@@ -25,7 +25,7 @@ export class FindRecordsPage {
   communityRecords: any[] = [];
 
   
-  filteredCommunityRecords:any;
+  filteredCommunityRecords: any[] = [];
 
   constructor(public navCtrl: NavController, 
     public auth: AuthProvider,
@@ -46,7 +46,7 @@ export class FindRecordsPage {
   //Function that constructs an Array of Community Records
   public aggregateRecords(){
     let offset = this.communityRecords.length;
-    let limit = 75;
+    let limit = 2000;
 
     
       return this.querySrvc.basicQuery(offset,limit,'SurveyData','surveyingOrganization',String(this.auth.currentUser().organization)).then((result) =>{

@@ -12,22 +12,23 @@
         <ion-spinner></ion-spinner>
     </div>
     
-    <ion-list>
-        <ion-grid>
-            <ion-row no-lines *ngFor="let item of filteredItems" (click)='setItem(item)'>
-                <ion-col col-8 >
-                    <div class="center">
-                        <h1>{{ item.get('fname') }}</h1>
-                        <h3>{{ item.get('lname') }}</h3>
-                        <h6>{{ item.get('nickname') }}</h6>
-                    </div>
-                </ion-col>
-                <ion-col  style="margin: auto">
-                    {{ item.get('communityname') }}
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-     
+    <ion-list [virtualScroll]="filteredItems">
+        <ion-item *virtualItem="let item">
+            <ion-grid (click)='setItem(item)'>
+                <ion-row no-lines >
+                    <ion-col col-8 >
+                        <div class="center">
+                            <h1>{{ item.get('fname') }}</h1>
+                            <h3>{{ item.get('lname') }}</h3>
+                            <h6>{{ item.get('nickname') }}</h6>
+                        </div>
+                    </ion-col>
+                    <ion-col  style="margin: auto">
+                        {{ item.get('communityname') }}
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
     </ion-list>
      
 </ion-content>
