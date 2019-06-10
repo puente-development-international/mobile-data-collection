@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.puente.datacollection" version="3.1.56" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.puente.datacollection" version="3.1.59" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Puente</name>
     <description>Custom Surveying and Mapping Application</description>
-    <author email="hope@puente-dr.com" href="https://hopetambala.herokuapp.com">Hope Tambala</author>
+    <author email="hope@puente-dr.com" href="https://hopetambala.come">Hope Tambala</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
@@ -98,11 +98,11 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
         <icon height="1024" src="resources/ios/icon/icon-1024.png" width="1024" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
-        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-            <string>need location access to find things nearby</string>
-        </edit-config>
         <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
-            <string>need location access to find things nearby</string>
+            <string>Needs location access to geolocate surveys being conducted</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>Needs location access to geolocate surveys being conducted</string>
         </edit-config>
         <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
             <string>need camera access to take pictures</string>
