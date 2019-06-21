@@ -62,8 +62,8 @@ export class SigninPage {
 
     this.authPvdr.signin(this.trimWhitespace(this.username), this.password).subscribe((success) => {
       //ion_alert.dismiss();
-      //this.navCtrl.setRoot(TabsPage);
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot(TabsPage);
+      //this.navCtrl.setRoot(HomePage);
       //loader.dismissAll();
     }, (error) => {
       //ion_alert.present();

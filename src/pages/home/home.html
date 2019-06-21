@@ -1,146 +1,110 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar>
+    <div color="primary" class="brand-title">puente</div>
 
-    <ion-buttons left>
+
+    <ion-buttons  end>
       <button ion-button icon-only (click)="openProfileModal()">
-        <ion-icon name="information-circle"></ion-icon>
+        <ion-icon name="information-circle" color="primary"></ion-icon>
       </button>
     </ion-buttons>  
     
-    <ion-title text-center>PUENTE</ion-title>
+    
 
-    <ion-buttons right>
+    <ion-buttons end>
       <button ion-button icon-only (click)="signout()">
-        <ion-icon name="log-out"></ion-icon>
+        <ion-icon name="log-out" color="primary"></ion-icon>
       </button>
     </ion-buttons>
     
   </ion-navbar>
-  <ion-segment border-top [(ngModel)]="viewMode" [ngClass]="{'lightsegmentStyles': isClass1Visible, 'darksegmentStyles': isClass2Visible}">
+  <!--ion-segment border-top [(ngModel)]="viewMode" [ngClass]="{'lightsegmentStyles': isClass1Visible, 'darksegmentStyles': isClass2Visible}">
       <ion-segment-button value="datacollection" (click)="isClass2Visible=false;isClass1Visible=true;" >
           {{ 'DATACOLLECTION' | translate }}
       </ion-segment-button>
       <ion-segment-button value="dashboard" (click)="isClass1Visible=false;isClass2Visible=true;">
           {{ 'DASHBOARD' | translate }}
       </ion-segment-button>
-  </ion-segment>
+  </ion-segment-->
   
 </ion-header>
 
-<ion-content fullscreen>
-    <!--Data Collection-->
-    <ng-template [ngIf]="viewMode === 'datacollection'">
-      <ion-content class="home-content">
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <ion-card (click) = 'openPatientID()'>
-                <h1 ion-text color="orange">ID</h1>
-                <p ion-text text-wrap>{{ 'IDANDREGISTRATION' | translate }}</p>
-              </ion-card>
-            </ion-col>
+  <!--Data Collection-->
+  <ion-content class="home-content">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card (click) = 'openPatientID()'>
+            <h1 ion-text color="orange">ID</h1>
+            <p ion-text text-wrap>{{ 'IDANDREGISTRATION' | translate }}</p>
+          </ion-card>
+        </ion-col>
 
-            <ion-col>
-              <ion-card (click) = "openVitals()">
-                <h1 ion-text color="red">{{ 'VITALS' | translate }}</h1>
-                <p ion-text text-wrap>{{ 'MEDICALSNAPSHOT' | translate }}</p>
-              </ion-card>
-            </ion-col>
+        <ion-col>
+          <ion-card (click) = "openVitals()">
+            <h1 ion-text color="red">{{ 'VITALS' | translate }}</h1>
+            <p ion-text text-wrap>{{ 'MEDICALSNAPSHOT' | translate }}</p>
+          </ion-card>
+        </ion-col>
 
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-card (click)='openEnvironmentalHistory()'>
-                <h1 ion-text color="green">{{ 'HISTORY' | translate }}</h1>
-                <p ion-text text-wrap>{{ 'ENVIRONMENTALHEALTHHISTORY' | translate }}</p>
-              </ion-card>
-            </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)='openEnvironmentalHistory()'>
+            <h1 ion-text color="green">{{ 'HISTORY' | translate }}</h1>
+            <p ion-text text-wrap>{{ 'ENVIRONMENTALHEALTHHISTORY' | translate }}</p>
+          </ion-card>
+        </ion-col>
 
-            <ion-col>
-              <ion-card (click)='openMedicalHistory()'>
-                <h1 ion-text color="purple">{{ 'HISTORY' | translate }}</h1>
-                <p ion-text text-wrap>{{ 'MEDICALHISTORY' | translate }}</p>
-              </ion-card>
-            </ion-col>
-          </ion-row>
+        <ion-col>
+          <ion-card (click)='openMedicalHistory()'>
+            <h1 ion-text color="purple">{{ 'HISTORY' | translate }}</h1>
+            <p ion-text text-wrap>{{ 'MEDICALHISTORY' | translate }}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-card style="height:inherit !important;">
-                <ion-row>
-                  <ion-col>
-                    <h1 ion-text color='blue'>{{ 'ASSESSMENT' | translate }}</h1>
-                  </ion-col>
-                </ion-row>
-                <ion-grid>
-                  <ion-row>
-                    <ion-col>
-                      <button ion-button icon-left small full (click) = 'openMedicalEvaluation()'>
-                        <ion-icon name="medkit"></ion-icon>
-                        <div>{{ 'MEDICAL' | translate }}</div>
-                      </button>
-                    </ion-col>
-                    <ion-col>
-                      <button ion-button icon-left small full (click) = 'openSurgicalEvaluation()' >
-                        <ion-icon name="cut"></ion-icon>
-                        <div>{{ 'SURGICAL' | translate }}</div>
-                      </button>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              </ion-card>
-            </ion-col>
-          </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card style="height:inherit !important;">
+            <ion-row>
+              <ion-col>
+                <h1 ion-text color='blue'>{{ 'ASSESSMENT' | translate }}</h1>
+              </ion-col>
+            </ion-row>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <button ion-button icon-left small full (click) = 'openMedicalEvaluation()'>
+                    <ion-icon name="medkit"></ion-icon>
+                    <div>{{ 'MEDICAL' | translate }}</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left small full (click) = 'openSurgicalEvaluation()' >
+                    <ion-icon name="cut"></ion-icon>
+                    <div>{{ 'SURGICAL' | translate }}</div>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-          <ion-row>
-            <!--ion-col>
-              <ion-card (click) = "openPrescriptions()">
-                <h1 ion-text color="grey">{{ 'PRESCRIPTIONS' | translate }}</h1>
-              </ion-card>
-            </ion-col-->
-            
-            <ion-col>
-              <ion-card (click) = "openAllergies()">
-                <h1 ion-text color="green">{{ 'ALLERGIES' | translate }}</h1>
-              </ion-card>
-            </ion-col>
-          </ion-row>
+      <ion-row>
+        <!--ion-col>
+          <ion-card (click) = "openPrescriptions()">
+            <h1 ion-text color="grey">{{ 'PRESCRIPTIONS' | translate }}</h1>
+          </ion-card>
+        </ion-col-->
         
-        </ion-grid>
-      </ion-content>
-    </ng-template>
-
-    <!--Dashboard-->
-    <ng-template [ngIf]="viewMode === 'dashboard'" >
-      <ion-content class="home-dashboard-content">
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <ion-card (click)="openFindRecords()" class="darkCard">
-                <h1 ion-text color="orange">{{ 'FINDRECORDS' | translate }}</h1>
-                <p ion-text text-wrap color="primary">{{ 'FINDRECORDS_SUB' | translate }}</p>
-              </ion-card>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-card (click) = 'openMapPage()' class="darkCard">
-                <h1 ion-text color="red">{{ 'MAPPING' | translate }}</h1>
-                <p ion-text text-wrap color="primary">{{ 'MAPPING_SUB' | translate }}</p>
-              </ion-card>
-            </ion-col>
-
-            <!--ion-col>
-              <ion-card class="darkCard">
-                <h1 ion-text color="purple">{{ 'CALENDAR' | translate }}</h1>
-                <p ion-text color="primary">{{ 'VIEWAPPS' | translate }}</p>
-              </ion-card>
-            </ion-col-->
-          </ion-row>
-        
-        </ion-grid>
-      </ion-content>
-    </ng-template>
-
-
-</ion-content>
+        <ion-col>
+          <ion-card (click) = "openAllergies()">
+            <h1 ion-text color="green">{{ 'ALLERGIES' | translate }}</h1>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    
+    </ion-grid>
+  </ion-content>

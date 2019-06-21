@@ -1,70 +1,64 @@
 page-dashboard {
 
-	.dashboard-content{
-		background: #4D4D4D;
-		barchart div {
-			background: #4D4D4D;
-		}
-		doughnut div {
-			background: #4D4D4D;
-		}
-		
-	}
-
-	.items{
-		border-color: rgba(0, 0, 0, 0);
-		background-color: rgba(0, 0, 0, 0);
-		color: white; 
-	}
- 
-	.info {
-		//color: #555;
-		//text-shadow: 0 0 3px map-get($colors, primary);
-		color: map-get($colors, primary);
-		text-shadow: 2px 2px 3px #555;
-        text-align: center;
-
-		//font: bold 40px/80px Helvetica, Verdana, Tahoma;
-		font: bold 8vh/28vw Helvetica, Verdana, Tahoma;
-		padding: 4px 3px 0 3px;
-		
-		animation-name: colorchange;
-		animation-duration: .005s;
-		
-        
+    .brand-title{
+        //font-family: 'San Francisco Display', "Helvetica-Neue", Helvetica, sans-serif;
+        font-family: "Roboto", "Helvetica Neue", sans-serif;
+        color: map-get($colors, primary);
+        //margin: "20px";
+        font-size: 4rem;
+        font-weight: bold;
+        padding: 5px 0px 5px 5px ;
     }
-	
-	/**
-	* LAPTOP and up (992px)
-	*/
-	@media (min-width: map-get($grid-breakpoints, lg)) {
 
-	}
-	
-	/**
-	* IPAD and up (796px)
-	*/
-	@media (min-width: map-get($grid-breakpoints, md)) {
-		.info {
-			color: #555;
-			text-align: center;
-	
-			//font: bold 40px/80px Helvetica, Verdana, Tahoma;
-			font: bold 12vh/28vw Helvetica, Verdana, Tahoma;
-			padding: 4px 3px 0 3px;
-			
-			
-		}
-
-	}
-
-	/* The animation code */
-	@keyframes colorchange {
-		from {
-			color: map-get($colors, primary-dark);
-		}
-		
-
-	}
-
+    .home-dashboard-content{
+        background: #ECE9E6;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #FFFFFF, rgb(245, 243, 241));  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #FFFFFF, rgb(245, 243, 241)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .card {
+        margin: 0 5px;
+        //width: calc(100% - 10px);
+        height: 20vh !important;
+        //height: inherit;
+        width: auto !important;
+        padding: 14px;
+        //box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
+        box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 4px;
+        h1 {
+            font-weight: 400;
+            //font-size: $main-font-size;
+            font-size: 3.5rem;
+        }
+        p {
+            font-weight: 100;
+            font-size: 1.5rem;
+        }
+    }
+    
+    /*
+    //Card Details to keep
+    .card-title {
+        //position: absolute;
+        //top: 36%;
+        background-color: map-get($colors, primary-light);
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: map-get($colors, primary-dark);
+      }
+    
+      .card-subtitle {
+        background-color: map-get($colors, primary-dark);
+        font-size: 1.25em;
+        //position: absolute;
+        //top: 52%;
+        width: 100%;
+        color: white;
+      }
+    ion-refresher-content{
+        $refresher-icon-color: map-get($colors, primary);
+        $refresher-text-color: map-get($colors, primary);
+    }
+    */
 }

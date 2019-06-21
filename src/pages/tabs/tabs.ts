@@ -5,7 +5,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 
 // Pages
 import { HomePage } from '../home/home';
-import { MapPage } from '../map/map';
+import { DashboardPage } from '../dashboard/dashboard';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { MapPage } from '../map/map';
 })
 export class TabsPage {
   tab1Root = HomePage;
-  tab4Root = MapPage;
+  tab2Root = DashboardPage;
 
   constructor(private auth: AuthProvider) { }
 

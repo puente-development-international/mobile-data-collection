@@ -1,92 +1,36 @@
-<!--
-  Generated template for the VisualChartsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation. -->
-<ion-header no-border >
-	<ion-navbar color="dashboard-dark" >
-		<ion-title text-center >{{ 'DIAGNOSTICS' | translate }}</ion-title>
+<ion-header>
+	<ion-navbar>
+		<div color="primary" class="brand-title">puente</div>
 	</ion-navbar>
-	<ion-segment [(ngModel)]="viewMode">
-		<ion-segment-button value="Demographics">
-			{{ 'DEMOGRAPHICS' | translate }}
-		</ion-segment-button>
-		<ion-segment-button value="Medical">
-			{{ 'MEDICAL' | translate }}
-		</ion-segment-button>
-		<ion-segment-button value="Environmental">
-			{{ 'ENVIRONMENTAL' | translate }}
-		</ion-segment-button>
-  </ion-segment>
+	
 </ion-header>
 
 
-<ion-content [ngSwitch]="viewMode" class="dashboard-content">
-	<div *ngSwitchCase="'Demographics'">
-		<barchart></barchart>
+<ion-content class="home-dashboard-content">
+	<ion-grid>
 		<ion-row>
-			<ion-col>
-					<circle-decoration class="info">100</circle-decoration>
-			</ion-col>
-			<ion-col>
-					<circle-decoration></circle-decoration>
-			</ion-col>
-			<ion-col>
-					<circle-decoration></circle-decoration>
-			</ion-col>
+		<ion-col>
+			<ion-card (click)="openFindRecords()" class="card">
+			<h1 ion-text color="orange">{{ 'FINDRECORDS' | translate }}</h1>
+			<p ion-text text-wrap color="black">{{ 'FINDRECORDS_SUB' | translate }}</p>
+			</ion-card>
+		</ion-col>
+		</ion-row>
+		<ion-row>
+		<ion-col>
+			<ion-card (click) = 'openMapPage()' class="card">
+			<h1 ion-text color="red">{{ 'MAPPING' | translate }}</h1>
+			<p ion-text text-wrap color="black">{{ 'MAPPING_SUB' | translate }}</p>
+			</ion-card>
+		</ion-col>
+
+		<!--ion-col>
+			<ion-card class="darkCard">
+			<h1 ion-text color="purple">{{ 'CALENDAR' | translate }}</h1>
+			<p ion-text color="primary">{{ 'VIEWAPPS' | translate }}</p>
+			</ion-card>
+		</ion-col-->
 		</ion-row>
 
-		<ion-row>
-			<ion-item padding class="items">
-				Stuff
-			</ion-item>
-		</ion-row>
-
-		<ion-row>
-			<ion-item padding class="items">
-				Stuff
-			</ion-item>
-		</ion-row>
-
-		<ion-row>
-			<ion-item padding class="items">
-				Stuff
-			</ion-item>
-		</ion-row>
-	</div>
-
-	<div *ngSwitchCase="'Medical'">
-		<doughnut></doughnut>
-		<ion-row>
-			<ion-col>
-					<circle-decoration class="info">100</circle-decoration>
-			</ion-col>
-			<ion-col>
-					<circle-decoration class="info">200</circle-decoration>
-			</ion-col>
-			<ion-col>
-					<circle-decoration class="info"></circle-decoration>
-			</ion-col>
-		</ion-row>
-
-		<ion-row>
-			<ion-item padding class="items">
-				Stuff
-			</ion-item>
-		</ion-row>
-
-		<ion-row>
-			<ion-item padding class="items">
-				Stuff
-			</ion-item>
-		</ion-row>
-
-		<ion-row>
-			<ion-item padding class="items">
-				Stuff
-			</ion-item>
-		</ion-row>
-	</div>
-
-	<div *ngSwitchCase="'Environmental'"></div>
+	</ion-grid>
 </ion-content>

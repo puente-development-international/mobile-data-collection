@@ -1,4 +1,15 @@
 page-home {
+
+    .brand-title{
+        //font-family: 'San Francisco Display', "Helvetica-Neue", Helvetica, sans-serif;
+        font-family: "Roboto", "Helvetica Neue", sans-serif;
+        color: map-get($colors, primary);
+        //margin: "20px";
+        font-size: 4rem;
+        font-weight: bold;
+        padding: 5px 0px 5px 5px ;
+    }
+
     .home-content {
         background: #ECE9E6;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to bottom, #FFFFFF, rgb(245, 243, 241));  /* Chrome 10-25, Safari 5.1-6 */
@@ -20,28 +31,10 @@ page-home {
             opacity: 0.95;
             background-color: white;
             //position: relative;
-            top: -50px;
+            //top: -50px;
         }
     
         .segment-button {
-            border-color: map-get($colors, primary) ;
-            color: map-get($colors, primary);
-        }
-
-    }
-
-    .darksegmentStyles {
-        .segment {
-            border-color: map-get($colors, primary) ;
-            padding: 4px 12px;
-            opacity: 0.95;
-            background-color: black;
-            //position: relative;
-            top: -50px;
-        }
-    
-        .segment-button {
-            background: black;
             border-color: map-get($colors, primary) ;
             color: map-get($colors, primary);
         }
@@ -69,36 +62,4 @@ page-home {
             font-size: 1.5rem;
         }
     }
-
-    .darkCard{
-        background: #151515;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #434343, #0c0c0c);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #434343, #0c0c0c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
-    
-    /*
-    //Card Details to keep
-    .card-title {
-        //position: absolute;
-        //top: 36%;
-        background-color: map-get($colors, primary-light);
-        font-size: 2.0em;
-        width: 100%;
-        font-weight: bold;
-        color: map-get($colors, primary-dark);
-      }
-    
-      .card-subtitle {
-        background-color: map-get($colors, primary-dark);
-        font-size: 1.25em;
-        //position: absolute;
-        //top: 52%;
-        width: 100%;
-        color: white;
-      }
-    ion-refresher-content{
-        $refresher-icon-color: map-get($colors, primary);
-        $refresher-text-color: map-get($colors, primary);
-    }
-    */
 }
