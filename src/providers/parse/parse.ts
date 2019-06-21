@@ -34,12 +34,9 @@ export class ParseProvider {
       surveyPoint.set(String(key),obj);
     }
 
-    
     var point = new Parse.GeoPoint(localObject.latitude,localObject.longitude);
     surveyPoint.set('location', point);
   
-    
-
     return surveyPoint.save(null, {
       success: function (surveyPoint) {
         console.log(surveyPoint);
