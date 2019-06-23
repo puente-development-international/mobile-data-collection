@@ -12,7 +12,14 @@ $font-path: "../assets/fonts";
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-
+*  {
+  //font-family: "Roboto", "Helvetica Neue", sans-serif;
+  //font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; //Apple
+  font-family:'PT Sans', 'sans-serif';
+  h1,h2 {
+    font-weight: 550 !important;
+  }
+};
 
 // Named Color Variables
 // --------------------------------------------------
@@ -93,3 +100,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
