@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ViewController } from 'ionic-angular';
+import { ViewController, ModalController } from 'ionic-angular';
 //import { Camera, CameraOptions } from '@ionic-native/camera';
 
 // Providers
@@ -10,6 +10,9 @@ import { UserpositionProvider } from '../../../providers/userposition/userpositi
 import { AssetManagerProvider } from '../../../providers/asset-manager/asset-manager';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 import { StorageProvider} from '../../../providers/storage/storage'
+
+import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-object-id';
+
 
 @Component({
   selector: 'patientid',
@@ -24,6 +27,8 @@ export class PatientIDForm {
   patientID = {
     fname: null,
     lname: null,
+    relationship:null,
+    relationship_id:null,
     nickname: null,
     dob: null,
     sex: null,
@@ -58,12 +63,18 @@ export class PatientIDForm {
     month:null,
     year:null
   }
+  relationship = {
+    objectID: null,
+    fname: null,
+    lname: null
+  }
 
   
   
   constructor(private parseProvider: ParseProvider,
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
+    public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
@@ -100,7 +111,7 @@ export class PatientIDForm {
     }
   }
 
-  public fixDate(){
+  fixDate(){
     for (let key in this.date_of_birth){
       if (this.date_of_birth[key] == null){
         this.date_of_birth[key] = 0;  
@@ -108,7 +119,10 @@ export class PatientIDForm {
 
     }
     this.patientID.dob = String(this.date_of_birth.day+'/'+ this.date_of_birth.month +'/'+ this.date_of_birth.year)
-    console.log(this.patientID.dob)
+    
+    this.patientID.relationship = `${this.relationship.lname}, ${this.relationship.fname}`
+    this.patientID.relationship_id = this.relationship.objectID
+    console.log(this.patientID.relationship)
   }
 
   public recordCoordinates() {
@@ -190,6 +204,33 @@ export class PatientIDForm {
     console.log(this.patientID[key]);
   }
 
-  /*  
+  /*
+    * Retrieves objectID from templates's content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
   */
+  inputObjectIDfromComponent(selectedItem) {
+    //this.isenabled=true;
+    this.relationship.objectID = selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
+    this.relationship.fname = selectedItem.get('fname');
+    this.relationship.lname = selectedItem.get('lname');
+  }
+
+  presentModal() {
+    const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+        
+    });
+    modal.present();
+  }
 }
