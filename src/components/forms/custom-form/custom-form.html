@@ -1,0 +1,49 @@
+<ion-content >
+  <ion-card>
+    <!--Identifier Stuff-->
+    <ion-item color='primary-dark' >
+      {{ 'CLIENT' | translate }}
+      <ion-label (click)="presentModal()">{{client.fname}} {{client.lname}}</ion-label>
+      <button ion-button outline item-start (click)="close()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <button ion-button item-start icon-only clear large (click)="presentModal()">
+          <ion-icon name="person" color="white"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-card-header class='card-title' color="primary-light" text-wrap>
+      {{ customForm.title }}
+    </ion-card-header>
+
+    
+    <ion-list>
+        <ion-item>
+            <ion-label floating>{{customForm.properties.question_1.title}}</ion-label>
+            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.properties.question_1.answer"></ion-textarea>
+        </ion-item> 
+
+        <ion-item>
+            <ion-label floating>{{customForm.properties.question_2.title}}</ion-label>
+            <ion-textarea rows="2" type="text" [(ngModel)]="customForm.properties.question_2.answer"></ion-textarea>
+        </ion-item> 
+
+        <ion-item>
+            <ion-label floating>{{ customForm.properties.question_3.title }}</ion-label>
+            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.properties.question_3.answer"></ion-textarea>
+        </ion-item> 
+          
+    </ion-list>
+  
+  </ion-card>
+  
+  <!--Submit-->
+  <ion-card padding-bottom='20px'>
+    <ion-item no-lines>
+      <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" text-wrap [disabled]="!isenabled">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        {{ 'SUBMIT' | translate }} {{ 'CUSTOMFORM' | translate }}
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>

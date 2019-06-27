@@ -52,6 +52,7 @@ import { EvaluationMedicalForm } from '../components/forms/evaluation-medical/ev
 import { EvaluationSurgicalForm } from '../components/forms/evaluation-surgical/evaluation-surgical';
 import { PrescriptionsForm } from '../components/forms/prescriptions/prescriptions';
 import { AllergiesForm } from '../components/forms/allergies/allergies';
+import { CustomForm } from '../components/forms/custom-form/custom-form';
 import { ListofvitalsComponent } from '../components/lists/listofvitals/listofvitals';
 import { ListofEnviroComponent } from '../components/lists/listofenv/listofenv';
 import { ListofMedEvalComponent } from '../components/lists/listof-med-eval/listof-med-eval';
@@ -74,7 +75,9 @@ import { MedEvalUpdatePage } from '../pages/update-forms/medeval-update/medeval-
 import { HelpPage } from '../pages/help/help';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { FindRecordsPage } from '../pages/find-records/find-records';
-import { SettingsPageModule } from '../pages/settings/settings.module'
+import { ManageCustomFormsPage } from '../pages/manage-custom-forms/manage-custom-forms';
+import { SettingsPageModule } from '../pages/settings/settings.module';
+import { TermsOfServicePage } from '../pages/about/terms-of-service/tos';
 
 
 
@@ -101,10 +104,12 @@ export function createTranslateLoader(http: Http) {
     HelpPage,
     DashboardPage,
     FindRecordsPage,
+    ManageCustomFormsPage,
     EnviroEvalUpdatePage,
     PatientUpdatePage,
     VitalsUpdatePage,
     MedEvalUpdatePage,
+    TermsOfServicePage,
     AccordionComponent,
     CardFlippingComponent,
     ContentDrawerComponent,
@@ -124,7 +129,8 @@ export function createTranslateLoader(http: Http) {
     EvaluationMedicalForm,
     EvaluationSurgicalForm,
     PrescriptionsForm,
-    AllergiesForm
+    AllergiesForm,
+    CustomForm
   ],
   imports: [
     BrowserModule,
@@ -149,6 +155,7 @@ export function createTranslateLoader(http: Http) {
     SigninPage,
     SignupPage,
     SigninForgotPage,
+    TermsOfServicePage,
     Splash,
     AnimatedCirclesComponent,
     ListofvitalsComponent,
@@ -160,6 +167,7 @@ export function createTranslateLoader(http: Http) {
     HelpPage,
     DashboardPage,
     FindRecordsPage,
+    ManageCustomFormsPage,
     EnviroEvalUpdatePage,
     PatientUpdatePage,
     VitalsUpdatePage,
@@ -171,7 +179,8 @@ export function createTranslateLoader(http: Http) {
     EvaluationMedicalForm,
     EvaluationSurgicalForm,
     PrescriptionsForm,
-    AllergiesForm
+    AllergiesForm,
+    CustomForm
     
   ],
   providers: [

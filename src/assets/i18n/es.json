@@ -12,6 +12,7 @@
     "FIRSTNAME": "Nombre de pila",
     "LASTNAME":"Apellido",
     "NICKNAME":"Apodo",
+    "MOTHERFATHERGUARDIAN":"Madre, padre, tutor",
     "DOB":"Fecha de Nacimiento",
     "SEX":"Sexo",
     "TELNUM":"Número de Teléfono",

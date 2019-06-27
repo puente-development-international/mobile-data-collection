@@ -12,6 +12,7 @@
     "FIRSTNAME": "First Name",
     "LASTNAME":"Last Name",
     "NICKNAME":"Nickname",
+    "MOTHERFATHERGUARDIAN":"Mother, father, guardian",
     "DOB":"Date of Birth",
     "SEX":"Sex",
     "TELNUM":"Telephone Number",
@@ -304,6 +305,9 @@
 
     "DAY":"Day",
     "MONTH":"Month",
-    "YEAR":"Year"
+    "YEAR":"Year",
+
+    "MANAGECUSTOMFORMS":"Custom Created Forms",
+    "MANAGECUSTOMFORMS_SUB":"Manage custom forms created on the dashboard"
 
 }

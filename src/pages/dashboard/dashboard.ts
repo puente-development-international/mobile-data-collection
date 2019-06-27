@@ -10,6 +10,7 @@ import { StorageProvider } from '../../providers/storage/storage'
 // Pages
 import { MapPage } from '../map/map';
 import { FindRecordsPage } from '../find-records/find-records';
+import { ManageCustomFormsPage} from '../manage-custom-forms/manage-custom-forms';
 
 
 /**
@@ -24,7 +25,6 @@ import { FindRecordsPage } from '../find-records/find-records';
 })
 export class DashboardPage {
 
-
     constructor(private toastCtrl: ToastController, 
         public modalCtrl: ModalController, 
         private navCtrl: NavController,
@@ -37,22 +37,27 @@ export class DashboardPage {
     ionViewCanEnter(): boolean {
         //Authenticates Page
         return this.auth.authenticated();
-      }
-      ionViewDidEnter() { 
-        this.storeCredentials()
-      }
+    }
 
-      openCharts() {
+    ionViewDidEnter() { 
+        this.storeCredentials()
+    }
+
+    openCharts() {
         this.navCtrl.push(DashboardPage);
-      }
-    
-      openMapPage() {
+    }
+
+    openMapPage() {
         this.navCtrl.push(MapPage);
-      }
-    
-      openFindRecords() {
+    }
+
+    openFindRecords() {
         this.navCtrl.push(FindRecordsPage);
-      }
+    }
+
+    openCustomForms() {
+        this.navCtrl.push(ManageCustomFormsPage);
+    }
 
     /*
         Controllers

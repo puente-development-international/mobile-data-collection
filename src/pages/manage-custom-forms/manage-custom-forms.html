@@ -1,0 +1,19 @@
+<ion-header >
+  <ion-navbar  color="primary">
+    <ion-title text-center text-wrap>{{ 'MANAGECUSTOMFORMS' | translate }}</ion-title>
+  </ion-navbar>
+  <ion-searchbar ion-text text-wrap [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems()" placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAMEUSER' | translate }}"></ion-searchbar>
+</ion-header>
+
+
+
+<ion-content class="page-background">
+  <ion-list [virtualScroll]="filteredCustomForms">
+    <ion-item *virtualItem="let customForm">
+        <div (click)="openCustomForm(customForm)">
+          <h1 ion-text text-wrap style="width:100%">{{ customForm.get('title') }}</h1>
+          <h3 ion-text text-wrap style="width:100%">{{ customForm.get('description') }}</h3>
+        </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

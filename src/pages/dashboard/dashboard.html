@@ -9,28 +9,30 @@
 <ion-content class="home-dashboard-content">
 	<ion-grid>
 		<ion-row>
-		<ion-col>
-			<ion-card (click)="openFindRecords()" class="card">
-			<h1 ion-text color="orange">{{ 'FINDRECORDS' | translate }}</h1>
-			<p ion-text text-wrap color="black">{{ 'FINDRECORDS_SUB' | translate }}</p>
-			</ion-card>
-		</ion-col>
+			<ion-col>
+				<ion-card (click)="openFindRecords()" class="card">
+				<h1 ion-text color="orange">{{ 'FINDRECORDS' | translate }}</h1>
+				<p ion-text text-wrap color="black">{{ 'FINDRECORDS_SUB' | translate }}</p>
+				</ion-card>
+			</ion-col>
+			</ion-row>
+			<ion-row>
+			<ion-col>
+				<ion-card (click) = 'openMapPage()' class="card">
+				<h1 ion-text color="red">{{ 'MAPPING' | translate }}</h1>
+				<p ion-text text-wrap color="black">{{ 'MAPPING_SUB' | translate }}</p>
+				</ion-card>
+			</ion-col>
+
 		</ion-row>
+
 		<ion-row>
-		<ion-col>
-			<ion-card (click) = 'openMapPage()' class="card">
-			<h1 ion-text color="red">{{ 'MAPPING' | translate }}</h1>
-			<p ion-text text-wrap color="black">{{ 'MAPPING_SUB' | translate }}</p>
-			</ion-card>
-		</ion-col>
-
-		<!--ion-col>
-			<ion-card class="darkCard">
-			<h1 ion-text color="purple">{{ 'CALENDAR' | translate }}</h1>
-			<p ion-text color="primary">{{ 'VIEWAPPS' | translate }}</p>
-			</ion-card>
-		</ion-col-->
+			<ion-col>
+				<ion-card (click)="openCustomForms()" class="card">
+				<h1 ion-text color="blue">{{ 'MANAGECUSTOMFORMS' | translate }}</h1>
+				<p ion-text text-wrap color="black">{{ 'MANAGECUSTOMFORMS_SUB' | translate }}</p>
+				</ion-card>
+			</ion-col>
 		</ion-row>
-
 	</ion-grid>
 </ion-content>
