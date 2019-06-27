@@ -302,6 +302,14 @@
 
     "DAY":"Dìa",
     "MONTH":"Mes",
-    "YEAR":"Año"
+    "YEAR":"Año",
+
+    "MANAGECUSTOMFORMS":"Formas personalizadas",
+    "MANAGECUSTOMFORMS_SUB":"Maneja formas creadas",
+
+    "TYPEOFSTOVE":"Tipo de estufa",
+    "FOGON":"Un fogón",
+    "STOVETOP":"Una estufa (de gas o de electricidad)",
+    "OPENFIRE":"La fogata"
     
 }

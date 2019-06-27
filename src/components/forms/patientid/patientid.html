@@ -70,12 +70,6 @@
 
         <ion-buttons padding-horizontal>
           <ion-label>{{'MARRIAGESTATUS' | translate }}</ion-label>
-          <!--ion-select  [(ngModel)]="patientID.marriageStatus" interface ='popover'>
-            <ion-option  value="single"> {{'SINGLE' | translate }} </ion-option>
-            <ion-option  value="married"> {{'MARRIED' | translate }} </ion-option>
-            <ion-option  value="concubine"> {{'CONCUBINE' | translate }} </ion-option>
-            <ion-option  value="widow"> {{'WIDOW' | translate }} </ion-option>
-          </ion-select-->
           <button ion-button right small [outline]="patientID.marriageStatus == 'single' ? false : true" color="primary-darkest" (click)="set('single','marriageStatus')">
             {{ 'SINGLE' | translate }}
           </button>
@@ -89,12 +83,7 @@
             {{ 'WIDOW' | translate }}
           </button>
         </ion-buttons>
-        <!--
-        <ion-item>
-          <ion-label stacked>Family Relationships</ion-label>
-          <ion-input type="text" [(ngModel)]="patientID.familyRelationships"></ion-input>
-        </ion-item>
-        -->
+      
         <ion-item>
           <ion-label stacked>{{'OCCUPATION' | translate }}</ion-label>
           <ion-input type="text" [(ngModel)]="patientID.occupation"></ion-input>

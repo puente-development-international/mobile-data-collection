@@ -308,6 +308,11 @@
     "YEAR":"Year",
 
     "MANAGECUSTOMFORMS":"Custom Created Forms",
-    "MANAGECUSTOMFORMS_SUB":"Manage custom forms created on the dashboard"
+    "MANAGECUSTOMFORMS_SUB":"Manage custom forms created on the dashboard",
+
+    "TYPEOFSTOVE":"Type of Stove",
+    "FOGON":"Constructed stove with ventilation",
+    "STOVETOP":"Stovetop with tank or electricity ",
+    "OPENFIRE":"Open Fire"
 
 }

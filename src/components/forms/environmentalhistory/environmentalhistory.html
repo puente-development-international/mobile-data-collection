@@ -79,26 +79,6 @@
               {{ 'FILTERED' | translate }}
             </button>
         </ion-buttons>
-
-        <!--ion-buttons padding-horizontal>
-          <ion-label stacked>{{ 'ACCESSTOBATHROOM' | translate }}  </ion-label>
-          <button ion-button small [outline]="environmentalHealth.bathroomAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','bathroomAccess')">
-            {{ 'YES' | translate }}
-          </button>
-          <button ion-button right small [outline]="environmentalHealth.bathroomAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','bathroomAccess')">
-            {{ 'NO' | translate }}
-          </button>
-        </ion-buttons>
-
-        <ion-buttons padding-horizontal>
-          <ion-label stacked>{{ 'ACCESSTOLATRINE' | translate }}  </ion-label>
-          <button ion-button small [outline]="environmentalHealth.latrineAccess == 'Y' ? false : true" color="primary-darkest" (click)="set('Y','latrineAccess')">
-            {{ 'YES' | translate }}
-          </button>
-          <button ion-button right small [outline]="environmentalHealth.latrineAccess == 'N' ? false : true" color="primary-darkest" (click)="set('N','latrineAccess')">
-            {{ 'NO' | translate }}
-          </button>
-        </ion-buttons-->
         
         <ion-buttons padding-horizontal>
           <ion-label>{{ 'BATHROOM' | translate }}/{{ 'LATRINE' | translate }}</ion-label>
@@ -183,6 +163,19 @@
           </button>
           <button ion-button right small [outline]="environmentalHealth.conditionoRoofinyourhouse == 'working' ? false : true" color="primary-darkest" (click)="set('working','conditionoRoofinyourhouse')">
             {{ 'WORKINGCONDITION' | translate }}
+          </button>
+        </ion-buttons>
+
+        <ion-buttons padding-horizontal>
+          <ion-label stacked>{{'TYPEOFSTOVE'| translate}} </ion-label>
+          <button ion-button small [outline]="environmentalHealth.stoveType == 'cementStove-Ventilation' ? false : true" color="primary-darkest" (click)="set('cementStove-Ventilation','stoveType')">
+            {{ 'FOGON' | translate }}
+          </button>
+          <button ion-button right small [outline]="environmentalHealth.stoveType == 'stoveTop' ? false : true" color="primary-darkest" (click)="set('stoveTop','stoveType')">
+            {{ 'STOVETOP' | translate }}
+          </button>
+          <button ion-button right small [outline]="environmentalHealth.stoveType == 'openfire-noVentilation' ? false : true" color="primary-darkest" (click)="set('openfire-noVentilation','stoveType')">
+            {{ 'OPENFIRE' | translate }}
           </button>
         </ion-buttons>
       </accordion>

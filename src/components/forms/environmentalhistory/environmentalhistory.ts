@@ -33,6 +33,7 @@ export class EnvironmentalHistoryForm {
     clinicAccess: null,
     conditionoFloorinyourhouse: null,
     conditionoRoofinyourhouse: null,
+    stoveType:null,
     medicalproblemswheredoyougo: null,
     dentalproblemswheredoyougo:null,
     biggestproblemofcommunity:null,
