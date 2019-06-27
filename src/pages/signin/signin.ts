@@ -8,6 +8,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { SignupPage } from '../signup/signup';
 import { TabsPage } from '../tabs/tabs'; 
 import { SettingsPage } from '../settings/settings';
+import { TermsOfServicePage } from '../about/terms-of-service/tos';
 import { HomePage } from '../home/home';
 import { SigninForgotPage } from '../signin-forgot/signin-forgot';
 
@@ -74,6 +75,14 @@ export class SigninPage {
   presentSettingsModal(){
     //Opens Profile Modal Page
     let myModal = this.modalCtrl.create(SettingsPage);
+
+    //.present() shows modal
+    myModal.present();
+  }
+
+  presentTermsOfServiceModal(){
+    //Opens Profile Modal Page
+    let myModal = this.modalCtrl.create(TermsOfServicePage);
 
     //.present() shows modal
     myModal.present();

@@ -32,6 +32,9 @@
 
 <ion-footer >
   <ion-navbar transparent>
+    <ion-item>
+      <ion-label (click)="presentTermsOfServiceModal()" color="primary">Terms of Service</ion-label>
+    </ion-item>
     <ion-buttons right>
       <button ion-button icon-only (click)="presentSettingsModal()" color="primary">
         <ion-icon name="cog"></ion-icon>
