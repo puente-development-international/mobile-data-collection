@@ -19,8 +19,11 @@ import { SigninForgotPage } from '../signin-forgot/signin-forgot';
 export class SigninPage {
   registerPage = SignupPage;
   forgotPage = SigninForgotPage;
+
   password: string = '';
   username: string = '';
+  firstname: string = '';
+  lastname: string = '';
 
   constructor(public alertCtrl: AlertController, 
     public navCtrl: NavController, 

@@ -51,7 +51,7 @@ export class SignupPage {
     
     loader.present();
 
-    this.authPvdr.signup(this.username, this.password, this.email, this.organization,this.role).subscribe((success) => {
+    this.authPvdr.signup(this.firstname, this.lastname, this.username, this.password, this.email, this.organization,this.role).subscribe((success) => {
       this.navCtrl.setRoot(TabsPage);
       loader.dismissAll();
     }, (error) => {

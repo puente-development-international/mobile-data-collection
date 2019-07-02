@@ -101,9 +101,11 @@ export class AuthProvider {
     });
   }
 
-  public signup(username: string, password: string, email: string, organization: string,role:string): Observable<boolean> {
+  public signup(firstname: string, lastname: string,username: string, password: string, email: string, organization: string,role:string): Observable<boolean> {
     return new Observable((observer) => {
       var user = new Parse.User();
+      user.set('firstname', firstname);
+      user.set('lastname', lastname);
       user.set('username', username);
       user.set('password', password);
       user.set('email', email);
