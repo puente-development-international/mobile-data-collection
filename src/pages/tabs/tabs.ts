@@ -9,7 +9,8 @@ import { DashboardPage } from '../dashboard/dashboard';
 
 
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: 'tabs.html',
+  selector: 'page-tabs',
 })
 export class TabsPage {
   tab1Root = HomePage;

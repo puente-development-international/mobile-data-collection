@@ -1,0 +1,17 @@
+page-tabs{
+  //Media Queries http://stephen.io/mediaqueries/iphonex/
+  //iPhone X
+  @media only screen 
+  and (min-device-width : 375px) 
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3)
+  and (orientation : portrait) { 
+    .tabbar{
+      padding-bottom: 20px !important;
+    }
+  }
+
+  .tabbar{
+    padding-bottom: 5px;
+  }
+}
