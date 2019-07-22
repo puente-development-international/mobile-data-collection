@@ -1,6 +1,14 @@
 {
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint-eslint-rules"
+  ],
   "rules": {
+    "no-floating-promises": { "severity": "error" },
+    "promise-function-async": true,
+    "no-var-requires": false,
     "no-duplicate-variable": true,
+    "no-constant-condition": true,
     "no-unused-variable": [
       true
     ]

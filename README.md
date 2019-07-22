@@ -16,7 +16,6 @@ This is a Community Health Records Data Collection Application that integrates I
 
 Google Maps Javascript SDK
 
-
 ## Screenshots
 
 <p align="middle">
@@ -96,13 +95,14 @@ Parse offer a backend to store data, push notifications, social media integratio
 - **Ideal for**: General purpose applications
 
 # Known Issues
+
 - Performance Issues on older/slower devices
 
 # Documentation
 https://hopetambala.github.io/puente-ionic-datacollection/
 
-# Contribution
 
+# Contribution
 - Report issues
 - Open pull request with improvements
 - Spread the word
