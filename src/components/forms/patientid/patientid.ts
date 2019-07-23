@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 import { ViewController, ModalController } from 'ionic-angular';
-//import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
 import { AuthProvider } from '../../../providers/auth/auth';
 import { UserpositionProvider } from '../../../providers/userposition/userposition';
-import { PhotosProvider } from '../../../providers/photos/photos'
+//import { PhotosProvider } from '../../../providers/photos/photos'
 import { AssetManagerProvider } from '../../../providers/asset-manager/asset-manager';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 import { StorageProvider} from '../../../providers/storage/storage'
@@ -22,7 +22,7 @@ import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-
 export class PatientIDForm {
 
   isenabled: boolean = false;
-  public imageSource: string;
+  public imageSource: any;
 
   patientID = {
     fname: null,
@@ -74,7 +74,8 @@ export class PatientIDForm {
     public viewCtrl:ViewController,
     public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
-    private photoController: PhotosProvider,
+    private camera:Camera,
+    //private photoController: PhotosProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
     public themeCtrl:UiUxProvider) {
@@ -129,13 +130,13 @@ export class PatientIDForm {
     });
   } 
 
-  public takePhoto () {
+  /*public takePhoto () {
     this.photoController.getPhoto().then((imagedata) => {
       this.imageSource = imagedata;
     }).catch((error) => {
       console.log('Error getting photo',error);
     });
-  }
+  }*/
 
   public fakeCachelocation(){
     this.patientID.communityname = this.geography.communityname;
@@ -160,7 +161,7 @@ export class PatientIDForm {
     });
   }
 
-  /*
+  
   takePhoto () {
     const options: CameraOptions = {
       quality: 100,
@@ -171,12 +172,12 @@ export class PatientIDForm {
     }
 
     this.camera.getPicture(options).then((imageData) => {
-      this.Imgsrc = 'data:image/jpeg;base64,' + imageData;
+      this.imageSource = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
       console.log(err);
     });
 
-  }*/
+  }
 
   checkifenter(){
     if (this.patientID.fname !== ''){

@@ -16,7 +16,7 @@
             <button ion-button text-wrap color="primary-light" round block large (click)='takePhoto()'>
                 <ion-icon name="camera"></ion-icon>
             </button>
-            <img src="{{imageSource?}}" *ngIf="imageSource" />
+            <img [src]="imageSource" *ngIf="imageSource" />
           </ion-item>
 
         <ion-item>

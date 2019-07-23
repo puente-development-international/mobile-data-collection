@@ -29,9 +29,17 @@ export class PhotosProvider {
       
     }      
     
-    let imageData =  'data:image/jpeg;base64,' + this.camera.getPicture(options);
+    //let imageData =  'data:image/jpeg;base64,' + this.camera.getPicture(options);
 
-    return imageData
+    return this.camera.getPicture(options).then((imageData) => {
+      // imageData is either a base64 encoded string or a file URI
+      // If it's base64 (DATA_URL):
+      return 'data:image/jpeg;base64,' + imageData;
+     }, (err) => {
+      // Handle error
+      console.log('Error found:',err)
+     });
+
   }
  
 
