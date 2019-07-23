@@ -7,6 +7,7 @@ import { ViewController, ModalController } from 'ionic-angular';
 import { ParseProvider } from '../../../providers/parse/parse';
 import { AuthProvider } from '../../../providers/auth/auth';
 import { UserpositionProvider } from '../../../providers/userposition/userposition';
+import { PhotosProvider } from '../../../providers/photos/photos'
 import { AssetManagerProvider } from '../../../providers/asset-manager/asset-manager';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 import { StorageProvider} from '../../../providers/storage/storage'
@@ -20,9 +21,8 @@ import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-
 })
 export class PatientIDForm {
 
-  isenabled:boolean=false;
-  //images: Array<{src: String}>;
-  Imgsrc: String;
+  isenabled: boolean = false;
+  public imageSource: string;
 
   patientID = {
     fname: null,
@@ -69,24 +69,19 @@ export class PatientIDForm {
     lname: null
   }
 
-  
-  
   constructor(private parseProvider: ParseProvider,
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
     public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
+    private photoController: PhotosProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
-    //private camera:Camera,
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello PatientIDForm ');
-    this.auth.authenticated()
+    this.auth.authenticated();
   }
-
-
-  
 
   ionViewDidEnter() {
     this.recordCoordinates();
@@ -133,6 +128,14 @@ export class PatientIDForm {
       console.log('Error getting location',error);
     });
   } 
+
+  public takePhoto () {
+    this.photoController.getPhoto().then((imagedata) => {
+      this.imageSource = imagedata;
+    }).catch((error) => {
+      console.log('Error getting photo',error);
+    });
+  }
 
   public fakeCachelocation(){
     this.patientID.communityname = this.geography.communityname;
