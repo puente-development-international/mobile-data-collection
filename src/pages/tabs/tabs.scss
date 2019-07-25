@@ -6,12 +6,14 @@ page-tabs{
   and (max-device-width : 812px)
   and (-webkit-device-pixel-ratio : 3)
   and (orientation : portrait) { 
-    .t{
-      padding-bottom: 20px ;
+    .tabbar{
+     bottom: 20px ; 
+     padding-bottom: 20px ;
     }
   }
 
-  .t{
-    padding-bottom: 20px !important;
+  .tabbar{
+    bottom: 10px ; 
+    padding-bottom: 10px !important;
   }
 }

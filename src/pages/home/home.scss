@@ -6,13 +6,13 @@ page-home {
     and (max-device-width : 812px)
     and (-webkit-device-pixel-ratio : 3)
     and (orientation : portrait) { 
-        .t{
-        padding-top: 10px !important;
+        .toolbar{
+            padding-top: 25px !important;
         }
     }
 
-    .t{
-        padding-top: 5px;
+    .toolbar{
+        padding-top: 20px !important;
     }
 
     .brand-title{
