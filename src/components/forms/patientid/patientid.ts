@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { ViewController, ModalController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Platform } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -22,7 +23,7 @@ import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-
 export class PatientIDForm {
 
   isenabled: boolean = false;
-  public imageSource: any;
+  image: string;
 
   patientID = {
     fname: null,
@@ -75,6 +76,7 @@ export class PatientIDForm {
     public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
     private camera:Camera,
+    private platform:Platform,
     //private photoController: PhotosProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
@@ -130,14 +132,6 @@ export class PatientIDForm {
     });
   } 
 
-  /*public takePhoto () {
-    this.photoController.getPhoto().then((imagedata) => {
-      this.imageSource = imagedata;
-    }).catch((error) => {
-      console.log('Error getting photo',error);
-    });
-  }*/
-
   public fakeCachelocation(){
     this.patientID.communityname = this.geography.communityname;
     this.patientID.city = this.geography.city;
@@ -149,10 +143,11 @@ export class PatientIDForm {
     await this.secureCredentials() //make sure credentials are stored
     await this.fixDate() //combine fields
     this.fakeCachelocation();
-    this.parseProvider.postObjectsToClass(this.patientID,'SurveyData').then((/*surveyPoint*/) => {
+    this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image).then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
       }
+      this.image = null;
       this.themeCtrl.toasting('Submitted | Entregado', "bottom");
       this.fakeCachelocation;
     }, (error) => {
@@ -162,21 +157,25 @@ export class PatientIDForm {
   }
 
   
-  takePhoto () {
+  async takePhoto(): Promise<any> {
     const options: CameraOptions = {
-      quality: 100,
+      /*quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      saveToPhotoAlbum: false
+      saveToPhotoAlbum: false*/
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
     }
-
-    this.camera.getPicture(options).then((imageData) => {
-      this.imageSource = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
-      console.log(err);
-    });
-
+    try {
+      this.image = "data:image/jpeg;base64," + await this.camera.getPicture(options);
+    }
+    catch(e){
+      console.log(`Error:${e}`)
+    }
+    
   }
 
   checkifenter(){

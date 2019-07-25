@@ -23,11 +23,28 @@ export class ParseProvider {
     Takes in local array and posts
   */
   
-  public postObjectsToClass(localObject, parseClass:string): Promise<any> {
+  public postObjectsToClass(localObject, parseClass:string, photoFile?:any): Promise<any> {
     //Creates and or Updates Parse Class
     //const SurveyData = Parse.Object.extend('SurveyData');
     const SurveyData = Parse.Object.extend(parseClass);
     let surveyPoint = new SurveyData();
+
+   if(photoFile){
+    var parseFile = new Parse.File("memberProfPic.png", { base64: photoFile });
+
+    //put this inside if {
+    parseFile.save().then(function() {
+      // The file has been saved to Parse.
+    }, function(error) {
+      // The file either could not be read, or could not be saved to Parse.
+      console.log(error)
+    });
+    
+    surveyPoint.set('picture', parseFile)
+
+   }
+    
+    
 
     for (var key in localObject) {
       var obj = localObject[key];
