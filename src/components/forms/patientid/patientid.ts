@@ -167,7 +167,7 @@ export class PatientIDForm {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       saveToPhotoAlbum: false*/
-      quality: 100,
+      quality: 40,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
