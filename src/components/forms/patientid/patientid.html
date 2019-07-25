@@ -166,7 +166,7 @@
       <p text-center>{{'PRESS' | translate }}</p>
       
       <button ion-button text-wrap color="primary-light" round block large (click)='recordCoordinates()'>
-        <ion-spinner *ngIf="patientID.latitude == null"></ion-spinner>
+        
         {{patientID.latitude}} {{patientID.longitude}}
       </button>
     </ion-item>
@@ -188,7 +188,8 @@
   <ion-card>
     <ion-item no-lines>
       <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" [disabled]="!isenabled">
-        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-spinner *ngIf="is_submitting"></ion-spinner>
+        <ion-icon *ngIf="!is_submitting" name="checkmark-circle"></ion-icon>
         {{'SUBMIT' | translate }} {{'REGISTRATION' | translate }}
       </button>
     </ion-item>

@@ -7,11 +7,11 @@ page-tabs{
   and (-webkit-device-pixel-ratio : 3)
   and (orientation : portrait) { 
     .t{
-      padding-bottom: 20px !important;
+      padding-bottom: 20px ;
     }
   }
 
   .t{
-    padding-bottom: 10px;
+    padding-bottom: 20px !important;
   }
 }

@@ -23,6 +23,7 @@ import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-
 export class PatientIDForm {
 
   isenabled: boolean = false;
+  is_submitting: boolean = false;
   image: string;
 
   patientID = {
@@ -140,6 +141,7 @@ export class PatientIDForm {
 
   async post_n_clear() {
     this.isenabled=false;
+    this.is_submitting=true;
     await this.secureCredentials() //make sure credentials are stored
     await this.fixDate() //combine fields
     this.fakeCachelocation();
@@ -148,6 +150,7 @@ export class PatientIDForm {
         this.patientID[key] = null;
       }
       this.image = null;
+      this.is_submitting=false;
       this.themeCtrl.toasting('Submitted | Entregado', "bottom");
       this.fakeCachelocation;
     }, (error) => {
