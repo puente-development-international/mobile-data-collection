@@ -142,8 +142,8 @@ export class PatientIDForm {
   async post_n_clear() {
     this.isenabled=false;
     this.is_submitting=true;
-    await this.secureCredentials() //make sure credentials are stored
-    await this.fixDate() //combine fields
+    await this.secureCredentials(); //make sure credentials are stored
+    await this.fixDate(); //combine fields
     this.fakeCachelocation();
     this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image).then((/*surveyPoint*/) => {
       for (var key in this.patientID){
@@ -151,6 +151,8 @@ export class PatientIDForm {
       }
       this.image = null;
       this.is_submitting=false;
+      this.date_of_birth.day = this.date_of_birth.month = this.date_of_birth.year = null;
+      this.relationship.fname = this.relationship.lname = this.relationship.objectID = null;
       this.themeCtrl.toasting('Submitted | Entregado', "bottom");
       this.fakeCachelocation;
     }, (error) => {
