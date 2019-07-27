@@ -2,9 +2,6 @@
 
 ![](https://img.shields.io/badge/build-success-brightgreen.svg)
 [![codecov](https://codecov.io/gh/hopetambala/puente-ionic-datacollection/branch/master/graph/badge.svg)](https://codecov.io/gh/hopetambala/puente-ionic-datacollection)
-
-# Stack
-
 ![](https://img.shields.io/badge/ionic_3-✓-blue.svg)
 ![](https://img.shields.io/badge/angular_2+-✓-blue.svg)
 ![](https://img.shields.io/badge/parse_server-✓-blue.svg)
