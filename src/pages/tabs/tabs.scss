@@ -7,11 +7,13 @@ page-tabs{
   and (-webkit-device-pixel-ratio : 3)
   and (orientation : portrait) { 
     .tabbar{
-      padding-bottom: 20px !important;
+     bottom: 20px ; 
+     padding-bottom: 20px ;
     }
   }
 
   .tabbar{
-    padding-bottom: 5px;
+    bottom: 10px ; 
+    padding-bottom: 10px !important;
   }
 }

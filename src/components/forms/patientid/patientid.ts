@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
 import { ViewController, ModalController } from 'ionic-angular';
-//import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Platform } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
 import { AuthProvider } from '../../../providers/auth/auth';
 import { UserpositionProvider } from '../../../providers/userposition/userposition';
+//import { PhotosProvider } from '../../../providers/photos/photos'
 import { AssetManagerProvider } from '../../../providers/asset-manager/asset-manager';
 import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 import { StorageProvider} from '../../../providers/storage/storage'
@@ -20,9 +22,9 @@ import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-
 })
 export class PatientIDForm {
 
-  isenabled:boolean=false;
-  //images: Array<{src: String}>;
-  Imgsrc: String;
+  isenabled: boolean = false;
+  is_submitting: boolean = false;
+  image: string;
 
   patientID = {
     fname: null,
@@ -69,24 +71,21 @@ export class PatientIDForm {
     lname: null
   }
 
-  
-  
   constructor(private parseProvider: ParseProvider,
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
     public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
+    private camera:Camera,
+    private platform:Platform,
+    //private photoController: PhotosProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
-    //private camera:Camera,
     public themeCtrl:UiUxProvider) {
 
     console.log('Hello PatientIDForm ');
-    this.auth.authenticated()
+    this.auth.authenticated();
   }
-
-
-  
 
   ionViewDidEnter() {
     this.recordCoordinates();
@@ -142,13 +141,18 @@ export class PatientIDForm {
 
   async post_n_clear() {
     this.isenabled=false;
-    await this.secureCredentials() //make sure credentials are stored
-    await this.fixDate() //combine fields
+    this.is_submitting=true;
+    await this.secureCredentials(); //make sure credentials are stored
+    await this.fixDate(); //combine fields
     this.fakeCachelocation();
-    this.parseProvider.postObjectsToClass(this.patientID,'SurveyData').then((/*surveyPoint*/) => {
+    this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image).then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
       }
+      this.image = null;
+      this.is_submitting=false;
+      this.date_of_birth.day = this.date_of_birth.month = this.date_of_birth.year = null;
+      this.relationship.fname = this.relationship.lname = this.relationship.objectID = null;
       this.themeCtrl.toasting('Submitted | Entregado', "bottom");
       this.fakeCachelocation;
     }, (error) => {
@@ -157,23 +161,27 @@ export class PatientIDForm {
     });
   }
 
-  /*
-  takePhoto () {
+  
+  async takePhoto(): Promise<any> {
     const options: CameraOptions = {
-      quality: 100,
+      /*quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      saveToPhotoAlbum: false
+      saveToPhotoAlbum: false*/
+      quality: 40,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
     }
-
-    this.camera.getPicture(options).then((imageData) => {
-      this.Imgsrc = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
-      console.log(err);
-    });
-
-  }*/
+    try {
+      this.image = "data:image/jpeg;base64," + await this.camera.getPicture(options);
+    }
+    catch(e){
+      console.log(`Error:${e}`)
+    }
+    
+  }
 
   checkifenter(){
     if (this.patientID.fname !== ''){

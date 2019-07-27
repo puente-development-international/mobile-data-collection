@@ -16,7 +16,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
-//import { Camera } from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera';
 
 
 // Providers
@@ -25,6 +25,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { QueryServiceProvider } from '../providers/query-service/query-service';
 import { ChartsProvider } from '../providers/charts/charts';
 import { UserpositionProvider } from '../providers/userposition/userposition';
+import { PhotosProvider } from '../providers/photos/photos';
 import { UiUxProvider } from '../providers/ui-ux/ui-ux';
 import { AssetManagerProvider } from '../providers/asset-manager/asset-manager';
 import { MapControlsProvider } from '../providers/map-controls/map-controls';
@@ -191,9 +192,11 @@ export function createTranslateLoader(http: Http) {
     ParseProvider,
     AuthProvider,
     Geolocation,
+    Camera,
     QueryServiceProvider,
     ChartsProvider,
     UserpositionProvider,
+    PhotosProvider,
     UiUxProvider,
     AssetManagerProvider,
     MapControlsProvider,

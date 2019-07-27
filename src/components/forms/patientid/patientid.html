@@ -12,6 +12,14 @@
 
     <ion-list>
         <ion-item>
+            <p text-center>{{'PRESS' | translate }}</p>
+            <button ion-button text-wrap color="primary-light" round block large (click)='takePhoto()'>
+                <ion-icon name="camera"></ion-icon>
+            </button>
+            <img [src]="image" *ngIf="image" />
+          </ion-item>
+
+        <ion-item>
           <ion-label stacked>{{'FIRSTNAME' | translate }}</ion-label>
           <ion-input type="text" [(ngModel)]="patientID.fname" (ngModelChange)="checkifenter()" placeholder="{{ 'INPUT' | translate }}"></ion-input>
         </ion-item>
@@ -21,12 +29,11 @@
           <ion-input type="text" [(ngModel)]="patientID.lname" placeholder="{{ 'INPUT' | translate }}"></ion-input>
         </ion-item>
 
-        <ion-item>
-          <ion-label (click)="presentModal()">{{'MOTHERFATHERGUARDIAN'}}</ion-label>
-          <ion-label>{{relationship.fname}} {{relationship.lname}}</ion-label>
+        <ion-item (click)="presentModal()">
+          <ion-label stacked >{{'MOTHERFATHERGUARDIAN' | translate}}: </ion-label>
+          <ion-input type="text" [(ngModel)]="relationship.fname" placeholder="{{ 'FIRSTNAME' | translate }}" disabled="disabled"></ion-input>
+          <ion-input type="text" [(ngModel)]="relationship.lname" placeholder="{{ 'LASTNAME' | translate }}" disabled="disabled"></ion-input>
         </ion-item>
-
-       
 
         <ion-item>
           <ion-label stacked>{{'NICKNAME' | translate }}</ion-label>
@@ -160,7 +167,7 @@
       <p text-center>{{'PRESS' | translate }}</p>
       
       <button ion-button text-wrap color="primary-light" round block large (click)='recordCoordinates()'>
-        <ion-spinner *ngIf="patientID.latitude == null"></ion-spinner>
+        
         {{patientID.latitude}} {{patientID.longitude}}
       </button>
     </ion-item>
@@ -182,7 +189,8 @@
   <ion-card>
     <ion-item no-lines>
       <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" [disabled]="!isenabled">
-        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-spinner *ngIf="is_submitting"></ion-spinner>
+        <ion-icon *ngIf="!is_submitting" name="checkmark-circle"></ion-icon>
         {{'SUBMIT' | translate }} {{'REGISTRATION' | translate }}
       </button>
     </ion-item>
