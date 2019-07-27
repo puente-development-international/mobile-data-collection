@@ -1,6 +1,7 @@
  # Puente Data Collection and Asset Identification Application 
 
 ![](https://img.shields.io/badge/build-success-brightgreen.svg)
+[![codecov](https://codecov.io/gh/hopetambala/puente-ionic-datacollection/branch/master/graph/badge.svg)](https://codecov.io/gh/hopetambala/puente-ionic-datacollection)
 
 # Stack
 
