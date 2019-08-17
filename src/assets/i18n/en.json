@@ -307,8 +307,8 @@
     "MONTH":"Month",
     "YEAR":"Year",
 
-    "MANAGECUSTOMFORMS":"Custom Created Forms",
-    "MANAGECUSTOMFORMS_SUB":"Manage custom forms created on the dashboard",
+    "MANAGECUSTOMFORMS":"Custom Forms",
+    "MANAGECUSTOMFORMS_SUB":"Manage forms created on dashboard",
 
     "TYPEOFSTOVE":"Type of Stove",
     "FOGON":"Constructed stove with ventilation",

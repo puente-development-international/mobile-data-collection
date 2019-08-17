@@ -1,16 +1,5 @@
 page-home {
     //Media Queries http://stephen.io/mediaqueries/iphonex/
-    //iPhone X
-    @media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 812px)
-    and (-webkit-device-pixel-ratio : 3)
-    and (orientation : portrait) { 
-        .toolbar{
-            padding-top: 25px !important;
-        }
-    }
-
     .toolbar{
         padding-top: 25px !important;
     }
