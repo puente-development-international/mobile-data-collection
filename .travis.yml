@@ -9,6 +9,6 @@ install:
 
 script:
   - npm ci --no-optional
-  - touch app.constant.ts
+  - touch src/app/app.constant.ts
   - npm run test && codecov
   - npm run build
