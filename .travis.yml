@@ -4,7 +4,7 @@ language: node_js
 node_js:
   - '10.16'
 before_install:
-  - touch src/app/app.constant.ts
+  - echo 'export const ENV = { }' > src/app/app.constant.ts
 install:
   - npm install -g codecov
 
