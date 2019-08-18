@@ -3,9 +3,9 @@
 ![travis](https://travis-ci.com/hopetambala/puente-ionic-datacollection.svg?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6cb2291fdaa74cbb864d3d07230e6f03)](https://www.codacy.com/app/hopetambala/puente-ionic-datacollection?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hopetambala/puente-ionic-datacollection&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/hopetambala/puente-ionic-datacollection/branch/master/graph/badge.svg)](https://codecov.io/gh/hopetambala/puente-ionic-datacollection)
-![](https://img.shields.io/badge/ionic_3-✓-orange.svg)
-![](https://img.shields.io/badge/angular_4+-✓-orange.svg)
-![](https://img.shields.io/badge/parse_server-✓-blue.svg)
+![](https://img.shields.io/badge/ionic_3-✓-blue.svg)
+![](https://img.shields.io/badge/angular_4+-✓-blue.svg)
+![](https://img.shields.io/badge/parse_server-✓-blueviolet.svg)
 
 # About this Program
 
