@@ -7,7 +7,7 @@ before_install:
   - echo 'export const ENV = {parseAppId:"",parseJavascriptKey:"",parseServerUrl:"",parseMasterKey:"" }' > src/app/app.constant.ts
 install:
   - npm install -g ionic@3.20.1
-  - npm i -g cordova
+  - npm install -g cordova-lib@8.1.1
   - npm install -g codecov
 
 script:
