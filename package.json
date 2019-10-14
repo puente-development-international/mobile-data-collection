@@ -1,6 +1,6 @@
 {
   "name": "puente-community-health-records-collection",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "website:build": "ionic cordova platform remove browser && ionic cordova platform add browser && ionic cordova build browser --prod --release",
     "android:build:production": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
@@ -12,10 +12,14 @@
     "lint": "tslint --format verbose --project tsconfig.json --config tslint.json",
     "test": "karma start ./test-config/karma.conf.js",
     "test-ci": "karma start ./test-config/karma.conf.js --single-run",
-    "test-coverage": "karma start ./test-config/karma.conf.js --single-run && codecov --token='c7f65fa3-cd71-4e42-b99f-0d13d3fd9d75'",
+    "test-coverage": "karma start ./test-config/karma.conf.js --single-run && codecov",
     "e2e": "npm run e2e-update && npm run e2e-test",
     "e2e-test": "protractor ./test-config/protractor.conf.js",
-    "e2e-update": "webdriver-manager update --standalone false --gecko false"
+    "e2e-update": "webdriver-manager update --standalone false --gecko false",
+    "reinstall": "rm -rf node_modules/ && npm install",
+    "gh-prune": "git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done",
+    "release": "standard-version",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -79,6 +83,7 @@
     "karma-webpack": "3.0.0",
     "null-loader": "3.0.0",
     "protractor": "5.4.2",
+    "standard-version": "7.0.0",
     "ts-loader": "3.0.3",
     "ts-node": "3.0.2",
     "tslint": "5.18.0",
