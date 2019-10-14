@@ -239,7 +239,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/providers/auth/auth.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/providers/auth/auth.ts:165</a></div>
                             </td>
                         </tr>
 
@@ -279,7 +279,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/providers/auth/auth.ts:149</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/providers/auth/auth.ts:151</a></div>
                             </td>
                         </tr>
 
@@ -319,7 +319,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/providers/auth/auth.ts:138</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/providers/auth/auth.ts:140</a></div>
                             </td>
                         </tr>
 
@@ -390,7 +390,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/providers/auth/auth.ts:167</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/providers/auth/auth.ts:169</a></div>
                             </td>
                         </tr>
 
@@ -513,7 +513,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">src/providers/auth/auth.ts:132</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/providers/auth/auth.ts:134</a></div>
                             </td>
                         </tr>
 
@@ -546,7 +546,7 @@
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>signup(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, organization: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, role: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                        <code>signup(firstname: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, lastname: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, organization: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, role: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
 
@@ -572,6 +572,30 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>firstname</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>lastname</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
                                                 <tr>
                                                         <td>username</td>
                                                         <td>
@@ -884,9 +908,11 @@ export class AuthProvider {
     });
   }
 
-  public signup(username: string, password: string, email: string, organization: string,role:string): Observable&lt;boolean&gt; {
+  public signup(firstname: string, lastname: string,username: string, password: string, email: string, organization: string,role:string): Observable&lt;boolean&gt; {
     return new Observable((observer) &#x3D;&gt; {
       var user &#x3D; new Parse.User();
+      user.set(&#x27;firstname&#x27;, firstname);
+      user.set(&#x27;lastname&#x27;, lastname);
       user.set(&#x27;username&#x27;, username);
       user.set(&#x27;password&#x27;, password);
       user.set(&#x27;email&#x27;, email);

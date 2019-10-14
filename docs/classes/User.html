@@ -408,9 +408,11 @@ export class AuthProvider {
     });
   }
 
-  public signup(username: string, password: string, email: string, organization: string,role:string): Observable&lt;boolean&gt; {
+  public signup(firstname: string, lastname: string,username: string, password: string, email: string, organization: string,role:string): Observable&lt;boolean&gt; {
     return new Observable((observer) &#x3D;&gt; {
       var user &#x3D; new Parse.User();
+      user.set(&#x27;firstname&#x27;, firstname);
+      user.set(&#x27;lastname&#x27;, lastname);
       user.set(&#x27;username&#x27;, username);
       user.set(&#x27;password&#x27;, password);
       user.set(&#x27;email&#x27;, email);

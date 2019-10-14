@@ -181,7 +181,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/providers/parse/parse.ts:105</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/providers/parse/parse.ts:119</a></div>
                             </td>
                         </tr>
 
@@ -221,7 +221,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/providers/parse/parse.ts:109</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/providers/parse/parse.ts:123</a></div>
                             </td>
                         </tr>
 
@@ -254,7 +254,7 @@
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>postObjectsToClass(localObject, parseClass: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                        <code>postObjectsToClass(localObject, parseClass: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, photoFile?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                     </td>
                 </tr>
 
@@ -303,6 +303,18 @@
                                                     
 
                                                 </tr>
+                                                <tr>
+                                                        <td>photoFile</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -343,7 +355,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/providers/parse/parse.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/providers/parse/parse.ts:69</a></div>
                             </td>
                         </tr>
 
@@ -448,7 +460,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/providers/parse/parse.ts:88</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/providers/parse/parse.ts:102</a></div>
                             </td>
                         </tr>
 
@@ -529,7 +541,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/providers/parse/parse.ts:122</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/providers/parse/parse.ts:136</a></div>
                             </td>
                         </tr>
 
@@ -786,23 +798,37 @@ export class ParseProvider {
     Takes in local array and posts
   */
   
-  public postObjectsToClass(localObject, parseClass:string): Promise&lt;any&gt; {
+  public postObjectsToClass(localObject, parseClass:string, photoFile?:any): Promise&lt;any&gt; {
     //Creates and or Updates Parse Class
     //const SurveyData &#x3D; Parse.Object.extend(&#x27;SurveyData&#x27;);
     const SurveyData &#x3D; Parse.Object.extend(parseClass);
     let surveyPoint &#x3D; new SurveyData();
+
+   if(photoFile){
+    var parseFile &#x3D; new Parse.File(&quot;memberProfPic.png&quot;, { base64: photoFile });
+
+    //put this inside if {
+    parseFile.save().then(function() {
+      // The file has been saved to Parse.
+    }, function(error) {
+      // The file either could not be read, or could not be saved to Parse.
+      console.log(error)
+    });
+    
+    surveyPoint.set(&#x27;picture&#x27;, parseFile)
+
+   }
+    
+    
 
     for (var key in localObject) {
       var obj &#x3D; localObject[key];
       surveyPoint.set(String(key),obj);
     }
 
-    
     var point &#x3D; new Parse.GeoPoint(localObject.latitude,localObject.longitude);
     surveyPoint.set(&#x27;location&#x27;, point);
   
-    
-
     return surveyPoint.save(null, {
       success: function (surveyPoint) {
         console.log(surveyPoint);

@@ -13,3 +13,4 @@ install:
 script:
   - npm ci --no-optional
   - npm run website:build
+  - codecov
