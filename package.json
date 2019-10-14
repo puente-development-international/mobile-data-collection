@@ -1,6 +1,6 @@
 {
   "name": "puente-community-health-records-collection",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "website:build": "ionic cordova platform remove browser && ionic cordova platform add browser && ionic cordova build browser --prod --release",
     "android:build:production": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
