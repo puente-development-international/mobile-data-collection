@@ -105,4 +105,4 @@ https://hopetambala.github.io/puente-ionic-datacollection/
 - Report issues
 - Open pull request with improvements
 - Spread the word
-- Reach out to me directly at <tech@puente-dr.com>
+- Reach out to me directly at <hope@puente-dr.com>
