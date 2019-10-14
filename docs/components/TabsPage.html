@@ -80,6 +80,10 @@
 
 
 
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-tabs</code></td>
+            </tr>
 
 
 
@@ -116,7 +120,7 @@
                                 <a href="#tab1Root">tab1Root</a>
                             </li>
                             <li>
-                                <a href="#tab4Root">tab4Root</a>
+                                <a href="#tab2Root">tab2Root</a>
                             </li>
                         </ul>
                     </td>
@@ -156,7 +160,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/pages/tabs/tabs.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/tabs/tabs.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -225,7 +229,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/tabs/tabs.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/pages/tabs/tabs.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -274,7 +278,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/pages/tabs/tabs.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/pages/tabs/tabs.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -285,29 +289,29 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="tab4Root"></a>
+                        <a name="tab2Root"></a>
                         <span class="name">
                             <b>
-                            tab4Root
+                            tab2Root
                             </b>
-                            <a href="#tab4Root"><span class="icon ion-ios-link"></span></a>
+                            <a href="#tab2Root"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>tab4Root:     <code></code>
+                        <code>tab2Root:     <code></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>MapPage</code>
+                            <i>Default value : </i><code>DashboardPage</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/pages/tabs/tabs.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/tabs/tabs.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -327,15 +331,16 @@ import { AuthProvider } from &#x27;../../providers/auth/auth&#x27;;
 
 // Pages
 import { HomePage } from &#x27;../home/home&#x27;;
-import { MapPage } from &#x27;../map/map&#x27;;
+import { DashboardPage } from &#x27;../dashboard/dashboard&#x27;;
 
 
 @Component({
-  templateUrl: &#x27;tabs.html&#x27;
+  templateUrl: &#x27;tabs.html&#x27;,
+  selector: &#x27;page-tabs&#x27;,
 })
 export class TabsPage {
   tab1Root &#x3D; HomePage;
-  tab4Root &#x3D; MapPage;
+  tab2Root &#x3D; DashboardPage;
 
   constructor(private auth: AuthProvider) { }
 
@@ -349,8 +354,8 @@ export class TabsPage {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ion-tabs&gt;
-  &lt;ion-tab [root]&#x3D;&quot;tab1Root&quot; tabTitle&#x3D;&quot; {{&#x27;FORMS&#x27; | translate}}&quot; tabIcon&#x3D;&quot;create&quot;&gt;&lt;/ion-tab&gt;
-  &lt;ion-tab [root]&#x3D;&quot;tab4Root&quot; tabTitle&#x3D;&quot; {{&#x27;MAPPINGTOOL&#x27; | translate}}&quot; tabIcon&#x3D;&quot;map&quot;&gt;&lt;/ion-tab&gt;
+  &lt;ion-tab [root]&#x3D;&quot;tab1Root&quot; tabTitle&#x3D;&quot; {{&#x27;COLLECT&#x27; | translate}}&quot; tabIcon&#x3D;&quot;paper&quot;&gt;&lt;/ion-tab&gt;
+  &lt;ion-tab [root]&#x3D;&quot;tab2Root&quot; tabTitle&#x3D;&quot; {{&#x27;MANAGE&#x27; | translate}}&quot; tabIcon&#x3D;&quot;clipboard&quot;&gt;&lt;/ion-tab&gt;
   &lt;!--ion-tab [root]&#x3D;&quot;tab2Root&quot; tabTitle&#x3D;&quot;About&quot; tabIcon&#x3D;&quot;information-circle&quot;&gt;&lt;/ion-tab--&gt;
   &lt;!-- &lt;ion-tab [root]&#x3D;&quot;tab3Root&quot; tabTitle&#x3D;&quot;Contact&quot; tabIcon&#x3D;&quot;contacts&quot;&gt;&lt;/ion-tab&gt; --&gt;
 &lt;/ion-tabs&gt;
@@ -383,8 +388,8 @@ export class TabsPage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-tabs>  <ion-tab [root]="tab1Root" tabTitle=" {{\'FORMS\' | translate}}" tabIcon="create"></ion-tab>  <ion-tab [root]="tab4Root" tabTitle=" {{\'MAPPINGTOOL\' | translate}}" tabIcon="map"></ion-tab>  <!--ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab-->  <!-- <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab> --></ion-tabs></div>'
-    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': ''},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
+        var COMPONENT_TEMPLATE = '<div><ion-tabs>  <ion-tab [root]="tab1Root" tabTitle=" {{\'COLLECT\' | translate}}" tabIcon="paper"></ion-tab>  <ion-tab [root]="tab2Root" tabTitle=" {{\'MANAGE\' | translate}}" tabIcon="clipboard"></ion-tab>  <!--ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab-->  <!-- <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab> --></ion-tabs></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TabsPage'};
 </script>

@@ -1,0 +1,984 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>puente-community-health-records-collection documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">puente-community-health-records-collection documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ManageCustomFormsPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/manage-custom-forms/manage-custom-forms.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-manage-custom-forms</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>manage-custom-forms.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#actionSheetCtrl">actionSheetCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#auth">auth</a>
+                            </li>
+                            <li>
+                                <a href="#customForms">customForms</a>
+                            </li>
+                            <li>
+                                <a href="#filteredCustomForms">filteredCustomForms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#searchTerm">searchTerm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#aggregateRecords">aggregateRecords</a>
+                            </li>
+                            <li>
+                                <a href="#back">back</a>
+                            </li>
+                            <li>
+                                <a href="#filterItems">filterItems</a>
+                            </li>
+                            <li>
+                                <a href="#openCustomForm">openCustomForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, auth: <a href="../injectables/AuthProvider.html">AuthProvider</a>, navParams: NavParams, parseSrvc: <a href="../injectables/ParseProvider.html">ParseProvider</a>, querySrvc: <a href="../injectables/QueryServiceProvider.html">QueryServiceProvider</a>, actionSheetCtrl: ActionSheetController, modalCtrl: ModalController, themeCtrl: <a href="../injectables/UiUxProvider.html">UiUxProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AuthProvider.html" target="_self" >AuthProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>parseSrvc</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ParseProvider.html" target="_self" >ParseProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>querySrvc</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/QueryServiceProvider.html" target="_self" >QueryServiceProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>actionSheetCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActionSheetController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>themeCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/UiUxProvider.html" target="_self" >UiUxProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="aggregateRecords"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            aggregateRecords
+                            </b>
+                            <a href="#aggregateRecords"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>aggregateRecords()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="back"></a>
+                        <span class="name">
+                            <b>
+                            back
+                            </b>
+                            <a href="#back"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>back()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:85</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterItems"></a>
+                        <span class="name">
+                            <b>
+                            filterItems
+                            </b>
+                            <a href="#filterItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>filterItems()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:69</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openCustomForm"></a>
+                        <span class="name">
+                            <b>
+                            openCustomForm
+                            </b>
+                            <a href="#openCustomForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openCustomForm(form)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>form</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actionSheetCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            actionSheetCtrl
+                            </b>
+                            <a href="#actionSheetCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>actionSheetCtrl:     <code>ActionSheetController</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionSheetController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="auth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            auth
+                            </b>
+                            <a href="#auth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>auth:     <code><a href="../injectables/AuthProvider.html" target="_self" >AuthProvider</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/AuthProvider.html" target="_self" >AuthProvider</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="customForms"></a>
+                        <span class="name">
+                            <b>
+                            customForms
+                            </b>
+                            <a href="#customForms"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>customForms:     <code>any[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredCustomForms"></a>
+                        <span class="name">
+                            <b>
+                            filteredCustomForms
+                            </b>
+                            <a href="#filteredCustomForms"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>filteredCustomForms:     <code>any[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl
+                            </b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>navCtrl:     <code>NavController</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams
+                            </b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>navParams:     <code>NavParams</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchTerm"></a>
+                        <span class="name">
+                            <b>
+                            searchTerm
+                            </b>
+                            <a href="#searchTerm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>searchTerm:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/pages/manage-custom-forms/manage-custom-forms.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { NavController, NavParams, ActionSheetController,ModalController } from &#x27;ionic-angular&#x27;;
+
+//Providers
+import { ParseProvider } from &#x27;../../providers/parse/parse&#x27;;
+import { QueryServiceProvider } from &#x27;../../providers/query-service/query-service&#x27;;
+import { AuthProvider } from &#x27;../../providers/auth/auth&#x27;;
+import { UiUxProvider } from &#x27;../../providers/ui-ux/ui-ux&#x27;;
+
+//Pages
+import { CustomForm } from &#x27;../../components/forms/custom-form/custom-form&#x27;;
+
+
+@Component({
+  selector: &#x27;page-manage-custom-forms&#x27;,
+  templateUrl: &#x27;manage-custom-forms.html&#x27;,
+})
+export class ManageCustomFormsPage {
+  searchTerm: string &#x3D; &#x27;&#x27;;
+  customForms: any[] &#x3D; [];
+
+  
+  filteredCustomForms: any[] &#x3D; [];
+
+  constructor(public navCtrl: NavController, 
+    public auth: AuthProvider,
+    public navParams: NavParams,
+    private parseSrvc: ParseProvider,
+    private querySrvc: QueryServiceProvider,
+    public actionSheetCtrl: ActionSheetController,
+    private modalCtrl:ModalController,
+    private themeCtrl: UiUxProvider) {
+      console.log(&#x27;ionViewDidLoad ManageCustomFormsPage&#x27;);
+
+      this.themeCtrl.presentCustomLoading();
+
+      this.aggregateRecords().then(()&#x3D;&gt;{
+        this.filteredCustomForms &#x3D; this.customForms;
+        this.themeCtrl.dismissCustomLoading();  
+    })
+  }
+
+  //Function that constructs an Array of Community Records
+  public aggregateRecords(){
+    let offset &#x3D; this.customForms.length;
+    let limit &#x3D; 2000;
+
+    return this.querySrvc.basicQuery(offset,limit,&#x27;FormSpecifications&#x27;,&#x27;organizations&#x27;,String(this.auth.currentUser().organization)).then((result) &#x3D;&gt;{
+      for (let i &#x3D; 0; i &lt; result.length; i++) {
+        let object &#x3D; result[i];
+        this.customForms.push(object);
+      }
+    }, (error) &#x3D;&gt; {
+      console.log(error);
+    }); 
+  }
+
+  //Navigation
+
+  openCustomForm(form){
+    let customFormsModal &#x3D; this.modalCtrl.create(CustomForm,{
+      form:form
+    });
+
+    customFormsModal.present()
+  }
+
+  //Searchbar
+  filterItems(){
+    this.filteredCustomForms &#x3D; this.customForms.filter((result) &#x3D;&gt; {/*
+      if (result.get(&#x27;fname&#x27;)){
+        var fname &#x3D;  result.get(&#x27;fname&#x27;).toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
+      }
+      if (result.get(&#x27;lname&#x27;)){
+        var lname &#x3D;  result.get(&#x27;lname&#x27;).toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
+      }
+      if (result.get(&#x27;surveyingUser&#x27;)){
+        var dataCollector &#x3D;  result.get(&#x27;surveyingUser&#x27;).toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
+      }
+      
+      return fname || lname || dataCollector;*/
+    });
+  }
+
+  back(){
+    this.navCtrl.pop()
+  }
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header &gt;
+  &lt;ion-navbar  color&#x3D;&quot;primary&quot;&gt;
+    &lt;ion-title text-center text-wrap&gt;{{ &#x27;MANAGECUSTOMFORMS&#x27; | translate }}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+  &lt;ion-searchbar ion-text text-wrap [(ngModel)]&#x3D;&quot;searchTerm&quot; [showCancelButton]&#x3D;&quot;shouldShowCancel&quot; (ionInput)&#x3D;&quot;filterItems()&quot; placeholder&#x3D;&quot;{{ &#x27;SEARCHBYFIRSTNAMELASTNAMEUSER&#x27; | translate }}&quot;&gt;&lt;/ion-searchbar&gt;
+&lt;/ion-header&gt;
+
+
+
+&lt;ion-content class&#x3D;&quot;page-background&quot;&gt;
+  &lt;ion-list [virtualScroll]&#x3D;&quot;filteredCustomForms&quot;&gt;
+    &lt;ion-item *virtualItem&#x3D;&quot;let customForm&quot;&gt;
+        &lt;div (click)&#x3D;&quot;openCustomForm(customForm)&quot;&gt;
+          &lt;h1 ion-text text-wrap style&#x3D;&quot;width:100%&quot;&gt;{{ customForm.get(&#x27;title&#x27;) }}&lt;/h1&gt;
+          &lt;h3 ion-text text-wrap style&#x3D;&quot;width:100%&quot;&gt;{{ customForm.get(&#x27;description&#x27;) }}&lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/ion-item&gt;
+  &lt;/ion-list&gt;
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header >  <ion-navbar  color="primary">    <ion-title text-center text-wrap>{{ \'MANAGECUSTOMFORMS\' | translate }}</ion-title>  </ion-navbar>  <ion-searchbar ion-text text-wrap [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems()" placeholder="{{ \'SEARCHBYFIRSTNAMELASTNAMEUSER\' | translate }}"></ion-searchbar></ion-header><ion-content class="page-background">  <ion-list [virtualScroll]="filteredCustomForms">    <ion-item *virtualItem="let customForm">        <div (click)="openCustomForm(customForm)">          <h1 ion-text text-wrap style="width:100%">{{ customForm.get(\'title\') }}</h1>          <h3 ion-text text-wrap style="width:100%">{{ customForm.get(\'description\') }}</h3>        </div>    </ion-item>  </ion-list></ion-content></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ManageCustomFormsPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ManageCustomFormsPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

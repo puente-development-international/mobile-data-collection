@@ -61,15 +61,6 @@
     <code>src/components/animated-circles/animated-circles.ts</code>
 </p>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Generated class for the AnimatedCirclesComponent component.</p>
-<p>See <a href="https://angular.io/api/core/Component">https://angular.io/api/core/Component</a> for more info on Angular
-Components.</p>
-
-    </p>
 
 
 
@@ -113,33 +104,6 @@ Components.</p>
     </table>
 </section>
 
-    <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#ionViewDidEnter">ionViewDidEnter</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
 
     <section>
     <h3 id="constructor">Constructor</h3>
@@ -147,45 +111,15 @@ Components.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(viewCtrl: ViewController)</code>
+<code>constructor()</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/components/animated-circles/animated-circles.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/components/animated-circles/animated-circles.ts:7</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>viewCtrl</td>
-                                                  
-                                                        <td>
-                                                                    <code>ViewController</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
@@ -194,50 +128,6 @@ Components.</p>
 
 
 
-    <section>
-    
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ionViewDidEnter"></a>
-                        <span class="name">
-                            <b>
-                            ionViewDidEnter
-                            </b>
-                            <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>ionViewDidEnter()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/components/animated-circles/animated-circles.ts:22</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
 </div>
@@ -245,34 +135,15 @@ Components.</p>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { ViewController } from &#x27;ionic-angular&#x27;;
 
-/**
- * Generated class for the AnimatedCirclesComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
   selector: &#x27;animated-circles&#x27;,
   templateUrl: &#x27;animated-circles.html&#x27;
 })
 export class AnimatedCirclesComponent {
 
-  //text: string;
-
-  constructor(private viewCtrl:ViewController) {
+  constructor() {
     console.log(&#x27;Hello AnimatedCirclesComponent Component&#x27;);
-  }
-
-  ionViewDidEnter() {
-    /*
-    When in place, might create race condition problem. This component isn&#x27;t a loader thus isn&#x27;t
-    asynchronous 
-    setTimeout(() &#x3D;&gt; {
-      this.viewCtrl.dismiss();
-    }, 5000); */
-
   }
 
 }
@@ -321,7 +192,7 @@ export class AnimatedCirclesComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ion-content><div class="container">		<svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">		 <circle cx="170" cy="170" r="160" stroke="#f8af1e"/>		 <circle cx="170" cy="170" r="135" stroke="#a57412"/>		 <circle cx="170" cy="170" r="110" stroke="#f8af1e"/>		 <circle cx="170" cy="170" r="85" stroke="#a57412"/>	</svg>	</div></ion-content></div>'
-    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': ''},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AnimatedCirclesComponent'};
 </script>

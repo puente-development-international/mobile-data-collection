@@ -127,6 +127,9 @@
                                 <a href="#navCtrl">navCtrl</a>
                             </li>
                             <li>
+                                <a href="#searching">searching</a>
+                            </li>
+                            <li>
                                 <a href="#searchTerm">searchTerm</a>
                             </li>
                             <li>
@@ -145,19 +148,25 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#close">close</a>
+                            </li>
+                            <li>
+                                <a href="#dismiss">dismiss</a>
+                            </li>
+                            <li>
                                 <a href="#filterItems">filterItems</a>
                             </li>
                             <li>
-                                <a href="#filterItems1">filterItems1</a>
-                            </li>
-                            <li>
-                                <a href="#ionViewDidEnter">ionViewDidEnter</a>
-                            </li>
-                            <li>
-                                <a href="#ionViewDidLoad">ionViewDidLoad</a>
+                                <a href="#filterItems_new">filterItems_new</a>
                             </li>
                             <li>
                                 <a href="#listItems">listItems</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#setFilteredItems">setFilteredItems</a>
                             </li>
                             <li>
                                 <a href="#setItem">setItem</a>
@@ -194,7 +203,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(navCtrl: NavController, querySrvc: <a href="../injectables/QueryServiceProvider.html">QueryServiceProvider</a>, auth: <a href="../injectables/AuthProvider.html">AuthProvider</a>)</code>
+<code>constructor(navCtrl: NavController, querySrvc: <a href="../injectables/QueryServiceProvider.html">QueryServiceProvider</a>, auth: <a href="../injectables/AuthProvider.html">AuthProvider</a>, viewCtrl: ViewController)</code>
                     </td>
                 </tr>
                         <tr>
@@ -252,6 +261,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>viewCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ViewController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -295,6 +316,109 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="close"></a>
+                        <span class="name">
+                            <b>
+                            close
+                            </b>
+                            <a href="#close"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>close()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:117</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dismiss"></a>
+                        <span class="name">
+                            <b>
+                            dismiss
+                            </b>
+                            <a href="#dismiss"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>dismiss(item)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="filterItems"></a>
                         <span class="name">
                             <b>
@@ -313,7 +437,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:56</a></div>
                             </td>
                         </tr>
 
@@ -333,25 +457,25 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="filterItems1"></a>
+                        <a name="filterItems_new"></a>
                         <span class="name">
                             <b>
-                            filterItems1
+                            filterItems_new
                             </b>
-                            <a href="#filterItems1"><span class="icon ion-ios-link"></span></a>
+                            <a href="#filterItems_new"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>filterItems1()</code>
+<code>filterItems_new(searchTerm)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:100</a></div>
                             </td>
                         </tr>
 
@@ -360,85 +484,36 @@
                     <td class="col-md-4">
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>searchTerm</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
 
+                                                </tr>
+                                        </tbody>
+                                    </table>
                             </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ionViewDidEnter"></a>
-                        <span class="name">
-                            <b>
-                            ionViewDidEnter
-                            </b>
-                            <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>ionViewDidEnter()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:35</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
+                            <div>
+                            </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ionViewDidLoad"></a>
-                        <span class="name">
-                            <b>
-                            ionViewDidLoad
-                            </b>
-                            <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>ionViewDidLoad()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:32</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -465,7 +540,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:77</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:76</a></div>
                             </td>
                         </tr>
 
@@ -475,6 +550,82 @@
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setFilteredItems"></a>
+                        <span class="name">
+                            <b>
+                            setFilteredItems
+                            </b>
+                            <a href="#setFilteredItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setFilteredItems()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:109</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
                     </td>
@@ -503,7 +654,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -585,7 +736,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -607,19 +758,24 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>filteredItems:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <code>filteredItems:     <code>any[]</code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                            <i>Type : </i>    <code>any[]</code>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -654,7 +810,46 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searching"></a>
+                        <span class="name">
+                            <b>
+                            searching
+                            </b>
+                            <a href="#searching"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>searching:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -727,7 +922,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/components/searchbar-object-id/searchbar-object-id.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -741,7 +936,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Output, EventEmitter } from &#x27;@angular/core&#x27;;
-import { NavController } from &#x27;ionic-angular&#x27;;
+import { NavController, ViewController} from &#x27;ionic-angular&#x27;;
 import &#x27;rxjs/add/operator/debounceTime&#x27;;
 
 import { QueryServiceProvider } from &#x27;../../providers/query-service/query-service&#x27;;
@@ -756,25 +951,28 @@ export class SearchbarObjectIdComponent {
   @Output() emitObjectIDfromComponent &#x3D; new EventEmitter();
 
   searchTerm: string &#x3D; &#x27;&#x27;;
-  //allItems: any;
   allItems &#x3D; [];
-  filteredItems:any;
+  filteredItems:any[] &#x3D; [];
   selectedItem:any;
+  searching: any &#x3D; false;
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     private querySrvc:QueryServiceProvider,
-    private auth:AuthProvider) {
+    private auth:AuthProvider,
+    private viewCtrl:ViewController) {
 
       this.auth.authenticated();
+
+      this.searching &#x3D; true;
       this.listItems().then(()&#x3D;&gt;{
+        this.searching &#x3D; false;
         this.filteredItems &#x3D; this.allItems; 
       })
   }
 
-  ionViewDidLoad() {
-  }
-
-  ionViewDidEnter(){
+  ngOnInit() {
+    this.setFilteredItems();
   }
 
   setItem(item){
@@ -785,10 +983,13 @@ export class SearchbarObjectIdComponent {
     this.selectedItem &#x3D; item;
 
     //Emits selectedItem to the parent class
-    this.emitObjectIDfromComponent.emit(this.selectedItem);
+    //this.emitObjectIDfromComponent.emit(this.selectedItem);
     //console.log(this.selectedItem.get(&#x27;fname&#x27;));
+    console.log(this.selectedItem)
+    this.dismiss(this.selectedItem)
   }
 
+  //old
   filterItems(){
     /*
     For Searchbar
@@ -799,23 +1000,16 @@ export class SearchbarObjectIdComponent {
     }); */
 
     this.filteredItems &#x3D; this.allItems.filter((result) &#x3D;&gt; {
-      return result.get(&#x27;fname&#x27;).toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
-    });
-
-  }
-
-  filterItems1(){
-    this.filteredItems &#x3D; this.allItems.filter((result) &#x3D;&gt; {
+      let result_comb &#x3D; result.get(&#x27;fname&#x27;) + &#x27; &#x27; + result.get(&#x27;lname&#x27;) 
       if (result.get(&#x27;fname&#x27;)){
-        var fname &#x3D;  result.get(&#x27;fname&#x27;).toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
+        var name &#x3D;  result_comb.toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
       }
-      if (result.get(&#x27;lname&#x27;)){
-        var lname &#x3D;  result.get(&#x27;lname&#x27;).toLowerCase().indexOf(this.searchTerm.toLowerCase()) &gt; -1;
-      }
-      return fname || lname;
+      return name;
     });
+
   }
 
+  //1
   listItems(): Promise&lt;any&gt; {
     //Retrieves list of records from server
 
@@ -833,10 +1027,36 @@ export class SearchbarObjectIdComponent {
         let object &#x3D; result[i];
         this.allItems.push(object);
       }
+      console.log(&quot;Done with Query&quot;)
     }, (error) &#x3D;&gt; {
       console.log(error);
     });
   }
+
+  //2
+  filterItems_new(searchTerm){
+    return this.allItems.filter((item) &#x3D;&gt; {
+      let result_comb &#x3D; item.get(&#x27;fname&#x27;) + &#x27; &#x27; + item.get(&#x27;lname&#x27;) 
+      return result_comb.toLowerCase().indexOf(searchTerm.toLowerCase()) &gt; -1;
+      
+      //return fname || lname;
+    });
+  }
+  //3
+  setFilteredItems() {
+    this.filteredItems &#x3D; this.filterItems_new(this.searchTerm);
+  }
+
+  dismiss(item) {
+    this.viewCtrl.dismiss(item);
+  }
+
+  close(){
+    let item &#x3D; null
+    this.dismiss(item)
+  }
+
+  
 
 }
 </code></pre>
@@ -845,28 +1065,35 @@ export class SearchbarObjectIdComponent {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">
 &lt;ion-content&gt;
+    &lt;ion-navbar color&#x3D;&#x27;primary&#x27;&gt;
+        &lt;button color&#x3D;&#x27;primary-light&#x27; ion-button item-start (click)&#x3D;&quot;close()&quot; large&gt;
+            &lt;ion-icon name&#x3D;&quot;arrow-round-back&quot; &gt;&lt;/ion-icon&gt;
+        &lt;/button&gt;
+    &lt;/ion-navbar&gt;
 
-    &lt;ion-searchbar [(ngModel)]&#x3D;&quot;searchTerm&quot; (ionInput)&#x3D;&quot;filterItems1()&quot; placeholder&#x3D;&quot;{{ &#x27;SEARCHBYFIRSTNAMELASTNAME&#x27; | translate }}&quot;&gt;&lt;/ion-searchbar&gt;
+    &lt;ion-searchbar [(ngModel)]&#x3D;&quot;searchTerm&quot; (ionChange)&#x3D;&quot;setFilteredItems()&quot;  placeholder&#x3D;&quot;{{ &#x27;SEARCHBYFIRSTNAMELASTNAME&#x27; | translate }}&quot;&gt;&lt;/ion-searchbar&gt;
     
-    &lt;!--div *ngIf&#x3D;&quot;searching&quot; class&#x3D;&quot;spinner-container&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;searching&quot; class&#x3D;&quot;spinner-container&quot;&gt;
         &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
-    &lt;/div--&gt;
+    &lt;/div&gt;
     
-    &lt;ion-list&gt;
-        &lt;ion-item-group&gt;
-            &lt;ion-item no-lines *ngFor&#x3D;&quot;let item of filteredItems&quot; (click)&#x3D;&#x27;setItem(item)&#x27;&gt;
-                &lt;ion-label&gt;
-                    {{ item.get(&#x27;fname&#x27;) }}
-                    {{ item.get(&#x27;lname&#x27;) }}
-                &lt;/ion-label&gt;
-                &lt;div item-right&gt;
-                    {{ item.get(&#x27;communityname&#x27;) }}
-                &lt;/div&gt; 
-                &lt;div item-left&gt;
-                    &lt;img height&#x3D;&quot;100 px&quot; width&#x3D;&quot;100 px&quot; src&#x3D;&#x27;assets/images/placeholder.png&#x27;&gt;
-                &lt;/div&gt; 
-            &lt;/ion-item&gt;
-        &lt;/ion-item-group&gt;      
+    &lt;ion-list [virtualScroll]&#x3D;&quot;filteredItems&quot;&gt;
+        &lt;ion-item *virtualItem&#x3D;&quot;let item&quot;&gt;
+            &lt;ion-grid (click)&#x3D;&#x27;setItem(item)&#x27;&gt;
+                &lt;ion-row no-lines &gt;
+                    &lt;ion-col col-8 &gt;
+                        &lt;div class&#x3D;&quot;center&quot;&gt;
+                            &lt;h1&gt;{{ item.get(&#x27;fname&#x27;) }}&lt;/h1&gt;
+                            &lt;h3&gt;{{ item.get(&#x27;lname&#x27;) }}&lt;/h3&gt;
+                            &lt;h6&gt;{{ item.get(&#x27;nickname&#x27;) }}&lt;/h6&gt;
+                        &lt;/div&gt;
+                    &lt;/ion-col&gt;
+                    &lt;ion-col  style&#x3D;&quot;margin: auto&quot;&gt;
+                        {{ item.get(&#x27;communityname&#x27;) }}
+                    &lt;/ion-col&gt;
+                &lt;/ion-row&gt;
+            &lt;/ion-grid&gt;
+        &lt;/ion-item&gt;
     &lt;/ion-list&gt;
      
 &lt;/ion-content&gt;</code></pre>
@@ -898,8 +1125,8 @@ export class SearchbarObjectIdComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-content>    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems1()" placeholder="{{ \'SEARCHBYFIRSTNAMELASTNAME\' | translate }}"></ion-searchbar>        <!--div *ngIf="searching" class="spinner-container">        <ion-spinner></ion-spinner>    </div-->        <ion-list>        <ion-item-group>            <ion-item no-lines *ngFor="let item of filteredItems" (click)=\'setItem(item)\'>                <ion-label>                    {{ item.get(\'fname\') }}                    {{ item.get(\'lname\') }}                </ion-label>                <div item-right>                    {{ item.get(\'communityname\') }}                </div>                 <div item-left>                    <img height="100 px" width="100 px" src=\'assets/images/placeholder.png\'>                </div>             </ion-item>        </ion-item-group>          </ion-list>     </ion-content></div>'
-    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': ''},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
+        var COMPONENT_TEMPLATE = '<div><ion-content>    <ion-navbar color=\'primary\'>        <button color=\'primary-light\' ion-button item-start (click)="close()" large>            <ion-icon name="arrow-round-back" ></ion-icon>        </button>    </ion-navbar>    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"  placeholder="{{ \'SEARCHBYFIRSTNAMELASTNAME\' | translate }}"></ion-searchbar>        <div *ngIf="searching" class="spinner-container">        <ion-spinner></ion-spinner>    </div>        <ion-list [virtualScroll]="filteredItems">        <ion-item *virtualItem="let item">            <ion-grid (click)=\'setItem(item)\'>                <ion-row no-lines >                    <ion-col col-8 >                        <div class="center">                            <h1>{{ item.get(\'fname\') }}</h1>                            <h3>{{ item.get(\'lname\') }}</h3>                            <h6>{{ item.get(\'nickname\') }}</h6>                        </div>                    </ion-col>                    <ion-col  style="margin: auto">                        {{ item.get(\'communityname\') }}                    </ion-col>                </ion-row>            </ion-grid>        </ion-item>    </ion-list>     </ion-content></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SearchbarObjectIdComponent'};
 </script>

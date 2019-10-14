@@ -127,7 +127,7 @@ on Ionic pages and navigation.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#navCtrl">navCtrl</a>
+                                <a href="#modalCtrl">modalCtrl</a>
                             </li>
                         </ul>
                     </td>
@@ -142,7 +142,31 @@ on Ionic pages and navigation.</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ionViewDidLoad">ionViewDidLoad</a>
+                                <a href="#doRefresh">doRefresh</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewCanEnter">ionViewCanEnter</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewDidEnter">ionViewDidEnter</a>
+                            </li>
+                            <li>
+                                <a href="#openCharts">openCharts</a>
+                            </li>
+                            <li>
+                                <a href="#openCustomForms">openCustomForms</a>
+                            </li>
+                            <li>
+                                <a href="#openFindRecords">openFindRecords</a>
+                            </li>
+                            <li>
+                                <a href="#openMapPage">openMapPage</a>
+                            </li>
+                            <li>
+                                <a href="#presentToast">presentToast</a>
+                            </li>
+                            <li>
+                                <a href="#storeCredentials">storeCredentials</a>
                             </li>
                         </ul>
                     </td>
@@ -162,12 +186,12 @@ on Ionic pages and navigation.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(navCtrl: NavController)</code>
+<code>constructor(toastCtrl: ToastController, modalCtrl: ModalController, navCtrl: NavController, storagePrvdr: <a href="../injectables/StorageProvider.html">StorageProvider</a>, auth: <a href="../injectables/AuthProvider.html">AuthProvider</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/pages/dashboard/dashboard.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/dashboard/dashboard.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -185,10 +209,58 @@ on Ionic pages and navigation.</p>
                                         </thead>
                                         <tbody>
                                                 <tr>
+                                                        <td>toastCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
                                                         <td>navCtrl</td>
                                                   
                                                         <td>
                                                                     <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storagePrvdr</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/StorageProvider.html" target="_self" >StorageProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AuthProvider.html" target="_self" >AuthProvider</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -218,25 +290,356 @@ on Ionic pages and navigation.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ionViewDidLoad"></a>
+                        <a name="doRefresh"></a>
                         <span class="name">
                             <b>
-                            ionViewDidLoad
+                            doRefresh
                             </b>
-                            <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
+                            <a href="#doRefresh"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>ionViewDidLoad()</code>
+<code>doRefresh(refresher)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/dashboard/dashboard.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/pages/dashboard/dashboard.ts:85</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewCanEnter"></a>
+                        <span class="name">
+                            <b>
+                            ionViewCanEnter
+                            </b>
+                            <a href="#ionViewCanEnter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewCanEnter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/pages/dashboard/dashboard.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewDidEnter"></a>
+                        <span class="name">
+                            <b>
+                            ionViewDidEnter
+                            </b>
+                            <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewDidEnter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/pages/dashboard/dashboard.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openCharts"></a>
+                        <span class="name">
+                            <b>
+                            openCharts
+                            </b>
+                            <a href="#openCharts"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openCharts()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/pages/dashboard/dashboard.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openCustomForms"></a>
+                        <span class="name">
+                            <b>
+                            openCustomForms
+                            </b>
+                            <a href="#openCustomForms"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openCustomForms()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/pages/dashboard/dashboard.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openFindRecords"></a>
+                        <span class="name">
+                            <b>
+                            openFindRecords
+                            </b>
+                            <a href="#openFindRecords"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openFindRecords()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/pages/dashboard/dashboard.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openMapPage"></a>
+                        <span class="name">
+                            <b>
+                            openMapPage
+                            </b>
+                            <a href="#openMapPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openMapPage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/pages/dashboard/dashboard.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="presentToast"></a>
+                        <span class="name">
+                            <b>
+                            presentToast
+                            </b>
+                            <a href="#presentToast"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>presentToast()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/pages/dashboard/dashboard.ts:65</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storeCredentials"></a>
+                        <span class="name">
+                            <b>
+                            storeCredentials
+                            </b>
+                            <a href="#storeCredentials"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>storeCredentials()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/pages/dashboard/dashboard.ts:95</a></div>
                             </td>
                         </tr>
 
@@ -263,31 +666,31 @@ on Ionic pages and navigation.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="navCtrl"></a>
+                        <a name="modalCtrl"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            navCtrl
+                            modalCtrl
                             </b>
-                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                            <a href="#modalCtrl"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>navCtrl:     <code>NavController</code>
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>modalCtrl:     <code>ModalController</code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>NavController</code>
+                            <i>Type : </i>    <code>ModalController</code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/dashboard/dashboard.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/dashboard/dashboard.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -300,8 +703,20 @@ on Ionic pages and navigation.</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild } from &#x27;@angular/core&#x27;;
-import { NavController } from &#x27;ionic-angular&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { App } from &#x27;ionic-angular&#x27;;
+import { ToastController, ModalController, NavController } from &#x27;ionic-angular&#x27;;
+
+
+// Providers
+import { AuthProvider } from &#x27;../../providers/auth/auth&#x27;;
+import { StorageProvider } from &#x27;../../providers/storage/storage&#x27;
+
+// Pages
+import { MapPage } from &#x27;../map/map&#x27;;
+import { FindRecordsPage } from &#x27;../find-records/find-records&#x27;;
+import { ManageCustomFormsPage} from &#x27;../manage-custom-forms/manage-custom-forms&#x27;;
+
 
 /**
  * Generated class for the VisualChartsPage page.
@@ -315,12 +730,77 @@ import { NavController } from &#x27;ionic-angular&#x27;;
 })
 export class DashboardPage {
 
-
-    constructor(public navCtrl: NavController) {
+    constructor(private toastCtrl: ToastController, 
+        public modalCtrl: ModalController, 
+        private navCtrl: NavController,
+        private storagePrvdr:StorageProvider,
+        private auth: AuthProvider) {
+        
+        this.auth.authenticated();
     }
 
-    ionViewDidLoad() {
-        console.log(&#x27;ionViewDidLoad Dashboard&#x27;);
+    ionViewCanEnter(): boolean {
+        //Authenticates Page
+        return this.auth.authenticated();
+    }
+
+    ionViewDidEnter() { 
+        this.storeCredentials()
+    }
+
+    openCharts() {
+        this.navCtrl.push(DashboardPage);
+    }
+
+    openMapPage() {
+        this.navCtrl.push(MapPage);
+    }
+
+    openFindRecords() {
+        this.navCtrl.push(FindRecordsPage);
+    }
+
+    openCustomForms() {
+        this.navCtrl.push(ManageCustomFormsPage);
+    }
+
+    /*
+        Controllers
+    */
+    presentToast() {
+        /*
+        A Toast is a subtle notification commonly used in modern applications. 
+        It can be used to provide feedback about an operation or to display a system message.
+        The toast appears on top of the app&#x27;s content, and can be dismissed 
+        by the app to resume user interaction with the app.
+        */
+        let toast &#x3D; this.toastCtrl.create({
+            message: &#x27;Submitted | Entregado&#x27;,
+            duration: 2500,
+            position: &#x27;bottom&#x27;
+        });
+
+        toast.onDidDismiss(() &#x3D;&gt; {
+            console.log(&#x27;Dismissed toast&#x27;);
+        });
+
+        toast.present();
+    }
+
+    doRefresh(refresher){
+        console.log(&#x27;Begin async operation for refresher&#x27;, refresher);
+        //this.listPoints();
+        setTimeout(() &#x3D;&gt; {
+            console.log(&#x27;Async operation for refresher has ended&#x27;);
+            //this.listPoints();
+            refresher.complete();
+        }, 2000);
+    }
+
+    storeCredentials(){
+        let name &#x3D; this.auth.currentUser().name;
+        let org &#x3D; this.auth.currentUser().organization;
+        this.storagePrvdr.setUserInfoToStorage(name,org);
     }
 
 }
@@ -328,97 +808,43 @@ export class DashboardPage {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!--
-  Generated template for the VisualChartsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation. --&gt;
-&lt;ion-header no-border &gt;
-	&lt;ion-navbar color&#x3D;&quot;dashboard-dark&quot; &gt;
-		&lt;ion-title text-center &gt;{{ &#x27;DIAGNOSTICS&#x27; | translate }}&lt;/ion-title&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+	&lt;ion-navbar&gt;
+		&lt;div color&#x3D;&quot;primary&quot; class&#x3D;&quot;brand-title&quot;&gt;puente&lt;/div&gt;
 	&lt;/ion-navbar&gt;
-	&lt;ion-segment [(ngModel)]&#x3D;&quot;viewMode&quot;&gt;
-		&lt;ion-segment-button value&#x3D;&quot;Demographics&quot;&gt;
-			{{ &#x27;DEMOGRAPHICS&#x27; | translate }}
-		&lt;/ion-segment-button&gt;
-		&lt;ion-segment-button value&#x3D;&quot;Medical&quot;&gt;
-			{{ &#x27;MEDICAL&#x27; | translate }}
-		&lt;/ion-segment-button&gt;
-		&lt;ion-segment-button value&#x3D;&quot;Environmental&quot;&gt;
-			{{ &#x27;ENVIRONMENTAL&#x27; | translate }}
-		&lt;/ion-segment-button&gt;
-  &lt;/ion-segment&gt;
+	
 &lt;/ion-header&gt;
 
 
-&lt;ion-content [ngSwitch]&#x3D;&quot;viewMode&quot; class&#x3D;&quot;dashboard-content&quot;&gt;
-	&lt;div *ngSwitchCase&#x3D;&quot;&#x27;Demographics&#x27;&quot;&gt;
-		&lt;barchart&gt;&lt;/barchart&gt;
+&lt;ion-content class&#x3D;&quot;home-dashboard-content&quot;&gt;
+	&lt;ion-grid&gt;
 		&lt;ion-row&gt;
 			&lt;ion-col&gt;
-					&lt;circle-decoration class&#x3D;&quot;info&quot;&gt;100&lt;/circle-decoration&gt;
+				&lt;ion-card (click)&#x3D;&quot;openFindRecords()&quot; class&#x3D;&quot;card&quot;&gt;
+				&lt;h1 ion-text color&#x3D;&quot;orange&quot;&gt;{{ &#x27;FINDRECORDS&#x27; | translate }}&lt;/h1&gt;
+				&lt;p ion-text text-wrap color&#x3D;&quot;black&quot;&gt;{{ &#x27;FINDRECORDS_SUB&#x27; | translate }}&lt;/p&gt;
+				&lt;/ion-card&gt;
 			&lt;/ion-col&gt;
+			&lt;/ion-row&gt;
+			&lt;ion-row&gt;
 			&lt;ion-col&gt;
-					&lt;circle-decoration&gt;&lt;/circle-decoration&gt;
+				&lt;ion-card (click) &#x3D; &#x27;openMapPage()&#x27; class&#x3D;&quot;card&quot;&gt;
+				&lt;h1 ion-text color&#x3D;&quot;red&quot;&gt;{{ &#x27;MAPPING&#x27; | translate }}&lt;/h1&gt;
+				&lt;p ion-text text-wrap color&#x3D;&quot;black&quot;&gt;{{ &#x27;MAPPING_SUB&#x27; | translate }}&lt;/p&gt;
+				&lt;/ion-card&gt;
 			&lt;/ion-col&gt;
-			&lt;ion-col&gt;
-					&lt;circle-decoration&gt;&lt;/circle-decoration&gt;
-			&lt;/ion-col&gt;
+
 		&lt;/ion-row&gt;
 
-		&lt;ion-row&gt;
-			&lt;ion-item padding class&#x3D;&quot;items&quot;&gt;
-				Stuff
-			&lt;/ion-item&gt;
-		&lt;/ion-row&gt;
-
-		&lt;ion-row&gt;
-			&lt;ion-item padding class&#x3D;&quot;items&quot;&gt;
-				Stuff
-			&lt;/ion-item&gt;
-		&lt;/ion-row&gt;
-
-		&lt;ion-row&gt;
-			&lt;ion-item padding class&#x3D;&quot;items&quot;&gt;
-				Stuff
-			&lt;/ion-item&gt;
-		&lt;/ion-row&gt;
-	&lt;/div&gt;
-
-	&lt;div *ngSwitchCase&#x3D;&quot;&#x27;Medical&#x27;&quot;&gt;
-		&lt;doughnut&gt;&lt;/doughnut&gt;
 		&lt;ion-row&gt;
 			&lt;ion-col&gt;
-					&lt;circle-decoration class&#x3D;&quot;info&quot;&gt;100&lt;/circle-decoration&gt;
-			&lt;/ion-col&gt;
-			&lt;ion-col&gt;
-					&lt;circle-decoration class&#x3D;&quot;info&quot;&gt;200&lt;/circle-decoration&gt;
-			&lt;/ion-col&gt;
-			&lt;ion-col&gt;
-					&lt;circle-decoration class&#x3D;&quot;info&quot;&gt;&lt;/circle-decoration&gt;
+				&lt;ion-card (click)&#x3D;&quot;openCustomForms()&quot; class&#x3D;&quot;card&quot;&gt;
+				&lt;h1 ion-text color&#x3D;&quot;blue&quot;&gt;{{ &#x27;MANAGECUSTOMFORMS&#x27; | translate }}&lt;/h1&gt;
+				&lt;p ion-text text-wrap color&#x3D;&quot;black&quot;&gt;{{ &#x27;MANAGECUSTOMFORMS_SUB&#x27; | translate }}&lt;/p&gt;
+				&lt;/ion-card&gt;
 			&lt;/ion-col&gt;
 		&lt;/ion-row&gt;
-
-		&lt;ion-row&gt;
-			&lt;ion-item padding class&#x3D;&quot;items&quot;&gt;
-				Stuff
-			&lt;/ion-item&gt;
-		&lt;/ion-row&gt;
-
-		&lt;ion-row&gt;
-			&lt;ion-item padding class&#x3D;&quot;items&quot;&gt;
-				Stuff
-			&lt;/ion-item&gt;
-		&lt;/ion-row&gt;
-
-		&lt;ion-row&gt;
-			&lt;ion-item padding class&#x3D;&quot;items&quot;&gt;
-				Stuff
-			&lt;/ion-item&gt;
-		&lt;/ion-row&gt;
-	&lt;/div&gt;
-
-	&lt;div *ngSwitchCase&#x3D;&quot;&#x27;Environmental&#x27;&quot;&gt;&lt;/div&gt;
+	&lt;/ion-grid&gt;
 &lt;/ion-content&gt;
 </code></pre>
     </div>
@@ -449,8 +875,8 @@ export class DashboardPage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--  Generated template for the VisualChartsPage page.  See http://ionicframework.com/docs/components/#navigation for more info on  Ionic pages and navigation. --><ion-header no-border >	<ion-navbar color="dashboard-dark" >		<ion-title text-center >{{ \'DIAGNOSTICS\' | translate }}</ion-title>	</ion-navbar>	<ion-segment [(ngModel)]="viewMode">		<ion-segment-button value="Demographics">			{{ \'DEMOGRAPHICS\' | translate }}		</ion-segment-button>		<ion-segment-button value="Medical">			{{ \'MEDICAL\' | translate }}		</ion-segment-button>		<ion-segment-button value="Environmental">			{{ \'ENVIRONMENTAL\' | translate }}		</ion-segment-button>  </ion-segment></ion-header><ion-content [ngSwitch]="viewMode" class="dashboard-content">	<div *ngSwitchCase="\'Demographics\'">		<barchart></barchart>		<ion-row>			<ion-col>					<circle-decoration class="info">100</circle-decoration>			</ion-col>			<ion-col>					<circle-decoration></circle-decoration>			</ion-col>			<ion-col>					<circle-decoration></circle-decoration>			</ion-col>		</ion-row>		<ion-row>			<ion-item padding class="items">				Stuff			</ion-item>		</ion-row>		<ion-row>			<ion-item padding class="items">				Stuff			</ion-item>		</ion-row>		<ion-row>			<ion-item padding class="items">				Stuff			</ion-item>		</ion-row>	</div>	<div *ngSwitchCase="\'Medical\'">		<doughnut></doughnut>		<ion-row>			<ion-col>					<circle-decoration class="info">100</circle-decoration>			</ion-col>			<ion-col>					<circle-decoration class="info">200</circle-decoration>			</ion-col>			<ion-col>					<circle-decoration class="info"></circle-decoration>			</ion-col>		</ion-row>		<ion-row>			<ion-item padding class="items">				Stuff			</ion-item>		</ion-row>		<ion-row>			<ion-item padding class="items">				Stuff			</ion-item>		</ion-row>		<ion-row>			<ion-item padding class="items">				Stuff			</ion-item>		</ion-row>	</div>	<div *ngSwitchCase="\'Environmental\'"></div></ion-content></div>'
-    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': ''},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
+        var COMPONENT_TEMPLATE = '<div><ion-header>	<ion-navbar>		<div color="primary" class="brand-title">puente</div>	</ion-navbar>	</ion-header><ion-content class="home-dashboard-content">	<ion-grid>		<ion-row>			<ion-col>				<ion-card (click)="openFindRecords()" class="card">				<h1 ion-text color="orange">{{ \'FINDRECORDS\' | translate }}</h1>				<p ion-text text-wrap color="black">{{ \'FINDRECORDS_SUB\' | translate }}</p>				</ion-card>			</ion-col>			</ion-row>			<ion-row>			<ion-col>				<ion-card (click) = \'openMapPage()\' class="card">				<h1 ion-text color="red">{{ \'MAPPING\' | translate }}</h1>				<p ion-text text-wrap color="black">{{ \'MAPPING_SUB\' | translate }}</p>				</ion-card>			</ion-col>		</ion-row>		<ion-row>			<ion-col>				<ion-card (click)="openCustomForms()" class="card">				<h1 ion-text color="blue">{{ \'MANAGECUSTOMFORMS\' | translate }}</h1>				<p ion-text text-wrap color="black">{{ \'MANAGECUSTOMFORMS_SUB\' | translate }}</p>				</ion-card>			</ion-col>		</ion-row>	</ion-grid></ion-content></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DashboardPage'};
 </script>

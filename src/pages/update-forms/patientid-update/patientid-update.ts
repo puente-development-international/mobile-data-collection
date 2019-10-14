@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+
 
 //Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -13,6 +15,8 @@ import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 export class PatientUpdatePage {
   //we need to push patientsID into this page and retrieve
   patient : any;
+
+  patientImage : string;
   
   patientID = {
     id: null,
@@ -43,24 +47,28 @@ export class PatientUpdatePage {
     year:null
   }
 
-
-
-
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
+    private camera:Camera,
     private parsePrvdr:ParseProvider,
     private themeSrvc:UiUxProvider,
     private userPositn:UserpositionProvider) {
-    this.patient = navParams.get('patient');
-    this.populateFields();
-    this.splitDate();
+      this.patient = navParams.get('patient');
+      this.populateFields();
+      this.splitDate();
+      
+  }
+  
+  ionViewDidEnter(){
+    if(this.patient.attributes.picture){
+      this.patientImage = this.patient.attributes.picture._url;
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConsumerMedicalEvalPage');
   }
   
-
   popView(){
     this.navCtrl.pop();
   }
@@ -74,9 +82,11 @@ export class PatientUpdatePage {
       if (this.patientID.hasOwnProperty(property)) {
         this.patientID[property] = this.patient.attributes[property];
       }
-
     }
-
+    /*if(this.patient.attributes.picture){
+      this.patientImage = this.patient.attributes.picture._url;
+    }*/
+  
     //Updates Forms!
     //for (var prop in this.patient.attributes) this.patientID[prop] = this.patient.attributes[prop];
   }
@@ -127,21 +137,41 @@ export class PatientUpdatePage {
     * @param {string} dictionary key
     * @returns 
   */
- set(value,key){
+  set(value,key){
   this.patientID[key]= value;
   console.log(this.patientID[key]);
-}
+  }
 
   async post_n_update() {
     this.patientID.id = this.patient.id;
-    console.log(this.patientID.fname);
     await this.fixDate();
-    this.parsePrvdr.postObjectsToClass(this.patientID,'SurveyData').then(() => {
+    this.parsePrvdr.postObjectsToClass(this.patientID,'SurveyData', this.patientImage).then(() => {
       this.themeSrvc.toasting('Saved | Guardado', 'top');
     }, (error) => {
       console.log(error);
       alert('Error Confirming.');
     });
+  }
+
+  async takePhoto(): Promise<any> {
+    const options: CameraOptions = {
+      /*quality: 100,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      saveToPhotoAlbum: false*/
+      quality: 40,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    try {
+      this.patientImage = "data:image/jpeg;base64," + await this.camera.getPicture(options);
+    }
+    catch(e){
+      console.log(`Error:${e}`)
+    }
+    
   }
 
 }
