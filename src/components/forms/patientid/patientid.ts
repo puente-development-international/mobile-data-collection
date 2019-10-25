@@ -14,6 +14,7 @@ import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 import { StorageProvider} from '../../../providers/storage/storage'
 
 import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-object-id';
+import { SignaturePadComponent } from '../../signature/signature';
 
 
 @Component({
@@ -25,6 +26,7 @@ export class PatientIDForm {
   isenabled: boolean = false;
   is_submitting: boolean = false;
   image: string;
+  signatureImage: string;
 
   patientID = {
     fname: null,
@@ -228,6 +230,11 @@ export class PatientIDForm {
     this.relationship.lname = selectedItem.get('lname');
   }
 
+  inputSignaturefromComponent(selectedItem) {
+    //this.isenabled=true;
+    this.signatureImage = selectedItem;
+  }
+
   presentModal() {
     const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
     modal.onDidDismiss(data => {
@@ -241,4 +248,19 @@ export class PatientIDForm {
     });
     modal.present();
   }
+
+  openSignatureModel(){
+    const modal = this.modalCtrl.create(SignaturePadComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputSignaturefromComponent(data)
+      }
+        
+    });
+    modal.present();
+  }
+
 }

@@ -12,12 +12,19 @@
 
     <ion-list>
         <ion-item>
-            <p text-center>{{'PRESS' | translate }}</p>
-            <button ion-button text-wrap color="primary-light" round block large (click)='takePhoto()'>
-                <ion-icon name="camera"></ion-icon>
-            </button>
-            <img [src]="image" *ngIf="image" />
-          </ion-item>
+          <p text-center>{{'PRESS' | translate }}</p>
+          <button ion-button text-wrap color="primary-light" round block large (click)="openSignatureModel()">
+              <ion-icon name="hand"></ion-icon><ion-icon name="create"></ion-icon>
+          </button>
+          <img [src]="signatureImage" *ngIf="signatureImage" />
+        </ion-item>
+        <ion-item>
+          <p text-center>{{'PRESS' | translate }}</p>
+          <button ion-button text-wrap color="primary-light" round block large (click)='takePhoto()'>
+              <ion-icon name="camera"></ion-icon>
+          </button>
+          <img [src]="image" *ngIf="image" />
+        </ion-item>
 
         <ion-item>
           <ion-label stacked>{{'FIRSTNAME' | translate }}</ion-label>

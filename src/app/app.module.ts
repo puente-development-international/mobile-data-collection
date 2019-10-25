@@ -6,6 +6,7 @@ import { Http } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { SignaturePadModule } from 'angular2-signaturepad';
 import { IonicStorageModule } from '@ionic/storage';
 
 
@@ -36,6 +37,7 @@ import { AccordionComponent } from '../components/accordion/accordion';
 import { CardFlippingComponent } from '../components/card-flipping/card-flipping';
 import { ContentDrawerComponent } from '../components/content-drawer/content-drawer';
 import { SearchbarObjectIdComponent } from '../components/searchbar-object-id/searchbar-object-id';
+import { SignaturePadComponent } from '../components/signature/signature';
 import { CircleDecorationComponent } from '../components/circle-decoration/circle-decoration';
 import { AnimatedCirclesComponent } from '../components/animated-circles/animated-circles';
 
@@ -115,6 +117,7 @@ export function createTranslateLoader(http: Http) {
     CardFlippingComponent,
     ContentDrawerComponent,
     SearchbarObjectIdComponent,
+    SignaturePadComponent,
     CircleDecorationComponent,
     AnimatedCirclesComponent,
     BarchartComponent,
@@ -135,6 +138,7 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
+    SignaturePadModule,
     ReactiveFormsModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
@@ -163,6 +167,7 @@ export function createTranslateLoader(http: Http) {
     ListofEnviroComponent,
     ListofMedEvalComponent,
     SearchbarObjectIdComponent,
+    SignaturePadComponent,
     MapPage,
     ProfileModalPage,
     HelpPage,
