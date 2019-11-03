@@ -1,13 +1,11 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title text-center>About</ion-title>
-
-    <ion-buttons left>
-      <button ion-button icon-only (click)="closeModal()">
-        <ion-icon name="arrow-dropleft-circle"></ion-icon>
+    <ion-item no-lines color="primary">
+      <button ion-button  item-start (click)="closeModal()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
       </button>
-    </ion-buttons>
-    
+      <ion-label>About</ion-label>
+    </ion-item>
   </ion-navbar>
 </ion-header>
 
