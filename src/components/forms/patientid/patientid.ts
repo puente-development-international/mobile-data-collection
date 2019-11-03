@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { ViewController, ModalController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { Platform } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -14,6 +13,7 @@ import { UiUxProvider} from '../../../providers/ui-ux/ui-ux';
 import { StorageProvider} from '../../../providers/storage/storage'
 
 import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-object-id';
+import { SignaturePadComponent } from '../../signature/signature';
 
 
 @Component({
@@ -25,6 +25,7 @@ export class PatientIDForm {
   isenabled: boolean = false;
   is_submitting: boolean = false;
   image: string;
+  signatureImage: string;
 
   patientID = {
     fname: null,
@@ -77,7 +78,6 @@ export class PatientIDForm {
     public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
     private camera:Camera,
-    private platform:Platform,
     //private photoController: PhotosProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
@@ -102,11 +102,11 @@ export class PatientIDForm {
       this.storagePrvdr.getUserInfoFromStorage().then((results)=>{
         results[0].then((result)=>{
           this.patientID.surveyingUser = result
-        })
+        }).catch((error)=>console.log(error));
         results[1].then((result)=>{
           this.patientID.surveyingOrganization = result
-        })
-      })
+        }).catch((error)=>console.log(error))
+      }).catch((error)=>console.log(error))
     }
   }
 
@@ -144,8 +144,9 @@ export class PatientIDForm {
     this.is_submitting=true;
     await this.secureCredentials(); //make sure credentials are stored
     await this.fixDate(); //combine fields
-    this.fakeCachelocation();
-    this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image).then((/*surveyPoint*/) => {
+    await this.fakeCachelocation();
+    
+    await this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image,this.signatureImage ).then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
       }
@@ -228,6 +229,15 @@ export class PatientIDForm {
     this.relationship.lname = selectedItem.get('lname');
   }
 
+  inputSignaturefromComponent(selectedItem) {
+    try {
+      this.signatureImage = selectedItem;
+    }
+    catch(e){
+      console.log(`Error:${e}`)
+    }
+  }
+
   presentModal() {
     const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
     modal.onDidDismiss(data => {
@@ -241,4 +251,19 @@ export class PatientIDForm {
     });
     modal.present();
   }
+
+  openSignatureModel(){
+    const modal = this.modalCtrl.create(SignaturePadComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputSignaturefromComponent(data)
+      }
+        
+    });
+    modal.present();
+  }
+
 }

@@ -9,7 +9,6 @@ import { SignupPage } from '../signup/signup';
 import { TabsPage } from '../tabs/tabs'; 
 import { SettingsPage } from '../settings/settings';
 import { TermsOfServicePage } from '../about/terms-of-service/tos';
-import { HomePage } from '../home/home';
 import { SigninForgotPage } from '../signin-forgot/signin-forgot';
 
 @Component({
