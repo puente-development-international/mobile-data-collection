@@ -23,26 +23,64 @@ export class ParseProvider {
     Takes in local array and posts
   */
   
-  public postObjectsToClass(localObject, parseClass:string, photoFile?:any): Promise<any> {
+  public postObjectsToClass(localObject, parseClass:string, photoFile?:any, signature?:any): Promise<any> {
     //Creates and or Updates Parse Class
     //const SurveyData = Parse.Object.extend('SurveyData');
     const SurveyData = Parse.Object.extend(parseClass);
     let surveyPoint = new SurveyData();
 
-   if(photoFile){
-    var parseFile = new Parse.File("memberProfPic.png", { base64: photoFile });
+  //  if(photoFiles){
+  //   for (let i=0; i<photoFiles.length; i++){
+  //     if(photoFiles[i] !== undefined){
+  //       console.log(photoFiles[i])
+  //       var parseFile = new Parse.File(photoFiles[i].name, { base64: photoFiles[i].image });
+  //       //put this inside if {
+  //       parseFile.save().then(function() {
+  //         // The file has been saved to Parse.
+  //       }, function(error) {
+  //         // The file either could not be read, or could not be saved to Parse.
+  //         console.log(error)
+  //       });
+        
+  //       if (photoFiles[i].name === 'memberProfPic'){
+  //         surveyPoint.set('picture', parseFile)
+  //       }
+  //       else {
+  //         surveyPoint.set(photoFiles[i].name, parseFile)
+  //       }
 
-    //put this inside if {
-    parseFile.save().then(function() {
+  //     }
+  //   }
+  //  }
+    if(photoFile){
+      var parseFile = new Parse.File("memberProfPic.png", { base64: photoFile });
+
+      //put this inside if {
+      parseFile.save().then(function() {
       // The file has been saved to Parse.
-    }, function(error) {
+      }, function(error) {
       // The file either could not be read, or could not be saved to Parse.
-      console.log(error)
-    });
-    
-    surveyPoint.set('picture', parseFile)
+        console.log(error)
+      });
 
-   }
+      surveyPoint.set('picture', parseFile)
+
+    }
+
+    if(signature){
+      var parseFile = new Parse.File("signature.png", { base64: signature });
+
+      //put this inside if {
+      parseFile.save().then(function() {
+      // The file has been saved to Parse.
+      }, function(error) {
+      // The file either could not be read, or could not be saved to Parse.
+        console.log(error)
+      });
+
+      surveyPoint.set('signature', parseFile)
+
+    }
     
     
 

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { ViewController, ModalController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { Platform } from 'ionic-angular';
 
 // Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -79,7 +78,6 @@ export class PatientIDForm {
     public modalCtrl:ModalController,
     private userPositn:UserpositionProvider,
     private camera:Camera,
-    private platform:Platform,
     //private photoController: PhotosProvider,
     public assetsMngr: AssetManagerProvider,
     private storagePrvdr: StorageProvider,
@@ -104,11 +102,11 @@ export class PatientIDForm {
       this.storagePrvdr.getUserInfoFromStorage().then((results)=>{
         results[0].then((result)=>{
           this.patientID.surveyingUser = result
-        })
+        }).catch((error)=>console.log(error));
         results[1].then((result)=>{
           this.patientID.surveyingOrganization = result
-        })
-      })
+        }).catch((error)=>console.log(error))
+      }).catch((error)=>console.log(error))
     }
   }
 
@@ -146,8 +144,9 @@ export class PatientIDForm {
     this.is_submitting=true;
     await this.secureCredentials(); //make sure credentials are stored
     await this.fixDate(); //combine fields
-    this.fakeCachelocation();
-    this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image).then((/*surveyPoint*/) => {
+    await this.fakeCachelocation();
+    
+    await this.parseProvider.postObjectsToClass(this.patientID,'SurveyData', this.image,this.signatureImage ).then((/*surveyPoint*/) => {
       for (var key in this.patientID){
         this.patientID[key] = null;
       }
@@ -231,8 +230,12 @@ export class PatientIDForm {
   }
 
   inputSignaturefromComponent(selectedItem) {
-    //this.isenabled=true;
-    this.signatureImage = selectedItem;
+    try {
+      this.signatureImage = selectedItem;
+    }
+    catch(e){
+      console.log(`Error:${e}`)
+    }
   }
 
   presentModal() {
