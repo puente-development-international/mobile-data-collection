@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.1.1...v1.2.0) (2019-11-03)
+
+
+### Features
+
+* add patient consent form ([11796e4](https://github.com/hopetambala/puente-ionic-datacollection/commit/11796e416f1caec48aefed0739d7ac353d602dd2))
+* signature form works :confetti_ball: ([9095854](https://github.com/hopetambala/puente-ionic-datacollection/commit/9095854cba6763f1d885001084801cee8cd02e9e))
+
+
+### Bug Fixes
+
+* add signature ([074ba52](https://github.com/hopetambala/puente-ionic-datacollection/commit/074ba5208f7dfab7dfa6eaaca10a596951f7d847))
+* android target version ([d3ac9c3](https://github.com/hopetambala/puente-ionic-datacollection/commit/d3ac9c32ec761d26609e7f7b81035d0a3d2ac8d3))
+* consistency with styling across multiple headers ([01d5ea8](https://github.com/hopetambala/puente-ionic-datacollection/commit/01d5ea8224dea602862695de00869ff48a741d2f))
+* start script didn't exist ([4780448](https://github.com/hopetambala/puente-ionic-datacollection/commit/47804481da815993a3e128e58fa18a68c678c267))
+* upgrade cordova-ios version to 5.0.1 ([c44e3bc](https://github.com/hopetambala/puente-ionic-datacollection/commit/c44e3bc17ef480334675e22cf0f24f7690ce96e8))
+
 ### [1.1.1](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.1.0...v1.1.1) (2019-10-14)
 
 ## 1.1.0 (2019-10-14)
