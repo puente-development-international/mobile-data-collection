@@ -6,6 +6,10 @@ page-vitals-update {
         background-color: black;
     }
 
+    .toolbar{
+        padding-top: 25px !important;
+    }
+
     .content{
         background: #F7F8F8;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to bottom, map-get($colors, primary), #F7F8F8);  /* Chrome 10-25, Safari 5.1-6 */

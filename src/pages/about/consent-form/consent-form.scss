@@ -1,4 +1,8 @@
-page-tos {
+page-consent-form {
+
+  .toolbar{
+    padding-top: 25px !important;
+  }
 
   .tutorial-page{
     //background-color:  map-get($colors,primary);
@@ -6,6 +10,4 @@ page-tos {
     padding: 5px;
     margin: auto;
   }
-
-
 }

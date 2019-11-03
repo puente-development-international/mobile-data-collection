@@ -3,11 +3,19 @@
 -->
 <ion-header no-border-bottom>
 
-  <ion-navbar color="primary" no-border-bottom>
+  <!-- <ion-navbar color="primary" no-border-bottom>
     <button color='primary-light' ion-button item-start (click)="popView()" large>
       <ion-icon name="arrow-round-back" ></ion-icon>
     </button>
     <ion-title>{{ 'UPDATE' | translate }} {{ 'VITALS' | translate }}</ion-title>
+  </ion-navbar> -->
+  <ion-navbar color="primary-dark">
+    <ion-item color='primary-dark' no-lines>
+      <button ion-button outline item-start (click)="popView()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>{{ 'UPDATE' | translate }} {{ 'VITALS' | translate }}</ion-label>
+    </ion-item>
   </ion-navbar>
 
 </ion-header>
