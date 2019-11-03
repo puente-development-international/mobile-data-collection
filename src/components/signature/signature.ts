@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, ViewController} from 'ionic-angular';
+import { NavController, ViewController, ModalController} from 'ionic-angular';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
+import { ConsentFormPage } from '../../pages/about/consent-form/consent-form';
+
 
 /**
  * Generated class for the SignaturePadComponent component.
@@ -26,7 +28,8 @@ export class SignaturePadComponent {
 
   constructor(
     public navCtrl: NavController,
-    private viewCtrl:ViewController) {
+    private viewCtrl:ViewController,
+    public modalCtrl: ModalController) {
     console.log('Hello SignaturePadComponent Component');
   }
 
@@ -66,6 +69,18 @@ export class SignaturePadComponent {
   close(){
     let item = null
     this.dismiss(item)
+  }
+
+  presentConsentForm(){
+    //Opens Profile Modal Page
+    let myModal = this.modalCtrl.create(ConsentFormPage);
+
+    //.present() shows modal
+    myModal.present();
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
 
 }

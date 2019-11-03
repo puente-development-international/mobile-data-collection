@@ -81,6 +81,7 @@ import { FindRecordsPage } from '../pages/find-records/find-records';
 import { ManageCustomFormsPage } from '../pages/manage-custom-forms/manage-custom-forms';
 import { SettingsPageModule } from '../pages/settings/settings.module';
 import { TermsOfServicePage } from '../pages/about/terms-of-service/tos';
+import { ConsentFormPage } from '../pages/about/consent-form/consent-form';
 
 
 
@@ -113,6 +114,7 @@ export function createTranslateLoader(http: Http) {
     VitalsUpdatePage,
     MedEvalUpdatePage,
     TermsOfServicePage,
+    ConsentFormPage,
     AccordionComponent,
     CardFlippingComponent,
     ContentDrawerComponent,
@@ -161,6 +163,7 @@ export function createTranslateLoader(http: Http) {
     SignupPage,
     SigninForgotPage,
     TermsOfServicePage,
+    ConsentFormPage,
     Splash,
     AnimatedCirclesComponent,
     ListofvitalsComponent,

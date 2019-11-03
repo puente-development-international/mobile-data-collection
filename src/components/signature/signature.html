@@ -4,7 +4,10 @@
       <ion-icon name="arrow-round-back" ></ion-icon>
     </button>
   </ion-navbar>
-  <signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad>
+  <ion-item>
+    <ion-label id="cf" (click)="presentConsentForm()" color="primary">Consent Form</ion-label>
+  </ion-item>
+  <signature-pad [options]="signaturePadOptions"  id="signatureCanvas">Signature</signature-pad>
   <ion-grid>
     <ion-row>
       <ion-col col-4>
@@ -18,4 +21,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  
 </ion-content>
