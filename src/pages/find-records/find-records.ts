@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ActionSheetController,ModalController } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController,ModalController, ViewController } from 'ionic-angular';
 
 //Providers
 import { ParseProvider } from '../../providers/parse/parse';
@@ -28,6 +28,7 @@ export class FindRecordsPage {
   filteredCommunityRecords: any[] = [];
 
   constructor(public navCtrl: NavController, 
+    public viewCtrl: ViewController,
     public auth: AuthProvider,
     public navParams: NavParams,
     private parseSrvc: ParseProvider,
@@ -67,8 +68,6 @@ export class FindRecordsPage {
   }
 
   //Navigation
-  
-
   openConsumerDemographicsEval(patient){
     let demographicsModal = this.modalCtrl.create(PatientUpdatePage,{
       patient:patient
@@ -147,6 +146,10 @@ export class FindRecordsPage {
 
   back(){
     this.navCtrl.pop()
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
 
 

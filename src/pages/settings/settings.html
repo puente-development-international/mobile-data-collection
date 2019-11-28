@@ -6,13 +6,22 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <!-- <ion-navbar>
     <ion-buttons left>
       <button ion-button (click)="close()" >
           <ion-icon name="home"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>{{ 'SETTINGS' | translate }}</ion-title>
+  </ion-navbar> -->
+
+  <ion-navbar hideBackButton="true" color="offwhite">
+    <ion-item  no-lines color="offwhite">
+      <button ion-button item-start outline color="primary" (click)="close()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>{{ 'SETTINGS' | translate }}</ion-label>
+    </ion-item>
   </ion-navbar>
 
 </ion-header>

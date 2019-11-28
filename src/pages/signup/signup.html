@@ -1,6 +1,11 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>{{ 'SIGNUP' | translate }}</ion-title>
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-item  no-lines color="primary">
+      <button ion-button item-start (click)="closeModal()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>{{ 'SIGNUP' | translate }}</ion-label>
+    </ion-item>
   </ion-navbar>
 </ion-header>
 

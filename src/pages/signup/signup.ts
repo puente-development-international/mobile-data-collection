@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, LoadingController, ViewController } from 'ionic-angular';
 
 // Providers
 import { AuthProvider } from '../../providers/auth/auth';
@@ -27,6 +27,7 @@ export class SignupPage {
   organizationsss = []
 
   constructor(public navCtrl: NavController, 
+    public viewCtrl: ViewController,
     private authPvdr: AuthProvider, 
     private loadCtrl: LoadingController,
     private query:QueryServiceProvider) { 
@@ -66,6 +67,10 @@ export class SignupPage {
     }
     let unique_orgs = this.organizationsss.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
     console.log(unique_orgs)
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
 
 }
