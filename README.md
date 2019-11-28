@@ -13,7 +13,7 @@ This is a Community Health Records Data Collection Application that integrates I
 
 ## Key Libraries
 
-Google Maps Javascript SDK 
+Google Maps Javascript SDK
 
 ## Screenshots
 
