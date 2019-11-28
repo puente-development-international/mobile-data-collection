@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 
 //Providers
 import { AuthProvider} from '../../providers/auth/auth';
@@ -15,6 +15,7 @@ export class SigninForgotPage {
   email: string = '';
 
   constructor(public navCtrl: NavController, 
+    public viewCtrl: ViewController,
     public navParams: NavParams,
     public auth: AuthProvider,
     public themeCtrl:UiUxProvider) {
@@ -29,6 +30,10 @@ export class SigninForgotPage {
       this.themeCtrl.toasting("Email sent", "bottom");
       this.navCtrl.pop();
     })
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
 
 }
