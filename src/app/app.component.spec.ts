@@ -1,7 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-
-import { Component } from '@angular/core';
-import { Platform, IonicModule, ModalController } from 'ionic-angular';
+import { Platform, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';

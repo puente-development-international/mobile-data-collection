@@ -30,6 +30,7 @@ export class CustomForm {
     description: null,
     organizations: [],
     properties: {
+      formSpecificationsId:"",
       question_1: {
         title:"",
         answer:""
@@ -69,6 +70,7 @@ export class CustomForm {
   }
   ionViewWillEnter(){
     this.form = this.navParams.get('form');
+    // console.log(this.form.id);
 
   }
 
@@ -165,17 +167,20 @@ export class CustomForm {
     /*
       Pulls object from other page and puts the attributes in localObject
     */
+
+    this.customForm.properties.formSpecificationsId = this.form.id;
     
     for (var property in this.form.attributes) {
       if (this.customForm.hasOwnProperty(property)) {
         this.customForm[property] = this.form.attributes[property];
       }
-
     }
+
+    
+
     console.log(this.customForm)
 
-    //Updates Forms!
-    //for (var prop in this.patient.attributes) this.patientID[prop] = this.patient.attributes[prop];
+    
   }
 
 

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ActionSheetController,ModalController } from 'ionic-angular';
 
 //Providers
-import { ParseProvider } from '../../providers/parse/parse';
 import { QueryServiceProvider } from '../../providers/query-service/query-service';
 import { AuthProvider } from '../../providers/auth/auth';
 import { UiUxProvider } from '../../providers/ui-ux/ui-ux';
@@ -25,7 +24,6 @@ export class ManageCustomFormsPage {
   constructor(public navCtrl: NavController, 
     public auth: AuthProvider,
     public navParams: NavParams,
-    private parseSrvc: ParseProvider,
     private querySrvc: QueryServiceProvider,
     public actionSheetCtrl: ActionSheetController,
     private modalCtrl:ModalController,
