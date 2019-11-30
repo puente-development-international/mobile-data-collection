@@ -19,18 +19,18 @@
     
     <ion-list>
         <ion-item>
-            <ion-label floating>{{customForm.properties.question_1.title}}</ion-label>
-            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.properties.question_1.answer"></ion-textarea>
+            <ion-label floating>{{customForm.fields[0].title}}</ion-label>
+            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.fields[0].answer"></ion-textarea>
         </ion-item> 
 
         <ion-item>
-            <ion-label floating>{{customForm.properties.question_2.title}}</ion-label>
-            <ion-textarea rows="2" type="text" [(ngModel)]="customForm.properties.question_2.answer"></ion-textarea>
+            <ion-label floating>{{customForm.fields[1].title}}</ion-label>
+            <ion-textarea rows="2" type="text" [(ngModel)]="customForm.fields[1].answer"></ion-textarea>
         </ion-item> 
 
         <ion-item>
-            <ion-label floating>{{ customForm.properties.question_3.title }}</ion-label>
-            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.properties.question_3.answer"></ion-textarea>
+            <ion-label floating>{{ customForm.fields[2].title }}</ion-label>
+            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.fields[2].answer"></ion-textarea>
         </ion-item> 
           
     </ion-list>

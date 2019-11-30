@@ -29,21 +29,21 @@ export class CustomForm {
     title: null,
     description: null,
     organizations: [],
-    properties: {
-      formSpecificationsId:"",
-      question_1: {
+    formSpecificationsId:"",
+    fields: [
+      {
         title:"",
         answer:""
       },
-      question_2:{
+      {
         title:null,
         answer:""
       },
-      question_3:{
+      {
         title:null,
         answer:""
-      },
-    },
+      }
+    ],
     
     surveyingUser: this.auth.currentUser().name,
     surveyingOrganization: this.auth.currentUser().organization
@@ -68,22 +68,20 @@ export class CustomForm {
       bounceBack: true
     };
   }
+
   ionViewWillEnter(){
     this.form = this.navParams.get('form');
-    // console.log(this.form.id);
-
   }
 
   ionViewDidEnter(){
     this.populateFields();
   }
 
-
   post_n_clear(){
     this.parseProvider.postObjectsToClassWithRelation(this.customForm,'FormResults','SurveyData',this.client.objectID).then(()=> {
-      this.customForm.properties.question_1.answer = ""
-      this.customForm.properties.question_2.answer = ""
-      this.customForm.properties.question_3.answer = ""
+      this.customForm.fields[0].answer = ""
+      this.customForm.fields[1].answer = ""
+      this.customForm.fields[2].answer = ""
       this.client.fname=null; 
       this.client.lname=null;
       this.isenabled=false;
@@ -168,13 +166,14 @@ export class CustomForm {
       Pulls object from other page and puts the attributes in localObject
     */
 
-    this.customForm.properties.formSpecificationsId = this.form.id;
+    this.customForm.formSpecificationsId = this.form.id;
     
     for (var property in this.form.attributes) {
       if (this.customForm.hasOwnProperty(property)) {
         this.customForm[property] = this.form.attributes[property];
       }
     }
+
 
     
 
