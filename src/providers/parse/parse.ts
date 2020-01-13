@@ -127,7 +127,7 @@ export class ParseProvider {
 
     return child.save(null, {
       success: function (child) {
-        console.log(child);
+        // console.log(child);
         return child;
       },
       error: function (child, error) {
