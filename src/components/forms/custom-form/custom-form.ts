@@ -30,20 +30,7 @@ export class CustomForm {
     description: null,
     organizations: [],
     formSpecificationsId:"",
-    fields: [
-      {
-        title:"",
-        answer:""
-      },
-      {
-        title:null,
-        answer:""
-      },
-      {
-        title:null,
-        answer:""
-      }
-    ],
+    fields: [],
     
     surveyingUser: this.auth.currentUser().name,
     surveyingOrganization: this.auth.currentUser().organization
@@ -79,9 +66,9 @@ export class CustomForm {
 
   post_n_clear(){
     this.parseProvider.postObjectsToClassWithRelation(this.customForm,'FormResults','SurveyData',this.client.objectID).then(()=> {
-      this.customForm.fields[0].answer = ""
-      this.customForm.fields[1].answer = ""
-      this.customForm.fields[2].answer = ""
+      this.customForm.fields.map(x=>{
+        x.answer = "";
+      })
       this.client.fname=null; 
       this.client.lname=null;
       this.isenabled=false;

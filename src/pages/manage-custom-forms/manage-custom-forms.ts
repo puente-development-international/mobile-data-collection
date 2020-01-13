@@ -57,6 +57,7 @@ export class ManageCustomFormsPage {
   //Navigation
 
   openCustomForm(form){
+    console.log(form);
     let customFormsModal = this.modalCtrl.create(CustomForm,{
       form:form
     });

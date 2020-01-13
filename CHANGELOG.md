@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.3.0...v1.4.0) (2020-01-12)
+
+
+### Features
+
+* decimal formator ([935c016](https://github.com/hopetambala/puente-ionic-datacollection/commit/935c016dd44ae13f3d43fdd0a501df2c00ed3e21))
+
+## [1.3.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.2.0...v1.3.0) (2020-01-03)
+
+
+### Features
+
+* have arrays instead of objects for form Results ([4c24eee](https://github.com/hopetambala/puente-ionic-datacollection/commit/4c24eee5ce20c5cc9fde5265d82e20fe64ea9831))
+
+
+### Bug Fixes
+
+* add formspecifications to form result ([54e78b2](https://github.com/hopetambala/puente-ionic-datacollection/commit/54e78b211e1f5b4fc83baa1f97f10d31f3f4d6de))
+* correct styling that was inhibiting app navigation ([91c11ed](https://github.com/hopetambala/puente-ionic-datacollection/commit/91c11ed894491789626871849860745d5c6b4e26))
+* expression change with mother father guardian fields ([bca3490](https://github.com/hopetambala/puente-ionic-datacollection/commit/bca349075453a24eb03e11ac2425bcbc04b19e7a))
+* info.plst ([8979fa5](https://github.com/hopetambala/puente-ionic-datacollection/commit/8979fa553004fcceaa6f5ca2b3b5a97151ac5038))
+
 ## [1.2.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.1.1...v1.2.0) (2019-11-03)
 
 
