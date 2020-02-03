@@ -38,8 +38,8 @@
 
         <ion-item (click)="presentModal()">
           <ion-label stacked >{{'MOTHERFATHERGUARDIAN' | translate}}: </ion-label>
-          <ion-input type="text" placeholder="{{ 'FIRSTNAME' | translate }}" disabled="disabled">{{relationship.fname}}</ion-input>
-          <ion-input type="text" placeholder="{{ 'LASTNAME' | translate }}" disabled="disabled">{{relationship.lname}}</ion-input>
+          <ion-input type="text" [(ngModel)]="relationship.fname" placeholder="{{ 'FIRSTNAME' | translate }}" >{{relationship.fname}}</ion-input>
+          <ion-input type="text" [(ngModel)]="relationship.lname" placeholder="{{ 'LASTNAME' | translate }}">{{relationship.lname}}</ion-input>
         </ion-item>
 
         <ion-item>
