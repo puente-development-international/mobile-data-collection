@@ -18,8 +18,8 @@
 
     <ion-list [virtualScroll]="customForm.fields">
         <ion-item *virtualItem="let customForm">
-            <ion-label floating>{{customForm.title}}</ion-label>
-            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.answer"></ion-textarea>
+            <ion-label stacked>{{customForm.title}}</ion-label>
+            <ion-textarea rows="1" type="text" placeholder="{{ 'INPUT' | translate }}" [(ngModel)]="customForm.answer"></ion-textarea>
         </ion-item>    
     </ion-list>
 
