@@ -118,6 +118,13 @@ Parse offer a backend to store data, push notifications, social media integratio
 sudo npm install -g ios-deploy --unsafe-perm=true --allow-root
 ```
 
+Sometimes running one of ios build scripts
+
+```
+npm run ios:build
+```
+doesn't work if you have an iPad or iPhone attached to the computer during building.
+
 ## Documentation
 https://hopetambala.github.io/puente-ionic-datacollection/
 
