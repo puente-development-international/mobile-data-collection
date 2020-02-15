@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
-import { ViewController, ModalController, NavParams } from 'ionic-angular';
+import { ViewController, ModalController, NavParams, VirtualScroll, LoadingController } from 'ionic-angular';
 
 
 // Providers
@@ -18,6 +18,7 @@ import { SearchbarObjectIdComponent } from '../../searchbar-object-id/searchbar-
 export class CustomForm {
   form : any;
   isenabled:boolean=false;
+  @ViewChild('virtualScroll', { read: VirtualScroll }) virtualScroll: VirtualScroll;
   
   client = {
     objectID: null,
@@ -42,6 +43,7 @@ export class CustomForm {
     private auth: AuthProvider,  
     public viewCtrl:ViewController,
     public modalCtrl:ModalController,
+    public loadingCtrl: LoadingController, 
     public themeCtrl:UiUxProvider,
     public navParams:NavParams) {
 
@@ -56,12 +58,23 @@ export class CustomForm {
     };
   }
 
-  ionViewWillEnter(){
-    this.form = this.navParams.get('form');
+  ionViewWillEnter = async() =>{
+    this.form = await this.navParams.get('form');
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter = async() => {
+    var loadingOverlay = this.loadingCtrl.create({
+      content: 'loading'
+    });
+
+    await loadingOverlay.present();
+    
     this.populateFields();
+
+    setTimeout(() => {
+        this.virtualScroll.resize();
+        loadingOverlay.dismiss();
+    }, 1000);
   }
 
   post_n_clear(){
