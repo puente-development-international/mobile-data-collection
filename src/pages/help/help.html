@@ -1,15 +1,12 @@
 <ion-header>
-    <ion-navbar color="primary">
-
-      <ion-title text-center>Support</ion-title>
-
-      <ion-buttons left>
-        <button ion-button icon-only (click)="closeModal()">
-          <ion-icon name="arrow-dropleft-circle"></ion-icon>
-        </button>
-      </ion-buttons>
-      
-    </ion-navbar>
+  <ion-navbar color="primary">
+    <ion-item no-lines color="primary">
+      <button ion-button  item-start (click)="closeModal()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>Support</ion-label>
+    </ion-item>
+  </ion-navbar>
   </ion-header>
 
 
@@ -24,7 +21,7 @@
     <ion-item>
       <p justify-center>
         The Puente Data Collection Application is one part of a suite of innovative technologies and services engineered to address problems within International Development. It is purposely focused on data collection and works optimally with the other programs and services offered by Puente which are listed above.
-        This particular app is designed with Ionic 3 and powered by Back4App.
+        This app is designed with Ionic 3 and powered by Back4App.
       </p>
     </ion-item>
   </ion-list>

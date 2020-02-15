@@ -1,6 +1,14 @@
 <ion-header >
-  <ion-navbar  color="primary">
+  <!-- <ion-navbar  color="primary">
     <ion-title text-center text-wrap>{{ 'MANAGECUSTOMFORMS' | translate }}</ion-title>
+  </ion-navbar> -->
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-item no-lines color="primary">
+      <button ion-button item-start (click)="closeModal()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>{{ 'MANAGECUSTOMFORMS' | translate }}</ion-label>
+    </ion-item>
   </ion-navbar>
   <ion-searchbar ion-text text-wrap [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems()" placeholder="{{ 'SEARCHBYFIRSTNAMELASTNAMEUSER' | translate }}"></ion-searchbar>
 </ion-header>

@@ -12,12 +12,19 @@
 
     <ion-list>
         <ion-item>
-            <p text-center>{{'PRESS' | translate }}</p>
-            <button ion-button text-wrap color="primary-light" round block large (click)='takePhoto()'>
-                <ion-icon name="camera"></ion-icon>
-            </button>
-            <img [src]="image" *ngIf="image" />
-          </ion-item>
+          <p text-center>{{'PRESS' | translate }}</p>
+          <button ion-button text-wrap color="primary-light" round block large (click)="openSignatureModel()">
+              <ion-icon name="hand"></ion-icon><ion-icon name="create"></ion-icon>
+          </button>
+          <img [src]="signatureImage" *ngIf="signatureImage" />
+        </ion-item>
+        <ion-item>
+          <p text-center>{{'PRESS' | translate }}</p>
+          <button ion-button text-wrap color="primary-light" round block large (click)='takePhoto()'>
+              <ion-icon name="camera"></ion-icon>
+          </button>
+          <img [src]="image" *ngIf="image" />
+        </ion-item>
 
         <ion-item>
           <ion-label stacked>{{'FIRSTNAME' | translate }}</ion-label>
@@ -31,8 +38,8 @@
 
         <ion-item (click)="presentModal()">
           <ion-label stacked >{{'MOTHERFATHERGUARDIAN' | translate}}: </ion-label>
-          <ion-input type="text" [(ngModel)]="relationship.fname" placeholder="{{ 'FIRSTNAME' | translate }}" disabled="disabled"></ion-input>
-          <ion-input type="text" [(ngModel)]="relationship.lname" placeholder="{{ 'LASTNAME' | translate }}" disabled="disabled"></ion-input>
+          <ion-input type="text" [(ngModel)]="relationship.fname" placeholder="{{ 'FIRSTNAME' | translate }}" >{{relationship.fname}}</ion-input>
+          <ion-input type="text" [(ngModel)]="relationship.lname" placeholder="{{ 'LASTNAME' | translate }}">{{relationship.lname}}</ion-input>
         </ion-item>
 
         <ion-item>

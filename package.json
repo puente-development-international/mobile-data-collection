@@ -1,11 +1,13 @@
 {
   "name": "puente-community-health-records-collection",
-  "version": "1.1.1",
+  "version": "1.4.0",
   "scripts": {
+    "start": "ionic serve",
+    "production": "npm run ios:build && npm run android:build:production && npm run website:build",
     "website:build": "ionic cordova platform remove browser && ionic cordova platform add browser && ionic cordova build browser --prod --release",
     "android:build:production": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android --prod --release",
     "android:build:staging": "ionic cordova platform remove android && ionic cordova platform add android && ionic cordova build android",
-    "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release",
+    "ios:build": "ionic cordova platform remove ios && ionic cordova platform add ios@5.0.1 && ionic cordova build ios --prod --release",
     "ios:build_legacy": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova build ios --prod --release -- --buildFlag='-UseModernBuildSystem=0'",
     "ios:emulate": "ionic cordova platform remove ios && ionic cordova platform add ios && ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'",
     "doc": "./node_modules/.bin/compodoc -d ./docs/ -p ./tsconfig.json",
@@ -37,10 +39,11 @@
     "@ionic-native/status-bar": "3.7.0",
     "@ionic/app-scripts": "3.2.2",
     "@ionic/storage": "2.1.3",
+    "angular2-signaturepad": "^2.9.0",
     "chart.js": "2.8.0",
     "cordova-android": "8.0.0",
     "cordova-browser": "6.0.0",
-    "cordova-ios": "5.0.0",
+    "cordova-ios": "5.0.1",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-device": "1.1.7",
     "cordova-plugin-geolocation": "4.0.1",
@@ -58,7 +61,7 @@
     "leaflet": "1.3.3",
     "ng2-charts": "1.6.0",
     "ng2-translate": "5.0.0",
-    "node-sass": "4.9.2",
+    "node-sass": "4.11.0",
     "parse": "1.11.1",
     "rxjs": "5.4.2",
     "sw-toolbox": "3.6.0",
@@ -108,9 +111,9 @@
       }
     },
     "platforms": [
-      "browser",
       "ios",
-      "android"
+      "android",
+      "browser"
     ]
   },
   "cordovaPlugins": [],

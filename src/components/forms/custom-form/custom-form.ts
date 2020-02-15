@@ -29,20 +29,8 @@ export class CustomForm {
     title: null,
     description: null,
     organizations: [],
-    properties: {
-      question_1: {
-        title:"",
-        answer:""
-      },
-      question_2:{
-        title:null,
-        answer:""
-      },
-      question_3:{
-        title:null,
-        answer:""
-      },
-    },
+    formSpecificationsId:"",
+    fields: [],
     
     surveyingUser: this.auth.currentUser().name,
     surveyingOrganization: this.auth.currentUser().organization
@@ -67,21 +55,20 @@ export class CustomForm {
       bounceBack: true
     };
   }
+
   ionViewWillEnter(){
     this.form = this.navParams.get('form');
-
   }
 
   ionViewDidEnter(){
     this.populateFields();
   }
 
-
   post_n_clear(){
     this.parseProvider.postObjectsToClassWithRelation(this.customForm,'FormResults','SurveyData',this.client.objectID).then(()=> {
-      this.customForm.properties.question_1.answer = ""
-      this.customForm.properties.question_2.answer = ""
-      this.customForm.properties.question_3.answer = ""
+      this.customForm.fields.map(x=>{
+        x.answer = "";
+      })
       this.client.fname=null; 
       this.client.lname=null;
       this.isenabled=false;
@@ -165,17 +152,21 @@ export class CustomForm {
     /*
       Pulls object from other page and puts the attributes in localObject
     */
+
+    this.customForm.formSpecificationsId = this.form.id;
     
     for (var property in this.form.attributes) {
       if (this.customForm.hasOwnProperty(property)) {
         this.customForm[property] = this.form.attributes[property];
       }
-
     }
+
+
+    
+
     console.log(this.customForm)
 
-    //Updates Forms!
-    //for (var prop in this.patient.attributes) this.patientID[prop] = this.patient.attributes[prop];
+    
   }
 
 

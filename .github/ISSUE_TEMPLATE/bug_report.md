@@ -5,7 +5,7 @@ about: Tell us what is broken
 ---
 
 ### Description
-Describe your issue here.
+_Describe your issue here. Feel free to use screenshots along with code snippets and/or error logs_
 
 ### Environment
 - version of Puente-Ionic-Datacollection?
@@ -15,10 +15,10 @@ Describe your issue here.
   - RxJS
 
 ### Steps to reproduce
-Tell us how to recreate your issue.
+_Tell us how to recreate your issue._
 
 ### Expected results
-What did you think would happen?
+_What did you think would happen?_
 
 ### Actual results
-What **really** happened?
+_What **really** happened?_

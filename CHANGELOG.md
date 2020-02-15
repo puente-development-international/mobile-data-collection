@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.3.0...v1.4.0) (2020-01-12)
+
+
+### Features
+
+* decimal formator ([935c016](https://github.com/hopetambala/puente-ionic-datacollection/commit/935c016dd44ae13f3d43fdd0a501df2c00ed3e21))
+
+## [1.3.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.2.0...v1.3.0) (2020-01-03)
+
+
+### Features
+
+* have arrays instead of objects for form Results ([4c24eee](https://github.com/hopetambala/puente-ionic-datacollection/commit/4c24eee5ce20c5cc9fde5265d82e20fe64ea9831))
+
+
+### Bug Fixes
+
+* add formspecifications to form result ([54e78b2](https://github.com/hopetambala/puente-ionic-datacollection/commit/54e78b211e1f5b4fc83baa1f97f10d31f3f4d6de))
+* correct styling that was inhibiting app navigation ([91c11ed](https://github.com/hopetambala/puente-ionic-datacollection/commit/91c11ed894491789626871849860745d5c6b4e26))
+* expression change with mother father guardian fields ([bca3490](https://github.com/hopetambala/puente-ionic-datacollection/commit/bca349075453a24eb03e11ac2425bcbc04b19e7a))
+* info.plst ([8979fa5](https://github.com/hopetambala/puente-ionic-datacollection/commit/8979fa553004fcceaa6f5ca2b3b5a97151ac5038))
+
+## [1.2.0](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.1.1...v1.2.0) (2019-11-03)
+
+
+### Features
+
+* add patient consent form ([11796e4](https://github.com/hopetambala/puente-ionic-datacollection/commit/11796e416f1caec48aefed0739d7ac353d602dd2))
+* signature form works :confetti_ball: ([9095854](https://github.com/hopetambala/puente-ionic-datacollection/commit/9095854cba6763f1d885001084801cee8cd02e9e))
+
+
+### Bug Fixes
+
+* add signature ([074ba52](https://github.com/hopetambala/puente-ionic-datacollection/commit/074ba5208f7dfab7dfa6eaaca10a596951f7d847))
+* android target version ([d3ac9c3](https://github.com/hopetambala/puente-ionic-datacollection/commit/d3ac9c32ec761d26609e7f7b81035d0a3d2ac8d3))
+* consistency with styling across multiple headers ([01d5ea8](https://github.com/hopetambala/puente-ionic-datacollection/commit/01d5ea8224dea602862695de00869ff48a741d2f))
+* start script didn't exist ([4780448](https://github.com/hopetambala/puente-ionic-datacollection/commit/47804481da815993a3e128e58fa18a68c678c267))
+* upgrade cordova-ios version to 5.0.1 ([c44e3bc](https://github.com/hopetambala/puente-ionic-datacollection/commit/c44e3bc17ef480334675e22cf0f24f7690ce96e8))
+
 ### [1.1.1](https://github.com/hopetambala/puente-ionic-datacollection/compare/v1.1.0...v1.1.1) (2019-10-14)
 
 ## 1.1.0 (2019-10-14)

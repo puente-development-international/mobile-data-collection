@@ -16,28 +16,15 @@
       {{ customForm.title }}
     </ion-card-header>
 
-    
-    <ion-list>
-        <ion-item>
-            <ion-label floating>{{customForm.properties.question_1.title}}</ion-label>
-            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.properties.question_1.answer"></ion-textarea>
-        </ion-item> 
-
-        <ion-item>
-            <ion-label floating>{{customForm.properties.question_2.title}}</ion-label>
-            <ion-textarea rows="2" type="text" [(ngModel)]="customForm.properties.question_2.answer"></ion-textarea>
-        </ion-item> 
-
-        <ion-item>
-            <ion-label floating>{{ customForm.properties.question_3.title }}</ion-label>
-            <ion-textarea rows="1" type="text" [(ngModel)]="customForm.properties.question_3.answer"></ion-textarea>
-        </ion-item> 
-          
+    <ion-list [virtualScroll]="customForm.fields">
+        <ion-item *virtualItem="let customForm">
+            <ion-label stacked>{{customForm.title}}</ion-label>
+            <ion-textarea rows="1" type="text" placeholder="{{ 'INPUT' | translate }}" [(ngModel)]="customForm.answer"></ion-textarea>
+        </ion-item>    
     </ion-list>
-  
+
   </ion-card>
   
-  <!--Submit-->
   <ion-card padding-bottom='20px'>
     <ion-item no-lines>
       <button ion-button icon-left full block large color="accent" (click)="post_n_clear()" text-wrap [disabled]="!isenabled">

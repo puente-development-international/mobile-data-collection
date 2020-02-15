@@ -7,11 +7,11 @@
 ![](https://img.shields.io/badge/angular_4+-✓-blue.svg)
 ![](https://img.shields.io/badge/parse_server-✓-blueviolet.svg)
 
-# About this Program
+## About this Program
 
-This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It's being used for community development data collection and assessment in the Dominican Republic.
+This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It's being used for community development data collection and assessment in the Dominican Republic. 
 
-# Key Libraries
+## Key Libraries
 
 Google Maps Javascript SDK
 
@@ -22,8 +22,24 @@ Google Maps Javascript SDK
   <img src="https://github.com/hopetambala/puente-ionic-datacollection/blob/master/resources/screenshots/db.jpg" width="40%"/>
 </p>
 
+## Development
 
-# File structure
+Here are terminal commands to get both Ionic and Cordova installed on your machine
+
+```
+npm install ionic -g
+npm install cordova@8.1.2
+```
+
+Here are some quick commands to get started after install Ionic and Cordova:
+
+- `npm install`: Install Node dependencies
+- `npm start`: Start the hot reloading development server.
+- `npm test`: Run the test suit and watch for changes.
+- `npm build`: Build a production optimized bundle of the app.
+- `npm lint`: Run the ESLinter.
+
+## File structure
 
 ```
 puente-data-collection/
@@ -93,15 +109,27 @@ Parse offer a backend to store data, push notifications, social media integratio
 - **Storage**: No restricted time limits and no file storage restrictions. Control over backup, restore and database indexes
 - **Ideal for**: General purpose applications
 
-# Known Issues
+## Known Issues and Troubleshooting
 
-- Performance Issues on older/slower devices
+### ios-deploy isn't working!
 
-# Documentation
+[From here](https://stackoverflow.com/questions/34733740/ios-deploy-not-found-under-os-x-el-capitan)
+```
+sudo npm install -g ios-deploy --unsafe-perm=true --allow-root
+```
+
+Sometimes running one of ios build scripts
+
+```
+npm run ios:build
+```
+doesn't work if you have an iPad or iPhone attached to the computer during building.
+
+## Documentation
 https://hopetambala.github.io/puente-ionic-datacollection/
 
 
-# Contribution
+## Contribution
 - Report issues
 - Open pull request with improvements
 - Spread the word

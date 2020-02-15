@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ActionSheetController,ModalController } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController,ModalController, ViewController } from 'ionic-angular';
 
 //Providers
-import { ParseProvider } from '../../providers/parse/parse';
 import { QueryServiceProvider } from '../../providers/query-service/query-service';
 import { AuthProvider } from '../../providers/auth/auth';
 import { UiUxProvider } from '../../providers/ui-ux/ui-ux';
@@ -23,9 +22,9 @@ export class ManageCustomFormsPage {
   filteredCustomForms: any[] = [];
 
   constructor(public navCtrl: NavController, 
+    public viewCtrl: ViewController,
     public auth: AuthProvider,
     public navParams: NavParams,
-    private parseSrvc: ParseProvider,
     private querySrvc: QueryServiceProvider,
     public actionSheetCtrl: ActionSheetController,
     private modalCtrl:ModalController,
@@ -58,6 +57,7 @@ export class ManageCustomFormsPage {
   //Navigation
 
   openCustomForm(form){
+    console.log(form);
     let customFormsModal = this.modalCtrl.create(CustomForm,{
       form:form
     });
@@ -84,6 +84,10 @@ export class ManageCustomFormsPage {
 
   back(){
     this.navCtrl.pop()
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
 
 

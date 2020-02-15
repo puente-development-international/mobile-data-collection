@@ -1,0 +1,26 @@
+<ion-content padding>
+  <ion-navbar color='primary'>
+    <button color='primary-light' ion-button item-start (click)="close()" large>
+      <ion-icon name="arrow-round-back" ></ion-icon>
+    </button>
+  </ion-navbar>
+  <ion-item>
+    <ion-icon name="information-circle"></ion-icon>
+    <ion-label id="cf" (click)="presentConsentForm()" color="primary">Consent Form</ion-label>
+  </ion-item>
+  <signature-pad [options]="signaturePadOptions"  id="signatureCanvas">Signature</signature-pad>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button full color="danger" (click)="drawCancel()">Cancel</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button full color="light" (click)="drawClear()">Clear</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button full color="secondary" (click)="drawComplete()">Done</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

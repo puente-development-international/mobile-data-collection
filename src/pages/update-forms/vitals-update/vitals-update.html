@@ -3,11 +3,19 @@
 -->
 <ion-header no-border-bottom>
 
-  <ion-navbar color="primary" no-border-bottom>
+  <!-- <ion-navbar color="primary" no-border-bottom>
     <button color='primary-light' ion-button item-start (click)="popView()" large>
       <ion-icon name="arrow-round-back" ></ion-icon>
     </button>
     <ion-title>{{ 'UPDATE' | translate }} {{ 'VITALS' | translate }}</ion-title>
+  </ion-navbar> -->
+  <ion-navbar color="primary-dark">
+    <ion-item color='primary-dark' no-lines>
+      <button ion-button outline item-start (click)="popView()" large>
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+      <ion-label>{{ 'UPDATE' | translate }} {{ 'VITALS' | translate }}</ion-label>
+    </ion-item>
   </ion-navbar>
 
 </ion-header>
@@ -68,7 +76,7 @@
 
         <ion-item>
           <ion-label floating>{{ 'HEMOGLOBINLEVELS' | translate }}</ion-label>
-          <ion-input type="number" [(ngModel)]="vitals.hemoglobinLevels" name="hemoglobinLevels"></ion-input>
+          <ion-input type="text" [(ngModel)]="vitals.hemoglobinLevels" name="hemoglobinLevels"></ion-input>
         </ion-item>
 
         <ion-item>
