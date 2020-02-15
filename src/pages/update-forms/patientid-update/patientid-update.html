@@ -38,17 +38,27 @@
             <img [src]="patientImage" *ngIf="patientImage" />
           </ion-item>
       <ion-item>
-        <ion-label floating>{{'FIRSTNAME' | translate }}</ion-label>
+        <ion-label stacked>{{'FIRSTNAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="patientID.fname" name="fname"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'LASTNAME' | translate }}</ion-label>
+        <ion-label stacked>{{'LASTNAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="patientID.lname" name="lname"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'NICKNAME' | translate }}</ion-label>
+        <ion-label stacked>{{'MOTHERFATHERGUARDIAN' | translate}}: </ion-label>
+        <ion-label>{{patientID.relationship}}</ion-label>
+      </ion-item>
+      <ion-item (click)="presentModal()">
+        <ion-label stacked >{{'PRESS' | translate}} {{'TO' | translate}} {{'CHANGE' | translate}} {{'MOTHERFATHERGUARDIAN' | translate}}: </ion-label>
+        <ion-input type="text" [(ngModel)]="relationship.fname" placeholder="{{ 'FIRSTNAME' | translate }}" name="relationshipFname">{{relationship.fname}}</ion-input>
+        <ion-input type="text" [(ngModel)]="relationship.lname" placeholder="{{ 'LASTNAME' | translate }}" name="relationshipLname">{{relationship.lname}}</ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>{{'NICKNAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="patientID.nickname" name="nickname"></ion-input>
       </ion-item>
 
@@ -79,7 +89,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'TELNUM' | translate }}</ion-label>
+        <ion-label stacked>{{'TELNUM' | translate }}</ion-label>
         <ion-input type="tel" [(ngModel)]="patientID.telephoneNumber" name="telephoneNumber"></ion-input>
       </ion-item>
 
@@ -100,7 +110,7 @@
       </ion-buttons>
     
       <ion-item>
-        <ion-label floating>{{'OCCUPATION' | translate }}</ion-label>
+        <ion-label stacked>{{'OCCUPATION' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="patientID.occupation" name="occupation"></ion-input>
       </ion-item>
 
@@ -132,22 +142,22 @@
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'INSURANCENUM' | translate }}</ion-label>
+        <ion-label stacked>{{'INSURANCENUM' | translate }}</ion-label>
         <ion-input type="number" [(ngModel)]="patientID.insuranceNumber" name="insuranceNumber"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'INSURANCEPROV' | translate }}</ion-label>
+        <ion-label stacked>{{'INSURANCEPROV' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="patientID.insuranceProvider" name="insuranceProvider"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'CLINICPROV' | translate }}</ion-label>
+        <ion-label stacked>{{'CLINICPROV' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="patientID.clinicProvider" name="clinicProvider"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>{{'LICENSENUM' | translate }}</ion-label>
+        <ion-label stacked>{{'LICENSENUM' | translate }}</ion-label>
         <ion-input type="number" [(ngModel)]="patientID.cedulaNumber" name="cedulaNumber"></ion-input>
       </ion-item> 
 

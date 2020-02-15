@@ -121,7 +121,6 @@ export class PatientIDForm {
     
     this.patientID.relationship = `${this.relationship.lname}, ${this.relationship.fname}`
     this.patientID.relationship_id = this.relationship.objectID
-    console.log(this.patientID.relationship)
   }
 
   public recordCoordinates() {
