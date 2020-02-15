@@ -15,13 +15,14 @@
     <ion-card-header class='card-title' color="primary-light" text-wrap>
       {{ customForm.title }}
     </ion-card-header>
-
-    <ion-list [virtualScroll]="customForm.fields">
+    <div style="height:100% !important">
+      <ion-list #virtualScroll [virtualScroll]="customForm.fields" approxItemHeight="50px">
         <ion-item *virtualItem="let customForm">
             <ion-label stacked>{{customForm.title}}</ion-label>
-            <ion-textarea rows="1" type="text" placeholder="{{ 'INPUT' | translate }}" [(ngModel)]="customForm.answer"></ion-textarea>
+            <ion-input type="text" placeholder="{{ 'INPUT' | translate }}" [(ngModel)]="customForm.answer"></ion-input>
         </ion-item>    
-    </ion-list>
+      </ion-list>
+    </div>
 
   </ion-card>
   
