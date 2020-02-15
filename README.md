@@ -9,7 +9,7 @@
 
 ## About this Program
 
-This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It's being used for community development data collection and assessment in the Dominican Republic.
+This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It's being used for community development data collection and assessment in the Dominican Republic. 
 
 ## Key Libraries
 
@@ -109,9 +109,21 @@ Parse offer a backend to store data, push notifications, social media integratio
 - **Storage**: No restricted time limits and no file storage restrictions. Control over backup, restore and database indexes
 - **Ideal for**: General purpose applications
 
-## Known Issues
+## Known Issues and Troubleshooting
 
-- Performance Issues on older/slower devices
+### ios-deploy isn't working!
+
+[From here](https://stackoverflow.com/questions/34733740/ios-deploy-not-found-under-os-x-el-capitan)
+```
+sudo npm install -g ios-deploy --unsafe-perm=true --allow-root
+```
+
+Sometimes running one of ios build scripts
+
+```
+npm run ios:build
+```
+doesn't work if you have an iPad or iPhone attached to the computer during building.
 
 ## Documentation
 https://hopetambala.github.io/puente-ionic-datacollection/

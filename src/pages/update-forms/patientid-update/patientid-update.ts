@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
+import { SearchbarObjectIdComponent } from '../../../components/searchbar-object-id/searchbar-object-id';
 
 //Providers
 import { ParseProvider } from '../../../providers/parse/parse';
@@ -22,6 +23,8 @@ export class PatientUpdatePage {
     id: null,
     fname: null,
     lname: null,
+    relationship:null,
+    relationship_id:null,
     nickname: null,
     dob: null,
     sex: null,
@@ -47,7 +50,14 @@ export class PatientUpdatePage {
     year:null
   }
 
+  relationship = {
+    objectID: null,
+    fname: null,
+    lname: null
+  }
+
   constructor(public navCtrl: NavController, 
+    private modalCtrl: ModalController,
     public navParams: NavParams,
     private camera:Camera,
     private parsePrvdr:ParseProvider,
@@ -115,7 +125,9 @@ export class PatientUpdatePage {
 
     }
     this.patientID.dob = String(this.date_of_birth.day+'/'+ this.date_of_birth.month +'/'+ this.date_of_birth.year)
-    console.log(this.patientID.dob)
+    
+    this.patientID.relationship = `${this.relationship.lname}, ${this.relationship.fname}`
+    this.patientID.relationship_id = this.relationship.objectID
   }
 
   public recordCoordinates() {
@@ -172,6 +184,36 @@ export class PatientUpdatePage {
       console.log(`Error:${e}`)
     }
     
+  }
+
+  /*
+    * Retrieves objectID from templates's content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
+ inputObjectIDfromComponent(selectedItem) {
+  //this.isenabled=true;
+  this.relationship.objectID = selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
+  this.relationship.fname = selectedItem.get('fname');
+  this.relationship.lname = selectedItem.get('lname');
+}
+
+  presentModal() {
+    const modal = this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data => {
+      if(data == null){
+        console.log('Exited')
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+        
+    });
+    modal.present();
   }
 
 }

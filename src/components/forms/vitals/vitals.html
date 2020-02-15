@@ -165,8 +165,11 @@
         <ion-grid padding='5%'>
           <ion-label stacked>{{ 'HEMOGLOBINLEVELS' | translate }}</ion-label>
           <ion-row>
+            <!-- <ion-col col-2>
+              <ion-input class="border" type="number" value="0.00" (ionChange)="formatNumber($event)" [(ngModel)]="vitals.hemoglobinLevels" placeholder="00.00"></ion-input>
+            </ion-col> -->
             <ion-col col-2>
-              <ion-input class="border" type="tel" [(ngModel)]="vitals.hemoglobinLevels" placeholder="00"></ion-input>
+              <ion-input class="border" type="text" value="0.00" [(ngModel)]="vitals.hemoglobinLevels" placeholder="00.00"></ion-input>
             </ion-col>
             <ion-col col-6>
               <ion-label>g/dL</ion-label>
