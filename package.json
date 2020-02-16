@@ -81,7 +81,7 @@
     "karma-chrome-launcher": "2.2.0",
     "karma-coverage-istanbul-reporter": "2.1.0",
     "karma-jasmine": "2.0.1",
-    "karma-jasmine-html-reporter": "1.1.0",
+    "karma-jasmine-html-reporter": "1.5.2",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "3.0.0",
     "null-loader": "3.0.0",
