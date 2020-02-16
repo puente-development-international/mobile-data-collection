@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>CircleDecorationComponent</li>
+  <li>ConsentFormPage</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,18 +58,9 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/components/circle-decoration/circle-decoration.ts</code>
+    <code>src/pages/about/consent-form/consent-form.ts</code>
 </p>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Generated class for the CircleDecorationComponent component.</p>
-<p>See <a href="https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html">https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html</a>
-for more info on Angular Components.</p>
-
-    </p>
 
 
 
@@ -91,7 +82,7 @@ for more info on Angular Components.</p>
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>circle-decoration</code></td>
+                <td class="col-md-9"><code>page-consent-form</code></td>
             </tr>
 
 
@@ -99,7 +90,7 @@ for more info on Angular Components.</p>
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>circle-decoration.html</code></td>
+                <td class="col-md-9"><code>consent-form.html</code></td>
             </tr>
 
 
@@ -126,12 +117,27 @@ for more info on Angular Components.</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#text">text</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#viewCtrl">viewCtrl</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeModal">closeModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -147,15 +153,45 @@ for more info on Angular Components.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(viewCtrl: ViewController)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/components/circle-decoration/circle-decoration.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/pages/about/consent-form/consent-form.ts:10</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>viewCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ViewController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -164,7 +200,51 @@ for more info on Angular Components.</p>
 
 
 
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <b>
+                            closeModal
+                        </b>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/pages/about/consent-form/consent-form.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
     <section>
     
         <h3 id="inputs">
@@ -174,23 +254,24 @@ for more info on Angular Components.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="text"></a>
+                        <a name="viewCtrl"></a>
                         <span class="name">
                             <b>
-                            text</b>
-                            <a href="#text"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Public</span>
+                            viewCtrl</b>
+                            <a href="#viewCtrl"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>    <code>ViewController</code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/components/circle-decoration/circle-decoration.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/pages/about/consent-form/consent-form.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -204,49 +285,67 @@ for more info on Angular Components.</p>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { ViewController } from &#x27;ionic-angular&#x27;;
 
-/**
- * Generated class for the CircleDecorationComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
+// Pages
+
 @Component({
-  selector: &#x27;circle-decoration&#x27;,
-  templateUrl: &#x27;circle-decoration.html&#x27;
+  selector: &#x27;page-consent-form&#x27;,
+  templateUrl: &#x27;consent-form.html&#x27;
 })
-export class CircleDecorationComponent {
+export class ConsentFormPage {
 
-  text: string;
+  constructor(public viewCtrl: ViewController) { }
 
-  constructor() {
-    console.log(&#x27;Hello CircleDecorationComponent Component&#x27;);
-    this.text &#x3D; &#x27;Hello World&#x27;;
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
+  
 
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;time-circle&quot;&gt;
-      &lt;!--div id&#x3D;&quot;info&quot;&gt;
-        
-      &lt;/div--&gt;
-      &lt;ng-content id&#x3D;&quot;info&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar color&#x3D;&quot;primary-dark&quot;&gt;
 
-      &lt;/ng-content&gt;
-&lt;/div&gt;
+    &lt;ion-item color&#x3D;&#x27;primary-dark&#x27; no-lines&gt;
+      &lt;button ion-button outline item-start (click)&#x3D;&quot;closeModal()&quot; large&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-round-back&quot; &gt;&lt;/ion-icon&gt;
+      &lt;/button&gt;
+      &lt;ion-label&gt;Consent Form&lt;/ion-label&gt;
+    &lt;/ion-item&gt;
+    
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
 
+&lt;ion-content padding class&#x3D;&quot;tutorial-page&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Consent Form for Collection, Use and Disclosure of Personal Information&lt;/strong&gt;&lt;/p&gt;
 
-&lt;!--
+  &lt;p&gt;Your privacy is very important to us, and all information collected will be handled responsibly. Additionally, we will be as open and transparent with how your information is handled.&lt;/p&gt;
 
-&lt;div id&#x3D;&quot;intro-text&quot;&gt;
-&lt;h1 href&#x3D;&quot;#&quot;&gt;day night simulation&lt;/h1&gt;
-&lt;h4&gt;by Szymon Stypa, inspired by pens on Codepen&lt;/h4&gt;
-&lt;/div&gt;
- 
---&gt;</code></pre>
+  &lt;p&gt;All data collectors and staff who come in contact with your information are aware of the sensitive nature of the information that you have decided to share with us. All staff members are trained in the appropriate use and protection of your information.&lt;/p&gt;
+  
+  &lt;p&gt;Information will be collected, used and disclosed for the following purposes:&lt;/p&gt;
+  
+  &lt;ul&gt;
+    &lt;li&gt;To assess your community infrastructure needs&lt;/li&gt;
+    &lt;li&gt;To assess your health concerns&lt;/li&gt;
+    &lt;li&gt;To provide on-ground support &lt;/li&gt;
+    &lt;li&gt;To advise you of solutions/potential treatment options&lt;/li&gt;
+    &lt;li&gt;To establish and maintain contact with you&lt;/li&gt;
+    &lt;li&gt;To communicate with health care providers&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p&gt;By signing this Consent Form, you have agreed that you have given your consent to the collection, use and/or disclosure of your personal information as outlined above. &lt;/p&gt;
+   
+  &lt;p&gt;I have reviewed the above information that explains how Puente will use my personal information and the steps that the organization is taking to protect my information. 
+  I agree that Puente Desarrollo Internacional can collect, use and disclose personal information as outlined above. &lt;/p&gt;
+  
+
+&lt;/ion-content&gt;
+</code></pre>
     </div>
 
 
@@ -275,10 +374,10 @@ export class CircleDecorationComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="time-circle">      <!--div id="info">              </div-->      <ng-content id="info">      </ng-content></div><!--<div id="intro-text"><h1 href="#">day night simulation</h1><h4>by Szymon Stypa, inspired by pens on Codepen</h4></div> --></div>'
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar color="primary-dark">    <ion-item color=\'primary-dark\' no-lines>      <button ion-button outline item-start (click)="closeModal()" large>          <ion-icon name="arrow-round-back" ></ion-icon>      </button>      <ion-label>Consent Form</ion-label>    </ion-item>      </ion-navbar></ion-header><ion-content padding class="tutorial-page">  <p><strong>Consent Form for Collection, Use and Disclosure of Personal Information</strong></p>  <p>Your privacy is very important to us, and all information collected will be handled responsibly. Additionally, we will be as open and transparent with how your information is handled.</p>  <p>All data collectors and staff who come in contact with your information are aware of the sensitive nature of the information that you have decided to share with us. All staff members are trained in the appropriate use and protection of your information.</p>    <p>Information will be collected, used and disclosed for the following purposes:</p>    <ul>    <li>To assess your community infrastructure needs</li>    <li>To assess your health concerns</li>    <li>To provide on-ground support </li>    <li>To advise you of solutions/potential treatment options</li>    <li>To establish and maintain contact with you</li>    <li>To communicate with health care providers</li>  </ul>    <p>By signing this Consent Form, you have agreed that you have given your consent to the collection, use and/or disclosure of your personal information as outlined above. </p>     <p>I have reviewed the above information that explains how Puente will use my personal information and the steps that the organization is taking to protect my information.   I agree that Puente Desarrollo Internacional can collect, use and disclose personal information as outlined above. </p>  </ion-content></div>'
     var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ConsentFormPage', 'selector': 'page-consent-form'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SignaturePadComponent', 'selector': 'signature'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'CircleDecorationComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ConsentFormPage'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -313,7 +412,7 @@ export class CircleDecorationComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'CircleDecorationComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConsentFormPage.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
