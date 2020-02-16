@@ -136,6 +136,9 @@
                             <li>
                                 <a href="#patientImage">patientImage</a>
                             </li>
+                            <li>
+                                <a href="#relationship">relationship</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -153,6 +156,9 @@
                                 <a href="#fixDate">fixDate</a>
                             </li>
                             <li>
+                                <a href="#inputObjectIDfromComponent">inputObjectIDfromComponent</a>
+                            </li>
+                            <li>
                                 <a href="#ionViewDidEnter">ionViewDidEnter</a>
                             </li>
                             <li>
@@ -167,6 +173,9 @@
                             <li>
                                     <span class="modifier">Async</span>
                                 <a href="#post_n_update">post_n_update</a>
+                            </li>
+                            <li>
+                                <a href="#presentModal">presentModal</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -201,12 +210,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(navCtrl: NavController, navParams: NavParams, camera: Camera, parsePrvdr: <a href="../injectables/ParseProvider.html">ParseProvider</a>, themeSrvc: <a href="../injectables/UiUxProvider.html">UiUxProvider</a>, userPositn: <a href="../injectables/UserpositionProvider.html">UserpositionProvider</a>)</code>
+<code>constructor(navCtrl: NavController, modalCtrl: ModalController, navParams: NavParams, camera: Camera, parsePrvdr: <a href="../injectables/ParseProvider.html">ParseProvider</a>, themeSrvc: <a href="../injectables/UiUxProvider.html">UiUxProvider</a>, userPositn: <a href="../injectables/UserpositionProvider.html">UserpositionProvider</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:48</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:57</a></div>
                             </td>
                         </tr>
 
@@ -228,6 +237,18 @@
                                                   
                                                         <td>
                                                                     <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
                                                         </td>
                                                   
                                                     <td>
@@ -263,7 +284,7 @@
                                                         <td>parsePrvdr</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/ParseProvider.html" target="_self" >ParseProvider</a></code>
+                                                                        <code><a href="../injectables/ParseProvider.html" target="_self" >ParseProvider</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -275,7 +296,7 @@
                                                         <td>themeSrvc</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/UiUxProvider.html" target="_self" >UiUxProvider</a></code>
+                                                                        <code><a href="../injectables/UiUxProvider.html" target="_self" >UiUxProvider</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -287,7 +308,7 @@
                                                         <td>userPositn</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/UserpositionProvider.html" target="_self" >UserpositionProvider</a></code>
+                                                                        <code><a href="../injectables/UserpositionProvider.html" target="_self" >UserpositionProvider</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -310,437 +331,551 @@
 
     <section>
     
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="fixDate"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fixDate"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
                             fixDate
-                            </b>
-                            <a href="#fixDate"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>fixDate()</code>
-                    </td>
-                </tr>
+                        </b>
+                        <a href="#fixDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fixDate()</code>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:110</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:120</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ionViewDidEnter"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inputObjectIDfromComponent"></a>
+                    <span class="name">
+                        <b>
+                            inputObjectIDfromComponent
+                        </b>
+                        <a href="#inputObjectIDfromComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inputObjectIDfromComponent(selectedItem)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:198</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>selectedItem</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewDidEnter"></a>
+                    <span class="name">
+                        <b>
                             ionViewDidEnter
-                            </b>
-                            <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>ionViewDidEnter()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:62</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:72</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ionViewDidLoad"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewDidLoad"></a>
+                    <span class="name">
+                        <b>
                             ionViewDidLoad
-                            </b>
-                            <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>ionViewDidLoad()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:68</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:78</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="populateFields"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="populateFields"></a>
+                    <span class="name">
+                        <b>
                             populateFields
-                            </b>
-                            <a href="#populateFields"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#populateFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>populateFields()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:76</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:86</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="popView"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="popView"></a>
+                    <span class="name">
+                        <b>
                             popView
-                            </b>
-                            <a href="#popView"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#popView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>popView()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:72</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:82</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="post_n_update"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Async</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="post_n_update"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
                             post_n_update
-                            </b>
-                            <a href="#post_n_update"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>post_n_update()</code>
-                    </td>
-                </tr>
+                        </b>
+                        <a href="#post_n_update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>post_n_update()</code>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:145</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:157</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="recordCoordinates"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="presentModal"></a>
+                    <span class="name">
+                        <b>
+                            presentModal
+                        </b>
+                        <a href="#presentModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>presentModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="205"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:205</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recordCoordinates"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
                             recordCoordinates
-                            </b>
-                            <a href="#recordCoordinates"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>recordCoordinates()</code>
-                    </td>
-                </tr>
+                        </b>
+                        <a href="#recordCoordinates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>recordCoordinates()</code>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:121</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:133</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="set"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="set"></a>
+                    <span class="name">
+                        <b>
                             set
-                            </b>
-                            <a href="#set"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#set"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>set(value, key)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:140</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:152</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>value</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>key</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                                    <td>
+                                        No
+                                    </td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="splitDate"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="splitDate"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
                             splitDate
-                            </b>
-                            <a href="#splitDate"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>splitDate()</code>
-                    </td>
-                </tr>
+                        </b>
+                        <a href="#splitDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>splitDate()</code>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:94</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:104</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="takePhoto"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Async</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="takePhoto"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
                             takePhoto
-                            </b>
-                            <a href="#takePhoto"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>takePhoto()</code>
-                    </td>
-                </tr>
+                        </b>
+                        <a href="#takePhoto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>takePhoto()</code>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:156</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:168</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
-
     <section>
     
         <h3 id="inputs">
@@ -753,21 +888,14 @@
                         <a name="date_of_birth"></a>
                         <span class="name">
                             <b>
-                            date_of_birth
-                            </b>
+                            date_of_birth</b>
                             <a href="#date_of_birth"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>date_of_birth:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
 
                         </td>
                     </tr>
@@ -782,7 +910,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:44</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:47</a></div>
                             </td>
                         </tr>
 
@@ -797,16 +925,9 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            navCtrl
-                            </b>
+                            navCtrl</b>
                             <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>navCtrl:     <code>NavController</code>
-</code>
                     </td>
                 </tr>
                     <tr>
@@ -817,7 +938,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:59</a></div>
                             </td>
                         </tr>
 
@@ -832,16 +953,9 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            navParams
-                            </b>
+                            navParams</b>
                             <a href="#navParams"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>navParams:     <code>NavParams</code>
-</code>
                     </td>
                 </tr>
                     <tr>
@@ -852,7 +966,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:61</a></div>
                             </td>
                         </tr>
 
@@ -866,27 +980,20 @@
                         <a name="patient"></a>
                         <span class="name">
                             <b>
-                            patient
-                            </b>
+                            patient</b>
                             <a href="#patient"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>patient:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -900,21 +1007,14 @@
                         <a name="patientID"></a>
                         <span class="name">
                             <b>
-                            patientID
-                            </b>
+                            patientID</b>
                             <a href="#patientID"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>patientID:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
 
                         </td>
                     </tr>
@@ -924,6 +1024,8 @@
     id: null,
     fname: null,
     lname: null,
+    relationship:null,
+    relationship_id:null,
     nickname: null,
     dob: null,
     sex: null,
@@ -946,7 +1048,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -960,27 +1062,56 @@
                         <a name="patientImage"></a>
                         <span class="name">
                             <b>
-                            patientImage
-                            </b>
+                            patientImage</b>
                             <a href="#patientImage"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>patientImage:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="relationship"></a>
+                        <span class="name">
+                            <b>
+                            relationship</b>
+                            <a href="#relationship"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    objectID: null,
+    fname: null,
+    lname: null
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/pages/update-forms/patientid-update/patientid-update.ts:53</a></div>
                             </td>
                         </tr>
 
@@ -994,9 +1125,10 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { NavController, NavParams } from &#x27;ionic-angular&#x27;;
+import { NavController, NavParams, ModalController } from &#x27;ionic-angular&#x27;;
 import { Camera, CameraOptions } from &#x27;@ionic-native/camera&#x27;;
 
+import { SearchbarObjectIdComponent } from &#x27;../../../components/searchbar-object-id/searchbar-object-id&#x27;;
 
 //Providers
 import { ParseProvider } from &#x27;../../../providers/parse/parse&#x27;;
@@ -1017,6 +1149,8 @@ export class PatientUpdatePage {
     id: null,
     fname: null,
     lname: null,
+    relationship:null,
+    relationship_id:null,
     nickname: null,
     dob: null,
     sex: null,
@@ -1042,7 +1176,14 @@ export class PatientUpdatePage {
     year:null
   }
 
+  relationship &#x3D; {
+    objectID: null,
+    fname: null,
+    lname: null
+  }
+
   constructor(public navCtrl: NavController, 
+    private modalCtrl: ModalController,
     public navParams: NavParams,
     private camera:Camera,
     private parsePrvdr:ParseProvider,
@@ -1110,7 +1251,9 @@ export class PatientUpdatePage {
 
     }
     this.patientID.dob &#x3D; String(this.date_of_birth.day+&#x27;/&#x27;+ this.date_of_birth.month +&#x27;/&#x27;+ this.date_of_birth.year)
-    console.log(this.patientID.dob)
+    
+    this.patientID.relationship &#x3D; &#x60;${this.relationship.lname}, ${this.relationship.fname}&#x60;
+    this.patientID.relationship_id &#x3D; this.relationship.objectID
   }
 
   public recordCoordinates() {
@@ -1169,6 +1312,36 @@ export class PatientUpdatePage {
     
   }
 
+  /*
+    * Retrieves objectID from templates&#x27;s content drawer
+    * 
+    * @example
+    * inputObjectIDfromComponent($event)
+    * 
+    * @param {any} object emitted from ContentDrawer
+    * @returns 
+  */
+ inputObjectIDfromComponent(selectedItem) {
+  //this.isenabled&#x3D;true;
+  this.relationship.objectID &#x3D; selectedItem.id; //Retrieve RESERVED Parse-Server Object ID Value
+  this.relationship.fname &#x3D; selectedItem.get(&#x27;fname&#x27;);
+  this.relationship.lname &#x3D; selectedItem.get(&#x27;lname&#x27;);
+}
+
+  presentModal() {
+    const modal &#x3D; this.modalCtrl.create(SearchbarObjectIdComponent);
+    modal.onDidDismiss(data &#x3D;&gt; {
+      if(data &#x3D;&#x3D; null){
+        console.log(&#x27;Exited&#x27;)
+      }
+      else{
+        this.inputObjectIDfromComponent(data)
+      }
+        
+    });
+    modal.present();
+  }
+
 }
 </code></pre>
     </div>
@@ -1180,13 +1353,21 @@ export class PatientUpdatePage {
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 --&gt;
-&lt;ion-header no-border-bottom&gt;
+&lt;ion-header&gt;
 
-  &lt;ion-navbar color&#x3D;&quot;primary&quot; no-border-bottom&gt;
+  &lt;!-- &lt;ion-navbar color&#x3D;&quot;primary&quot; no-border-bottom&gt;
     &lt;button color&#x3D;&#x27;primary-light&#x27; ion-button item-start (click)&#x3D;&quot;popView()&quot; large&gt;
       &lt;ion-icon name&#x3D;&quot;arrow-round-back&quot; &gt;&lt;/ion-icon&gt;
     &lt;/button&gt;
     &lt;ion-title&gt;{{ &#x27;PATIENTDEMOGRAPHICS&#x27; | translate }}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt; --&gt;
+  &lt;ion-navbar color&#x3D;&quot;primary-dark&quot;&gt;
+    &lt;ion-item color&#x3D;&#x27;primary-dark&#x27; no-lines&gt;
+      &lt;button ion-button outline item-start (click)&#x3D;&quot;popView()&quot; large&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-round-back&quot; &gt;&lt;/ion-icon&gt;
+      &lt;/button&gt;
+      &lt;ion-label&gt;{{ &#x27;PATIENTDEMOGRAPHICS&#x27; | translate }}&lt;/ion-label&gt;
+    &lt;/ion-item&gt;
   &lt;/ion-navbar&gt;
 
 &lt;/ion-header&gt;
@@ -1206,17 +1387,27 @@ export class PatientUpdatePage {
             &lt;img [src]&#x3D;&quot;patientImage&quot; *ngIf&#x3D;&quot;patientImage&quot; /&gt;
           &lt;/ion-item&gt;
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;FIRSTNAME&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;FIRSTNAME&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;patientID.fname&quot; name&#x3D;&quot;fname&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;LASTNAME&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;LASTNAME&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;patientID.lname&quot; name&#x3D;&quot;lname&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;NICKNAME&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;MOTHERFATHERGUARDIAN&#x27; | translate}}: &lt;/ion-label&gt;
+        &lt;ion-label&gt;{{patientID.relationship}}&lt;/ion-label&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-item (click)&#x3D;&quot;presentModal()&quot;&gt;
+        &lt;ion-label stacked &gt;{{&#x27;PRESS&#x27; | translate}} {{&#x27;TO&#x27; | translate}} {{&#x27;CHANGE&#x27; | translate}} {{&#x27;MOTHERFATHERGUARDIAN&#x27; | translate}}: &lt;/ion-label&gt;
+        &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;relationship.fname&quot; placeholder&#x3D;&quot;{{ &#x27;FIRSTNAME&#x27; | translate }}&quot; name&#x3D;&quot;relationshipFname&quot;&gt;{{relationship.fname}}&lt;/ion-input&gt;
+        &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;relationship.lname&quot; placeholder&#x3D;&quot;{{ &#x27;LASTNAME&#x27; | translate }}&quot; name&#x3D;&quot;relationshipLname&quot;&gt;{{relationship.lname}}&lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item&gt;
+        &lt;ion-label stacked&gt;{{&#x27;NICKNAME&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;patientID.nickname&quot; name&#x3D;&quot;nickname&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
@@ -1247,7 +1438,7 @@ export class PatientUpdatePage {
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;TELNUM&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;TELNUM&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;tel&quot; [(ngModel)]&#x3D;&quot;patientID.telephoneNumber&quot; name&#x3D;&quot;telephoneNumber&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
@@ -1268,7 +1459,7 @@ export class PatientUpdatePage {
       &lt;/ion-buttons&gt;
     
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;OCCUPATION&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;OCCUPATION&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;patientID.occupation&quot; name&#x3D;&quot;occupation&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
@@ -1300,22 +1491,22 @@ export class PatientUpdatePage {
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;INSURANCENUM&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;INSURANCENUM&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;patientID.insuranceNumber&quot; name&#x3D;&quot;insuranceNumber&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;INSURANCEPROV&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;INSURANCEPROV&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;patientID.insuranceProvider&quot; name&#x3D;&quot;insuranceProvider&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;CLINICPROV&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;CLINICPROV&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;patientID.clinicProvider&quot; name&#x3D;&quot;clinicProvider&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt;
 
       &lt;ion-item&gt;
-        &lt;ion-label floating&gt;{{&#x27;LICENSENUM&#x27; | translate }}&lt;/ion-label&gt;
+        &lt;ion-label stacked&gt;{{&#x27;LICENSENUM&#x27; | translate }}&lt;/ion-label&gt;
         &lt;ion-input type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;patientID.cedulaNumber&quot; name&#x3D;&quot;cedulaNumber&quot;&gt;&lt;/ion-input&gt;
       &lt;/ion-item&gt; 
 
@@ -1369,8 +1560,8 @@ export class PatientUpdatePage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--  Generated template for the ConsumerMedicalEvalPage page.  See http://ionicframework.com/docs/components/#navigation for more info on  Ionic pages and navigation.--><ion-header no-border-bottom>  <ion-navbar color="primary" no-border-bottom>    <button color=\'primary-light\' ion-button item-start (click)="popView()" large>      <ion-icon name="arrow-round-back" ></ion-icon>    </button>    <ion-title>{{ \'PATIENTDEMOGRAPHICS\' | translate }}</ion-title>  </ion-navbar></ion-header><ion-content padding class="content">  <div class=\'card\'>    <!--ion-item>      <img [src]=\'patientID.picture\'>    </ion-item-->    <form (ngSubmit)="post_n_update()">        <ion-item>            <!--<p text-center>{{\'PRESS\' | translate }}</p>            <button type="button" ion-button text-wrap color="primary-light" round block large (click)=\'takePhoto()\'>                <ion-icon name="camera"></ion-icon>            </button>-->            <img [src]="patientImage" *ngIf="patientImage" />          </ion-item>      <ion-item>        <ion-label floating>{{\'FIRSTNAME\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.fname" name="fname"></ion-input>      </ion-item>      <ion-item>        <ion-label floating>{{\'LASTNAME\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.lname" name="lname"></ion-input>      </ion-item>      <ion-item>        <ion-label floating>{{\'NICKNAME\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.nickname" name="nickname"></ion-input>      </ion-item>      <ion-grid padding=\'5%\'>        <ion-label stacked>{{\'DOB\' | translate }}</ion-label>        <ion-row>          <ion-col col-3>              <ion-label stacked>{{\'DAY\' | translate }}</ion-label>              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.day" name="day" placeholder="DD" maxlength=\'2\' ></ion-input>          </ion-col>          <ion-col col-3>              <ion-label stacked>{{\'MONTH\' | translate }}</ion-label>              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.month" name="month" placeholder="MM" maxlength=\'2\' ></ion-input>          </ion-col>          <ion-col col-3>              <ion-label stacked>{{\'YEAR\' | translate }}</ion-label>              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.year" name="year" placeholder="YYYY" maxlength=\'4\' ></ion-input>          </ion-col>        </ion-row>      </ion-grid>      <ion-item>        <ion-label>{{\'SEX\' | translate }}</ion-label>        <ion-select [(ngModel)]="patientID.sex" name="sex" interface =\'popover\'>            <ion-option value="Male"> {{\'MALE\' | translate }} </ion-option>            <ion-option value="Female"> {{\'FEMALE\' | translate }} </ion-option>        </ion-select>      </ion-item>      <ion-item>        <ion-label floating>{{\'TELNUM\' | translate }}</ion-label>        <ion-input type="tel" [(ngModel)]="patientID.telephoneNumber" name="telephoneNumber"></ion-input>      </ion-item>      <ion-buttons padding-horizontal>        <ion-label>{{\'MARRIAGESTATUS\' | translate }}</ion-label>        <button ion-button right small [outline]="patientID.marriageStatus == \'single\' ? false : true" color="primary-darkest" (click)="set(\'single\',\'marriageStatus\')">          {{ \'SINGLE\' | translate }}        </button>        <button ion-button right small [outline]="patientID.marriageStatus == \'married\' ? false : true" color="primary-darkest" (click)="set(\'married\',\'marriageStatus\')">          {{ \'MARRIED\' | translate }}        </button>        <button ion-button right small [outline]="patientID.marriageStatus == \'free_union\' ? false : true" color="primary-darkest" (click)="set(\'free_union\',\'marriageStatus\')">          {{ \'FREEUNION\' | translate }}        </button>        <button ion-button right small [outline]="patientID.marriageStatus == \'widow\' ? false : true" color="primary-darkest" (click)="set(\'widow\',\'marriageStatus\')">          {{ \'WIDOW\' | translate }}        </button>      </ion-buttons>          <ion-item>        <ion-label floating>{{\'OCCUPATION\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.occupation" name="occupation"></ion-input>      </ion-item>      <ion-item>        <ion-label>{{\'EDUCATION\' | translate }}</ion-label>        <ion-select text-wrap [(ngModel)]="patientID.educationLevel" name="educationLevel" interface =\'popover\'>            <ion-option text-wrap value="lessThanprimary">{{\'LESSTHANPRIMARY\' | translate }}</ion-option>            <ion-option text-wrap value="primary"> {{\'PRIMARY\' | translate }}</ion-option>            <ion-option text-wrap value="someHighSchool">{{\'SOMEHIGHSCHOOL\' | translate }}</ion-option>            <ion-option text-wrap value="highschool">{{\'HIGHSCHOOL\' | translate }}</ion-option>            <ion-option text-wrap value="someCollege">{{\'SOMECOLLEGE\' | translate }}</ion-option>            <ion-option text-wrap value="college"> {{\'COLLEGE\' | translate }}</ion-option>        </ion-select>      </ion-item>      <ion-item>        <ion-label>{{\'COMMUNITY\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.communityname" name="communityname"></ion-input>      </ion-item>      <ion-item>        <ion-label>{{\'CITY\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.city" name="city"></ion-input>      </ion-item>      <ion-item>        <ion-label>{{\'PROVINCE\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.province" name="province"></ion-input>      </ion-item>      <ion-item>        <ion-label floating>{{\'INSURANCENUM\' | translate }}</ion-label>        <ion-input type="number" [(ngModel)]="patientID.insuranceNumber" name="insuranceNumber"></ion-input>      </ion-item>      <ion-item>        <ion-label floating>{{\'INSURANCEPROV\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.insuranceProvider" name="insuranceProvider"></ion-input>      </ion-item>      <ion-item>        <ion-label floating>{{\'CLINICPROV\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.clinicProvider" name="clinicProvider"></ion-input>      </ion-item>      <ion-item>        <ion-label floating>{{\'LICENSENUM\' | translate }}</ion-label>        <ion-input type="number" [(ngModel)]="patientID.cedulaNumber" name="cedulaNumber"></ion-input>      </ion-item>       <ion-item>        <p text-center>{{\'PRESS\' | translate }}</p>                <button ion-button text-wrap color="primary-light" round block large (click)=\'recordCoordinates()\'>          <ion-spinner *ngIf="patientID.latitude == null"></ion-spinner>          {{patientID.latitude}} {{patientID.longitude}}        </button>      </ion-item>            <ion-item type="submit">        <button ion-button icon-left full block large color="primary-dark" >          <ion-icon name="checkmark-circle"></ion-icon>          {{\'UPDATE\' | translate }}        </button>      </ion-item>            </form>  </div></ion-content></div>'
-    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
+        var COMPONENT_TEMPLATE = '<div><!--  Generated template for the ConsumerMedicalEvalPage page.  See http://ionicframework.com/docs/components/#navigation for more info on  Ionic pages and navigation.--><ion-header>  <!-- <ion-navbar color="primary" no-border-bottom>    <button color=\'primary-light\' ion-button item-start (click)="popView()" large>      <ion-icon name="arrow-round-back" ></ion-icon>    </button>    <ion-title>{{ \'PATIENTDEMOGRAPHICS\' | translate }}</ion-title>  </ion-navbar> -->  <ion-navbar color="primary-dark">    <ion-item color=\'primary-dark\' no-lines>      <button ion-button outline item-start (click)="popView()" large>          <ion-icon name="arrow-round-back" ></ion-icon>      </button>      <ion-label>{{ \'PATIENTDEMOGRAPHICS\' | translate }}</ion-label>    </ion-item>  </ion-navbar></ion-header><ion-content padding class="content">  <div class=\'card\'>    <!--ion-item>      <img [src]=\'patientID.picture\'>    </ion-item-->    <form (ngSubmit)="post_n_update()">        <ion-item>            <!--<p text-center>{{\'PRESS\' | translate }}</p>            <button type="button" ion-button text-wrap color="primary-light" round block large (click)=\'takePhoto()\'>                <ion-icon name="camera"></ion-icon>            </button>-->            <img [src]="patientImage" *ngIf="patientImage" />          </ion-item>      <ion-item>        <ion-label stacked>{{\'FIRSTNAME\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.fname" name="fname"></ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'LASTNAME\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.lname" name="lname"></ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'MOTHERFATHERGUARDIAN\' | translate}}: </ion-label>        <ion-label>{{patientID.relationship}}</ion-label>      </ion-item>      <ion-item (click)="presentModal()">        <ion-label stacked >{{\'PRESS\' | translate}} {{\'TO\' | translate}} {{\'CHANGE\' | translate}} {{\'MOTHERFATHERGUARDIAN\' | translate}}: </ion-label>        <ion-input type="text" [(ngModel)]="relationship.fname" placeholder="{{ \'FIRSTNAME\' | translate }}" name="relationshipFname">{{relationship.fname}}</ion-input>        <ion-input type="text" [(ngModel)]="relationship.lname" placeholder="{{ \'LASTNAME\' | translate }}" name="relationshipLname">{{relationship.lname}}</ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'NICKNAME\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.nickname" name="nickname"></ion-input>      </ion-item>      <ion-grid padding=\'5%\'>        <ion-label stacked>{{\'DOB\' | translate }}</ion-label>        <ion-row>          <ion-col col-3>              <ion-label stacked>{{\'DAY\' | translate }}</ion-label>              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.day" name="day" placeholder="DD" maxlength=\'2\' ></ion-input>          </ion-col>          <ion-col col-3>              <ion-label stacked>{{\'MONTH\' | translate }}</ion-label>              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.month" name="month" placeholder="MM" maxlength=\'2\' ></ion-input>          </ion-col>          <ion-col col-3>              <ion-label stacked>{{\'YEAR\' | translate }}</ion-label>              <ion-input class="border" type="tel" [(ngModel)]="date_of_birth.year" name="year" placeholder="YYYY" maxlength=\'4\' ></ion-input>          </ion-col>        </ion-row>      </ion-grid>      <ion-item>        <ion-label>{{\'SEX\' | translate }}</ion-label>        <ion-select [(ngModel)]="patientID.sex" name="sex" interface =\'popover\'>            <ion-option value="Male"> {{\'MALE\' | translate }} </ion-option>            <ion-option value="Female"> {{\'FEMALE\' | translate }} </ion-option>        </ion-select>      </ion-item>      <ion-item>        <ion-label stacked>{{\'TELNUM\' | translate }}</ion-label>        <ion-input type="tel" [(ngModel)]="patientID.telephoneNumber" name="telephoneNumber"></ion-input>      </ion-item>      <ion-buttons padding-horizontal>        <ion-label>{{\'MARRIAGESTATUS\' | translate }}</ion-label>        <button ion-button right small [outline]="patientID.marriageStatus == \'single\' ? false : true" color="primary-darkest" (click)="set(\'single\',\'marriageStatus\')">          {{ \'SINGLE\' | translate }}        </button>        <button ion-button right small [outline]="patientID.marriageStatus == \'married\' ? false : true" color="primary-darkest" (click)="set(\'married\',\'marriageStatus\')">          {{ \'MARRIED\' | translate }}        </button>        <button ion-button right small [outline]="patientID.marriageStatus == \'free_union\' ? false : true" color="primary-darkest" (click)="set(\'free_union\',\'marriageStatus\')">          {{ \'FREEUNION\' | translate }}        </button>        <button ion-button right small [outline]="patientID.marriageStatus == \'widow\' ? false : true" color="primary-darkest" (click)="set(\'widow\',\'marriageStatus\')">          {{ \'WIDOW\' | translate }}        </button>      </ion-buttons>          <ion-item>        <ion-label stacked>{{\'OCCUPATION\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.occupation" name="occupation"></ion-input>      </ion-item>      <ion-item>        <ion-label>{{\'EDUCATION\' | translate }}</ion-label>        <ion-select text-wrap [(ngModel)]="patientID.educationLevel" name="educationLevel" interface =\'popover\'>            <ion-option text-wrap value="lessThanprimary">{{\'LESSTHANPRIMARY\' | translate }}</ion-option>            <ion-option text-wrap value="primary"> {{\'PRIMARY\' | translate }}</ion-option>            <ion-option text-wrap value="someHighSchool">{{\'SOMEHIGHSCHOOL\' | translate }}</ion-option>            <ion-option text-wrap value="highschool">{{\'HIGHSCHOOL\' | translate }}</ion-option>            <ion-option text-wrap value="someCollege">{{\'SOMECOLLEGE\' | translate }}</ion-option>            <ion-option text-wrap value="college"> {{\'COLLEGE\' | translate }}</ion-option>        </ion-select>      </ion-item>      <ion-item>        <ion-label>{{\'COMMUNITY\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.communityname" name="communityname"></ion-input>      </ion-item>      <ion-item>        <ion-label>{{\'CITY\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.city" name="city"></ion-input>      </ion-item>      <ion-item>        <ion-label>{{\'PROVINCE\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.province" name="province"></ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'INSURANCENUM\' | translate }}</ion-label>        <ion-input type="number" [(ngModel)]="patientID.insuranceNumber" name="insuranceNumber"></ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'INSURANCEPROV\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.insuranceProvider" name="insuranceProvider"></ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'CLINICPROV\' | translate }}</ion-label>        <ion-input type="text" [(ngModel)]="patientID.clinicProvider" name="clinicProvider"></ion-input>      </ion-item>      <ion-item>        <ion-label stacked>{{\'LICENSENUM\' | translate }}</ion-label>        <ion-input type="number" [(ngModel)]="patientID.cedulaNumber" name="cedulaNumber"></ion-input>      </ion-item>       <ion-item>        <p text-center>{{\'PRESS\' | translate }}</p>                <button ion-button text-wrap color="primary-light" round block large (click)=\'recordCoordinates()\'>          <ion-spinner *ngIf="patientID.latitude == null"></ion-spinner>          {{patientID.latitude}} {{patientID.longitude}}        </button>      </ion-item>            <ion-item type="submit">        <button ion-button icon-left full block large color="primary-dark" >          <ion-icon name="checkmark-circle"></ion-icon>          {{\'UPDATE\' | translate }}        </button>      </ion-item>            </form>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'AccordionComponent', 'selector': 'accordion'},{'name': 'AllergiesForm', 'selector': 'allergies'},{'name': 'AnimatedCirclesComponent', 'selector': 'animated-circles'},{'name': 'BarchartComponent', 'selector': 'barchart'},{'name': 'CardFlippingComponent', 'selector': 'card-flipping'},{'name': 'CircleDecorationComponent', 'selector': 'circle-decoration'},{'name': 'ConsentFormPage', 'selector': 'page-consent-form'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'CustomForm', 'selector': 'custom-form'},{'name': 'DashboardPage', 'selector': 'page-dashboard'},{'name': 'DoughnutComponent', 'selector': 'doughnut'},{'name': 'EnviroEvalUpdatePage', 'selector': 'page-env-update'},{'name': 'EnvironmentalHistoryForm', 'selector': 'environmentalhistory'},{'name': 'EvaluationMedicalForm', 'selector': 'evaluation-medical'},{'name': 'EvaluationSurgicalForm', 'selector': 'evaluation-surgical'},{'name': 'FindRecordsPage', 'selector': 'page-find-records'},{'name': 'HelpPage', 'selector': 'page-help'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ListofEnviroComponent', 'selector': 'listofenv'},{'name': 'ListofMedEvalComponent', 'selector': 'listof-med-eval'},{'name': 'ListofvitalsComponent', 'selector': 'listofvitals'},{'name': 'ManageCustomFormsPage', 'selector': 'page-manage-custom-forms'},{'name': 'MapPage', 'selector': 'page-map'},{'name': 'MedEvalUpdatePage', 'selector': 'page-medeval-update'},{'name': 'MedicalHistoryForm', 'selector': 'medicalhistory'},{'name': 'MyApp', 'selector': ''},{'name': 'PatientIDForm', 'selector': 'patientid'},{'name': 'PatientUpdatePage', 'selector': 'page-patientid-update'},{'name': 'PrescriptionsForm', 'selector': 'prescriptions'},{'name': 'ProfileModalPage', 'selector': 'page-profile-modal'},{'name': 'RadarComponent', 'selector': 'radar'},{'name': 'SearchbarObjectIdComponent', 'selector': 'searchbar-object-id'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'SignaturePadComponent', 'selector': 'signature'},{'name': 'SigninForgotPage', 'selector': 'page-signin-forgot'},{'name': 'SigninPage', 'selector': 'page-signin'},{'name': 'SignupPage', 'selector': 'page-signup'},{'name': 'Splash', 'selector': 'page-splash'},{'name': 'TabsPage', 'selector': 'page-tabs'},{'name': 'TermsOfServicePage', 'selector': 'page-tos'},{'name': 'VitalsForm', 'selector': 'vitals'},{'name': 'VitalsUpdatePage', 'selector': 'page-vitals-update'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PatientUpdatePage'};
 </script>
@@ -1385,6 +1576,7 @@ export class PatientUpdatePage {
 
 
 
+                   
 
 
 
@@ -1407,6 +1599,7 @@ export class PatientUpdatePage {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'PatientUpdatePage.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

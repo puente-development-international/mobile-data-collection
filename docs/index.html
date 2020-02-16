@@ -37,9 +37,9 @@
 <img src="https://img.shields.io/badge/ionic_3-✓-blue.svg" alt="" class="img-responsive">
 <img src="https://img.shields.io/badge/angular_4+-✓-blue.svg" alt="" class="img-responsive">
 <img src="https://img.shields.io/badge/parse_server-✓-blueviolet.svg" alt="" class="img-responsive"></p>
-<h1 id="about-this-program">About this Program</h1>
-<p>This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It&#39;s being used for community development data collection and assessment in the Dominican Republic.</p>
-<h1 id="key-libraries">Key Libraries</h1>
+<h2 id="about-this-program">About this Program</h2>
+<p>This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It&#39;s being used for community development data collection and assessment in the Dominican Republic. </p>
+<h2 id="key-libraries">Key Libraries</h2>
 <p>Google Maps Javascript SDK</p>
 <h2 id="screenshots">Screenshots</h2>
 <p align="middle">
@@ -47,8 +47,18 @@
   <img src="https://github.com/hopetambala/puente-ionic-datacollection/blob/master/resources/screenshots/db.jpg" width="40%"/>
 </p>
 
-
-<h1 id="file-structure">File structure</h1>
+<h2 id="development">Development</h2>
+<p>Here are terminal commands to get both Ionic and Cordova installed on your machine</p>
+<div><pre class="line-numbers"><code class="language-none">npm install ionic -g
+npm install cordova&#64;8.1.2</code></pre></div><p>Here are some quick commands to get started after install Ionic and Cordova:</p>
+<ul>
+<li><code>npm install</code>: Install Node dependencies</li>
+<li><code>npm start</code>: Start the hot reloading development server.</li>
+<li><code>npm test</code>: Run the test suit and watch for changes.</li>
+<li><code>npm build</code>: Build a production optimized bundle of the app.</li>
+<li><code>npm lint</code>: Run the ESLinter.</li>
+</ul>
+<h2 id="file-structure">File structure</h2>
 <div><pre class="line-numbers"><code class="language-none">puente-data-collection/
 │
 ├── resources/
@@ -109,18 +119,19 @@
 <li><strong>Storage</strong>: No restricted time limits and no file storage restrictions. Control over backup, restore and database indexes</li>
 <li><strong>Ideal for</strong>: General purpose applications</li>
 </ul>
-<h1 id="known-issues">Known Issues</h1>
-<ul>
-<li>Performance Issues on older/slower devices</li>
-</ul>
-<h1 id="documentation">Documentation</h1>
+<h2 id="known-issues-and-troubleshooting">Known Issues and Troubleshooting</h2>
+<h3 id="ios-deploy-isnt-working">ios-deploy isn&#39;t working!</h3>
+<p><a href="https://stackoverflow.com/questions/34733740/ios-deploy-not-found-under-os-x-el-capitan">From here</a></p>
+<div><pre class="line-numbers"><code class="language-none">sudo npm install -g ios-deploy --unsafe-perm=true --allow-root</code></pre></div><p>Sometimes running one of ios build scripts</p>
+<div><pre class="line-numbers"><code class="language-none">npm run ios:build</code></pre></div><p>doesn&#39;t work if you have an iPad or iPhone attached to the computer during building.</p>
+<h2 id="documentation">Documentation</h2>
 <p><a href="https://hopetambala.github.io/puente-ionic-datacollection/">https://hopetambala.github.io/puente-ionic-datacollection/</a></p>
-<h1 id="contribution">Contribution</h1>
+<h2 id="contribution">Contribution</h2>
 <ul>
 <li>Report issues</li>
 <li>Open pull request with improvements</li>
 <li>Spread the word</li>
-<li>Reach out to me directly at <a href="mailto:&#x68;&#x6f;&#x70;&#x65;&#64;&#x70;&#117;&#101;&#x6e;&#116;&#x65;&#45;&#x64;&#114;&#x2e;&#99;&#111;&#109;">&#x68;&#x6f;&#x70;&#x65;&#64;&#x70;&#117;&#101;&#x6e;&#116;&#x65;&#45;&#x64;&#114;&#x2e;&#99;&#111;&#109;</a></li>
+<li>Reach out to me directly at <a href="mailto:&#x68;&#x6f;&#x70;&#101;&#64;&#x70;&#x75;&#x65;&#x6e;&#116;&#101;&#45;&#x64;&#114;&#x2e;&#99;&#111;&#x6d;">&#x68;&#x6f;&#x70;&#101;&#64;&#x70;&#x75;&#x65;&#x6e;&#116;&#101;&#45;&#x64;&#114;&#x2e;&#99;&#111;&#x6d;</a></li>
 </ul>
 
 
@@ -136,6 +147,7 @@
 
 
 
+                   
 
 
 
@@ -158,6 +170,7 @@
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
             var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>
