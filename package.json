@@ -24,14 +24,14 @@
     "snyk-protect": "snyk protect"
   },
   "dependencies": {
-    "@angular/common": "5.0.3",
-    "@angular/compiler": "5.0.3",
-    "@angular/compiler-cli": "7.2.6",
-    "@angular/core": "5.0.3",
-    "@angular/forms": "5.0.3",
-    "@angular/http": "5.0.3",
-    "@angular/platform-browser": "5.0.3",
-    "@angular/platform-browser-dynamic": "5.0.3",
+    "@angular/common": "~5.2.9",
+    "@angular/compiler": "~5.2.9",
+    "@angular/compiler-cli": "~5.2.9",
+    "@angular/core": "~5.2.9",
+    "@angular/forms": "~5.2.9",
+    "@angular/http": "~5.2.9",
+    "@angular/platform-browser": "~5.2.9",
+    "@angular/platform-browser-dynamic": "~5.2.9",
     "@ionic-native/camera": "4.3.3",
     "@ionic-native/core": "4.10.0",
     "@ionic-native/geolocation": "4.10.0",
@@ -41,8 +41,8 @@
     "@ionic/storage": "2.2.0",
     "angular2-signaturepad": "2.11.0",
     "chart.js": "2.9.3",
-    "cordova-android": "8.0.0",
-    "cordova-browser": "6.0.0",
+    "cordova-android": "7.1.4",
+    "cordova-browser": "5.0.4",
     "cordova-ios": "5.0.1",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-device": "1.1.7",
@@ -111,9 +111,9 @@
       }
     },
     "platforms": [
+      "ios",
       "android",
-      "browser",
-      "ios"
+      "browser"
     ]
   },
   "cordovaPlugins": [],
