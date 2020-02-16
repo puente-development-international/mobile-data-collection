@@ -1,41 +1,369 @@
 'use strict';
 
 
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-customElements.define('compodoc-menu', function (_HTMLElement) {
-    _inherits(_class, _HTMLElement);
-
-    function _class() {
-        _classCallCheck(this, _class);
-
-        var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this));
-
-        _this.isNormalMode = _this.getAttribute('mode') === 'normal';
-        return _this;
+customElements.define('compodoc-menu', class extends HTMLElement {
+    constructor() {
+        super();
+        this.isNormalMode = this.getAttribute('mode') === 'normal';
     }
 
-    _createClass(_class, [{
-        key: 'connectedCallback',
-        value: function connectedCallback() {
-            this.render(this.isNormalMode);
-        }
-    }, {
-        key: 'render',
-        value: function render(isNormalMode) {
-            let tp = lithtml.html(
-'<nav>\n    <ul class="list">\n        <li class="title">\n            \n                <a href="index.html" data-type="index-link">puente-community-health-records-collection documentation</a>\n            \n        </li>\n\n        <li class="divider"></li>\n        ' + (isNormalMode ? '<div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>' : '') + '\n        <li class="chapter">\n            <a data-type="chapter-link" href="index.html"><span class="icon ion-ios-home"></span>Getting started</a>\n            <ul class="links">\n                \n                    <li class="link">\n                        <a href="overview.html" data-type="chapter-link">\n                            <span class="icon ion-ios-keypad"></span>Overview\n                        </a>\n                    </li>\n                    <li class="link">\n                        <a href="index.html" data-type="chapter-link">\n                            <span class="icon ion-ios-paper"></span>README\n                        </a>\n                    </li>\n                \n                \n                    <li class="link">\n                        \n                            <a href="changelog.html"\n                        \n                        data-type="chapter-link">\n                            <span class="icon ion-ios-paper"></span>CHANGELOG\n                        </a>\n                    </li>\n                \n                    <li class="link">\n                        \n                            <a href="contributing.html"\n                        \n                        data-type="chapter-link">\n                            <span class="icon ion-ios-paper"></span>CONTRIBUTING\n                        </a>\n                    </li>\n                \n                    <li class="link">\n                        \n                            <a href="license.html"\n                        \n                        data-type="chapter-link">\n                            <span class="icon ion-ios-paper"></span>LICENSE\n                        </a>\n                    </li>\n                \n                \n                    <li class="link">\n                        <a href="dependencies.html"\n                            data-type="chapter-link">\n                            <span class="icon ion-ios-list"></span>Dependencies\n                        </a>\n                    </li>\n                \n            </ul>\n        </li>\n        \n        \n        <li class="chapter modules">\n            <a data-type="chapter-link" href="modules.html">\n                <div class="menu-toggler linked" data-toggle="collapse"\n                    ' + (isNormalMode ? 'data-target="#modules-links"' : 'data-target="#xs-modules-links"') + '>\n                    <span class="icon ion-ios-archive"></span>\n                    <span class="link-name">Modules</span>\n                    <span class="icon ion-ios-arrow-down"></span>\n                </div>\n            </a>\n            <ul class="links collapse"\n            ' + (isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"') + '>\n                \n                    <li class="link">\n                        <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>\n                        \n                            <li class="chapter inner">\n                                <div class="simple menu-toggler" data-toggle="collapse"\n                                    ' + (isNormalMode ? 'data-target="#components-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"' : 'data-target="#xs-components-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"') + '>\n                                    <span class="icon ion-md-cog"></span>\n                                    <span>Components</span>\n                                    <span class="icon ion-ios-arrow-down"></span>\n                                </div>\n                                <ul class="links collapse"\n                                    ' + (isNormalMode ? 'id="components-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"' : 'id="xs-components-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"') + '>\n                                    \n                                        <li class="link">\n                                            <a href="components/AboutPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AboutPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/AccordionComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AccordionComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/AllergiesForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AllergiesForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/AnimatedCirclesComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AnimatedCirclesComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/BarchartComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">BarchartComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/CardFlippingComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">CardFlippingComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/CircleDecorationComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">CircleDecorationComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ContactPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ContentDrawerComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContentDrawerComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/CustomForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">CustomForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/DashboardPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">DashboardPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/DoughnutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">DoughnutComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/EnviroEvalUpdatePage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">EnviroEvalUpdatePage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/EnvironmentalHistoryForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">EnvironmentalHistoryForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/EvaluationMedicalForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">EvaluationMedicalForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/EvaluationSurgicalForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">EvaluationSurgicalForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/FindRecordsPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FindRecordsPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/HelpPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">HelpPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/HomePage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">HomePage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ListofEnviroComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ListofEnviroComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ListofMedEvalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ListofMedEvalComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ListofvitalsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ListofvitalsComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ManageCustomFormsPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ManageCustomFormsPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/MapPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">MapPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/MedEvalUpdatePage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">MedEvalUpdatePage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/MedicalHistoryForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">MedicalHistoryForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/MyApp.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">MyApp</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/PatientIDForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">PatientIDForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/PatientUpdatePage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">PatientUpdatePage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/PrescriptionsForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">PrescriptionsForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/ProfileModalPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ProfileModalPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/RadarComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">RadarComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/SearchbarObjectIdComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">SearchbarObjectIdComponent</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/SigninForgotPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">SigninForgotPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/SigninPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">SigninPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/SignupPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">SignupPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/Splash.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">Splash</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/TabsPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">TabsPage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/TermsOfServicePage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">TermsOfServicePage</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/VitalsForm.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">VitalsForm</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="components/VitalsUpdatePage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">VitalsUpdatePage</a>\n                                        </li>\n                                    \n                                </ul>\n                            </li>\n                        \n                        \n                        \n                        \n                            <li class="chapter inner">\n                                <div class="simple menu-toggler" data-toggle="collapse"\n                                    ' + (isNormalMode ? 'data-target="#injectables-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"' : 'data-target="#xs-injectables-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"') + '>\n                                    <span class="icon ion-md-arrow-round-down"></span>\n                                    <span>Injectables</span>\n                                    <span class="icon ion-ios-arrow-down"></span>\n                                </div>\n                                <ul class="links collapse"\n                                    ' + (isNormalMode ? 'id="injectables-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"' : 'id="xs-injectables-links-module-AppModule-b68b54f2916f1e246989ad759fa7523e"') + '>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/AssetManagerProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>AssetManagerProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/AuthProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>AuthProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/ChartsProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>ChartsProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/MapControlsProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>MapControlsProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/ParseProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>ParseProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/PhotosProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>PhotosProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/QueryServiceProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>QueryServiceProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/StorageProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>StorageProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/UiUxProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>UiUxProvider</a>\n                                        </li>\n                                    \n                                        <li class="link">\n                                            <a href="injectables/UserpositionProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>UserpositionProvider</a>\n                                        </li>\n                                    \n                                </ul>\n                            </li>\n                        \n                        \n                    </li>\n                \n                    <li class="link">\n                        <a href="modules/SettingsPageModule.html" data-type="entity-link">SettingsPageModule</a>\n                        \n                            <li class="chapter inner">\n                                <div class="simple menu-toggler" data-toggle="collapse"\n                                    ' + (isNormalMode ? 'data-target="#components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"' : 'data-target="#xs-components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"') + '>\n                                    <span class="icon ion-md-cog"></span>\n                                    <span>Components</span>\n                                    <span class="icon ion-ios-arrow-down"></span>\n                                </div>\n                                <ul class="links collapse"\n                                    ' + (isNormalMode ? 'id="components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"' : 'id="xs-components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"') + '>\n                                    \n                                        <li class="link">\n                                            <a href="components/SettingsPage.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">SettingsPage</a>\n                                        </li>\n                                    \n                                </ul>\n                            </li>\n                        \n                        \n                        \n                        \n                        \n                    </li>\n                \n            </ul>\n        </li>\n        \n        \n            \n        \n        \n        \n        \n        <li class="chapter">\n            <div class="simple menu-toggler" data-toggle="collapse"\n            ' + (isNormalMode ? 'data-target="#classes-links"' : 'data-target="#xs-classes-links"') + '>\n                <span class="icon ion-ios-paper"></span>\n                <span>Classes</span>\n                <span class="icon ion-ios-arrow-down"></span>\n            </div>\n            <ul class="links collapse"\n            ' + (isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"') + '>\n                \n                    <li class="link">\n                        <a href="classes/User.html" data-type="entity-link">User</a>\n                    </li>\n                \n            </ul>\n        </li>\n        \n        \n            \n        \n        \n        \n        \n        \n        \n        <li class="chapter">\n            <div class="simple menu-toggler" data-toggle="collapse"\n            ' + (isNormalMode ? 'data-target="#miscellaneous-links"' : 'data-target="#xs-miscellaneous-links"') + '>\n                <span class="icon ion-ios-cube"></span>\n                <span>Miscellaneous</span>\n                <span class="icon ion-ios-arrow-down"></span>\n            </div>\n            <ul class="links collapse"\n            ' + (isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"') + '>\n                \n                \n                    <li class="link">\n                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>\n                    </li>\n                \n                \n                \n                    <li class="link">\n                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>\n                    </li>\n                \n            </ul>\n        </li>\n        \n        \n            \n        \n        \n        <li class="chapter">\n            <a data-type="chapter-link" href="coverage.html"><span class="icon ion-ios-stats"></span>Documentation coverage</a>\n        </li>\n        \n        \n        \n        <li class="divider"></li>\n        <li class="copyright">\n                Documentation generated using <a href="https://compodoc.app/" target="_blank">\n                    \n                        \n                            <img data-src="images/compodoc-vectorise.png" class="img-responsive" data-type="compodoc-logo">\n                        \n                    \n                </a>\n        </li>\n        \n    </ul>\n</nav>'
-);
-        this.innerHTML = tp.strings;
-        }
-    }]);
+    connectedCallback() {
+        this.render(this.isNormalMode);
+    }
 
-    return _class;
-}(HTMLElement));
+    render(isNormalMode) {
+        let tp = lithtml.html(`
+        <nav>
+            <ul class="list">
+                <li class="title">
+                    <a href="index.html" data-type="index-link">puente-community-health-records-collection documentation</a>
+                </li>
+
+                <li class="divider"></li>
+                ${ isNormalMode ? `<div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>` : '' }
+                <li class="chapter">
+                    <a data-type="chapter-link" href="index.html"><span class="icon ion-ios-home"></span>Getting started</a>
+                    <ul class="links">
+                        <li class="link">
+                            <a href="overview.html" data-type="chapter-link">
+                                <span class="icon ion-ios-keypad"></span>Overview
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="index.html" data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>README
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="changelog.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>CHANGELOG
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="contributing.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>CONTRIBUTING
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="license.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>LICENSE
+                            </a>
+                        </li>
+                                <li class="link">
+                                    <a href="dependencies.html" data-type="chapter-link">
+                                        <span class="icon ion-ios-list"></span>Dependencies
+                                    </a>
+                                </li>
+                    </ul>
+                </li>
+                    <li class="chapter modules">
+                        <a data-type="chapter-link" href="modules.html">
+                            <div class="menu-toggler linked" data-toggle="collapse" ${ isNormalMode ?
+                                'data-target="#modules-links"' : 'data-target="#xs-modules-links"' }>
+                                <span class="icon ion-ios-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="icon ion-ios-arrow-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
+                            <li class="link">
+                                <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' : 'data-target="#xs-components-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' :
+                                            'id="xs-components-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' }>
+                                            <li class="link">
+                                                <a href="components/AboutPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AboutPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/AccordionComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AccordionComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/AllergiesForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AllergiesForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/AnimatedCirclesComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AnimatedCirclesComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/BarchartComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">BarchartComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/CardFlippingComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CardFlippingComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/CircleDecorationComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CircleDecorationComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ConsentFormPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ConsentFormPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ContactPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ContentDrawerComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContentDrawerComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/CustomForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CustomForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/DashboardPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DashboardPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/DoughnutComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DoughnutComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/EnviroEvalUpdatePage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">EnviroEvalUpdatePage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/EnvironmentalHistoryForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">EnvironmentalHistoryForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/EvaluationMedicalForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">EvaluationMedicalForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/EvaluationSurgicalForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">EvaluationSurgicalForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/FindRecordsPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">FindRecordsPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/HelpPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">HelpPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/HomePage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">HomePage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ListofEnviroComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ListofEnviroComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ListofMedEvalComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ListofMedEvalComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ListofvitalsComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ListofvitalsComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ManageCustomFormsPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ManageCustomFormsPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/MapPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MapPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/MedEvalUpdatePage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MedEvalUpdatePage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/MedicalHistoryForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MedicalHistoryForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/MyApp.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MyApp</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/PatientIDForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PatientIDForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/PatientUpdatePage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PatientUpdatePage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/PrescriptionsForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PrescriptionsForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ProfileModalPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ProfileModalPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/RadarComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">RadarComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SearchbarObjectIdComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SearchbarObjectIdComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SignaturePadComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SignaturePadComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SigninForgotPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SigninForgotPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SigninPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SigninPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SignupPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SignupPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/Splash.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">Splash</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/TabsPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">TabsPage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/TermsOfServicePage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">TermsOfServicePage</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/VitalsForm.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">VitalsForm</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/VitalsUpdatePage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">VitalsUpdatePage</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' : 'data-target="#xs-injectables-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' :
+                                        'id="xs-injectables-links-module-AppModule-eee592c43f0368de659b1668b07b7ccd"' }>
+                                        <li class="link">
+                                            <a href="injectables/AssetManagerProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>AssetManagerProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/AuthProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>AuthProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/ChartsProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>ChartsProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/MapControlsProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>MapControlsProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/ParseProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>ParseProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/PhotosProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>PhotosProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/QueryServiceProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>QueryServiceProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/StorageProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>StorageProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/UiUxProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>UiUxProvider</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/UserpositionProvider.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>UserpositionProvider</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SettingsPageModule.html" data-type="entity-link">SettingsPageModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"' : 'data-target="#xs-components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"' :
+                                            'id="xs-components-links-module-SettingsPageModule-8a2c342afd94d202e8739ddd121a587f"' }>
+                                            <li class="link">
+                                                <a href="components/SettingsPage.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SettingsPage</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                </ul>
+                </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#classes-links"' :
+                            'data-target="#xs-classes-links"' }>
+                            <span class="icon ion-ios-paper"></span>
+                            <span>Classes</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
+                            <li class="link">
+                                <a href="classes/User.html" data-type="entity-link">User</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#miscellaneous-links"'
+                            : 'data-target="#xs-miscellaneous-links"' }>
+                            <span class="icon ion-ios-cube"></span>
+                            <span>Miscellaneous</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                            <li class="link">
+                                <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
+                            </li>
+                            <li class="link">
+                                <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="coverage.html"><span class="icon ion-ios-stats"></span>Documentation coverage</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="copyright">
+                        Documentation generated using <a href="https://compodoc.app/" target="_blank">
+                            <img data-src="images/compodoc-vectorise.png" class="img-responsive" data-type="compodoc-logo">
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+        `);
+        this.innerHTML = tp.strings;
+    }
+});
