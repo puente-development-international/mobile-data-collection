@@ -61,7 +61,7 @@
     "leaflet": "1.6.0",
     "ng2-charts": "1.6.0",
     "ng2-translate": "5.0.0",
-    "node-sass": "4.11.0",
+    "node-sass": "4.13.1",
     "parse": "1.11.1",
     "rxjs": "5.4.2",
     "sw-toolbox": "3.6.0",
