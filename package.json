@@ -87,7 +87,7 @@
     "null-loader": "3.0.0",
     "protractor": "5.4.2",
     "standard-version": "7.0.0",
-    "ts-loader": "3.0.3",
+    "ts-loader": "3.5.0",
     "ts-node": "3.0.2",
     "tslint": "5.18.0",
     "tslint-eslint-rules": "5.4.0",
