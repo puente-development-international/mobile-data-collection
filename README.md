@@ -7,6 +7,21 @@
 ![](https://img.shields.io/badge/angular_4+-✓-blue.svg)
 ![](https://img.shields.io/badge/parse_server-✓-blueviolet.svg)
 
+
+# THIS PROJECT IS DEPRECATED
+Puente Mobile Data Collection is not maintained anymore. See [Puente Collect](https://github.com/puente-development-international/collect) for our new mobile data collection.
+
+You can still Puente Mobile Data Collection for inspiration on using Ionic v3 and Parse-Server together..
+
+## What now?
+Consider using and contributing Puente Collect! We're excited about introducing it to the international development community.
+
+- It's opinionated. We made intentional decisions to switch to React-Native.
+- It's more human-centered. We went through a rigourous discover and design phase to make sure Puente Collect was designed for everyone.
+- It's more sustainably built. We made intentional decisions to make sure we follow best practices for code management and releases, aggressively using testing, documentation, and linting to keep the codebase looking clean.
+
+------------------------------------
+
 ## About this Program
 
 This is a Community Health Records Data Collection Application that integrates Ionic 3, Angular 2+ and Parse Server. It's being used for community development data collection and assessment in the Dominican Republic. 
